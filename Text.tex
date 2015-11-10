@@ -1,0 +1,101 @@
+\documentclass[
+    11pt,
+    ngerman,
+    fleqn,
+    parskip=half,
+    DIV=15, BCOR=2cm, headinclude,
+]{scrbook}
+
+%\includeonly{40-Implementierung}
+
+\usepackage{header}
+
+\def\table{\def\figurename{Tabelle}\figure}
+\let\endtable\endfigure 
+
+\usepackage{csquotes}
+\usepackage{booktabs}
+\usepackage{algpseudocode}
+\usepackage{placeins}
+
+\usepackage{float}
+\newfloat{algorithm}{tbhp}{loa}[chapter]
+\floatname{algorithm}{Algorithmus}
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{
+    compat=1.9,
+    width=0.8\linewidth,
+    xticklabel style={/pgf/number format/use comma},
+    yticklabel style={/pgf/number format/use comma},
+}
+\usepgfplotslibrary{external}
+\tikzexternalize[mode=list and make]
+\tikzsetexternalprefix{_build/Abbildung-}
+
+\pgfplotsset{
+    colormap={whiteblack}{gray=(0.95) gray=(0)},
+    max space between ticks=50pt,
+}
+
+
+\hypersetup{
+    pdftitle={%
+        Gitterfeldtheoretische Behandlung des harmonischen Oszillators in der
+        Pfadintegralformulierung in \textsc{Euklid}ischer Raum-Zeit
+    }
+}
+
+\usepackage{datetime}
+
+\newcommand\bootstrapsamples{N_\text P}
+\newcommand\gausswidth{\sigma}
+\newcommand\initialrandomwidth{\tilde \Delta}
+\newcommand\iterations{M}
+\newcommand\iterationsbetween{M_\text{Zw}}
+\newcommand\margin{\Delta}
+\newcommand\mass{\mu}
+\newcommand\preiterations{M'}
+\newcommand\rounds{\bar n}
+\newcommand\timesites{N}
+\newcommand\timestep{a}
+
+\newcommand\funcmeasure{\mathcal D \vec x}
+
+\subject{Bachelorarbeit in Physik}
+\title{%
+    Gitterfeldtheoretische Behandlung \\
+    des harmonischen Oszillators \\
+    in der Pfadintegralformulierung \\
+    in Euklidischer Raum-Zeit
+}
+%\subtitle{}
+\author{
+    Martin Ueding \\ \small{\href{mailto:mu@martin-ueding.de}{mu@martin-ueding.de}}
+}
+\publishers{%
+    Angefertigt im Helmholtz-Institut für Strahlen- und Kernphysik, vorgelegt
+    der Mathematisch-Naturwissenschaftlichen Fakultät \\ der Universität Bonn
+}
+\date{Juli 2014}
+
+\uppertitleback{%
+    1. Gutachter: Prof. Dr. Carsten Urbach \\
+    2. Gutachter: PD Dr. Bernard Metsch
+}
+
+\lowertitleback{%
+}
+
+\begin{document}
+
+\maketitle
+
+
+
+\tableofcontents
+
+
+
+\end{document}
