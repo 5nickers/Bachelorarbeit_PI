@@ -1,0 +1,51 @@
+\chapter{Praxisteil}
+
+\section{Elektronik}
+
+\subsection{Anforderungen}
+
+Bei der Elektronik gab es zwei verschiedene Bereiche: \\
+In einem ersten Schritt sollte ein A-D Wandler gefunden werden, damit der vorhandene Drucksensor genauer ausgelesen werden kann. Zum Start es Projekts wurde der Drucksensor über das $\SI{10}{bit}$ breite analoge Interface des Arduino ausgelesen. Das ist für eine genaue Auswertung der Experimente zu wenig. Der Drucksensor hat einen Messbereich von (nachgucken) und gibt diesen auf $\SI{0}{} - \SI{10}{V}$ aus. Da der Arduino maximal $\SI{5}{V}$ als Eingangsspannung verarbeiten kann, wird die Spannung über einen Spannungsteiler auf $\SI{0} - \SI{5}{V}$ reduziert und dann eingelesen. Das entspricht einer Genauigkeit von $\SI{0,004}{V/bit}$, was einer Genauigkeit von XXX mbar/Volt entspricht. \\
+\hfill \\
+Als Resultat soll die gesamte Elektronik als \glqq Blackbox\grqq \ vorliegen, sodass man nach außen hin nur noch Anschlüsse hat, die klar gekennzeichnet sind. Dies soll in Form eines speziell angefertigten Gehäuses erledigt werden, das zudem auch noch rudimentären Schutz gegen Schmutz bietet.
+
+
+\subsection{Umsetzung}
+
+\subsubsection{Elektronik}
+
+Der Arduino bietet einen sehr einfachen SPI Bus zum Anschluss von Modulen an. Darüber können die digitalen Outputdaten, der angesteckten Module ausgelesen werden, unabhängig davon wie hoch die Auflösung der Module ist. Auf Grund dieser Voraussetzungen wurde entschieden ein Modul für diesen Bus zu verwenden. \\
+Rechnung für 16 bit einfügen!!!!!! \\
+Es gibt verschiedene $\SI{16}{bit}$ A-D Wandler auf dem Markt, allerdings gibt es den hier ausgewählten (einfügen!!!!) bereits auf einer fertig montierten Platine, die direkt in den Arduino eingesteckt werden kann. Zudem gibt es zu der Platine eine recht gute Dokumentation. 
+
+
+Schaltskizze!!!
+
+\subsubsection{Gehäuse}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
