@@ -120,54 +120,18 @@
 \renewcommand{\Im}{\mathop{{}\mathrm{Im}}\nolimits}
 \renewcommand{\Re}{\mathop{{}\mathrm{Re}}\nolimits}
 
-% Fourier transform.
-\DeclareMathOperator{\fourier}{\ensuremath{\mathcal{F}}}
 
-% Roman versions of “e” and “i” to serve as Euler's number and the imaginary
-% constant.
-\newcommand{\eup}{\mathrm e}
-\newcommand{\iup}{\mathrm i}
-
-% Symbols for the various mathematical fields (natural numbers, integers,
-% rational numbers, real numbers, complex numbers).
-\newcommand{\C}{\ensuremath{\mathbb C}}
-\newcommand{\N}{\ensuremath{\mathbb N}}
-\newcommand{\Q}{\ensuremath{\mathbb Q}}
-\newcommand{\R}{\ensuremath{\mathbb R}}
-\newcommand{\Z}{\ensuremath{\mathbb Z}}
-
-% Shape like operators.
-\DeclareMathOperator{\dalambert}{\Box}
-\DeclareMathOperator{\laplace}{\bigtriangleup}
-\newcommand{\curl}{\vnabla \times}
-\newcommand{\divergence}[1]{\inner{\vnabla}{#1}}
-\newcommand{\Divergence}[1]{\Inner{\vnabla}{#1}}
-\newcommand{\vnabla}{\vec \nabla}
 
 \newcommand{\half}{\frac 12}
 
-% Unit vector (German „Einheitsvektor“).
-\newcommand{\ev}{\hat{\vec e}}
 
-% Mathematician's notation for the inner (scalar, dot) product.
-\newcommand{\bracket}[1]{\langle #1 \rangle}
-\newcommand{\Bracket}[1]{\left\langle #1 \right\rangle}
-\newcommand{\inner}[2]{\bracket{#1, #2}}
-\newcommand{\Inner}[2]{\Bracket{#1, #2}}
 
 % Placeholders.
 \newcommand{\fehlt}{\textcolor{darkred}{Hier fehlen noch Inhalte.}}
 \newcommand{\messwert}{\textcolor{blue}{\square}}
 \newcommand{\punkte}{\phantom{xxxxx}}
 
-% Separator for equations on a single line.
-\newcommand{\eqnsep}{,\quad}
 
-% Quantum Mechanics.
-\usepackage{braket}
-
-% Thermodynamic partial derivative.
-\newcommand\tdpd[3]{\del{\dpd{#1}{#2}}_{#3}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                  Headings                                   %
