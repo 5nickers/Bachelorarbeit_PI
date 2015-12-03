@@ -1,6 +1,6 @@
 \chapter{Praxisteil}
 
-\section{Elektronik}
+\section{AP 2 - Elektronik}
 
 \subsection{Anforderungen}
 
@@ -31,9 +31,27 @@ Um die Komplexität so gering wie möglich zu halten, wurde sich gegen einen Sch
 Hier Bilder einfügen!!
 
 
+\section{AP3 - Gassystem}
+
+\subsection{Anforderungen (kommt das hier hin?)}
+
+Die Aufgabe bestand darin, trotz der Integration des Luftbefeuchters, das Gassystem als Einheit so kompakt und stabil wie möglich zu gestalten. Es sollte zusammen mit der Elektronik zusammen in den Lichtstreuaufbau passen und dort die Rotationbewegung des Aufbaus nicht einschränken.
 
 
+\subsection{Umsetzung}
 
+\subsubsection{Flowcontroller}
+
+Um die Anforderung der Erweiterung des Regelbereichs beim Gasstrom auf $\SI{0} - \SI{3000}{l/h}$ zu erfüllen, musste der bisherige Flowcontroller mit einem Regelbereich von $\SI{0} - \SI{120}{l/h}$ ersetzt werden. \\
+Die Idee einer konstruktiven Lösung den Strom über mehrere Gasdurchflussbegrenzer und Ventile auf definierte Werte voreinzustellen und mit dem vorhandenen Flowcontroller von da ab zu regeln, wurde verworfen, weil es sich als zu ungenau und nicht deutlich billiger in Aufwand und Kosten darstellte. \\
+Die Lösung bestand darin einen neuen Flowcontroller anzuschaffen, der den gesamten Regelbereich mit einer hinreichenden Genauigkeit abdeckt und gleichzeitig gut in das Gassystem integriert werden kann. Dazu wurden Angebote eingeholt, die im folgenden dargelegt sind:
+
+Tabelle mit Bronkhorst und Brooks
+
+
+Es wurde sich für den Flowcontroller der Firma Brooks entschieden. Das geschah aus mehreren Gründen: \\
+Im ursprünglichen Aufbau war auch ein Flowcontroler von Brooks verbaut, daher wussten wir wie dieser angesteuert wird und hatten bereits den benötigten Stecker. Weiterhin ist die Genauigkeit des Brookscontrollers im niedriegen Regelbereich besser als die des Bronkhorstcontrollers. Dies ist grade bei quantitativen Messungen mit kleinen Rohrdurchmessern und sehr feinen granularen Medien essentiell. \\
+Zudem waren die Anschaffungskosten für den Brookscontroller um ca $\SI{300}{Euro}$ niedriger.
 
 
 
