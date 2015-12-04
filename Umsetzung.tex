@@ -46,12 +46,21 @@ Um die Anforderung der Erweiterung des Regelbereichs beim Gasstrom auf $\SI{0} -
 Die Idee einer konstruktiven Lösung den Strom über mehrere Gasdurchflussbegrenzer und Ventile auf definierte Werte voreinzustellen und mit dem vorhandenen Flowcontroller von da ab zu regeln, wurde verworfen, weil es sich als zu ungenau und nicht deutlich billiger in Aufwand und Kosten darstellte. \\
 Die Lösung bestand darin einen neuen Flowcontroller anzuschaffen, der den gesamten Regelbereich mit einer hinreichenden Genauigkeit abdeckt und gleichzeitig gut in das Gassystem integriert werden kann. Dazu wurden Angebote eingeholt, die im folgenden dargelegt sind:
 
-Tabelle mit Bronkhorst und Brooks
+\begin{tabular}{|c|c|c|}
+	\hline  & Brooks & Bronkhorst \\ 
+	\hline Regelbereich & $\SI{0} - \SI{3000}{l/h}$ & $\SI{0} - \SI{3000}{l/h}$ \\ 
+	\hline Genauigkeit $20 - \SI{100}{\%}$ & $\pm \SI{0,9}{\%}$ & $\pm \SI{0,5}{\%}$ Istwert $+ \pm \SI{0,1}{\%}$ Endwert\\ 
+	\hline Genauigkeit $0 - \SI{20}{\%}$ & $\pm \SI{0,18}{\%}$ & $\pm \SI{0,5}{\%}$ Istwert $+ \pm \SI{0,1}{\%}$ Endwert \\ 
+	\hline Preis in \euro & 1187,33 & 1382,66 \\ 
+	\hline 
+\end{tabular} 
 
+\vspace{0,5cm}
 
 Es wurde sich für den Flowcontroller der Firma Brooks entschieden. Das geschah aus mehreren Gründen: \\
 Im ursprünglichen Aufbau war auch ein Flowcontroler von Brooks verbaut, daher wussten wir wie dieser angesteuert wird und hatten bereits den benötigten Stecker. Weiterhin ist die Genauigkeit des Brookscontrollers im niedriegen Regelbereich besser als die des Bronkhorstcontrollers. Dies ist grade bei quantitativen Messungen mit kleinen Rohrdurchmessern und sehr feinen granularen Medien essentiell. \\
-Zudem waren die Anschaffungskosten für den Brookscontroller um ca $\SI{300}{Euro}$ niedriger.
+Zudem waren die Anschaffungskosten für den Brookscontroller um ca $\SI{200}{Euro}$ niedriger.\\
+Außerdem hatte die Gruppe bei einem anderen Controller von Bronkhorst einige Probleme mit der Zuverlässigkeit gehabt, während der Brooks Controller keine aufwies.
 
 
 
