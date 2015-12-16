@@ -44,32 +44,31 @@
   <internal package="biblatex" priority="9" active="0">
     <generic>latex</generic>
     <provides type="dynamic">
-      <file>Text.aux</file>
-      <file>Text-blx.bib</file>
+      <file>Text.bcf</file>
     </provides>
     <requires type="dynamic">
       <file>Text.bbl</file>
     </requires>
     <requires type="static">
+      <file>blx-dm.def</file>
       <file>blx-compat.def</file>
       <file>biblatex.def</file>
-      <file>alphabetic.bbx</file>
+      <file>authoryear.bbx</file>
       <file>standard.bbx</file>
-      <file>alphabetic.cbx</file>
+      <file>authoryear.cbx</file>
       <file>biblatex.cfg</file>
       <file>ngerman.lbx</file>
       <file>german.lbx</file>
     </requires>
   </internal>
   <external package="biblatex" priority="5" active="0">
-    <generic>bibtex</generic>
+    <generic>biber</generic>
     <cmdline>
-      <binary>bibtex</binary>
-      <option>-min-crossrefs 2</option>
+      <binary>biber</binary>
       <infile>Text</infile>
     </cmdline>
     <input>
-      <file>Text.aux</file>
+      <file>Text.bcf</file>
     </input>
     <output>
       <file>Text.bbl</file>
@@ -78,13 +77,10 @@
       <file>Text.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>Text.aux</file>
-      <file>Text-blx.bib</file>
+      <file>Text.bcf</file>
     </requires>
     <requires type="editable">
-    </requires>
-    <requires type="static">
-      <file>biblatex.bst</file>
+      <file>Quellen.bib</file>
     </requires>
   </external>
 </requests>
