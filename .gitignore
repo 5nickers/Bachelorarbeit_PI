@@ -1,1 +1,5 @@
 *.pdf
+*.bbl
+*.blg
+*.bcf
+*.xml
