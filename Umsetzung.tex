@@ -112,13 +112,18 @@ Die Methode des Vorbeiströmens fiel raus, weil eine zu große Strömfläche geb
 Ursprünglich sollte der Luftbefeuchter so ausgelegt werden, sodass der gesamte Regelbereich des Controllers abgedeckt ist. In Versuchen hat sich allerdings gezeigt, das dafür ein Wasservolumen von $7 - \SI{8}{l} $ nötig wäre. Eine Aperatur dieser Größe wäre schwer bis unmöglich im Lichtstreuaufbau unterzubringen. Daher wurde ein Behältnis, das in den Aufbau passt, gewählt und damit ist nun ein Flussbereich von $0 - \SI{000000000}{l/h}$ abdeckbar. \\
 Eine weitere Herausforderung war die Luft mit dem geforderten Feuchtigkeitsgrad von $\SI{75}{\%}$ anzureichern. \\
 
-Skizze einfügen!!!!
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[scale=0.6]{Luftbefeuchter.png}
+		\caption{Skizze Luftbefeuchter}
+	\end{center}
+\end{figure}
 
 Ein erprobtes Verfahren ist, die Luft durch eine gesättigte Kochsalzlösung zu leiten. Dadurch wird automatisch eine Luftfeuchtigkeit von $\SI{75}{\%}$ erreicht. Die Luft muss allerdings als sehr feine Blasen durch die Kochsalzlösung wandern, da die Steigzeit sonst nicht ausreicht die Luft anzureichern. \\
 Dies wurde erreicht indem die Luft aus einer Schlauchspirale mit feinen Löchern durch eine zweilagige Schicht aus handelsüblichen Küchenschwämmen geleitet wurde. \\
 Damit die Schwämme nicht durch den Luftstrom von ihrem Platz weggedrückt werden, wurde in $\SI{2}{cm}$ darüber ein Netz gespannt.
 
-
+\newpage
 
 \section{AP4 - Wirbelbett}
 
@@ -138,7 +143,7 @@ Da das bisherige Wirbelbett nicht flexibel genug konfigurierbar war, musste es m
 Hier Bild einfügen!!!!
 
 
-Die Komponenten werden im folgenden beschrieben.
+Da ein Ionisator in das Wirbelbett eingebaut werden sollte, konnten die Teile nicht aus Metall gefertigt werden, da sie Ladung der Luft direkt über das Metall abgeflossen wäre. Es wurde daher entschieden sämtliche Bauteile des Wirbelbettes mit dem 3D Drucker aus ABS Plastik herzustellen. Dies hatte zu dem den Vorteil, das Prototypen schnell und einfach verfügbar und testbar waren. 
 
 
 \subsection{Methode zum Granulat auffangen}
@@ -170,17 +175,34 @@ Weiterhin wäre ein erheblicher Konstruktionsaufwand nötig, um einen eigenen Zy
 Aus diesem Grund haben wir uns für das im folgenden beschriebene Prinzip entschieden.
 
 
-\paragraph{Erweiterung des Querschnitts}
-
-\hfill \\
-
-Wie man anhand der Formel $v_a = \frac{Q}{A}$ \cite{Grollius2012} sehen kann, ist die Geschwindigkeit des Gasstrom direkt proportional zum Querschnitt des Rohrs. Wenn man also den Querschnitt verdoppelt, dann viertelt man die Geschwindigkeit des Gasstroms. 
-
 
 \subsubsection{Umsetzung}
 
 Um den Gasstrom zu verlangsamen und gleichzeitig das Einfüllen des Granulats zu erleichtern, wurde jeweils ein Trichter konstruiert, der passgenau mit dem Innendurchmesser jedes Probenröhrchens abschließt und zudem den Querschnitt verdoppelt. \\
+Wie man anhand der Formel $v_a = \frac{Q}{A}$ \cite{Grollius2012} sehen kann, ist die Geschwindigkeit des Gasstrom direkt proportional zum Querschnitt des Rohrs. Wenn man also den Querschnitt verdoppelt, dann viertelt man die Geschwindigkeit des Gasstroms. \\
 Zudem wurde ein abnehmbarer Filter oben auf den Trichter gespannt, um einen rudimentären Schutz gegen austretende Partikel bei Fehlbedienung zu gewährleisten.
+
+
+\subsection{Anschlusszylinder}
+
+\subsubsection{Anforderungen}
+
+Im Prinzip gab es im vorigen Aufbau auch schon einen Anschlusszylinder, allerdings brauchten wir mehr Features und mehr Flexibilität. Das Ziel war an diesem Zylinder den Anschluss an das Gassystem zu haben, den Ionisator unterzubringen und eine Halterung für die verschieden großen Röhrchen zu haben.
+
+
+\subsubsection{Umsetzung}
+
+Der Kern des Anschlusszylinders ist die $\SI{40}{mm}$ breite Röhre in der Mitte, damit Röhrchendurchmesser bis $\SI{40}{mm}$ mit einem laminaren Gasstrom versorgt werden können. \\
+Auf der Oberseite befindet sich eine Nut in die der O-Ring zum Abdichten der Verbindung Anschlusszylinder-Röhrchenhalter. Damit diese Verbindung dicht ist, befindet sich auf der Oberseite zudem ein Arretierungsmechanismus in den der Röhrchenhalter eingedreht wird. Zudem garantiert dieser Mechanismus ein einfaches und schnelles lösen der Komponenten.
+
+
+Hier Doppelbild einfügen
+
+
+In der Frontansicht sieht man den Einlass mit Arretierung für den Ionisator. Zur Montage wird die Spitze des Ionisator in einen Adapter gesteckt und dieser Adapter mittels drehen arretiert. Die Luftdichtheit wird durch einen O-Ring aus Gummi erreicht. \\
+In der Seitenansicht wird der Anschluss für das Gassystem sichtbar. Hier wurde ein Swagelockverbinder mit Gummi O-Ring in das Plastik geschraubt und der Adapter für den Schlauch daran angeschlossen.
+
+
 
 
 
