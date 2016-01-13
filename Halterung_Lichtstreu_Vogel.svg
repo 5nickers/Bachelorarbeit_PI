@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 744.09448819 1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="Halterung_Lichtstreu_Vogel.svg"
+   inkscape:export-filename="D:\Dropbox\Bachelorarbeit\BA\BA_Text\Halterung_Lichtstreu_Vogel.png"
+   inkscape:export-xdpi="271.37549"
+   inkscape:export-ydpi="271.37549">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="256.4368"
+     inkscape:cy="456.86987"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#0000ff;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="rect3336"
+       width="84.852814"
+       height="80.812202"
+       x="452.54834"
+       y="521.02197" />
+    <rect
+       style="fill:#999999"
+       id="rect3338"
+       width="140.02432"
+       height="12.121831"
+       x="361.7869"
+       y="546.43854" />
+    <rect
+       style="fill:#999999"
+       id="rect3338-6"
+       width="140.02432"
+       height="12.121831"
+       x="238.55928"
+       y="533.08698" />
+    <rect
+       style="fill:#ff0000"
+       id="rect3357"
+       width="11.071428"
+       height="7.8571429"
+       x="365"
+       y="541.64789" />
+    <rect
+       style="fill:#333333"
+       id="rect3359"
+       width="28.928572"
+       height="44.642857"
+       x="239.74747"
+       y="488.41199" />
+    <rect
+       style="fill:#1a1a1a"
+       id="rect3361"
+       width="5.4295697"
+       height="2.5253813"
+       x="241.31815"
+       y="530.52863" />
+    <rect
+       style="fill:#1a1a1a"
+       id="rect3361-2"
+       width="5.4295697"
+       height="2.5253813"
+       x="261.71057"
+       y="530.52863" />
+    <rect
+       style="fill:#666666;stroke:none"
+       id="rect4205"
+       width="22.038254"
+       height="20.357143"
+       x="479.64285"
+       y="558.43359" />
+  </g>
+</svg>

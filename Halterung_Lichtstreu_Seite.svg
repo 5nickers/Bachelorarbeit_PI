@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 744.09448819 1052.3622047"
+   id="svg4193"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="Halterung_Lichtstreu_Seite.svg"
+   inkscape:export-filename="D:\Dropbox\Bachelorarbeit\BA\BA_Text\Halterung_Lichtstreu_Seite.png"
+   inkscape:export-xdpi="256.3418"
+   inkscape:export-ydpi="256.3418">
+  <defs
+     id="defs4195" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8"
+     inkscape:cx="355.91583"
+     inkscape:cy="298.05561"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata4198">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#0000ff;stroke:none"
+       id="rect4201"
+       width="316.01376"
+       height="27.142857"
+       x="211.31473"
+       y="849.50507" />
+    <rect
+       style="fill:#808080;stroke:none"
+       id="rect4203"
+       width="38.385796"
+       height="225.11609"
+       x="308.09656"
+       y="624.56262" />
+    <rect
+       style="fill:#999999;stroke:none"
+       id="rect4207"
+       width="13.131983"
+       height="56.063465"
+       x="346.48233"
+       y="643.75549" />
+    <rect
+       style="fill:#999999;stroke:none"
+       id="rect4209"
+       width="8.0812206"
+       height="55.558392"
+       x="361.63461"
+       y="644.05133" />
+    <rect
+       style="fill:#4d4d4d;stroke:none"
+       id="rect4213"
+       width="9.8214283"
+       height="1.4285715"
+       x="369.64285"
+       y="698.07648" />
+    <rect
+       style="fill:#4d4d4d;stroke:none"
+       id="rect4215"
+       width="1.3392857"
+       height="4.0178571"
+       x="369.64285"
+       y="694.14789" />
+    <rect
+       style="fill:#333333;stroke:none"
+       id="rect4217"
+       width="44.642857"
+       height="1.5178572"
+       x="373.30359"
+       y="696.55865" />
+  </g>
+</svg>
