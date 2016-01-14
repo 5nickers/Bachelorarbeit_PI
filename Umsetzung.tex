@@ -43,7 +43,7 @@ Die Aufgabe bestand darin, trotz der Integration des Luftbefeuchters, das Gassys
 \subsubsection{Flowcontroller}
 
 Um die Anforderung der Erweiterung des Regelbereichs beim Gasstrom auf $\SI{0} - \SI{3000}{l/h}$ zu erfüllen, musste der bisherige Flowcontroller mit einem Regelbereich von $\SI{0} - \SI{120}{l/h}$ ersetzt werden. \\
-Die Idee einer konstruktiven Lösung den Strom über mehrere Gasdurchflussbegrenzer und Ventile auf definierte Werte voreinzustellen und mit dem vorhandenen Flowcontroller von da ab zu regeln, wurde verworfen, weil es sich als zu ungenau und nicht deutlich billiger in Aufwand und Kosten darstellte. \\
+Die Idee den Luftstrom über mehrere Gasdurchflussbegrenzer und Ventile auf definierte Werte voreinzustellen und mit dem vorhandenen Flowcontroller von da ab zu regeln, wurde verworfen, weil es sich als zu ungenau und nicht deutlich billiger in Aufwand und Kosten darstellte. Zudem wäre der Aufbau deutlich größer gewesen. \\
 Die Lösung bestand darin einen neuen Flowcontroller anzuschaffen, der den gesamten Regelbereich mit einer hinreichenden Genauigkeit abdeckt und gleichzeitig gut in das Gassystem integriert werden kann. Dazu wurden Angebote eingeholt, die im folgenden dargelegt sind:
 
 \begin{tabular}{|c|c|c|}
@@ -65,7 +65,7 @@ Außerdem hatte die Gruppe bei einem anderen Controller von Bronkhorst einige Pr
 
 \subsubsection{Verrohrung}
 
-Eine Herstellerauswahl hat hier nicht stattgefunden, da bereits vorhandene Verrohrung weitergenutzt werden sollte, deshalb wurde weiterhin auf Swagelok gesetzt. Dies hatte auch den Vorteil, das ein Berater aus dem nahegelegenen Standort Düsseldorf bei der Auslegung und Wahl der Komponenten beraten konnte. \\
+Eine Herstellerauswahl hat hier nicht stattgefunden, da bereits vorhandene Verrohrung weitergenutzt werden sollte. Deshalb wurde weiterhin auf Swagelok gesetzt. Dies hatte auch den Vorteil, das ein Berater aus dem nahegelegenen Standort Düsseldorf bei der Auslegung und Wahl der Komponenten beraten konnte. \\
 Auf der Skizze in Abbildung xy kann man das gebaute System sehen:
 \hfill \\
 
@@ -84,13 +84,13 @@ Für den Luftbefeuchter wurden drei unterschiedliche Lösungen geprüft:
 
 \hfill \\
 
-Von Swagelok gibt es eine Lösung ähnlich dem jetzigen Drucksensor. Über ein spezielles Rohrverbindungsstück kann ein Metallzylinder angeschlossen werden, der Senkrecht in auf dem Rohr nach oben steht. Dieser wird mit Wasser gefüllt, das von unten mit Luft durchströmt wird und anschließend oben abgenommen und Richtung Wirbelbett fließt.
+Von Swagelok gibt es eine Lösung ähnlich dem jetzigen Drucksensor. Über ein spezielles Rohrverbindungsstück kann ein Metallzylinder angeschlossen werden, der Senkrecht auf dem Rohr nach oben steht. Dieser wird mit Wasser gefüllt, das von unten mit Luft durchströmt wird und anschließend oben abgenommen und Richtung Wirbelbett fließt.
 
 \paragraph{Befeuchtung durch Vorbeiströmen}
 
 \hfill \\
 
-In einer anderen Arbeit (hier quelle einfügen) wurde die Luftbefeuchtung realisiert, oindem man Luft direkt an einer  WasserOberfläche vorbeiströmen ließ und die Luft durch Diffusion Wasser aufnahm. 
+In einer anderen Arbeit \cite{Fallturmexperiment} wurde die Luftbefeuchtung realisiert, indem man Luft direkt an einer  Wasseroberfläche vorbeiströmen ließ und die Luft durch Diffusion Wasser aufnahm. 
 
 \paragraph{Befeuchtung durch Durchströmen}
 \hfill \\
@@ -121,7 +121,7 @@ Eine weitere Herausforderung war die Luft mit dem geforderten Feuchtigkeitsgrad 
 
 Ein erprobtes Verfahren ist, die Luft durch eine gesättigte Kochsalzlösung zu leiten. Dadurch wird automatisch eine Luftfeuchtigkeit von $\SI{75}{\%}$ erreicht. Die Luft muss allerdings als sehr feine Blasen durch die Kochsalzlösung wandern, da die Steigzeit sonst nicht ausreicht die Luft anzureichern. \\
 Dies wurde erreicht indem die Luft aus einer Schlauchspirale mit feinen Löchern durch eine zweilagige Schicht aus handelsüblichen Küchenschwämmen geleitet wurde. \\
-Damit die Schwämme nicht durch den Luftstrom von ihrem Platz weggedrückt werden, wurde in $\SI{2}{cm}$ darüber ein Netz gespannt.
+Damit die Schwämme nicht durch den Luftstrom von ihrem Platz weggedrückt werden, wurde $\SI{2}{cm}$ darüber ein Netz gespannt.
 
 \newpage
 
@@ -130,7 +130,7 @@ Damit die Schwämme nicht durch den Luftstrom von ihrem Platz weggedrückt werde
 
 \subsection{Überblick}
 
-Da das bisherige Wirbelbett nicht flexibel genug konfigurierbar war, musste es möglichst modular neu konstruiert werden. Es wurde daher entschieden das Wirbelbett aus 4 Teilen plus dem Probenröhrchen zu bauen. Die einzelnen Teile sind:
+Da das bisherige Wirbelbett nicht flexibel genug konfigurierbar war, musste es neu konstruiert werden und dabei möglichst modular werden. Es wurde daher entschieden das Wirbelbett aus 4 Teilen plus dem Probenröhrchen zu bauen. Die einzelnen Teile sind:
 
 \begin{itemize}
 	\item Anschlusszylinder
@@ -143,14 +143,14 @@ Da das bisherige Wirbelbett nicht flexibel genug konfigurierbar war, musste es m
 Hier Bild einfügen!!!!
 
 
-Da ein Ionisator in das Wirbelbett eingebaut werden sollte, konnten die Teile nicht aus Metall gefertigt werden, da sie Ladung der Luft direkt über das Metall abgeflossen wäre. Es wurde daher entschieden sämtliche Bauteile des Wirbelbettes mit dem 3D Drucker aus ABS Plastik herzustellen. Dies hatte zu dem den Vorteil, das Prototypen schnell und einfach verfügbar und testbar waren. 
+Da ein Ionisator in das Wirbelbett eingebaut werden sollte, konnten die Teile nicht aus Metall gefertigt werden, da die Ladung der Luft direkt über das Metall abgeflossen wäre. Es wurde daher entschieden sämtliche Bauteile des Wirbelbettes mit dem 3D Drucker aus ABS Plastik herzustellen. Dies hatte zu dem den Vorteil, das Prototypen schnell und einfach verfügbar und testbar waren. 
 
 
 \subsection{Methode zum Granulat auffangen}
 
 \subsubsection{Anforderung}
 
-Wie schon in der Einleitung beschrieben, hat granulares Medium gleichzeitig mehrere Phasen, von denen die oberste die Gasphase ist. Je nach Füllstand und Gasfluss des Messröhrchens kann es nun passieren, das einzelne Partikel oben aus dem Röhrchen hinausfliegen. Dies gilt es zu verhindern.
+Wie schon in der Einleitung beschrieben, hat ein granulares Medium gleichzeitig mehrere Phasen, von denen die oberste die Gasphase ist. Je nach Füllstand und Gasfluss des Messröhrchens kann es nun passieren, das einzelne Partikel oben aus dem Röhrchen hinausfliegen. Dies gilt es zu verhindern.
 
 \subsubsection{Auswahl}
 
