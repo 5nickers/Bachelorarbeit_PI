@@ -203,14 +203,14 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.979899"
-     inkscape:cx="280.0307"
-     inkscape:cy="308.57775"
+     inkscape:cx="323.21472"
+     inkscape:cy="298.9813"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1680"
-     inkscape:window-height="988"
-     inkscape:window-x="-8"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="1912"
      inkscape:window-y="-8"
      inkscape:window-maximized="1" />
   <metadata
@@ -281,49 +281,51 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="130.50253"
-       y="828.61133"
+       x="117.87563"
+       y="818.50983"
        id="text5056"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5058"
-         x="130.50253"
-         y="828.61133"
-         style="font-size:13.75px">Grundplatte</tspan></text>
+         x="117.87563"
+         y="818.50983"
+         style="font-size:17.5px">Grundplatte</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="168.69547"
-       y="759.92303"
+       x="137.38074"
+       y="761.43829"
        id="text5060"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5062"
-         x="168.69547"
-         y="759.92303"
-         style="font-size:13.75px">vertikale Strebe</tspan></text>
+         x="137.38074"
+         y="761.43829"
+         style="font-size:17.5px">vertikale Strebe</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:13.75px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="368.20059"
-       y="792.75299"
+       x="370.22089"
+       y="794.26825"
        id="text5064"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5066"
-         x="368.20059"
-         y="792.75299">horizontaler Träger 1</tspan></text>
+         x="370.22089"
+         y="794.26825"
+         style="font-size:17.5px">horizontaler Träger 1</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:13.75px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="364.66507"
-       y="599.81384"
+       x="366.1803"
+       y="598.29858"
        id="text5068"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5070"
-         x="364.66507"
-         y="599.81384">horizontaler Träger 2</tspan></text>
+         x="366.1803"
+         y="598.29858"
+         style="font-size:17.5px">horizontaler Träger 2</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:13.75px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -334,7 +336,8 @@
          sodipodi:role="line"
          id="tspan5074"
          x="484.36813"
-         y="693.75806">Halteplatte</tspan></text>
+         y="693.75806"
+         style="font-size:17.5px">Halteplatte</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:13.75px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -345,7 +348,8 @@
          sodipodi:role="line"
          id="tspan5078"
          x="412.14224"
-         y="738.70984">Winkel</tspan></text>
+         y="738.70984"
+         style="font-size:17.5px">Winkel</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.7;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:3.9000001;stroke-dasharray:none;marker-end:url(#Arrow1Lend);opacity:1"
        d="m 218.30956,825.2067 25.52567,30.04694"
