@@ -5,7 +5,7 @@
 \paragraph{Anforderungen}
 \hfill \\
 Bei der Elektronik gab es zwei verschiedene Bereiche: \\
-In einem ersten Schritt sollte ein A-D Wandler gefunden werden, damit der vorhandene Drucksensor genauer ausgelesen werden kann. Zum Start es Projekts wurde der Drucksensor über das $\SI{10}{bit}$ breite analoge Interface des Arduino ausgelesen. Das ist für eine genaue Auswertung der Experimente zu wenig. Der Drucksensor hat einen Messbereich von (nachgucken) und gibt diesen auf $\SI{0}{} - \SI{10}{V}$ aus. Da der Arduino maximal $\SI{5}{V}$ als Eingangsspannung verarbeiten kann, wird die Spannung über einen Spannungsteiler auf $\SI{0} - \SI{5}{V}$ reduziert und dann eingelesen. Das entspricht einer Genauigkeit von $\SI{0,004}{V/bit}$, was einer Genauigkeit von XXX mbar/Volt entspricht. \\
+In einem ersten Schritt sollte ein A-D \footnote{Analog-Digital} Wandler gefunden werden, damit der vorhandene Drucksensor genauer ausgelesen werden kann. Zum Start es Projekts wurde der Drucksensor über das $\SI{10}{bit}$ breite analoge Interface des Arduino ausgelesen. Das ist für eine genaue Auswertung der Experimente zu wenig. Der Drucksensor hat einen Messbereich von (nachgucken) und gibt diesen auf $\SI{0}{} - \SI{10}{V}$ aus. Da der Arduino maximal $\SI{5}{V}$ als Eingangsspannung verarbeiten kann, wird die Spannung über einen Spannungsteiler auf $\SI{0} - \SI{5}{V}$ reduziert und dann eingelesen. Das entspricht einer Genauigkeit von $\SI{0,004}{V/bit}$, was einer Genauigkeit von XXX mbar/Volt entspricht. \\
 \hfill \\
 Als Resultat soll die gesamte Elektronik als \glqq Blackbox\grqq \ vorliegen, sodass man nach außen hin nur noch Anschlüsse hat, die klar gekennzeichnet sind. Dies soll in Form eines Gehäuses erledigt werden, das zudem auch noch rudimentären Schutz gegen Schmutz bietet.
 
@@ -14,9 +14,9 @@ Als Resultat soll die gesamte Elektronik als \glqq Blackbox\grqq \ vorliegen, so
 
 \paragraph{Elektronik}
 \hfill \\
-Der Arduino bietet einen sehr einfachen SPI Bus zum Anschluss von Modulen an. Darüber können die digitalen Outputdaten, der angesteckten Module ausgelesen werden, unabhängig davon wie hoch die Auflösung der Module ist. Auf Grund dieser Voraussetzungen wurde entschieden ein Modul für diesen Bus zu verwenden. \\
+Der Arduino bietet einen sehr einfachen SPI \footnote{\url{http://www.mct.de/faq/spi.html}} Bus zum Anschluss von Modulen an. Darüber können die digitalen Outputdaten, der angesteckten Module ausgelesen werden, unabhängig davon wie hoch die Auflösung der Module ist. Auf Grund dieser Voraussetzungen wurde entschieden ein Modul für diesen Bus zu verwenden. \\
 Rechnung für 16 bit einfügen!!!!!! \\
-Es gibt verschiedene $\SI{16}{bit}$ A-D Wandler auf dem Markt, allerdings gibt es den hier ausgewählten (einfügen!!!!) bereits auf einer fertig montierten Platine, die direkt in den Arduino eingesteckt werden kann. Zudem gibt es zu der Platine eine recht gute Dokumentation. 
+Es gibt verschiedene $\SI{16}{bit}$ A-D Wandler auf dem Markt, allerdings gibt es den hier ausgewählten (einfügen!!!!) bereits auf einer fertig montierten Platine. Zudem gibt es zu der Platine eine gute Dokumentation. 
 
 
 Schaltskizze!!!
@@ -46,7 +46,7 @@ Um die Anforderung der Erweiterung des Regelbereichs beim Gasstrom auf $\SI{0} -
 Die Idee den Luftstrom über mehrere Gasdurchflussbegrenzer und Ventile auf definierte Werte voreinzustellen und mit dem vorhandenen Flowcontroller von da ab zu regeln, wurde verworfen, weil es sich als zu ungenau und nicht deutlich billiger in Aufwand und Kosten darstellte. Zudem wäre der Aufbau deutlich größer gewesen. \\
 Die Lösung bestand darin einen neuen Flowcontroller anzuschaffen, der den gesamten Regelbereich mit einer hinreichenden Genauigkeit abdeckt und gleichzeitig gut in das Gassystem integriert werden kann. Dazu wurden Angebote eingeholt, die im folgenden dargelegt sind:
 
-\begin{tabular}{|c|c|c|}
+\begin{tabular}{|l|c|c|}
 	\hline  & Brooks & Bronkhorst \\ 
 	\hline Regelbereich & $\SI{0} - \SI{3000}{l/h}$ & $\SI{0} - \SI{3000}{l/h}$ \\ 
 	\hline Genauigkeit $20 - \SI{100}{\%}$ & $\pm \SI{0,9}{\%}$ & $\pm \SI{0,5}{\%}$ Istwert $+ \pm \SI{0,1}{\%}$ Endwert\\ 
@@ -255,14 +255,35 @@ In der Draufsicht sieht man, das zum Verschieben nach links und rechts zwei durc
 
 
 
+\subsection{Filter}
+
+\paragraph{Anforderungen}
+\hfill \\
+Das Ziel bestand darin einen Filter zu finden, der, im Gegensatz zu dem vorher verwendeten Schwamm, immer die gleichen Eigenschaften aufweist, auch wenn man ihn austauscht. Zudem muss der Filter durchlässig genug sein um bis zu $\SI{3000}{l/h}$ Luft durchzulassen, ohne zu reißen. Zugleich müssen die Poren fein genug sein, damit die Partikel des kleinsten Granulats nicht hindurch fallen. Außerdem muss der Filter dünn genug sein, damit der die Höhe der Konstruktion nicht negativ beeinflusst, da es beim Lichtstreuaufbeu eine Höhenbegrenzung gibt. Weiterhin musste der Filter hydrophob und antistatisch sein, sodass er bei Zuschaltung des Luftbefeuchters kein Wasser aufnimmt und dadurch verstopft und sich nicht statisch aufläd.
 
 
+\paragraph{Auswahl}
+\hfill \\
+Um einen geeigneten Filter zu finden wurde sich mit den Herstellern Merk Millipore, Sartorius und Nitto in Verbindung gesetzt. Am Schluss hatten wie die Auswahl zwischen folgenden Filtern:
 
 
+\begin{center}
+			\begin{tabular}{l|c|c|c}
+				& Membran Sartorius & Membran Merckmillipore & Membran Nitto \\
+				\hline
+				Porengröße [$\mu$m] & 0,45  & 10    & 24 \\
+				Dicke[$\mu$m] & 125 & 130 & 500 \\
+				Porösität[$\%$] & 75    & 60    & 38 \\
+				Luftdurchlass [$l/min \cdot cm^2$] & 20    & 14    & 0,09 \\
+				antistatisch & ja    & ja    & ja \\
+				hydrophob & ja    & ja    & ja \\
+				Material & PVDF \footnotemark[1]  & PTFE \footnotemark[2]  & PE \footnotemark[3] \\
+			\end{tabular}	
+\end{center}
 
-
-
-
+\footnotetext[1]{Polyvinylidenfluorid}
+\footnotetext[2]{Polytetrafluorethylen}
+\footnotetext[3]{Polyethylen}
 
 
 
