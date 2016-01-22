@@ -16,7 +16,7 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="Halterung_Lichtstreu_Seite.svg"
-   inkscape:export-filename="C:\Users\hans_ci\Documents\Bachelorarbeit_PI\Halterung_Lichtstreu_Seite.png"
+   inkscape:export-filename="D:\Dropbox\Bachelorarbeit\BA\BA_Text\Halterung_Lichtstreu_Seite.png"
    inkscape:export-xdpi="256.3418"
    inkscape:export-ydpi="256.3418">
   <defs
@@ -308,7 +308,9 @@
        x="370.22089"
        y="794.26825"
        id="text5064"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       inkscape:export-xdpi="256"
+       inkscape:export-ydpi="256"><tspan
          sodipodi:role="line"
          id="tspan5066"
          x="370.22089"
