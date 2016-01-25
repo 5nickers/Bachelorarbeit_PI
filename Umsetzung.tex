@@ -5,7 +5,7 @@
 \paragraph{Anforderungen}
 \hfill \\
 Bei der Elektronik gab es zwei verschiedene Bereiche: \\
-In einem ersten Schritt sollte ein A-D \footnote{Analog-Digital} Wandler gefunden werden, damit der vorhandene Drucksensor genauer ausgelesen werden kann. Zum Start es Projekts wurde der Drucksensor über das $\SI{10}{bit}$ breite analoge Interface des Arduino ausgelesen. Das ist für eine genaue Auswertung der Experimente zu wenig. Der Drucksensor hat einen Messbereich von (nachgucken) und gibt diesen auf $\SI{0}{} - \SI{10}{V}$ aus. Da der Arduino maximal $\SI{5}{V}$ als Eingangsspannung verarbeiten kann, wird die Spannung über einen Spannungsteiler auf $\SI{0} - \SI{5}{V}$ reduziert und dann eingelesen. Das entspricht einer Genauigkeit von $\SI{0,004}{V/bit}$, was einer Genauigkeit von XXX mbar/Volt entspricht. \\
+In einem ersten Schritt sollte ein A-D\footnote{Analog-Digital} Wandler gefunden werden, damit der vorhandene Drucksensor genauer ausgelesen werden kann. Zum Start es Projekts wurde der Drucksensor über das $\SI{10}{bit}$ breite analoge Interface des Arduino ausgelesen. Das ist für eine genaue Auswertung der Experimente zu wenig. Der Drucksensor hat einen Messbereich von (nachgucken) und gibt diesen auf \SIrange{0}{10}{\volt} aus. Da der Arduino maximal $\SI{5}{V}$ als Eingangsspannung verarbeiten kann, wird die Spannung über einen Spannungsteiler auf \SIrange{0}{5}{\volt} reduziert und dann eingelesen. Das entspricht einer Genauigkeit von $\SI{0,004}{V/bit}$, was einer Genauigkeit von XXX mbar/Volt entspricht. \\
 \hfill \\
 Als Resultat soll die gesamte Elektronik als \glqq Blackbox\grqq \ vorliegen, sodass man nach außen hin nur noch Anschlüsse hat, die klar gekennzeichnet sind. Dies soll in Form eines Gehäuses erledigt werden, das zudem auch noch rudimentären Schutz gegen Schmutz bietet.
 
@@ -42,17 +42,18 @@ Die Aufgabe bestand darin, trotz der Integration des Luftbefeuchters, das Gassys
 
 \subsubsection{Flowcontroller}
 
-Um die Anforderung der Erweiterung des Regelbereichs beim Gasstrom auf $\SI{0} - \SI{3000}{l/h}$ zu erfüllen, musste der bisherige Flowcontroller mit einem Regelbereich von $\SI{0} - \SI{120}{l/h}$ ersetzt werden. \\
+Um die Anforderung der Erweiterung des Regelbereichs beim Gasstrom auf \SIrange{0}{3000}{l/h} zu erfüllen, musste der bisherige Flowcontroller mit einem Regelbereich von \SIrange{0}{120}{l/h} ersetzt werden. \\
 Die Idee den Luftstrom über mehrere Gasdurchflussbegrenzer und Ventile auf definierte Werte voreinzustellen und mit dem vorhandenen Flowcontroller von da ab zu regeln, wurde verworfen, weil es sich als zu ungenau und nicht deutlich billiger in Aufwand und Kosten darstellte. Zudem wäre der Aufbau deutlich größer gewesen. \\
 Die Lösung bestand darin einen neuen Flowcontroller anzuschaffen, der den gesamten Regelbereich mit einer hinreichenden Genauigkeit abdeckt und gleichzeitig gut in das Gassystem integriert werden kann. Dazu wurden Angebote eingeholt, die im folgenden dargelegt sind:
 
+
 \begin{tabular}{|l|c|c|}
 	\hline  & Brooks & Bronkhorst \\ 
-	\hline Regelbereich & $\SI{0} - \SI{3000}{l/h}$ & $\SI{0} - \SI{3000}{l/h}$ \\ 
-	\hline Genauigkeit $20 - \SI{100}{\%}$ & $\pm \SI{0,9}{\%}$ & $\pm \SI{0,5}{\%}$ Istwert $+ \pm \SI{0,1}{\%}$ Endwert\\ 
-	\hline Genauigkeit $0 - \SI{20}{\%}$ & $\pm \SI{0,18}{\%}$ & $\pm \SI{0,5}{\%}$ Istwert $+ \pm \SI{0,1}{\%}$ Endwert \\ 
+	\hline Regelbereich & \SIrange{0}{3000}{l/h} & \SIrange{0}{3000}{l/h} \\ 
+	\hline Genauigkeit $20 - \SI{100}{\%}$ & $\pm \SI{0,9}{\%}$ Istwert & $\pm \SI{0,5}{\%}$ Istwert $+ \pm \SI{0,1}{\%}$ Endwert\\ 
+	\hline Genauigkeit $0 - \SI{20}{\%}$ & $\pm \SI{0,18}{\%}$ Istwert & $\pm \SI{0,5}{\%}$ Istwert $+ \pm \SI{0,1}{\%}$ Endwert \\ 
 	\hline Preis in \euro & 1187,33 & 1382,66 \\ 
-	\hline 
+	\bottomrule 
 \end{tabular} 
 
 \vspace{0,5cm}
@@ -109,7 +110,7 @@ Die Methode des Vorbeiströmens fiel raus, weil eine zu große Strömfläche geb
 
 \hfill \\
 
-Ursprünglich sollte der Luftbefeuchter so ausgelegt werden, sodass der gesamte Regelbereich des Controllers abgedeckt ist. In Versuchen hat sich allerdings gezeigt, das dafür ein Wasservolumen von $7 - \SI{8}{l} $ nötig wäre. Eine Aperatur dieser Größe wäre schwer bis unmöglich im Lichtstreuaufbau unterzubringen. Daher wurde ein Behältnis, das in den Aufbau passt, gewählt und damit ist nun ein Flussbereich von $0 - \SI{000000000}{l/h}$ abdeckbar. \\
+Ursprünglich sollte der Luftbefeuchter so ausgelegt werden, sodass der gesamte Regelbereich des Controllers abgedeckt ist. In Versuchen hat sich allerdings gezeigt, das dafür ein Wasservolumen von \SIrange{7}{8}{l} nötig wäre. Eine Aperatur dieser Größe wäre schwer bis unmöglich im Lichtstreuaufbau unterzubringen. Daher wurde ein Behältnis, das in den Aufbau passt, gewählt und damit ist nun ein Flussbereich von \SIrange{0}{000}{l/h} abdeckbar. \\
 Eine weitere Herausforderung war die Luft mit dem geforderten Feuchtigkeitsgrad von $\SI{75}{\%}$ anzureichern. \\
 
 \begin{figure}[h]
