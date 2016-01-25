@@ -14,7 +14,7 @@ Als Resultat soll die gesamte Elektronik als \glqq Blackbox\grqq \ vorliegen, so
 
 \paragraph{Elektronik}
 \hfill \\
-Der Arduino bietet einen sehr einfachen SPI \footnote{\url{http://www.mct.de/faq/spi.html}} Bus zum Anschluss von Modulen an. Darüber können die digitalen Outputdaten, der angesteckten Module ausgelesen werden, unabhängig davon wie hoch die Auflösung der Module ist. Auf Grund dieser Voraussetzungen wurde entschieden ein Modul für diesen Bus zu verwenden. \\
+Der Arduino bietet einen sehr einfachen SPI\footnote{\url{http://www.mct.de/faq/spi.html}} Bus zum Anschluss von Modulen an. Darüber können die digitalen Outputdaten, der angesteckten Module ausgelesen werden, unabhängig davon wie hoch die Auflösung der Module ist. Auf Grund dieser Voraussetzungen wurde entschieden ein Modul für diesen Bus zu verwenden. \\
 Rechnung für 16 bit einfügen!!!!!! \\
 Es gibt verschiedene $\SI{16}{bit}$ A-D Wandler auf dem Markt, allerdings gibt es den hier ausgewählten (einfügen!!!!) bereits auf einer fertig montierten Platine. Zudem gibt es zu der Platine eine gute Dokumentation. 
 
@@ -141,7 +141,12 @@ Da das bisherige Wirbelbett nicht flexibel genug konfigurierbar war, musste es n
 \end{itemize}
 
 
-Hier Bild einfügen!!!!
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[scale=0.6]{Zusammenbau_fluides_Bett.png}
+		\caption{Digitalmodell Wirbelbett}
+	\end{center}
+\end{figure}
 
 
 Da ein Ionisator in das Wirbelbett eingebaut werden sollte, konnten die Teile nicht aus Metall gefertigt werden, da die Ladung der Luft direkt über das Metall abgeflossen wäre. Es wurde daher entschieden sämtliche Bauteile des Wirbelbettes mit dem 3D Drucker aus ABS Plastik herzustellen. Dies hatte zu dem den Vorteil, das Prototypen schnell und einfach verfügbar und testbar waren. 
@@ -151,7 +156,7 @@ Da ein Ionisator in das Wirbelbett eingebaut werden sollte, konnten die Teile ni
 
 \subsubsection{Anforderung}
 
-Wie schon in der Einleitung beschrieben, hat ein granulares Medium gleichzeitig mehrere Phasen, von denen die oberste die Gasphase ist. Je nach Füllstand und Gasfluss des Messröhrchens kann es nun passieren, das einzelne Partikel oben aus dem Röhrchen hinausfliegen. Dies gilt es zu verhindern.
+Wie schon in der Einleitung beschrieben, hat ein granulares Medium mehrere Phasen gleichzeitig, von denen die oberste die Gasphase ist. Je nach Füllstand und Gasfluss des Messröhrchens kann es nun passieren, das einzelne Partikel oben aus dem Röhrchen hinausfliegen. Dies gilt es zu verhindern.
 
 \subsubsection{Auswahl}
 
@@ -164,7 +169,7 @@ Ein sehr beliebtes Produkt, um Luft von Partikeln zu säubern, ist der Fliehkraf
 
 \begin{figure}[h]
 	\begin{center}
-		\includegraphics[scale=0.4]{Umsetzung_Fliehkraftabscheider.jpg}
+		\includegraphics[scale=0.5]{Umsetzung_Fliehkraftabscheider.jpg}
 		\caption{Fliehkraftabscheider: Quelle Wikipedia}
 	\end{center}
 \end{figure}
@@ -200,7 +205,7 @@ Auf der Oberseite befindet sich eine Nut in die der O-Ring zum Abdichten der Ver
 Hier Doppelbild einfügen
 
 
-In der Frontansicht sieht man den Einlass mit Arretierung für den Ionisator. Zur Montage wird die Spitze des Ionisator in einen Adapter gesteckt und dieser Adapter mittels drehen arretiert. Die Luftdichtheit wird durch einen O-Ring aus Gummi erreicht. \\
+In der Frontansicht sieht man den Einlass mit Arretierung für den Ionisator. Zur Montage wird die Spitze des Ionisator in einen Adapter gesteckt und dieser Adapter mittels drehen arretiert. Die Luftdichtheit wird durch einen O-Ring aus Gummi (Shore Härte 50) erreicht. \\
 In der Seitenansicht wird der Anschluss für das Gassystem sichtbar. Hier wurde ein Swagelockverbinder mit Gummi O-Ring in das Plastik geschraubt und der Adapter für den Schlauch daran angeschlossen.
 
 
@@ -278,7 +283,7 @@ Um einen geeigneten Filter zu finden wurde sich mit den Herstellern Merk Millipo
 				Luftdurchlass [$l/min \cdot cm^2$] & 20    & 14    & 0,09 \\
 				antistatisch & ja    & ja    & ja \\
 				hydrophob & ja    & ja    & ja \\
-				Material & PVDF \footnotemark[1]  & PTFE \footnotemark[2]  & PE \footnotemark[3] \\
+				Material & PVDF\footnotemark[1]  & PTFE\footnotemark[2]  & PE\footnotemark[3] \\
 			\end{tabular}	
 \end{center}
 
@@ -286,6 +291,9 @@ Um einen geeigneten Filter zu finden wurde sich mit den Herstellern Merk Millipo
 \footnotetext[2]{Polytetrafluorethylen}
 \footnotetext[3]{Polyethylen}
 
+\vspace{0.5cm}
+
+Es wurde sich für die Membran von Sartorius entschieden, weil sie alle Anforderungen erfüllt und in allen Belangen besser ist als die beiden Alternativen. Damit die Membran nicht verrutscht wurde ein jeweils passendes Stück auf die Probenröhrchen geklebt. So ist auch sicher gestellt, das kein Granulat unabsichtlich in den Anschlusszylinder fällt.
 
 
 
