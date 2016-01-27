@@ -16,11 +16,25 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="Luftbefeuchter.svg"
-   inkscape:export-filename="C:\Users\hans_ci\Documents\Bachelorarbeit_PI\Luftbefeuchter.png"
+   inkscape:export-filename="D:\Dropbox\Bachelorarbeit\BA\BA_Text\Luftbefeuchter.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <defs
      id="defs4">
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker4262"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path4264"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
     <marker
        inkscape:isstock="true"
        style="overflow:visible;"
@@ -28,7 +42,8 @@
        refX="0.0"
        refY="0.0"
        orient="auto"
-       inkscape:stockid="Arrow1Lend">
+       inkscape:stockid="Arrow1Lend"
+       inkscape:collect="always">
       <path
          transform="scale(0.8) rotate(180) translate(12.5,0)"
          style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
@@ -117,9 +132,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.70000001"
-     inkscape:cx="327.68779"
-     inkscape:cy="429.37798"
+     inkscape:zoom="1.979899"
+     inkscape:cx="345.59824"
+     inkscape:cy="681.17349"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -127,9 +142,9 @@
      inkscape:snap-grids="true"
      showguides="true"
      inkscape:guide-bbox="true"
-     inkscape:window-width="1680"
-     inkscape:window-height="988"
-     inkscape:window-x="-8"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="1912"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:snap-text-baseline="false">
@@ -416,7 +431,7 @@
          sodipodi:role="line"
          id="tspan3456"
          x="243.44676"
-         y="819.01697"></tspan></text>
+         y="819.01697" /></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -513,5 +528,36 @@
        d="m 540.43161,559.40777 -84.85282,25.25381"
        id="path4984"
        inkscape:connector-curvature="0" />
+    <rect
+       style="fill:#ff0000;stroke:none"
+       id="rect3401"
+       width="4.3878498"
+       height="0.97858518"
+       x="327.95233"
+       y="338.56317" />
+    <rect
+       style="fill:#ff0000;stroke:none"
+       id="rect3401-1"
+       width="4.3878498"
+       height="0.97858518"
+       x="365.40689"
+       y="338.57895" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.02049053px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker4262)"
+       d="m 470.21672,307.88716 -97.82589,29.72037"
+       id="path3418"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="477.80215"
+       y="310.40515"
+       id="text4392"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4394"
+         x="477.80215"
+         y="310.40515"
+         style="font-size:20px">Silikon</tspan></text>
   </g>
 </svg>
