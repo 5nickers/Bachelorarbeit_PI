@@ -3,14 +3,10 @@
 
 \section{Einführung}
 
-Bei fast allen Stoffen muss die Stofftemperatur ändern, damit sie in einen anderen Aggregatzustand wechseln. Bei granularen Medien ist das nicht nötig, stattdessen wird eine Säule des Mediums mittles unterschiedlich hoher Luftdurchsätze zu den verschiedenen Aggregatzustänge angeregt. \\
-Da man bisher kein tiefgehendes Verständnis darüber hat welche Parameter sich wie auf die Entstehung der einzelnen Aggregatzustände auswirken, soll dies im Rahmen einer Doktorarbeit untersucht werden. \\
-Ausgang war ein Aufbau eines Wirbelbettes, das allerdings nur begrenzt nutzbar war und sich auf Grund verschiedener Unzulänglichkeiten, nur für qualitative Messungen nutzen lies. \\
-\hfill \\
-Diese Arbeit behandelt die Neukonzeption des bestehenden Wirbelbettes am Deutschen Zentrum für Luft- und Raumfahrt, Institut für Materialphysik im Weltraum. Dabei geht es vor allen Dingen darum mit welchen konstruktiven Lösungen die Mängel des bisherigen Wirbelbettes behoben wurden. Weiterhin werden Testmessungen gemacht, um die Funktion des Wirbelbettes nachzuweisen.
+Diese Arbeit behandelt die Neukonzeption des bestehenden Wirbelbettes am Deutschen Zentrum für Luft- und Raumfahrt, Institut für Materialphysik im Weltraum. Dabei geht es vor allen Dingen darum mit welchen konstruktiven Lösungen die Mängel des bisherigen Wirbelbettes behoben wurden. Zur Verifikation der Konstruktion werden im Anschluss Testmessungen mit verschiedenen granularen Medien gemacht. 
 
 
-\section{Grundlegende Begrifflichkeiten}
+\section{Grundlegende Definitionen}
 
 \subsection{Granulare Medien}
 
@@ -34,78 +30,76 @@ Im gasförmigen Zustand sind die Abstände der Partikel weit größer als der Pa
 Der darunterliegende flüssige Zustand bietet bereits deutlich weniger Bewegungsfreiheit. Die mittlere freie Weglänge ist auf die Größenordnung der Partikel gesunken (fragen!). Man spricht auch von einem Glasübergang. \\
 Charakteristisch für granulare Medien ist der \glqq jamming\grqq \ Übergang zwischen fest und flüssig. Hier ist keine Diffusion mehr möglich, die Partikel verbleiben also in ihrer Packungsposition und verklemmen mit ihrer Nachbarn. Bereits in diesem Zustand bilden sich sogenannte \glqq force chains\grqq \ heraus, über die die Kraftübertragung des Systems läuft. \\
 Die \glqq force chains\grqq \ bilden sich im festen Zustand vollständig heraus und entstehen vor allem dadurch, das ein Teilchen deutlich mehr Nachbarn hat, als zu Stabilisation braucht. Da sich die Partikel amorph anordnen, verlaufen die \glqq force chains\grqq \ nicht homogen und isotrop, sondern willkürlich, was sich in einer unregelmäßigen Kraftverteilung ausdrückt. \cite{Darmstadt2015}, \cite{Fallturmexperiment}
+Eine genaue Charakterisierung eines granularen Mediums ist mit der Methode von Castellanos (Zitieren) aus den XX Jahren möglich. Hierzu wird ein Wirbelbett genutzt, welches im folgenden Abschnitt erläutert wird.
 
 
+\subsection{Wirbelbett}
 
-\subsection{Ionisator}
+Ganz allgemein ist ein Wirbelbett eine Konstruktion mit dessen Hilfe es möglich ist ein granulares Medium quantitativ zu vermessen. Ein sehr einfaches Wirbelbett kann man sich ungefähr so vorstellen:
 
-Unter einem Ionisator versteht man ein Gerät, das ein Medium ionisiert und des dadurch elektrisch leitfähig macht. Je nach Bauweise und je nachdem wie das Gerät das Medium ionisiert, gibt es unterschiedliche Anwendungszwecke. \\
-Ich beschränke mich hier auf einen Ionisator, der mittels eines starken elektrischen Feldes Luft ionisiert und unserem Anwendungszweck genügt. \\
-Unser Ionisator besteht aus einem Netzteil, das $\SI{7}{\kilo V}$ Spannung erzeugt und einem Aufsatz, an dessen Ende ein elektrisches Feld zwischen der Metallspitze (Kathode) und dem äußeren Ring (Anode) erzeugt wird.
+Hier Skizze einfügen!
 
-
-
-\begin{figure}[h]
-	\begin{center}
-		\includegraphics[scale=0.2]{Einleitung_Ionisator.jpg}
-		\caption{1: Kathode, 2: Anode}
-	\end{center}
-\end{figure}
+Das im Probenrohr befindliche granulare Medium wird von unten mittels eines regelbaren Luftstrom durchströmt. Das Ziel ist hierbei den Zustand der sogenannten \glqq Fluidisation\grqq \ zu erreichen. Um diesen Zustand messtechnisch zu bestimmen, ist es nötig den über dem granularen Medium abfallenden Druck zu messen. Sobald dieser Druck konstant ist, ist der Zustand der Fluidisation erreicht. Der abfallende Druck wird hierbei über die Strömungsgeschwindigkeit des Luftstroms geregelt.
 
 
+\section{Derzeitiger Stand und Probleme}
 
-\subsection{Flowcontroller}
+Bilder!!!
 
-Ein Flowcontroller ist ein Gerät mit dem man Flüsse gasförmiger oder flüssiger Medien kontrollieren kann. In der Regel kann ein Flowcontroller nur mit einem Aggregatzustand arbeiten und auch dort muss auf die verschiedenen Medien kalibriert werden, damit die angegeben Fehlergrenzen eingehalten werden. \\
-Flowcontroller gibt es für viele verschiedene Flussraten, Genauigkeiten, Medien und Ansteuerungssysteme. Wie bei allen Produkten gilt auch hier das Prinzip, desto mehr Features, desto teurer der Controller. \\
-Bei wissenschaftlichen Untersuchungen wie unserem Experiment kommt man um bestimmte Features nicht herum, da eine hohe Genauigkeit und präzises Ansteuern besonders wichtig sind. Dies wird im Abschnitt XXX genauer erläutert.
+
+Das bisherige Wirbelbett besteht aus einem eingesteckten Röhrchen mit einem herkömmlichen Schwamm als Filter. Das Röhrchen und die Gaszufuhr sind beide auf einem hohlen Metallblock montiert und mittels Kleber wird der luftdichte Abschluss erreicht. \\
+Das oben beschriebene Teil ist zur vertikalen Verstellbarkeit auf einen Geräteträger montiert, für die horizontale Verstellbarkeit sorgt eine Mikrometerschraube auf dem Geräteträger. \\
+Die Gaszufuhr wird über flexible Plasikschläuche realisiert, die teils mit Klemmen und teils mit Muttern an den Geräteflanschen befestigt sind. \\
+Die Elektronik zum Auslesen des Drucksensors liegt offen und anfällig auf dem Tisch, zudem kann der Druck noch nicht genau genug ausgelesen werden. Man bekommt ein Signal zwischen \SIrange{0}{10}{\volt} vom Sensor, das über einen Spannungsteiler auf \SIrange{0}{5}{\volt} reduziert wird. \\
+Dieser Aufbau bringt eine Reihe von Problemen mit sich. Das größte Problem ist sicherlich, das nicht mit unterschiedlichen Probenrohrdurchmessern gemessen werden kann. Außerdem ist der luftdichte Anschluss am Probenrohr nicht gegeben, da dies nur mit dem Schwamm in eine Öffnung des Metallblocks gesteckt wird.
+Weiterhin ist das Wirbelbett zwar vertikal und horizontal beweglich, aber der Geräteträger verhindert Messungen im Lichtstreuaufbau.
+Die bisherige Verrohrung mit Plastikschläuchen ist nicht luftdicht und zu instabil um transportiert zu werden.
 
 
 
 \section{Wissenschaftliche Fragestellung}
 
-In der heutigen Zeit möchte man in der Hohlformgebung komplexe Metallteile am Stück formen, da dies, wegen weniger potentieller Bruchstellen, zu höherer Stabilität führt und außerdem Zeit spart. Besonders ist man daran interessiert das jetzige Warmformgebungsverfahren bei hohlen Aluminiumprofilen auch für Stahlprofile nutzbar zu machen. \\
-Dabei steht man vor der Herausforderung, das man bei den Temperaturen der Stahl Warmformgebung keine Ölmischung mehr nutzen kann, da sich diese entzünden würde. \\
-Aus diesem Grund wählte man als Medium die Stoffklasse der granularen Medien aus. Diese bringen allerdings den Nachteil mit sich, das sie kompressiebel sind und die an einer Seite aufgebrachte Kraft sich nicht homogen und isotrop auf den Wänden verteilt. 
-Man nimmt an, das die Art der Kraftverteilung durch drei Hauptparameter charakterisieren lässt. Zum einen ist das die Form der verwendeten Partikel, die Größe der Partikel und die Adhäsionskrafte der Partikel untereinander. \\
-Diese drei Parameter kann man gesammelt betrachten, indem man die granularen Medien in einem Wirbelbett fluidisiert und misst ab wann die Medien in die flüssige Phase übergehen. Dadurch erreicht man eine Vergleichbarkeit der Medien untereinander und kann im Anschluss besser entscheiden welche Medien sich als Kraftüberträger eignen. \\
+Wie schon Castellanos gezeigt hat, gibt es einen Zusammenhang zwischen dem Fluidisierungspunkt und der Teilchengröße des Granulats. Der hier gebaute Messaufbau soll das selbe Messprinzip nutzen wie schon Castellanos, also den Druckabfall in Abhängigkeit der Gasströmungsgeschwindigkeit. Beispielhaft sieht man in dem unten stehenden Diagramm ein Messprotokoll von Granulat mit xyz Eigenschaften.
+
+Hier Diagagramm auf Castellanos paper
+
+Eine weiterführende Fragestellung ist nun, ob man den Fluidisierungspunkt kontrollieren kann, indem man die Partikel auf verschiedene Arten beschichtet oder anderweitig behandelt. Dazu muss eine große Bandbreite verschiedener Medien quantitaiv messbar sein. Die Realisierung eines solchen Messaufbaus ist Ziel dieser Arbeit. 
 
 
 \section{Ziele der Arbeit}
 
-In der Arbeit soll ein vorhandener Versuchsstand für quantitative Messungen optimiert werden, zudem soll der Versuchsstand sowohl mit Luft als auch mit Wasser betrieben werden können. Im Praxisprojekt werden die Probleme des bisherigen Setups analysiert und eine entsprechende Lösung für das Medium Luft konstruiert. \\ 
-Die Bachelorarbeit beschäftigt sich mit der Konzeption des Wasserbetriebs und dessen Umsetzung. \\
-Die Arbeit wurde dazu in folgende Arbeitspakete unterteilt:
+In der Arbeit soll ein vorhandener Versuchsstand für quantitative Messungen neu gebaut werden, zudem soll der Versuchsstand sowohl mit Luft als auch mit Wasser betrieben werden können. Im ersten Teil werden die Probleme des bisherigen Setups analysiert und eine entsprechende Lösung für das Medium Luft konstruiert. \\ 
+Der zweite Teil beschäftigt sich mit der Konzeption des Wasserbetriebs und dessen Umsetzung. \\
+Konkrete Ziele des Praxisprojekts sind thematisch geordnet folgende:
+Die Elektronik soll im Bezug auf das Auslesen des Drucksensors genauer gemacht und in ein Gehäuse verpackt werden. \\
+Es soll ein neues Gassystem entworfen werden, das luftdicht und mechnanisch stabil ist. Weiterhin soll in das Gassystem ein Luftbefeuchter integriert werden. Zudem muss der Gasstrom regelbare Gasstrom auf Grund der größeren Probenröhrchendurchmesser erhöht werden.  \\
+Das Wirbelbett soll insofern neugebaut werden, sodass mit verschiedenen dicken Probenröhrchen gemessen werden kann. Die Röhrchen sollen einfach und schnell wechselbar sein und auch das Probenmaterial muss einfach zu wechseln sein. Zur Unterbindung der Elektrostatik des granularen Mediums ist die Integration eines Luftionisators geplant. Weiterhin soll das Wirbelbett für eine korrekte Integration in den Lichtstreuaufbau horizontal und vertikal manipulierbar sein. \\
+Zur Strukturierung der Arbeit wurden die einzelnen Ziele in folgende Arbeitspakete unterteilt:
 
 
-\subsection{AP 1}
+\subsection{AP 1 - Analyse}
 
-In einem ersten Schritt werden die Eckdaten den Projekts gesammelt und den Anforderungen zugeordnet. Zudem wird über die Materialwahl entschieden und eine Stückliste aller Kaufteile erstellt. Außerdem werden erste Lösungsansätze definiert, was wiederum in die Liste der Kaufteile einfließt.
-
-
-\subsection{AP 2}
-
-Die bisherige Elektronik liegt schutzlos und unübersichtlich neben dem Versuchsaufbau. Hier ist es erforderlich diese in sofern zu verpacken, das klar ist welche Anschlüsse für was gedacht sind und das ein eine einfache Transportierbarkeit gewährleistet ist.
-Weiterhin muss ein A-D Wandler in die Schaltung integiert und angeschlossen werden.
-
-\subsection{AP 3}
-
-Zum Betrieb es Wirbelbettes ist ein Gaszustrom nötig, bei dem sich der momentane Gasstrom präzise zwischen $\SI{0}{\liter / \hour} - \SI{3000}{\liter / \hour}$ regeln und der dabei anliegende Druck messen lässt. Weiterhin soll eine Komponente zur Befeuchtung der Luft integriert werden, die variabel zu- und abgeschaltet werden kann. \\
-Zudem muss soll das ganze System mechanisch stabil sein und transportabel sein. \\
-Die Aufgabe besteht darin einen geeigneten Flowcontroller anzuschaffen, den Luftbefeuchter auszulegen und die Verrohrung entsprechend der Anforderungen zu wählen und umzusetzen.
-
-\subsection{AP 4}
-
-Das Wirbelbett ist die Hauptbaugruppe um die sich das Projekt dreht. In ihr befindet sich bei den Versuchen das granulare Medium und an ihr finden die optischen Messungen statt. \\
-Hier besteht die Aufgabe in einer nahezu völligen Neukonstruktion, um das Bett für einen größeren Messraum nutzbar zu machen und auch einige neue Features hinzuzufügen.
+In den ersten zwei Wochen werden die Eckdaten den Projekts gesammelt und den Anforderungen zugeordnet. Zudem wird über die Materialwahl für das Wirbelbett entschieden und eine Stückliste aller Kaufteile für das Projekt insgesamt erstellt. Außerdem werden erste Lösungsansätze definiert, was wiederum in die Liste der Kaufteile einfließt.
 
 
-\subsection{AP 5}
+\subsection{AP 2 - Elektronik}
 
-\subsection{AP 6}
+In den Wochen zwei und drei soll das Gehäuse für die Elektronik gebaut werden und das Problem mit dem nicht genau genug auszulesenden Drucksensors gelöst werden. Dies soll zu Anfang geschehen, weil die Steuerelektronik für jegliche Steuerung zuständig ist und somit ohne diese das Wirbelbett nicht bedienbar ist. Zudem kann mit einem recht einfache Bauteil wie dem Gehäuse erste Erfahrungen mit dem 3D Drucker gesammelt werden.
 
-\subsection{AP 7}
+\subsection{AP 3 - Gassystem}
 
+Dieses Arbeitspaket umfasst auch zwei Wochen und beschäftigt sich mit dem Gassystem. Hier geht es insbesondere um das suchen und bestellen der geeigneten Teile für die Verrohrung und den Luftbefeuchter, sowie den Zusammenbau selbiger. \\
+Der Entschluss dieses Arbeitspaket auch recht früh anzugehen, fiel da insbesondere Komponenten wie der Flowcontroller Lieferzeiten von sechs Wochen oder mehr haben. 
+
+\subsection{AP 4 - Wirbelbett}
+
+Die Wochen sechs bis acht sollen dazu genutzt werden das eigentliche Wirbelbett neu zu konstruieren. Um schnell und effektiv beurteilen zu können, ob die Ideen zielführend sind, soll ein 3D Drucker zur Prototypenerzeugung genutzt werden. Die finalen Teile sollen auch mit dem 3D Drucker hergestellt werden. \\
+Dieser Abschnitt liegt direkt vor dem Testen, damit unmittelbar nach dessen Abschluss alle für den Testlauf nötigen Komponenten vorhanden sind.
+
+
+\subsection{AP 5 - Tests}
+
+In einem letzten Abschnitt sollen alle Komponenten im vollständigen Aufbau getestet werden. Hier soll evaluiert werden, ob alle Anforderungen erfüllt wurden und ob es noch Mängel gibt. Kleinere Mängel sollen noch in dieser Phase behoben werden, während bei größeren analysiert werden muss wie damit umzugehen ist. Wenn möglich werden auch Messkurven des alten Messaufbaus und des neuen verglichen und diskutiert.
 
 
 

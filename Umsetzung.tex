@@ -1,4 +1,4 @@
-\chapter{Praxisteil}
+\chapter{Umsetzung}
 
 \section{AP 2 - Elektronik}
 
@@ -6,7 +6,6 @@
 \hfill \\
 Bei der Elektronik gab es zwei verschiedene Bereiche: \\
 In einem ersten Schritt sollte ein A-D\footnote{Analog-Digital} Wandler gefunden werden, damit der vorhandene Drucksensor genauer ausgelesen werden kann. Zum Start es Projekts wurde der Drucksensor über das $\SI{10}{bit}$ breite analoge Interface des Arduino ausgelesen. Das ist für eine genaue Auswertung der Experimente zu wenig. Der Drucksensor hat einen Messbereich von (nachgucken) und gibt diesen auf \SIrange{0}{10}{\volt} aus. Da der Arduino maximal $\SI{5}{V}$ als Eingangsspannung verarbeiten kann, wird die Spannung über einen Spannungsteiler auf \SIrange{0}{5}{\volt} reduziert und dann eingelesen. Das entspricht einer Genauigkeit von $\SI{0,004}{V/bit}$, was einer Genauigkeit von XXX mbar/Volt entspricht. \\
-\hfill \\
 Als Resultat soll die gesamte Elektronik als \glqq Blackbox\grqq \ vorliegen, sodass man nach außen hin nur noch Anschlüsse hat, die klar gekennzeichnet sind. Dies soll in Form eines Gehäuses erledigt werden, das zudem auch noch rudimentären Schutz gegen Schmutz bietet.
 
 
@@ -14,14 +13,14 @@ Als Resultat soll die gesamte Elektronik als \glqq Blackbox\grqq \ vorliegen, so
 
 \paragraph{Elektronik}
 \hfill \\
-Der Arduino bietet einen sehr einfachen SPI\footnote{\url{http://www.mct.de/faq/spi.html}} Bus zum Anschluss von Modulen an. Darüber können die digitalen Outputdaten, der angesteckten Module ausgelesen werden, unabhängig davon wie hoch die Auflösung der Module ist. Auf Grund dieser Voraussetzungen wurde entschieden ein Modul für diesen Bus zu verwenden. \\
+Der Arduino bietet einen sehr einfachen SPI\footnote{\url{http://www.mct.de/faq/spi.html}} Bus zum Anschluss von Modulen an. Darüber können die digitalen Outputdaten, der angesteckten Module ausgelesen werden, unabhängig davon wie hoch die Auflösung der Module ist. Auf Grund dessen wurde entschieden ein Modul für diesen Bus zu verwenden. \\
 Rechnung für 16 bit einfügen!!!!!! \\
-Es gibt verschiedene $\SI{16}{bit}$ A-D Wandler auf dem Markt, allerdings gibt es den hier ausgewählten (einfügen!!!!) bereits auf einer fertig montierten Platine. Zudem gibt es zu der Platine eine gute Dokumentation. 
+Es gibt verschiedene $\SI{16}{bit}$ A-D Wandler auf dem Markt, allerdings gibt es den hier ausgewählten (TM7705 Dual 16-bit ADC) bereits auf einer fertig montierten Platine. Zudem gibt es zu der Platine eine gute Dokumentation. 
 
 
 Schaltskizze!!!
 
-\paragraph{Gehäuse}
+\paragraph{Gehäuse (still in progress)} 
 \hfill \\
 Da es insbesondere im Lichtstreuaufbau nur sehr begrenzten Stauraum gibt und sämtliche Bauteile, das Wirbelbett selbst ausgenommen, auf einer Platte verbaut werden sollen, wurde gegen ein kommerziell erhältliches Gehäuse entschieden. \\ 
 Stattdessen wurde ein Gehäuse entworfen, in dem sowohl der Arduino als auch das Board mit der Schaltung passgenau Platz finden. Dabei wurde darauf geachtet, dass die Kontakte unterhalb des Arduinos und des Boards genug Platz haben, sodass es keinerlei unbeabsichtigte Reibung der Komponenten am Gehäuse gibt. \\
@@ -33,18 +32,23 @@ Hier Bilder einfügen!!
 
 \section{AP3 - Gassystem}
 
-\subsection{Anforderungen (kommt das hier hin?)}
+\subsection{Anforderungen}
 
-Die Aufgabe bestand darin, trotz der Integration des Luftbefeuchters, das Gassystem als Einheit so kompakt und stabil wie möglich zu gestalten. Es sollte zusammen mit der Elektronik zusammen in den Lichtstreuaufbau passen und dort die Rotationbewegung des Aufbaus nicht einschränken.
+Beim Gassystem soll neben der Luftdichtheit auch eine mechanische Stabilität erreicht werden, damit es einfach von zwischen Normalem und Lichtstreubaufbau transportiert werden kann. Außerdem soll der Gasstrom von \SIrange{0}{120}{l/h} auf \SIrange{0}{3000}{l/h} erhöht werden. Der Regelbereich ist Resultat einer Rechnung im Abschnitt Flowcontroller Zudem sollen die Werte, die der Drucksensor vor und hinter dem Wirbelbett misst um weniger als \SI{1}{\%} differieren. Weiterhin muss das gesamte Gassystem mit Luftbefeuchter in den Lichtstreuaufbau passen. \\
+Der Luftbefeuchter selbst soll im Betrieb eine Luftfeuchtigkeit von \SI{75}{\%} erreichen und den gesamten Regelbereich des Flowcontrollers abdecken.
+
 
 
 \subsection{Umsetzung}
 
 \subsubsection{Flowcontroller}
 
-Um die Anforderung der Erweiterung des Regelbereichs beim Gasstrom auf \SIrange{0}{3000}{l/h} zu erfüllen, musste der bisherige Flowcontroller mit einem Regelbereich von \SIrange{0}{120}{l/h} ersetzt werden. \\
+Um granulare Medien bis zu einer Partikelgröße von \SI{000}{mm} auf einer Querschnittfläche von \SI{4}{cm} von fluidisieren zu können, muss der Gasfluss erhöht werden. Nach folgdem..... Hier formel etc einfügen
+Aus der Rechnung folgt, das ein Gasfluss von \SIrange{0}{3000}{l/h} alle Anforderungen erfüllt. \\
+Ein Gerät, das diesen Gasfluss genau genug regeln kann, ist ein Flowcontroller.
 Die Idee den Luftstrom über mehrere Gasdurchflussbegrenzer und Ventile auf definierte Werte voreinzustellen und mit dem vorhandenen Flowcontroller von da ab zu regeln, wurde verworfen, weil es sich als zu ungenau und nicht deutlich billiger in Aufwand und Kosten darstellte. Zudem wäre der Aufbau deutlich größer gewesen. \\
-Die Lösung bestand darin einen neuen Flowcontroller anzuschaffen, der den gesamten Regelbereich mit einer hinreichenden Genauigkeit abdeckt und gleichzeitig gut in das Gassystem integriert werden kann. Dazu wurden Angebote eingeholt, die im folgenden dargelegt sind:
+\hfill \\
+Die Lösung bestand somit darin einen neuen Flowcontroller anzuschaffen, der den gesamten Regelbereich mit einer hinreichenden Genauigkeit abdeckt und gleichzeitig gut in das Gassystem integriert werden kann. Dazu wurden zwei Angebote eingeholt, die im folgenden dargelegt sind:
 
 
 \begin{tabular}{|l|c|c|}
@@ -59,33 +63,39 @@ Die Lösung bestand darin einen neuen Flowcontroller anzuschaffen, der den gesam
 \vspace{0,5cm}
 
 Es wurde sich für den Flowcontroller der Firma Brooks entschieden. Das geschah aus mehreren Gründen: \\
-Im ursprünglichen Aufbau war auch ein Flowcontroler von Brooks verbaut, daher wussten wir wie dieser angesteuert wird und hatten bereits den benötigten Stecker. Weiterhin ist die Genauigkeit des Brookscontrollers im niedriegen Regelbereich besser als die des Bronkhorstcontrollers. Dies ist grade bei quantitativen Messungen mit kleinen Rohrdurchmessern und sehr feinen granularen Medien essentiell. \\
-Zudem waren die Anschaffungskosten für den Brookscontroller um ca $\SI{200}{Euro}$ niedriger.\\
-Außerdem hatte die Gruppe bei einem anderen Controller von Bronkhorst einige Probleme mit der Zuverlässigkeit gehabt, während der Brooks Controller keine aufwies.
+Im ursprünglichen Aufbau war auch ein Flowcontroler von Brooks verbaut, daher war bekannt wie dieser angesteuert wird und hatten bereits den benötigten Stecker. Weiterhin ist die Genauigkeit des Brookscontrollers im niedriegen Regelbereich besser als die des Bronkhorstcontrollers. Dies ist grade bei quantitativen Messungen mit kleinen Rohrdurchmessern und sehr feinen granularen Medien essentiell. \\
+Zudem waren die Anschaffungskosten für den Brookscontroller um ca $\SI{200}{Euro}$ niedriger. Außerdem hatte die Gruppe bei einem anderen Controller von Bronkhorst einige Probleme mit der Zuverlässigkeit gehabt, während der Brooks Controller keine aufwies.
 
 
 \subsubsection{Verrohrung}
 
-Eine Herstellerauswahl hat hier nicht stattgefunden, da bereits vorhandene Verrohrung weitergenutzt werden sollte. Deshalb wurde weiterhin auf Swagelok gesetzt. Dies hatte auch den Vorteil, das ein Berater aus dem nahegelegenen Standort Düsseldorf bei der Auslegung und Wahl der Komponenten beraten konnte. \\
+Um die geforderte Stabilität und Transportierbarkeit zu gewährleisten, wurde entschieden das gesamte Gassystem aus Stahlrohren (\textcolor{blue}{blau}) zu bauen. Das bietet, neben der besseren Luftdichtigkeit, auch einen höheren Schutz gegenüber äußeren Umwelteinflüssen wie ätzenden Flüssigkeiten oder herunterfallenden Gegenständen.
+Eine Herstellerauswahl hat hier nicht stattgefunden, da bereits vorhandene Verrohrung der Firma Swagelok weitergenutzt werden sollte. Dies hatte auch den Vorteil, das ein Berater aus dem nahegelegenen Standort Düsseldorf bei der Auslegung und Wahl der Komponenten beraten konnte. \\
 Auf der Skizze in Abbildung xy kann man das gebaute System sehen:
 \hfill \\
 
-Skizze Einfügen
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[scale=0.6]{Aufbau_Gassystem.jpg}
+		\caption{Schema Gassystem}
+	\end{center}
+\end{figure}
 
 
-Bei der Verrohrung wurde sich für eine Kombination aus Edelstahlrohren und Bunaschläuchen entschieden. Dies bietet dem System die nötige Flexibilität im Bezug auf Anschluss an das Wirbelbett und die Luftzufuhr, als auch die nötige Robustheit und Stabilität. Sämtliche Rohrleitungen vom Druckminderer bis zum Übergang zum Wirbelbett sind aus Edelstahl. \\
-Die Ventile, T-Stücke und Verbindungsstücke sind auch aus Edelstahl, da Messing zwar billiger wäre, allerdings auch weicher, was zu Verformungen und höherem Verschleiß führen kann.
+Um dem Aufbau die nötige Flexibilität zu geben, die beim Umbau zwischen den beiden Versuchsständen nötig ist, wurde das Wirbelbett mit einem Bunaschlauch (\textcolor{orange}{orange}) an das Gassystem angeschlossen. Zudem ist der Anschluss des Gassystems an die Durckluftversorgung mit einem Bunaschlauch gelöst. Sämtliche Rohrleitungen ab dem Luftfilter bis zum Übergang zum Wirbelbett sind aus Edelstahl. \\
+Die Ventile, T-Stücke und Verbindungsstücke sind auch aus Edelstahl, da Messing zwar billiger wäre, allerdings auch weicher, was zu Verformungen und höherem Verschleiß führen kann. \\
+Abschließend kann gesagt werden, das durch die Wahl der Verrohrung ei luftdichtes Gassystem erreicht wurde. Außerdem ist der Aufbau mit $\SI{000}{m} \cdot \SI{000}{m}$ passend für den Lichtstreuaufbau.
 
 
 \subsubsection{Luftbefeuchter}
 
-Für den Luftbefeuchter wurden drei unterschiedliche Lösungen geprüft:
+Um die Anforderungen für den Luftbefeuchter zu erfüllen, wurden drei mögliche Lösungen geprüft, dabei war die Größe der Lösung das Hauptaugenmerk.
 
 \paragraph{Swagelok} 
 
 \hfill \\
 
-Von Swagelok gibt es eine Lösung ähnlich dem jetzigen Drucksensor. Über ein spezielles Rohrverbindungsstück kann ein Metallzylinder angeschlossen werden, der Senkrecht auf dem Rohr nach oben steht. Dieser wird mit Wasser gefüllt, das von unten mit Luft durchströmt wird und anschließend oben abgenommen und Richtung Wirbelbett fließt.
+Von Swagelok gibt es eine Lösung ähnlich dem jetzigen Drucksensor. Über ein spezielles Rohrverbindungsstück kann ein Metallzylinder angeschlossen werden, der senkrecht auf dem Rohr nach oben steht. Dieser wird mit Wasser gefüllt, das von unten mit Luft durchströmt wird und die anschließend oben abgenommen und Richtung Wirbelbett fließt.
 
 \paragraph{Befeuchtung durch Vorbeiströmen}
 
@@ -93,25 +103,24 @@ Von Swagelok gibt es eine Lösung ähnlich dem jetzigen Drucksensor. Über ein s
 
 In einer anderen Arbeit \cite{Fallturmexperiment} wurde die Luftbefeuchtung realisiert, indem man Luft direkt an einer  Wasseroberfläche vorbeiströmen ließ und die Luft durch Diffusion Wasser aufnahm. 
 
-\paragraph{Befeuchtung durch Durchströmen}
+\paragraph{Eigenbau}
 \hfill \\
 
-Die einfachste Methode Luft zu befeuchten, ist sie durch ein Wasserbad zu leiten und sie anschließend geeignet abzugreifen.
+Eine alternative Methode ist mit gleicher Funktion wie die Lösung von Swagelok, besteht darin einen eigenen Luftbefeuchter zu bauen. 
 
 
 \paragraph{Auswahl}
 
 \hfill \\
 
-Es wurde sich für die Methode \glqq Befeuchtung durch Durchströmen\grqq \ entschieden, da die anderen Methoden Mängel aufweisen. Die Lösung von Swagelok ist zum einen sehr teuer, zudem würde bei angeschaltetem Gasfluss Wasser in das System fließen. \\
+Es wurde sich für die Lösung \glqq Eigenbau\grqq \ entschieden, da die anderen Methoden Mängel aufweisen. Die Lösung von Swagelok ist zum einen sehr teuer, zudem würde bei angeschaltetem Gasfluss Wasser in das System fließen. \\
 Die Methode des Vorbeiströmens fiel raus, weil eine zu große Strömfläche gebraucht wurde. Anhand der Formeln aus der Arbeit von Herrn Schmitz, erhielt man eine Fläche von $\SI{50}{cm} \cdot \SI{50}{cm}$. Ein Aufbau dieser Größe ist unmöglich im Lichtstreuaufbau unterzubringen.
 
 \paragraph{Umsetzung}
 
 \hfill \\
 
-Ursprünglich sollte der Luftbefeuchter so ausgelegt werden, sodass der gesamte Regelbereich des Controllers abgedeckt ist. In Versuchen hat sich allerdings gezeigt, das dafür ein Wasservolumen von \SIrange{7}{8}{l} nötig wäre. Eine Aperatur dieser Größe wäre schwer bis unmöglich im Lichtstreuaufbau unterzubringen. Daher wurde ein Behältnis, das in den Aufbau passt, gewählt und damit ist nun ein Flussbereich von \SIrange{0}{000}{l/h} abdeckbar. \\
-Eine weitere Herausforderung war die Luft mit dem geforderten Feuchtigkeitsgrad von $\SI{75}{\%}$ anzureichern. \\
+Damit der Befeuchter in den Lichtstreuaufbau passt, wurde zu Anfang ein Behältnis ausgewählt, das in den Aufbau passt und dann wurden die für den Befeuchter nötigen Änderungen vorgenommen. Dazu wurde der Kanister mit einem Durchmesser von \SI{22}{cm} und einer Höhe von \SI{50}{cm} (???) auf einer Höhe von \SI{00}{cm} (???) horizontal aufgeschnitten. Nun war es möglich die benötigten Komponenten in dem Behälter unterzubringen. Der schematische Aufbau ist in der unten stehenden Skizze zu sehen: \\
 
 \begin{figure}[h]
 	\begin{center}
@@ -120,25 +129,52 @@ Eine weitere Herausforderung war die Luft mit dem geforderten Feuchtigkeitsgrad 
 	\end{center}
 \end{figure}
 
-Ein erprobtes Verfahren ist, die Luft durch eine gesättigte Kochsalzlösung zu leiten. Dadurch wird automatisch eine Luftfeuchtigkeit von $\SI{75}{\%}$ erreicht. Die Luft muss allerdings als sehr feine Blasen durch die Kochsalzlösung wandern, da die Steigzeit sonst nicht ausreicht die Luft anzureichern. \\
-Dies wurde erreicht indem die Luft aus einer Schlauchspirale mit feinen Löchern durch eine zweilagige Schicht aus handelsüblichen Küchenschwämmen geleitet wurde. \\
+Eine weitere Herausforderung war die Luft mit dem geforderten Feuchtigkeitsgrad von $\SI{75}{\%}$ anzureichern. Ein erprobtes Verfahren ist, die Luft durch eine gesättigte Kochsalzlösung zu leiten. Dadurch wird automatisch eine Luftfeuchtigkeit von $\SI{75}{\%}$ erreicht. Die Luft muss allerdings als sehr feine Blasen durch die Kochsalzlösung wandern, da die Steigzeit sonst nicht ausreicht die Luft anzureichern. \\
+Dies wurde erreicht, indem die Luft aus einer Schlauchspirale mit feinen Löchern durch eine zweilagige Schicht aus handelsüblichen Küchenschwämmen geleitet wurde. \\
 Damit die Schwämme nicht durch den Luftstrom von ihrem Platz weggedrückt werden, wurde $\SI{2}{cm}$ darüber ein Netz gespannt.
+
+\begin{figure}[h]
+	\begin{minipage}[hbt]{7cm}
+		\centering
+		\includegraphics[width=7cm]{Luftbefeuchter_Spirale.jpg}
+		\caption{Spirale}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[hbt]{7cm}
+		\centering
+		\includegraphics[width=7cm]{Luftbefeuchter_Schwaemme.jpg}
+		\caption{Schwämme}
+	\end{minipage}
+\end{figure}
+
+Anschließend wurde in die obere Hälfte des Behälters eine Kombination aus einem Swagelok \SI{6}{mm} Rohrverbinder und einem Schlauchanschluss eingefügt. So kann man von außen ein Standard \SI{6}{mm} Stahlrohr anschließen und innen den Bunaschlauch für die Spirale. Die Lösung für die Luftabfuhr wurde ähnlich realisiert. Dazu wurde in den Verschluss wiederum ein \SI{6}{mm} Rohrverbinder eingefügt und der Verschluss auf der Innenseite mit einer Schicht Silikon ausgekleidet, sodass man ihn noch auf- und abdrehen kann um Wasser nachzufüllen, gleichzeitig aber die Luftdichtheit gewährleistet ist.
+
+
+\begin{figure}[h]
+	\begin{minipage}[hbt]{7cm}
+		\centering
+		\includegraphics[width=7cm]{Luftbefeuchter_Netz.jpg}
+		\caption{Netz}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[hbt]{7cm}
+		\centering
+		\includegraphics[width=7cm]{Luftbefeuchter_gesamt.jpg}
+		\caption{Außenansicht mit eingefülltem Wasser}
+	\end{minipage}
+\end{figure}
 
 \newpage
 
 \section{AP4 - Wirbelbett}
 
 
-\subsection{Überblick}
+\subsection{Allgemeine Anforderungen}
 
-Da das bisherige Wirbelbett nicht flexibel genug konfigurierbar war, musste es neu konstruiert werden und dabei möglichst modular werden. Es wurde daher entschieden das Wirbelbett aus 4 Teilen plus dem Probenröhrchen zu bauen. Die einzelnen Teile sind:
+Da das bisherige Wirbelbett nicht flexibel genug konfigurierbar war, musste es neu konstruiert werden und dabei möglichst modular werden. Zum einen soll es möglich sein Probenröhrchen von \SI{5}{mm}, \SI{20}{mm}, \SI{30}{mm} und \SI{40}{mm} nutzen zu können. Weiterhin ist es erforderlich sowohl die Probenröhrchen als auch das Probenmaterial einfach und schnell wechseln zu können. Außerdem wurde gefordert, das aus dem Probenröhrchen austretende Partikel aufgefangen werden können. Des weiteren musste ein neuer Filter für den Übergang vom Anschlusszylinder zum Probenröhrchen gefunden werden. 
+Eine weitere Anforderung bestand in der Integration eine Ionisators, sodass die durch das Probenröhrchen strömende Luft ionisiert werden kann. Die gesamte Konstruktion muss zudem in den Lichtstreuaufbau passen. \\
 
-\begin{itemize}
-	\item Anschlusszylinder
-	\item unterer Röhrchenhalter
-	\item oberer Röhrchenhalter
-	\item Trichter
-\end{itemize}
+
 
 
 \begin{figure}[h]
@@ -149,14 +185,14 @@ Da das bisherige Wirbelbett nicht flexibel genug konfigurierbar war, musste es n
 \end{figure}
 
 
-Da ein Ionisator in das Wirbelbett eingebaut werden sollte, konnten die Teile nicht aus Metall gefertigt werden, da die Ladung der Luft direkt über das Metall abgeflossen wäre. Es wurde daher entschieden sämtliche Bauteile des Wirbelbettes mit dem 3D Drucker aus ABS Plastik herzustellen. Dies hatte zu dem den Vorteil, das Prototypen schnell und einfach verfügbar und testbar waren. 
+Im folgenden werden die im Bild zu sehenden Bauteile in Abschnitten diskutiert, die sich mit der Methode zum auffangen des Granulats, dem Anschlusszylinder, dem Röhrchenhalter, der Halterung des Wirbelbetts und dem Filter beschäftigen.
 
 
 \subsection{Methode zum Granulat auffangen}
 
 \subsubsection{Anforderung}
 
-Wie schon in der Einleitung beschrieben, hat ein granulares Medium mehrere Phasen gleichzeitig, von denen die oberste die Gasphase ist. Je nach Füllstand und Gasfluss des Messröhrchens kann es nun passieren, das einzelne Partikel oben aus dem Röhrchen hinausfliegen. Dies gilt es zu verhindern.
+Wie schon in der Einleitung beschrieben, hat ein granulares Medium mehrere Phasen gleichzeitig, von denen die oberste die Gasphase ist. Je nach Füllstand und Gasfluss des Messröhrchens kann es nun passieren, das einzelne Partikel oben aus dem Röhrchen hinausfliegen. Außerdem braucht es eine Absicherung gegen Fehlbedienung, sodass bei zu hohem Gasstrom kein Granulat aus dem Probenröchrchen austritt.
 
 \subsubsection{Auswahl}
 
@@ -178,27 +214,34 @@ Ein sehr beliebtes Produkt, um Luft von Partikeln zu säubern, ist der Fliehkraf
 
 Das Problem bei diesem Bauteil besteht darin, das die kommerziell erhältlichen Versionen sehr teuer sind und zudem zu groß für unserem Aufbau passen. \\
 Weiterhin wäre ein erheblicher Konstruktionsaufwand nötig, um einen eigenen Zyklon zu bauen, da die Luft in unserem Versuch von unten kommt, der Zyklon sie aber von der Seite braucht. \\
-Aus diesem Grund haben wir uns für das im folgenden beschriebene Prinzip entschieden.
+
+\paragraph{Trichter}
+
+\hfill \\
+
+Eine Alternative dazu ist ein Trichter, der den Querschnitt aufweitet und so den Gasstrom verlangsamt. Aus Kosten und den oben beschriebenen Konstruktionsproblemen wurde entschieden einen Trichter zu entwerfen.
 
 
 
 \subsubsection{Umsetzung}
 
 Um den Gasstrom zu verlangsamen und gleichzeitig das Einfüllen des Granulats zu erleichtern, wurde jeweils ein Trichter konstruiert, der passgenau mit dem Innendurchmesser jedes Probenröhrchens abschließt und zudem den Querschnitt verdoppelt. \\
-Wie man anhand der Formel $v_a = \frac{Q}{A}$ \cite{Grollius2012} sehen kann, ist die Geschwindigkeit des Gasstrom direkt proportional zum Querschnitt des Rohrs. Wenn man also den Querschnitt verdoppelt, dann viertelt man die Geschwindigkeit des Gasstroms. \\
+Wie man anhand der Formel $v_a = \frac{Q}{A}$ \cite{Grollius2012} sehen kann, ist die Geschwindigkeit des Gasstrom direkt proportional zum Querschnitt des Rohrs. Wenn man also den Querschnitt verdoppelt, dann viertelt man die Geschwindigkeit des Gasstroms. Dies wurde für jeden Durchmesser gemacht. Man könnte zwar bei gleicher Höhe auch die Querschnitte unter \SI{40}{mm} auf \SI{80}{mm} aufweiten, allerdings bringt das stömungstechnisch nicht viel, da sich der Luftstrom nicht so schnell so stark aufweiten kann. \\
 Zudem wurde ein abnehmbarer Filter oben auf den Trichter gespannt, um einen rudimentären Schutz gegen austretende Partikel bei Fehlbedienung zu gewährleisten.
+
+Hier Konstruktionsskizze einfügen
 
 
 \subsection{Anschlusszylinder}
 
 \subsubsection{Anforderungen}
 
-Im Prinzip gab es im vorigen Aufbau auch schon einen Anschlusszylinder, allerdings brauchten wir mehr Features und mehr Flexibilität. Das Ziel war an diesem Zylinder den Anschluss an das Gassystem zu haben, den Ionisator unterzubringen und eine Halterung für die verschieden großen Röhrchen zu haben.
+Im Prinzip gab es im vorigen Aufbau auch schon einen Anschlusszylinder, allerdings brauchte man mehr Features und mehr Flexibilität. Das Ziel bei diesem Zylinder war den Anschluss an das Gassystem zu haben und eine Halterung für die verschieden großen Röhrchen zu haben. Zudem sollte gewährleistet werden, das ein Ionisator ein den Luftstrom eingebracht werden kann.
 
 
 \subsubsection{Umsetzung}
 
-Der Kern des Anschlusszylinders ist die $\SI{40}{mm}$ breite Röhre in der Mitte, damit Röhrchendurchmesser bis $\SI{40}{mm}$ mit einem laminaren Gasstrom versorgt werden können. \\
+Der Kern des Anschlusszylinders ist die $\SI{40}{mm}$ breite Röhre, damit Röhrchendurchmesser bis $\SI{40}{mm}$ mit einem laminaren Gasstrom versorgt werden können. \\
 Auf der Oberseite befindet sich eine Nut in die der O-Ring zum Abdichten der Verbindung Anschlusszylinder-Röhrchenhalter. Damit diese Verbindung dicht ist, befindet sich auf der Oberseite zudem ein Arretierungsmechanismus in den der Röhrchenhalter eingedreht wird. Zudem garantiert dieser Mechanismus ein einfaches und schnelles lösen der Komponenten.
 
 
@@ -206,7 +249,7 @@ Hier Doppelbild einfügen
 
 
 In der Frontansicht sieht man den Einlass mit Arretierung für den Ionisator. Zur Montage wird die Spitze des Ionisator in einen Adapter gesteckt und dieser Adapter mittels drehen arretiert. Die Luftdichtheit wird durch einen O-Ring aus Gummi (Shore Härte 50) erreicht. \\
-In der Seitenansicht wird der Anschluss für das Gassystem sichtbar. Hier wurde ein Swagelockverbinder mit Gummi O-Ring in das Plastik geschraubt und der Adapter für den Schlauch daran angeschlossen.
+In der Seitenansicht wird der Anschluss für das Gassystem sichtbar. Hier wurde ein Swagelockverbinder mit Gummi O-Ring in das Plastik geschraubt und der Adapter für den Bunaschlauch daran angeschlossen.
 
 
 \subsection{Röhrchenhalter}
@@ -275,7 +318,7 @@ Um einen geeigneten Filter zu finden wurde sich mit den Herstellern Merk Millipo
 
 \begin{center}
 			\begin{tabular}{l|c|c|c}
-				& Membran Sartorius & Membran Merckmillipore & Membran Nitto \\
+				& Sartorius & Merck Millipore & Nitto \\
 				\hline
 				Porengröße [$\mu$m] & 0,45  & 10    & 24 \\
 				Dicke[$\mu$m] & 125 & 130 & 500 \\
@@ -297,7 +340,10 @@ Es wurde sich für die Membran von Sartorius entschieden, weil sie alle Anforder
 
 
 
+\section{Bewertung}
 
+
+\section{Ausblick}
 
 
 
