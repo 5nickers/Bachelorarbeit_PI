@@ -5,7 +5,7 @@
 \paragraph{Anforderungen}
 \hfill \\
 Bei der Elektronik gab es zwei verschiedene Bereiche: \\
-In einem ersten Schritt sollte ein A-D\footnote{Analog-Digital} Wandler gefunden werden, damit der vorhandene Drucksensor genauer ausgelesen werden kann. Zum Start es Projekts wurde der Drucksensor über das $\SI{10}{bit}$ breite analoge Interface des Arduino ausgelesen. Das ist für eine genaue Auswertung der Experimente zu wenig. Der Drucksensor hat einen Messbereich von (nachgucken) und gibt diesen auf \SIrange{0}{10}{\volt} aus. Da der Arduino maximal $\SI{5}{V}$ als Eingangsspannung verarbeiten kann, wird die Spannung über einen Spannungsteiler auf \SIrange{0}{5}{\volt} reduziert und dann eingelesen. Das entspricht einer Genauigkeit von $\SI{0,004}{V/bit}$, was einer Genauigkeit von XXX mbar/Volt entspricht. \\
+In einem ersten Schritt sollte ein A-D\footnote{Analog-Digital} Wandler gefunden werden, damit der vorhandene Drucksensor genauer ausgelesen werden kann. Zum Start es Projekts wurde der Drucksensor über das $\SI{10}{bit}$ breite analoge Interface des Arduino ausgelesen. Das ist für eine genaue Auswertung der Experimente zu wenig. Der Drucksensor hat einen Messbereich von \SIrange{0}{1,25}{\bar} und gibt diesen auf \SIrange{0}{10}{\volt} aus. Da der Arduino maximal $\SI{5}{V}$ als Eingangsspannung verarbeiten kann, wird die Spannung über einen Spannungsteiler auf \SIrange{0}{5}{\volt} reduziert und dann eingelesen. Das entspricht einer Genauigkeit von $\SI{0,005}{V/bit}$. \\
 Als Resultat soll die gesamte Elektronik als \glqq Blackbox\grqq \ vorliegen, sodass man nach außen hin nur noch Anschlüsse hat, die klar gekennzeichnet sind. Dies soll in Form eines Gehäuses erledigt werden, das zudem auch noch rudimentären Schutz gegen Schmutz bietet.
 
 
@@ -13,8 +13,8 @@ Als Resultat soll die gesamte Elektronik als \glqq Blackbox\grqq \ vorliegen, so
 
 \paragraph{Elektronik}
 \hfill \\
-Der Arduino bietet einen sehr einfachen SPI\footnote{\url{http://www.mct.de/faq/spi.html}} Bus zum Anschluss von Modulen an. Darüber können die digitalen Outputdaten, der angesteckten Module ausgelesen werden, unabhängig davon wie hoch die Auflösung der Module ist. Auf Grund dessen wurde entschieden ein Modul für diesen Bus zu verwenden. \\
-Rechnung für 16 bit einfügen!!!!!! \\
+Der Arduino bietet einen sehr einfachen SPI\footnote{\url{http://www.mct.de/faq/spi.html}} Bus zum Anschluss von Modulen an. Darüber können die digitalen Outputdaten, der angesteckten Module ausgelesen werden, unabhängig davon wie hoch die Auflösung der Module ist. Auf Grund dessen wurde entschieden ein Modul für diesen Bus zu verwenden und aus Gründen der Genauigkeit wurde sich für ein \SI{16}{bit} Modul entschieden. \\
+Damit kann man mit einer Genauigkeit von $\frac{\SI{5}{V}}{\SI{65536}{bit}} = \SI{0,00008}{V/bit}$ die Ausgangsspannung des Drucksensors auslesen. Das bedeutet auch eine Auslesegenauigkeit von $\frac{\SI{1250}{mbar}}{\SI{65536}{bit}} = \SI{0,02}{mbar/bit}$. \\
 Es gibt verschiedene $\SI{16}{bit}$ A-D Wandler auf dem Markt, allerdings gibt es den hier ausgewählten (TM7705 Dual 16-bit ADC) bereits auf einer fertig montierten Platine. Zudem gibt es zu der Platine eine gute Dokumentation. 
 
 
@@ -29,6 +29,7 @@ Um die Komplexität so gering wie möglich zu halten, wurde sich gegen einen Sch
 
 Hier Bilder einfügen!!
 
+\newpage
 
 \section{AP3 - Gassystem}
 
@@ -89,7 +90,7 @@ Abschließend kann gesagt werden, das durch die Wahl der Verrohrung ei luftdicht
 
 \subsubsection{Luftbefeuchter}
 
-Um die Anforderungen für den Luftbefeuchter zu erfüllen, wurden drei mögliche Lösungen geprüft, dabei war die Größe der Lösung das Hauptaugenmerk.
+Um die Anforderungen für den Luftbefeuchter zu erfüllen, wurden drei mögliche Lösungen geprüft, dabei waren die Größe und die Kosten der Lösung das Hauptaugenmerk.
 
 \paragraph{Swagelok} 
 
@@ -163,6 +164,48 @@ Anschließend wurde in die obere Hälfte des Behälters eine Kombination aus ein
 		\caption{Außenansicht mit eingefülltem Wasser}
 	\end{minipage}
 \end{figure}
+
+
+\subsubsection{Kosten}
+
+Insgesamt hat der Aufbau des Gassystems und Luftbefeuchters knapp \SI{1600}{\euro} gekostet, wenn man dabei nur die zusätzlich bestellten Materialien einbezieht und nicht die ohnehin vorhandenen. Der größte Teil der Kosten fällt dabei auf den Flowcontroller zurück. Eine genaue Aufstellung ist im folgenden zu sehen:
+
+\begin{center}
+\begin{tabular}{l|c|c|c}
+	Teil  & Anzahl & Kosten/Stück & Kosten \\
+	\hline
+	&       &       &  \\
+	Flowcontroller & 1     & 1186  & 1186 \\
+	Mutter mit Ferrul & 10    & 4,8   & 48 \\
+	Kükenhahn & 3     & 69,25 & 207,75 \\
+	T-Stück & 2     & 26,11 & 52,22 \\
+	Verbinungsstück & 1     & 12,87 & 12,87 \\
+	Endanschluss & 4     & 12,87 & 51,48 \\
+	Buna N Schlauch & 9     & 2,67  & 24,03 \\
+	Einschraubverbindung M12x1 & 3     & 16,67 & 50,01 \\
+	Teichnetz & 1     & 8,45  & 8,45 \\
+	Küchenschwämme & 3     & 2,99  & 8,97 \\
+	\hline 
+	&       &       &  \\
+	Summe &       &       & 1632,36 \\
+\end{tabular}
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \newpage
 
@@ -341,6 +384,46 @@ Es wurde sich für die Membran von Sartorius entschieden, weil sie alle Anforder
 
 
 \section{Bewertung}
+
+\subsection{Elektronik}
+
+
+\subsection{Gassystem}
+
+
+\subsection{Wirbelbett}
+
+
+\subsection{Nutzung des 3D Druckers}
+
+Durch den engen Zeitplan und die Anforderungen bedingt war es nicht möglich ein anderes Material außer Plastik zu verwenden. Das ist ein Material, das die Werkstatt nicht vorrätig hat und der Art Konstruktion hier als Vollmaterial sehr teuer wäre. Der 3D Drucker ermöglichte ein schnelles und Materialeffizientes herstellen von Modellen, die auch verwendet werden konnten. So war man in der Lage Zwischenstände zusammenzubauen und Fehler zu erkennen, die am Rechner nicht zu sehen waren. Um die Zeitersparnis deutlicher zu machen, hier ein Beispiel am komplexesten Teil des Wirbelbetts: \\
+\paragraph{3D Drucker}
+\begin{itemize}
+	\item[1.] exportieren der Konstruktion in ein passendes Format $\rightarrow$ ca. 2 Minuten
+	\item[2.] Arbeit des Druckers $\rightarrow$ ca. 11 Stunden
+\end{itemize}
+
+\hfill \\
+
+\paragraph{Werkstatt}
+\begin{itemize}
+	\item[1.] Erstellung der nötigen Skizzen $\rightarrow$ 30-90 Minuten, evtl. länger
+	\item[2.] Arbeit der Werkstatt mit Wartezeit $\rightarrow$ 2-3 Tage
+\end{itemize}
+
+\vspace{0.5cm}
+
+Mittels des 3D Druckers ist also möglich über Nacht ein neues Modell zu drucken und am nächsten Tag damit zu testen, das ist eine Zeitersparnis von \SIrange{1,5}{2,5}{Tagen}. Ohne einen 3D Drucker wäre die Konstruktion nicht so schnell fortgeschritten und wäre deutlich teuer geworden. 
+
+
+
+\subsection{Insgesamt}
+
+
+
+
+
+
 
 
 \section{Ausblick}
