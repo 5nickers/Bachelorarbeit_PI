@@ -18,7 +18,13 @@ Damit kann man mit einer Genauigkeit von $\frac{\SI{5}{V}}{\SI{65536}{bit}} = \S
 Es gibt verschiedene $\SI{16}{bit}$ A-D Wandler auf dem Markt, allerdings gibt es den hier ausgewählten (TM7705 Dual 16-bit ADC) bereits auf einer fertig montierten Platine. Zudem gibt es zu der Platine eine gute Dokumentation. 
 
 
-Schaltskizze!!!
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[scale=0.6]{Schema_Elektronik.jpg}
+		\caption{Schema Elektronik}
+	\end{center}
+\end{figure}
+
 
 \paragraph{Gehäuse (still in progress)} 
 \hfill \\
@@ -44,8 +50,41 @@ Der Luftbefeuchter selbst soll im Betrieb eine Luftfeuchtigkeit von \SI{75}{\%} 
 
 \subsubsection{Flowcontroller}
 
-Um granulare Medien bis zu einer Partikelgröße von \SI{000}{mm} auf einer Querschnittfläche von \SI{4}{cm} von fluidisieren zu können, muss der Gasfluss erhöht werden. Nach folgdem..... Hier formel etc einfügen
-Aus der Rechnung folgt, das ein Gasfluss von \SIrange{0}{3000}{l/h} alle Anforderungen erfüllt. \\
+Um granulare Medien bis zu einer Partikelgröße von \SI{000}{mm} auf einer Querschnittfläche von \SI{4}{cm} von fluidisieren zu können, muss der Gasfluss erhöht werden. In wieweit der Gassfluss erhöht werden muss, lässt sich aus diesen Beiden Formeln berechnen: \\
+Der Druckabfall über dem Granulat am Punkt der Fluidisation ist mit $\Delta P = \rho h g + \sigma_t$ gegeben. Hierbei ist $\rho$ die Dichte des Granulats und $\sigma_t$ ein Faktor zwischen 0 und 1, der davon abhängt wie stark die einzelnen Partikel zusammenhängen. Der Druckabfall ist außerdem mit der Carman Gleichung $\Delta P / h = E \eta U \cdot \frac{1 - \epsilon}{\epsilon^3 d_p^2}$ gegeben. In diesem Fall ist $E$ eine Konstante mit Wert 180, $\eta$ die Gasviskosität, $U$ die Gasgeschwindigkeit, $d_p$ ist............? und $\epsilon$ die Packungsdichte des Bettes. Daraus kann man für die zwei am häufigsten auftretenden Packungsdichten die nötigen Gasströme berechnen: \\
+
+Gasströme für $\epsilon = \SI{0,64}{}$: \\
+
+\begin{tabular}{c|c|c|c|c|c}
+$\epsilon = \SI{0,56}{}$	&   $D_r$ $[mm]$    &  &       &       &  \\
+$d_p$ $[\mu m]$	&       & 300   & 500   & 750   & 1000 \\
+	\hline
+	 & 5     & 4,26141 & 11,83725 & 26,6338125 & 47,349 \\
+	& 10    & 17,04564 & 47,349 & 106,53525 & 189,396 \\
+	& 20    & 68,18256 & 189,396 & 426,141 & 757,584 \\
+	& 30    & 153,41076 & 426,141 & 958,81725 & 1704,564 \\
+	& 40    & 272,73024 & 757,584 & 1704,564 & 3030,336 \\
+\end{tabular}
+
+\vspace{1cm}
+
+Gasströme für $\epsilon = \SI{0,64}{}$:
+
+\begin{tabular}{c|c|c|c|c|c}
+	&   $D_r$ $[mm]$    &  &       &       &  \\
+	$d_p$ $[\mu m]$	&       & 300   & 500   & 750   & 1000 \\
+	\hline
+& 5     & 12,831579 & 35,643275 & 80,1973688 & 142,5731 \\
+& 10    & 51,326316 & 142,5731 & 320,789475 & 570,2924 \\
+& 20    & 205,305264 & 570,2924 & 1283,1579 & 2281,1696 \\
+& 30    & 461,936844 & 1283,1579 & 2887,10528 & 5132,6316 \\
+& 40    & 821,221056 & 2281,1696 & 5132,6316 & 9124,6784 \\
+\end{tabular} 
+
+
+\vspace{0.5cm}
+
+Aus den Tabellen folgt, das ein Gasfluss von \SIrange{0}{3000}{l/h} alle Anforderungen erfüllt. \\
 Ein Gerät, das diesen Gasfluss genau genug regeln kann, ist ein Flowcontroller.
 Die Idee den Luftstrom über mehrere Gasdurchflussbegrenzer und Ventile auf definierte Werte voreinzustellen und mit dem vorhandenen Flowcontroller von da ab zu regeln, wurde verworfen, weil es sich als zu ungenau und nicht deutlich billiger in Aufwand und Kosten darstellte. Zudem wäre der Aufbau deutlich größer gewesen. \\
 \hfill \\
@@ -83,7 +122,7 @@ Auf der Skizze in Abbildung xy kann man das gebaute System sehen:
 \end{figure}
 
 
-Um dem Aufbau die nötige Flexibilität zu geben, die beim Umbau zwischen den beiden Versuchsständen nötig ist, wurde das Wirbelbett mit einem Bunaschlauch (\textcolor{orange}{orange}) an das Gassystem angeschlossen. Zudem ist der Anschluss des Gassystems an die Durckluftversorgung mit einem Bunaschlauch gelöst. Sämtliche Rohrleitungen ab dem Luftfilter bis zum Übergang zum Wirbelbett sind aus Edelstahl. \\
+Um dem Aufbau die nötige Flexibilität zu geben, die beim Umbau zwischen den beiden Versuchsständen nötig ist, wurde das Wirbelbett mit einem Bunaschlauch (\textcolor{orange}{orange}) an das Gassystem angeschlossen. Zudem ist der Anschluss des Gassystems an die Durckluftversorgung mit einem Schlauch gelöst. Sämtliche Rohrleitungen ab dem Luftfilter bis zum Übergang zum Wirbelbett sind aus Edelstahl. \\
 Die Ventile, T-Stücke und Verbindungsstücke sind auch aus Edelstahl, da Messing zwar billiger wäre, allerdings auch weicher, was zu Verformungen und höherem Verschleiß führen kann. \\
 Abschließend kann gesagt werden, das durch die Wahl der Verrohrung ei luftdichtes Gassystem erreicht wurde. Außerdem ist der Aufbau mit $\SI{000}{m} \cdot \SI{000}{m}$ passend für den Lichtstreuaufbau.
 
@@ -121,7 +160,7 @@ Die Methode des Vorbeiströmens fiel raus, weil eine zu große Strömfläche geb
 
 \hfill \\
 
-Damit der Befeuchter in den Lichtstreuaufbau passt, wurde zu Anfang ein Behältnis ausgewählt, das in den Aufbau passt und dann wurden die für den Befeuchter nötigen Änderungen vorgenommen. Dazu wurde der Kanister mit einem Durchmesser von \SI{22}{cm} und einer Höhe von \SI{50}{cm} (???) auf einer Höhe von \SI{00}{cm} (???) horizontal aufgeschnitten. Nun war es möglich die benötigten Komponenten in dem Behälter unterzubringen. Der schematische Aufbau ist in der unten stehenden Skizze zu sehen: \\
+Damit der Befeuchter in den Lichtstreuaufbau passt, wurde zu Anfang ein Behältnis ausgewählt, das in den Aufbau passt und dann wurden die für den Befeuchter nötigen Änderungen vorgenommen. Dazu wurde der Kanister mit einem Durchmesser von \SI{22}{cm} und einer Höhe von \SI{38}{cm} auf einer Höhe von \SI{15}{cm} horizontal aufgeschnitten. Nun war es möglich die benötigten Komponenten in dem Behälter unterzubringen. Der schematische Aufbau ist in der unten stehenden Skizze zu sehen: \\
 
 \begin{figure}[h]
 	\begin{center}
