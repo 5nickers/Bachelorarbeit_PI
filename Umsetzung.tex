@@ -41,7 +41,7 @@ Hier Bilder einfügen!!
 
 \subsection{Anforderungen}
 
-Beim Gassystem soll neben der Luftdichtheit auch eine mechanische Stabilität erreicht werden, damit es einfach von zwischen Normalem und Lichtstreubaufbau transportiert werden kann. Außerdem soll der Gasstrom von \SIrange{0}{120}{l/h} auf \SIrange{0}{3000}{l/h} erhöht werden. Der Regelbereich ist Resultat einer Rechnung im Abschnitt Flowcontroller Zudem sollen die Werte, die der Drucksensor vor und hinter dem Wirbelbett misst um weniger als \SI{1}{\%} differieren. Weiterhin muss das gesamte Gassystem mit Luftbefeuchter in den Lichtstreuaufbau passen. \\
+Beim Gassystem soll neben der Luftdichtheit auch eine mechanische Stabilität erreicht werden, damit es einfach von zwischen Normalem und Lichtstreubaufbau transportiert werden kann. Außerdem soll der Gasstrom von \SIrange{0}{120}{l/h} auf \SIrange{0}{3000}{l/h} erhöht werden. Der Regelbereich ist Resultat einer Rechnung im Abschnitt Flowcontroller. Zudem sollen die Werte, die der Drucksensor vor und hinter dem Wirbelbett misst um weniger als \SI{1}{\%} differieren. Weiterhin muss das gesamte Gassystem mit Luftbefeuchter in den Lichtstreuaufbau passen. \\
 Der Luftbefeuchter selbst soll im Betrieb eine Luftfeuchtigkeit von \SI{75}{\%} erreichen und den gesamten Regelbereich des Flowcontrollers abdecken.
 
 
@@ -56,7 +56,7 @@ Der Druckabfall über dem Granulat am Punkt der Fluidisation ist mit $\Delta P =
 Gasströme für $\epsilon = \SI{0,64}{}$: \\
 
 \begin{tabular}{c|c|c|c|c|c}
-$\epsilon = \SI{0,56}{}$	&   $D_r$ $[mm]$    &  &       &       &  \\
+	&   $D_r$ $[mm]$    &  &       &       &  \\
 $d_p$ $[\mu m]$	&       & 300   & 500   & 750   & 1000 \\
 	\hline
 	 & 5     & 4,26141 & 11,83725 & 26,6338125 & 47,349 \\
@@ -91,13 +91,12 @@ Die Idee den Luftstrom über mehrere Gasdurchflussbegrenzer und Ventile auf defi
 Die Lösung bestand somit darin einen neuen Flowcontroller anzuschaffen, der den gesamten Regelbereich mit einer hinreichenden Genauigkeit abdeckt und gleichzeitig gut in das Gassystem integriert werden kann. Dazu wurden zwei Angebote eingeholt, die im folgenden dargelegt sind:
 
 
-\begin{tabular}{|l|c|c|}
-	\hline  & Brooks & Bronkhorst \\ 
+\begin{tabular}{l|c|c}
+	 & Brooks & Bronkhorst \\ 
 	\hline Regelbereich & \SIrange{0}{3000}{l/h} & \SIrange{0}{3000}{l/h} \\ 
 	\hline Genauigkeit $20 - \SI{100}{\%}$ & $\pm \SI{0,9}{\%}$ Istwert & $\pm \SI{0,5}{\%}$ Istwert $+ \pm \SI{0,1}{\%}$ Endwert\\ 
 	\hline Genauigkeit $0 - \SI{20}{\%}$ & $\pm \SI{0,18}{\%}$ Istwert & $\pm \SI{0,5}{\%}$ Istwert $+ \pm \SI{0,1}{\%}$ Endwert \\ 
 	\hline Preis in \euro & 1187,33 & 1382,66 \\ 
-	\bottomrule 
 \end{tabular} 
 
 \vspace{0,5cm}
@@ -122,9 +121,9 @@ Auf der Skizze in Abbildung xy kann man das gebaute System sehen:
 \end{figure}
 
 
-Um dem Aufbau die nötige Flexibilität zu geben, die beim Umbau zwischen den beiden Versuchsständen nötig ist, wurde das Wirbelbett mit einem Bunaschlauch (\textcolor{orange}{orange}) an das Gassystem angeschlossen. Zudem ist der Anschluss des Gassystems an die Durckluftversorgung mit einem Schlauch gelöst. Sämtliche Rohrleitungen ab dem Luftfilter bis zum Übergang zum Wirbelbett sind aus Edelstahl. \\
-Die Ventile, T-Stücke und Verbindungsstücke sind auch aus Edelstahl, da Messing zwar billiger wäre, allerdings auch weicher, was zu Verformungen und höherem Verschleiß führen kann. \\
-Abschließend kann gesagt werden, das durch die Wahl der Verrohrung ei luftdichtes Gassystem erreicht wurde. Außerdem ist der Aufbau mit $\SI{000}{m} \cdot \SI{000}{m}$ passend für den Lichtstreuaufbau.
+Um dem Aufbau die nötige Flexibilität zu geben, die beim Umbau zwischen den beiden Versuchsständen nötig ist, wurde das Wirbelbett mit einem Bunaschlauch (\textcolor{orange}{orange}) an das Gassystem angeschlossen. Um Problemen mit dem Flowcontroller zu begegnen, wird das Gassystem über eine Druckluftflasche mit einstellbarem Ausgangsdruck gespeist. Sämtliche Rohrleitungen ab dem Luftfilter bis zum Übergang zum Wirbelbett sind aus Edelstahl. \\
+Die Ventile, T-Stücke und Verbindungsstücke sind auch aus Edelstahl, da Messing zwar billiger wäre, allerdings auch weicher, was zu Verformungen und höherem Verschleiß führen kann. Zur weiteren Erhöhung der Stabilität und Transportierbarkeit wurde das System zudem auf einer Holzplatte befestigt. \\
+Abschließend kann gesagt werden, das durch die Wahl der Verrohrung ein luftdichtes Gassystem erreicht wurde. Außerdem ist der Aufbau mit $\SI{000}{m} \cdot \SI{000}{m}$ passend für den Lichtstreuaufbau.
 
 
 \subsubsection{Luftbefeuchter}
@@ -153,7 +152,7 @@ Eine alternative Methode ist mit gleicher Funktion wie die Lösung von Swagelok,
 
 \hfill \\
 
-Es wurde sich für die Lösung \glqq Eigenbau\grqq \ entschieden, da die anderen Methoden Mängel aufweisen. Die Lösung von Swagelok ist zum einen sehr teuer, zudem würde bei angeschaltetem Gasfluss Wasser in das System fließen. \\
+Es wurde sich für die Lösung \glqq Eigenbau\grqq \ entschieden, da die anderen Methoden Mängel aufweisen. Die Lösung von Swagelok ist zum einen sehr teuer, zudem würde bei abgeschaltetem Gasfluss Wasser in das System fließen. \\
 Die Methode des Vorbeiströmens fiel raus, weil eine zu große Strömfläche gebraucht wurde. Anhand der Formeln aus der Arbeit von Herrn Schmitz, erhielt man eine Fläche von $\SI{50}{cm} \cdot \SI{50}{cm}$. Ein Aufbau dieser Größe ist unmöglich im Lichtstreuaufbau unterzubringen.
 
 \paragraph{Umsetzung}
@@ -189,7 +188,6 @@ Damit die Schwämme nicht durch den Luftstrom von ihrem Platz weggedrückt werde
 
 Anschließend wurde in die obere Hälfte des Behälters eine Kombination aus einem Swagelok \SI{6}{mm} Rohrverbinder und einem Schlauchanschluss eingefügt. So kann man von außen ein Standard \SI{6}{mm} Stahlrohr anschließen und innen den Bunaschlauch für die Spirale. Die Lösung für die Luftabfuhr wurde ähnlich realisiert. Dazu wurde in den Verschluss wiederum ein \SI{6}{mm} Rohrverbinder eingefügt und der Verschluss auf der Innenseite mit einer Schicht Silikon ausgekleidet, sodass man ihn noch auf- und abdrehen kann um Wasser nachzufüllen, gleichzeitig aber die Luftdichtheit gewährleistet ist.
 
-
 \begin{figure}[h]
 	\begin{minipage}[hbt]{7cm}
 		\centering
@@ -203,6 +201,11 @@ Anschließend wurde in die obere Hälfte des Behälters eine Kombination aus ein
 		\caption{Außenansicht mit eingefülltem Wasser}
 	\end{minipage}
 \end{figure}
+
+Abschließend wurde auch der Luftbefeuchter auf einer Holzplatte befestigt, die auch dazu dient den Zu- und Ableitungsrohren möglichst wenig Bewegungsspielraum zu geben, sodass die Anschlüsse an den Befeuchter nicht belastet werden und es so nicht zu Undichtigkeiten kommt.
+
+
+Bild!!
 
 
 \subsubsection{Kosten}
@@ -347,7 +350,7 @@ Im oberen Teil sind zudem vier Aussparungen, die die Stabilität nicht beeinträ
 Hier Doppelbild einfügen
 
 
-Der dritte Teil des Halters sorgt dafür, dass das Röhrchen nicht seitlich verkippt werden kann und es dadurch zu Undichtigkeiten kommt. Damit diese Halterung nicht für jedes Röhrchen seperat montiert werden muss, wurde ein universelles Ringsystem entworfen. Das Basisteil wird am Schanier festgeschraubt und hat $\SI{40}{mm}$ Durchmesser. In das Basisteil können nur weitere Ringe eingesetzt werden, damit auch die Durchmesser $30,20,5\SI{}{\ mm}$ einen guten Halt haben.
+Der dritte Teil des Halters sorgt dafür, dass das Röhrchen nicht seitlich verkippt werden kann und es dadurch zu Undichtigkeiten kommt. Damit diese Halterung nicht für jedes Röhrchen seperat montiert werden muss, wurde ein universelles Ringsystem entworfen. Das Basisteil wird am Schanier festgeschraubt und hat $\SI{40}{mm}$ Durchmesser. In das Basisteil können nun weitere Ringe eingesetzt und durch verdrehen arretiert werden, damit auch die Durchmesser $30,20,5\SI{}{\ mm}$ einen guten Halt haben.
 
 
 \subsection{Halterung Wirbelbett}
