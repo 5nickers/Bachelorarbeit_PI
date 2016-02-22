@@ -1,21 +1,79 @@
 \chapter{Umsetzung}
 
+Im folgenden Kapitel wir die Umsetzung der Ziele aus dem vorigen Kapitel behandelt. Zuerst wird die Elektronik behandelt, danach das Gassystem und abschließend das Wirbelbett und die Testergebnisse.
+
+
+\section{AP 1 - Analyse}
+
+\paragraph{Elektronik}
+\hfill \\
+Der Hautschwachpunkt der Elektronik ist die Verkabelung, da man es bei dem Setup mit mehreren Teilen zu tun hat, die teils verlötet, teils gesteckt werden. Das führt zu einem insgesamt sensiblen Aufbau. Ziel muss es also sein, so viele Kabel wie möglich geeignet zu verpacken, sodass sie möglichst wenig äußeren Einflüssen ausgesetzt sind. 
+
+
+\paragraph{Gassystem}
+\hfill \\
+Eine Herstellerauswahl hat hier nicht stattgefunden, da bereits vorhandene Verrohrung der Firma Swagelok weitergenutzt werden sollte. Dies hatte auch den Vorteil, das ein Berater aus dem nahegelegenen Standort Düsseldorf bei der Auslegung und Wahl der Komponenten beraten konnte. \\
+Insgesamt wir der Aufbau des Gassystems und Luftbefeuchters knapp \SI{1600}{\euro} kosten, wenn man dabei nur die zusätzlich bestellten Materialien einbezieht und nicht die ohnehin vorhandenen. Der größte Teil der Kosten fällt dabei auf den Flowcontroller zurück. Eine genaue Aufstellung ist im folgenden zu sehen:
+
+\begin{center}
+	\begin{tabular}{l|c|c|c}
+		Teil  & Anzahl & Kosten/Stück & Kosten \\
+		\hline
+		&       &       &  \\
+		Flowcontroller & 1     & 1186  & 1186 \\
+		Mutter mit Ferrul & 10    & 4,8   & 48 \\
+		Kükenhahn & 3     & 69,25 & 207,75 \\
+		T-Stück & 2     & 26,11 & 52,22 \\
+		Verbinungsstück & 1     & 12,87 & 12,87 \\
+		Endanschluss & 4     & 12,87 & 51,48 \\
+		Buna N Schlauch & 9     & 2,67  & 24,03 \\
+		Einschraubverbindung M12x1 & 3     & 16,67 & 50,01 \\
+		Teichnetz & 1     & 8,45  & 8,45 \\
+		Küchenschwämme & 3     & 2,99  & 8,97 \\
+		\hline 
+		&       &       &  \\
+		Summe &       &       & 1632,36 \\
+	\end{tabular}
+\end{center}
+
+
+\paragraph{Wirbelbett}
+\hfill \\
+Bei der Analyse des bisherigen Wirbelbettes wurde klar, das die Bauhöhe, neben der Dichtheit, ein entscheidendes Kriterium ist. Die Bauhöhe ist durch den Lichtstreuaufbau nach begrenzt und enthält eine Mindesthöhe über dem Rotationsarm und eine Maximalhöhe, da der Aufbau sonst gegen Stahlträger stößt. Daraus folgte unmittelbar, das die Anschlüsse für Luft und Ionisator beide seitlich, also in der horizontalen Ebene erfolgen müssen. \\
+Weiterhin wurde beschlossen den Justiermechanismus des alten Aufbaus weiterzuverwenden, da dieser bereits funktioniert und leicht in den neuen Aufbau integriert werden kann. 
+
+
 \section{AP 2 - Elektronik}
 
 \paragraph{Anforderungen}
 \hfill \\
 Bei der Elektronik gab es zwei verschiedene Bereiche: \\
-In einem ersten Schritt sollte ein A-D\footnote{Analog-Digital} Wandler gefunden werden, damit der vorhandene Drucksensor genauer ausgelesen werden kann. Zum Start es Projekts wurde der Drucksensor über das $\SI{10}{bit}$ breite analoge Interface des Arduino ausgelesen. Das ist für eine genaue Auswertung der Experimente zu wenig. Der Drucksensor hat einen Messbereich von \SIrange{0}{1,25}{\bar} und gibt diesen auf \SIrange{0}{10}{\volt} aus. Da der Arduino maximal $\SI{5}{V}$ als Eingangsspannung verarbeiten kann, wird die Spannung über einen Spannungsteiler auf \SIrange{0}{5}{\volt} reduziert und dann eingelesen. Das entspricht einer Genauigkeit von $\SI{0,005}{V/bit}$. \\
+In einem ersten Schritt sollte ein A-D\footnote{Analog-Digital} Wandler gefunden werden, mit dem der Drucksensor mit \SI{0,1}{mbar} Genauigkeit ausgelesen werden kann. Zum Start es Projekts wurde der Drucksensor über das $\SI{10}{bit}$ breite analoge Interface des Arduino ausgelesen. Das ist für eine genaue Auswertung der Experimente zu wenig. Der A-D Wandler soll zwischen den Drucksensor und den Arduino geschaltet werden, damit die Auslesegenauigkeit von \SI{0,1}{mbar} erreicht werden kann. Der Drucksensor hat einen Messbereich von \SIrange{0}{2}{\bar} absolut und gibt diesen auf \SIrange{0}{10}{\volt} aus. Da der Arduino maximal $\SI{5}{V}$ als Eingangsspannung verarbeiten kann, wird die Spannung über einen Spannungsteiler auf \SIrange{0}{5}{\volt} reduziert und dann eingelesen. 
 Als Resultat soll die gesamte Elektronik als \glqq Blackbox\grqq \ vorliegen, sodass man nach außen hin nur noch Anschlüsse hat, die klar gekennzeichnet sind. Dies soll in Form eines Gehäuses erledigt werden, das zudem auch noch rudimentären Schutz gegen Schmutz bietet.
 
 
 \subsection{Umsetzung}
 
+
 \paragraph{Elektronik}
 \hfill \\
-Der Arduino bietet einen sehr einfachen SPI\footnote{\url{http://www.mct.de/faq/spi.html}} Bus zum Anschluss von Modulen an. Darüber können die digitalen Outputdaten, der angesteckten Module ausgelesen werden, unabhängig davon wie hoch die Auflösung der Module ist. Auf Grund dessen wurde entschieden ein Modul für diesen Bus zu verwenden und aus Gründen der Genauigkeit wurde sich für ein \SI{16}{bit} Modul entschieden. \\
+Der Arduino bietet einen SPI\footnote{\url{http://www.mct.de/faq/spi.html}} Bus zum Anschluss von externen Modulen an. Darüber können die digitalen Outputdaten der angesteckten Module ausgelesen werden, unabhängig davon wie hoch die Auflösung der Module ist. Auf Grund dessen wurde entschieden ein Modul für diesen Bus zu verwenden und aus Gründen der Genauigkeit wurde sich für ein \SI{16}{bit} Modul entschieden. \\
 Damit kann man mit einer Genauigkeit von $\frac{\SI{5}{V}}{\SI{65536}{bit}} = \SI{0,00008}{V/bit}$ die Ausgangsspannung des Drucksensors auslesen. Das bedeutet auch eine Auslesegenauigkeit von $\frac{\SI{1250}{mbar}}{\SI{65536}{bit}} = \SI{0,02}{mbar/bit}$. \\
-Es gibt verschiedene $\SI{16}{bit}$ A-D Wandler auf dem Markt, allerdings gibt es den hier ausgewählten (TM7705 Dual 16-bit ADC) bereits auf einer fertig montierten Platine. Zudem gibt es zu der Platine eine gute Dokumentation. 
+Zur Auswahl standen zwei verschiedene A-D Wandler:
+
+\begin{center}
+\begin{tabular}{l|c|c}
+	& TM7705 Dual 16-bit ADC & AD420 \\ 
+	\hline Preis [\euro]	& 15  & 7 \\ 
+	\hline Auflösung [bit]	& 16  & 16 \\ 
+	\hline Power supply [Volt]	& 1,3/3/5  & 12-32 \\ 
+	\hline Lieferzeit [Wochen]	& 3  & 3 \\ 
+	\hline Montage 	& auf Platine  & nur Chip \\ 
+\end{tabular} 	
+\end{center}
+
+
+Es wurde sich für den TM7705 Dual 16-bit ADC entschieden, da dieser bereits auf eine Platine aufgelötet ist und somit ohne zusätzliche Arbeiten verwendet werden kann und zudem auch direkt vom Arduino mit Spannung versorgt werden kann. Der AD420 hätte ein zusätzliches Netzteil gebraucht, was wiederum mehr Platz in Anspruch genommen hätte. Schematisch ist die Schaltung mit dem A-D Wandler die unten stehende:
 
 
 \begin{figure}[h]
@@ -29,9 +87,9 @@ Es gibt verschiedene $\SI{16}{bit}$ A-D Wandler auf dem Markt, allerdings gibt e
 \paragraph{Gehäuse (still in progress)} 
 \hfill \\
 Da es insbesondere im Lichtstreuaufbau nur sehr begrenzten Stauraum gibt und sämtliche Bauteile, das Wirbelbett selbst ausgenommen, auf einer Platte verbaut werden sollen, wurde gegen ein kommerziell erhältliches Gehäuse entschieden. \\ 
-Stattdessen wurde ein Gehäuse entworfen, in dem sowohl der Arduino als auch das Board mit der Schaltung passgenau Platz finden. Dabei wurde darauf geachtet, dass die Kontakte unterhalb des Arduinos und des Boards genug Platz haben, sodass es keinerlei unbeabsichtigte Reibung der Komponenten am Gehäuse gibt. \\
+Stattdessen wurde ein Gehäuse entworfen, in dem sowohl der Arduino als auch das Board mit dem Spannungsteiler passgenau Platz finden. Dabei wurde darauf geachtet, dass die Kontakte unterhalb des Arduinos und des Boards genug Platz haben, sodass es keinerlei unbeabsichtigte Reibung der Komponenten am Gehäuse gibt. \\
 Für die Anschlüsse wurden möglichst kleine Löcher im Gehäuse gelassen, sodass ein größtmöglicher Schutz gegen Schmutz bei größtmöglichem Komfort gewährleistet wird. \\
-Um die Komplexität so gering wie möglich zu halten, wurde sich gegen einen Schließmechanismus entschieden, da dieser entweder anfällig oder unnötig teuer werden würde. Da das Gehäuse lediglich zum entfernen der angeschlossenen Kabel geöffnet werden muss, war es am einfachsten, den Deckel mit Klebeband am Gehäuse fest zu machen.
+Beim Deckel wurde sich für eine Presspassung entschieden, zudem dient der Deckel gleichzeitig dazu die Komponenten innerhalb des Gehäuses an Ort und Stelle zu halten. Dies wurde über Streben, die vom Deckel nach unten bis auf die jeweilige Komponente geht realisiert.
 
 Hier Bilder einfügen!!
 
@@ -41,7 +99,7 @@ Hier Bilder einfügen!!
 
 \subsection{Anforderungen}
 
-Beim Gassystem soll neben der Luftdichtheit auch eine mechanische Stabilität erreicht werden, damit es einfach von zwischen Normalem und Lichtstreubaufbau transportiert werden kann. Außerdem soll der Gasstrom von \SIrange{0}{120}{l/h} auf \SIrange{0}{3000}{l/h} erhöht werden. Der Regelbereich ist Resultat einer Rechnung im Abschnitt Flowcontroller. Zudem sollen die Werte, die der Drucksensor vor und hinter dem Wirbelbett misst um weniger als \SI{1}{\%} differieren. Weiterhin muss das gesamte Gassystem mit Luftbefeuchter in den Lichtstreuaufbau passen. \\
+Beim Gassystem soll neben der Luftdichtheit auch eine mechanische Stabilität erreicht werden, damit es einfach von zwischen Normalem und Lichtstreubaufbau transportiert werden kann. Außerdem soll der Gasstrom von \SIrange{0}{120}{l/h} auf \SIrange{0}{3000}{l/h} erhöht werden. Zudem sollen die Werte, die der Drucksensor vor und hinter dem Wirbelbett misst um weniger als \SI{1}{\%} differieren. Weiterhin muss das gesamte Gassystem mit Luftbefeuchter in den Lichtstreuaufbau passen. \\
 Der Luftbefeuchter selbst soll im Betrieb eine Luftfeuchtigkeit von \SI{75}{\%} erreichen und den gesamten Regelbereich des Flowcontrollers abdecken.
 
 
@@ -50,45 +108,9 @@ Der Luftbefeuchter selbst soll im Betrieb eine Luftfeuchtigkeit von \SI{75}{\%} 
 
 \subsubsection{Flowcontroller}
 
-Um granulare Medien bis zu einer Partikelgröße von \SI{000}{mm} auf einer Querschnittfläche von \SI{4}{cm} von fluidisieren zu können, muss der Gasfluss erhöht werden. In wieweit der Gassfluss erhöht werden muss, lässt sich aus diesen Beiden Formeln berechnen: \\
-Der Druckabfall über dem Granulat am Punkt der Fluidisation ist mit $\Delta P = \rho h g + \sigma_t$ gegeben. Hierbei ist $\rho$ die Dichte des Granulats und $\sigma_t$ ein Faktor zwischen 0 und 1, der davon abhängt wie stark die einzelnen Partikel zusammenhängen. Der Druckabfall ist außerdem mit der Carman Gleichung $\Delta P / h = E \eta U \cdot \frac{1 - \epsilon}{\epsilon^3 d_p^2}$ gegeben. In diesem Fall ist $E$ eine Konstante mit Wert 180, $\eta$ die Gasviskosität, $U$ die Gasgeschwindigkeit, $d_p$ ist............? und $\epsilon$ die Packungsdichte des Bettes. Daraus kann man für die zwei am häufigsten auftretenden Packungsdichten die nötigen Gasströme berechnen: \\
-
-Gasströme für $\epsilon = \SI{0,64}{}$: \\
-
-\begin{tabular}{c|c|c|c|c|c}
-	&   $D_r$ $[mm]$    &  &       &       &  \\
-$d_p$ $[\mu m]$	&       & 300   & 500   & 750   & 1000 \\
-	\hline
-	 & 5     & 4,26141 & 11,83725 & 26,6338125 & 47,349 \\
-	& 10    & 17,04564 & 47,349 & 106,53525 & 189,396 \\
-	& 20    & 68,18256 & 189,396 & 426,141 & 757,584 \\
-	& 30    & 153,41076 & 426,141 & 958,81725 & 1704,564 \\
-	& 40    & 272,73024 & 757,584 & 1704,564 & 3030,336 \\
-\end{tabular}
-
-\vspace{1cm}
-
-Gasströme für $\epsilon = \SI{0,64}{}$:
-
-\begin{tabular}{c|c|c|c|c|c}
-	&   $D_r$ $[mm]$    &  &       &       &  \\
-	$d_p$ $[\mu m]$	&       & 300   & 500   & 750   & 1000 \\
-	\hline
-& 5     & 12,831579 & 35,643275 & 80,1973688 & 142,5731 \\
-& 10    & 51,326316 & 142,5731 & 320,789475 & 570,2924 \\
-& 20    & 205,305264 & 570,2924 & 1283,1579 & 2281,1696 \\
-& 30    & 461,936844 & 1283,1579 & 2887,10528 & 5132,6316 \\
-& 40    & 821,221056 & 2281,1696 & 5132,6316 & 9124,6784 \\
-\end{tabular} 
-
-
-\vspace{0.5cm}
-
-Aus den Tabellen folgt, das ein Gasfluss von \SIrange{0}{3000}{l/h} alle Anforderungen erfüllt. \\
-Ein Gerät, das diesen Gasfluss genau genug regeln kann, ist ein Flowcontroller.
-Die Idee den Luftstrom über mehrere Gasdurchflussbegrenzer und Ventile auf definierte Werte voreinzustellen und mit dem vorhandenen Flowcontroller von da ab zu regeln, wurde verworfen, weil es sich als zu ungenau und nicht deutlich billiger in Aufwand und Kosten darstellte. Zudem wäre der Aufbau deutlich größer gewesen. \\
-\hfill \\
-Die Lösung bestand somit darin einen neuen Flowcontroller anzuschaffen, der den gesamten Regelbereich mit einer hinreichenden Genauigkeit abdeckt und gleichzeitig gut in das Gassystem integriert werden kann. Dazu wurden zwei Angebote eingeholt, die im folgenden dargelegt sind:
+Aus den Tabellen im Abschnitt \glqq Ziele der Arbeit\grqq \ folgt, das ein Gasfluss von \SIrange{0}{3000}{l/h} alle Anforderungen erfüllt. \\
+Es gab mehrere Lösungsarten diese Anforderung zu erfüllen. Eine Lösung bestand darin, den Luftstrom über mehrere Gasdurchflussbegrenzer und Ventile auf definierte Werte voreinzustellen und mit dem vorhandenen Flowcontroller von da ab zu regeln. Zudem kann man einen Massenstromregler kaufen, der komplett digital zu regeln ist. \\
+Die erste Lösungsart wurde verworfen, weil es sich als zu ungenau und nicht deutlich billiger in Aufwand und Kosten darstellte. Zudem wäre der Aufbau deutlich größer gewesen. Die Lösung bestand somit darin einen neuen Flowcontroller anzuschaffen, der den gesamten Regelbereich mit einer hinreichenden Genauigkeit abdeckt und gleichzeitig gut in das Gassystem integriert werden kann. Dazu wurden zwei Angebote eingeholt, die im folgenden dargelegt sind:
 
 
 \begin{tabular}{l|c|c}
@@ -108,8 +130,7 @@ Zudem waren die Anschaffungskosten für den Brookscontroller um ca $\SI{200}{Eur
 
 \subsubsection{Verrohrung}
 
-Um die geforderte Stabilität und Transportierbarkeit zu gewährleisten, wurde entschieden das gesamte Gassystem aus Stahlrohren (\textcolor{blue}{blau}) zu bauen. Das bietet, neben der besseren Luftdichtigkeit, auch einen höheren Schutz gegenüber äußeren Umwelteinflüssen wie ätzenden Flüssigkeiten oder herunterfallenden Gegenständen.
-Eine Herstellerauswahl hat hier nicht stattgefunden, da bereits vorhandene Verrohrung der Firma Swagelok weitergenutzt werden sollte. Dies hatte auch den Vorteil, das ein Berater aus dem nahegelegenen Standort Düsseldorf bei der Auslegung und Wahl der Komponenten beraten konnte. \\
+Um die geforderte Stabilität und Reproduzierbarkeit zu gewährleisten, wurde entschieden das gesamte Gassystem aus Stahlrohren (\textcolor{blue}{blau}) zu bauen. Das bietet, neben der besseren Luftdichtigkeit, auch einen höheren Schutz gegenüber äußeren Umwelteinflüssen wie ätzenden Flüssigkeiten oder herunterfallenden Gegenständen.
 Auf der Skizze in Abbildung xy kann man das gebaute System sehen:
 \hfill \\
 
@@ -121,30 +142,17 @@ Auf der Skizze in Abbildung xy kann man das gebaute System sehen:
 \end{figure}
 
 
-Um dem Aufbau die nötige Flexibilität zu geben, die beim Umbau zwischen den beiden Versuchsständen nötig ist, wurde das Wirbelbett mit einem Bunaschlauch (\textcolor{orange}{orange}) an das Gassystem angeschlossen. Um Problemen mit dem Flowcontroller zu begegnen, wird das Gassystem über eine Druckluftflasche mit einstellbarem Ausgangsdruck gespeist. Sämtliche Rohrleitungen ab dem Luftfilter bis zum Übergang zum Wirbelbett sind aus Edelstahl. \\
-Die Ventile, T-Stücke und Verbindungsstücke sind auch aus Edelstahl, da Messing zwar billiger wäre, allerdings auch weicher, was zu Verformungen und höherem Verschleiß führen kann. Zur weiteren Erhöhung der Stabilität und Transportierbarkeit wurde das System zudem auf einer Holzplatte befestigt. \\
-Abschließend kann gesagt werden, das durch die Wahl der Verrohrung ein luftdichtes Gassystem erreicht wurde. Außerdem ist der Aufbau mit $\SI{000}{m} \cdot \SI{000}{m}$ passend für den Lichtstreuaufbau.
+Um dem Aufbau die nötige Flexibilität zu geben, die beim Umbau zwischen den beiden Versuchsständen nötig ist, wurde das Wirbelbett mit einem Bunaschlauch (\textcolor{orange}{orange}) an das Gassystem angeschlossen. Der Bunaschlauch gewährleistet neben der nötigen Flexibiltät auch eine deutlich verminderte Knickgefahr, da der Schlauch aus dickem Gummi mit zusätzlicher Verstärkung aus Rayongewebe besteht.
+Um Problemen mit dem Flowcontroller zu begegnen, wird das Gassystem über eine Druckluftflasche mit einstellbarem Ausgangsdruck gespeist. Sämtliche Rohrleitungen ab dem Luftfilter bis zum Übergang zum Wirbelbett sind aus Edelstahl. \\
+Die Ventile, T-Stücke und Verbindungsstücke sind auch aus Edelstahl, da Messing zwar billiger wäre, allerdings auch weicher, was zu Verformungen und höherem Verschleiß führen kann. Zur weiteren Erhöhung der Stabilität und Reproduzierbarkeit wurde das System zudem auf einer Holzplatte befestigt. \\
+Abschließend kann gesagt werden, das durch die Wahl der Verrohrung ein luftdichtes Gassystem erreicht wurde. Außerdem ist der Aufbau mit $\SI{0,41}{m} \cdot \SI{0,33}{m}$ passend für den Lichtstreuaufbau.
 
 
 \subsubsection{Luftbefeuchter}
 
-Um die Anforderungen für den Luftbefeuchter zu erfüllen, wurden drei mögliche Lösungen geprüft, dabei waren die Größe und die Kosten der Lösung das Hauptaugenmerk.
-
-\paragraph{Swagelok} 
-
-\hfill \\
-
-Von Swagelok gibt es eine Lösung ähnlich dem jetzigen Drucksensor. Über ein spezielles Rohrverbindungsstück kann ein Metallzylinder angeschlossen werden, der senkrecht auf dem Rohr nach oben steht. Dieser wird mit Wasser gefüllt, das von unten mit Luft durchströmt wird und die anschließend oben abgenommen und Richtung Wirbelbett fließt.
-
-\paragraph{Befeuchtung durch Vorbeiströmen}
-
-\hfill \\
-
-In einer anderen Arbeit \cite{Fallturmexperiment} wurde die Luftbefeuchtung realisiert, indem man Luft direkt an einer  Wasseroberfläche vorbeiströmen ließ und die Luft durch Diffusion Wasser aufnahm. 
-
-\paragraph{Eigenbau}
-\hfill \\
-
+Um die Anforderungen für den Luftbefeuchter zu erfüllen, wurden drei mögliche Lösungen geprüft, dabei waren die Größe und die Kosten der Lösung das Hauptaugenmerk. \\
+Von Swagelok gibt es eine Lösung ähnlich dem jetzigen Drucksensor. Über ein spezielles Rohrverbindungsstück kann ein Metallzylinder angeschlossen werden, der senkrecht auf dem Rohr nach oben steht. Dieser wird mit Wasser gefüllt, das von unten mit Luft durchströmt wird und die anschließend oben abgenommen und Richtung Wirbelbett fließt. \\
+In einer anderen Arbeit \cite{Fallturmexperiment} wurde die Luftbefeuchtung realisiert, indem man Luft direkt an einer  Wasseroberfläche vorbeiströmen ließ und die Luft durch Diffusion Wasser aufnahm. \\
 Eine alternative Methode ist mit gleicher Funktion wie die Lösung von Swagelok, besteht darin einen eigenen Luftbefeuchter zu bauen. 
 
 
@@ -153,7 +161,7 @@ Eine alternative Methode ist mit gleicher Funktion wie die Lösung von Swagelok,
 \hfill \\
 
 Es wurde sich für die Lösung \glqq Eigenbau\grqq \ entschieden, da die anderen Methoden Mängel aufweisen. Die Lösung von Swagelok ist zum einen sehr teuer, zudem würde bei abgeschaltetem Gasfluss Wasser in das System fließen. \\
-Die Methode des Vorbeiströmens fiel raus, weil eine zu große Strömfläche gebraucht wurde. Anhand der Formeln aus der Arbeit von Herrn Schmitz, erhielt man eine Fläche von $\SI{50}{cm} \cdot \SI{50}{cm}$. Ein Aufbau dieser Größe ist unmöglich im Lichtstreuaufbau unterzubringen.
+Die Methode des Vorbeiströmens wurde verworfen, weil eine zu große Strömfläche gebraucht wurde. Anhand der Formeln aus der Arbeit von Herrn Schmitz, erhielt man eine Fläche von $\SI{50}{cm} \cdot \SI{50}{cm}$. Einen Aufbau dieser Größe kann man nicht im Lichtstreuaufbau unterbringen.
 
 \paragraph{Umsetzung}
 
@@ -208,43 +216,6 @@ Abschließend wurde auch der Luftbefeuchter auf einer Holzplatte befestigt, die 
 Bild!!
 
 
-\subsubsection{Kosten}
-
-Insgesamt hat der Aufbau des Gassystems und Luftbefeuchters knapp \SI{1600}{\euro} gekostet, wenn man dabei nur die zusätzlich bestellten Materialien einbezieht und nicht die ohnehin vorhandenen. Der größte Teil der Kosten fällt dabei auf den Flowcontroller zurück. Eine genaue Aufstellung ist im folgenden zu sehen:
-
-\begin{center}
-\begin{tabular}{l|c|c|c}
-	Teil  & Anzahl & Kosten/Stück & Kosten \\
-	\hline
-	&       &       &  \\
-	Flowcontroller & 1     & 1186  & 1186 \\
-	Mutter mit Ferrul & 10    & 4,8   & 48 \\
-	Kükenhahn & 3     & 69,25 & 207,75 \\
-	T-Stück & 2     & 26,11 & 52,22 \\
-	Verbinungsstück & 1     & 12,87 & 12,87 \\
-	Endanschluss & 4     & 12,87 & 51,48 \\
-	Buna N Schlauch & 9     & 2,67  & 24,03 \\
-	Einschraubverbindung M12x1 & 3     & 16,67 & 50,01 \\
-	Teichnetz & 1     & 8,45  & 8,45 \\
-	Küchenschwämme & 3     & 2,99  & 8,97 \\
-	\hline 
-	&       &       &  \\
-	Summe &       &       & 1632,36 \\
-\end{tabular}
-\end{center}
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -281,11 +252,7 @@ Wie schon in der Einleitung beschrieben, hat ein granulares Medium mehrere Phase
 
 \subsubsection{Auswahl}
 
-\paragraph{Fliehkraftabscheider} 
-
-\hfill \\
-
-Ein sehr beliebtes Produkt, um Luft von Partikeln zu säubern, ist der Fliehkraftabscheider oder Zyklon. Dieser basiert auf dem Prinzip, das die Luft immer weiter beschleunigt wird und die darin enthaltenen Partikel an die Wand gedrückt werden und schließlich nach unten raus fallen. \\
+Ein in der Industrie übliches Produkt, um Luft von Partikeln zu säubern, ist der Fliehkraftabscheider oder Zyklon. Dieser basiert auf dem Prinzip, das die Luft immer weiter beschleunigt wird und die darin enthaltenen Partikel an die Wand gedrückt werden und schließlich nach unten raus fallen. \\
 
 
 \begin{figure}[h]
@@ -299,11 +266,6 @@ Ein sehr beliebtes Produkt, um Luft von Partikeln zu säubern, ist der Fliehkraf
 
 Das Problem bei diesem Bauteil besteht darin, das die kommerziell erhältlichen Versionen sehr teuer sind und zudem zu groß für unserem Aufbau passen. \\
 Weiterhin wäre ein erheblicher Konstruktionsaufwand nötig, um einen eigenen Zyklon zu bauen, da die Luft in unserem Versuch von unten kommt, der Zyklon sie aber von der Seite braucht. \\
-
-\paragraph{Trichter}
-
-\hfill \\
-
 Eine Alternative dazu ist ein Trichter, der den Querschnitt aufweitet und so den Gasstrom verlangsamt. Aus Kosten und den oben beschriebenen Konstruktionsproblemen wurde entschieden einen Trichter zu entwerfen.
 
 
@@ -321,7 +283,7 @@ Hier Konstruktionsskizze einfügen
 
 \subsubsection{Anforderungen}
 
-Im Prinzip gab es im vorigen Aufbau auch schon einen Anschlusszylinder, allerdings brauchte man mehr Features und mehr Flexibilität. Das Ziel bei diesem Zylinder war den Anschluss an das Gassystem zu haben und eine Halterung für die verschieden großen Röhrchen zu haben. Zudem sollte gewährleistet werden, das ein Ionisator ein den Luftstrom eingebracht werden kann.
+Das Ziel bei diesem Zylinder war den Anschluss an das Gassystem zu haben und eine Halterung für die verschieden großen Röhrchen zu haben, die einen schnellen Wechsel gewährleistet. Zudem sollte gewährleistet werden, das ein Ionisator in den Luftstrom eingebracht werden kann.
 
 
 \subsubsection{Umsetzung}
@@ -427,36 +389,23 @@ Es wurde sich für die Membran von Sartorius entschieden, weil sie alle Anforder
 
 \section{Bewertung}
 
+
 \subsection{Elektronik}
 
+Rückblickend wurde die Komplexität der Elektronik unterschätzt, was dazu führte, das sehr lange unklar war welche Teile verwendet werden. Dadurch war es nicht möglich in dem geplanten Zeitfenster ein finales Gehäuse für die Elektronik zu designen. Da der Zeitaufwand für das Design dieses Teils allerdings nicht sehr hoch war, war es ohne Probleme möglich es am Ende des Projekts zu machen. In Zukunft wäre es besser solche Probleme entweder früher zu erkennen oder das Design von vorne herein ans Ende zu stellen. 
 
 \subsection{Gassystem}
 
+Der gewählte Filter erfüllt zwar alle gestellten Anforderungen, bringt aber einen Nachteil mit sich. Trotz planem Filter beim Aufkleben auf das Probenröhrchen, verformt sich dieser im Laufe der Nutzung plastisch. Das führt zu einem zusätzlichen heben und senken des graularen Mediums um bis zu \SI{3}{cm} (im Rährchen mit \SI{40}{mm}  Durchmesser). Dieses Verhalten ist unerwünscht, da sich die Granulate deswegen nicht komprimieren und dann auf ihr Verhalten untersuchen lassen.  
 
 \subsection{Wirbelbett}
 
 
+
 \subsection{Nutzung des 3D Druckers}
 
-Durch den engen Zeitplan und die Anforderungen bedingt war es nicht möglich ein anderes Material außer Plastik zu verwenden. Das ist ein Material, das die Werkstatt nicht vorrätig hat und der Art Konstruktion hier als Vollmaterial sehr teuer wäre. Der 3D Drucker ermöglichte ein schnelles und Materialeffizientes herstellen von Modellen, die auch verwendet werden konnten. So war man in der Lage Zwischenstände zusammenzubauen und Fehler zu erkennen, die am Rechner nicht zu sehen waren. Um die Zeitersparnis deutlicher zu machen, hier ein Beispiel am komplexesten Teil des Wirbelbetts: \\
-\paragraph{3D Drucker}
-\begin{itemize}
-	\item[1.] exportieren der Konstruktion in ein passendes Format $\rightarrow$ ca. 2 Minuten
-	\item[2.] Arbeit des Druckers $\rightarrow$ ca. 11 Stunden
-\end{itemize}
-
-\hfill \\
-
-\paragraph{Werkstatt}
-\begin{itemize}
-	\item[1.] Erstellung der nötigen Skizzen $\rightarrow$ 30-90 Minuten, evtl. länger
-	\item[2.] Arbeit der Werkstatt mit Wartezeit $\rightarrow$ 2-3 Tage
-\end{itemize}
-
-\vspace{0.5cm}
-
-Mittels des 3D Druckers ist also möglich über Nacht ein neues Modell zu drucken und am nächsten Tag damit zu testen, das ist eine Zeitersparnis von \SIrange{1,5}{2,5}{Tagen}. Ohne einen 3D Drucker wäre die Konstruktion nicht so schnell fortgeschritten und wäre deutlich teuer geworden. 
-
+Durch die Anforderung einen Ionisator im Aufbau unterzubringen, war es nicht möglich ein anderes Material außer Plastik zu verwenden. Zudem konnte eine andere Herangehensweise gewählt werden, statt klassischen Technischen Zeichnungen und FEM, wurde die Methode des evolutionären Druckens gewählt. Das sparte die aufwändigen Simulationen und erlaubte das testen der designten Teile unter Realbedingungen. Der Nachteil dieser Methode ist neben den  Fehldrucken, die bei ca \SI{10}{\%} lagen, der Overhead an Teilen. Dadurch das man das selbe Teil in verschiedenen Evolutionsstufen druckt, ist man nicht sehr materialsparend. \\
+Die Qualität der gedruckten Bauteile war durchweg hoch, besonders die Stabilität ist beachtlich, allerdings dauert es zwei, drei Drucke bis man seinen Modell am Rechner soweit angepasst hat, das der Drucker so druckt, wie man es beabsichtigt. Zudem ist der Drucker anfällig im Bezug auf den Druckuntergrund. Während des Projekts ist das Kaptontape auf der Heizplatte kaputtgegangen und ohne dieses Tape auf der Heizplatte, ist es nicht möglich Teile mit Durchmesser größer als \SI{40}{mm} mit flachem Boden zu drucken. Die Drucke bogen sich und waren somit ungeeignet für dichtende Zwecke eingesetzt zu werden.
 
 
 \subsection{Insgesamt}
