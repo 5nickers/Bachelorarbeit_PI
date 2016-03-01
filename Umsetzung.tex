@@ -216,7 +216,7 @@ Abschließend wurde auch der Luftbefeuchter auf einer Holzplatte befestigt, die 
 Bild!!
 
 
-
+Im realen Betrieb wird die Luftfeuchtigkeit von \SI{75}{\%} nicht immer erreicht, stattdessen ist sie abhängig vom Luftstrom wie im Diagramm unten dargestellt.
 
 
 
@@ -288,12 +288,36 @@ Das Ziel bei diesem Zylinder war den Anschluss an das Gassystem zu haben und ein
 
 \subsubsection{Umsetzung}
 
-Der Kern des Anschlusszylinders ist die $\SI{40}{mm}$ breite Röhre, damit Röhrchendurchmesser bis $\SI{40}{mm}$ mit einem laminaren Gasstrom versorgt werden können. \\
-Auf der Oberseite befindet sich eine Nut in die der O-Ring zum Abdichten der Verbindung Anschlusszylinder-Röhrchenhalter. Damit diese Verbindung dicht ist, befindet sich auf der Oberseite zudem ein Arretierungsmechanismus in den der Röhrchenhalter eingedreht wird. Zudem garantiert dieser Mechanismus ein einfaches und schnelles lösen der Komponenten.
+Der Kern des Anschlusszylinders ist die $\SI{40}{mm}$ breite Röhre, damit Röhrchendurchmesser bis $\SI{40}{mm}$ mit einem laminaren Gasstrom versorgt werden können. Belegen lässt sich der laminare Gasstrom durch die Reynoldszahl. Dazu wird zunächst die Gasgeschwindigkeit $v_{Gas}$ berechnet:
+
+\begin{align*}
+v_{Gas} = \frac{Q}{A}
+\end{align*}
+Dabei ist $Q$ die Gasmenge in $m^3$, die pro Sekunde durch das Röhrchen strömt und $A$ die Querschnittsfläche des Röhrchens in $m^2$. Mit der Gasgeschwindigkeit berechnet man dann die Reynoldszahl:
+\begin{align*}
+Re = \frac{v_{Gas} \cdot d}{\nu}
+\end{align*} 
+Dabei ist $d$ der innere Durchmesser des Anschlusszylinders und $\nu$ die kinetische Viskosität der Luft. Für den maximalen Gasstrom von $\SI{3}{m^3/h}$, lautet die Rechnung wie folgt:
+
+\begin{align*}
+v_{Gas} &= \frac{\frac{\SI{3}{m^3}}{\SI{3600}{s}}}{\pi \cdot \SI{0,02}{m}^2} = \SI{0,66}{m/s} 
+\intertext{Damit ergibt die sich Reynoldszahl zu:}
+Re &= \frac{\SI{0,66}{m/s} \cdot \SI{0,04}{m}}{ \nu\footnotemark[1]} = 1724,36
+\end{align*}
+
+\footnotetext[1]{kinematische Viskosität von Luft = $\SI{15,31}{m^2/s}$ bei Normaldruck und \SI{20}{^\circ C}}
+
+Die Reynoldszahl ist kleiner als 2300, damit ist der Gasstrom laminar. \\
+Auf der Oberseite befindet sich eine Nut in die der O-Ring zum Abdichten der Verbindung Anschlusszylinder-Röhrchenhalter eingelegt wird. Um das Dichtverhalten zwischen Plastik und O-Ring zu verbessern wurde in beide Nute eine \SI{1}{mm} dicke Lage Silikon gestrichen. Damit diese Verbindung dicht ist, befindet sich auf der Oberseite zudem ein Arretierungsmechanismus in den der Röhrchenhalter eingedreht wird. Zudem garantiert dieser Mechanismus ein einfaches und schnelles lösen der Komponenten.
+Dazu muss eine Kraft von \SI{80}{N} auf die Silikon-Gummi Dichtung ausgeübt werden. Bei Arretierung wird diese Kraft an acht Punkten gehalten, jeder Punkt hält also \SI{10}{N}. In Versuchen stellte sich heraus, das jeder dieser Punkte erst bei einer Krafteinwirkung von \SI{60}{N} anfängt nachzugeben. Die Festigkeit im Arbeitsbereich garantiert. Weiterhin wurde berechnet wie viel Kraft nötig wäre, damit sich der Röhrchenhalter von selbst aus der Arretierung schraubt:
+Bei einer Kraft von \SI{80}{N} und einem Haftreibungskoeffizienten von 0,3 (Kunststoff auf Kunststoff) ergibt sich:
+\begin{align*}
+F_R = \SI{80}{N} \cdot 0,3 = \SI{24}{N}
+\end{align*}
+Eine Kraft dieser Größenordnung tritt bei unseren Versuchsbedingungen nicht auf, daher kann man die Möglichkeit einer Selbstlösung vernachlässigen.
 
 
 Hier Doppelbild einfügen
-
 
 In der Frontansicht sieht man den Einlass mit Arretierung für den Ionisator. Zur Montage wird die Spitze des Ionisator in einen Adapter gesteckt und dieser Adapter mittels drehen arretiert. Die Luftdichtheit wird durch einen O-Ring aus Gummi (Shore Härte 50) erreicht. \\
 In der Seitenansicht wird der Anschluss für das Gassystem sichtbar. Hier wurde ein Swagelockverbinder mit Gummi O-Ring in das Plastik geschraubt und der Adapter für den Bunaschlauch daran angeschlossen.
@@ -305,17 +329,18 @@ In der Seitenansicht wird der Anschluss für das Gassystem sichtbar. Hier wurde 
 
 \hfill \\
 
-Der Röhrchenhalter besteht aus drei Teilen, eins dient zur Verbinung mit dem Anschlusszylinder und das andere sorgt dafür, dass die Dichtung an Ort und Stelle gehalten wird. \\
-Die beiden Teile werden durch vier M6 Schrauben verbunden, damit der Druck auf den dichtenden O-Ring möglichst gleichmäßig verteilt ist. \\
-Im oberen Teil sind zudem vier Aussparungen, die die Stabilität nicht beeinträchtigen aber Material sparen. 
+Der Röhrchenhalter besteht aus drei Teilen, eins dient zur Verbinung mit dem Anschlusszylinder und das andere sorgt dafür, dass die Dichtung an Ort und Stelle gehalten wird. Beide Auflagestellen des O-Rings sind zudem mit Silikon bestrichen, um einen möglichst dichten Abschluss zu gewährleisten.
+Diese Teile werden durch sechs M6 Schrauben verbunden, damit der Druck auf den dichtenden O-Ring möglichst gleichmäßig verteilt ist. \\
 
 Hier Doppelbild einfügen
 
 
-Der dritte Teil des Halters sorgt dafür, dass das Röhrchen nicht seitlich verkippt werden kann und es dadurch zu Undichtigkeiten kommt. Damit diese Halterung nicht für jedes Röhrchen seperat montiert werden muss, wurde ein universelles Ringsystem entworfen. Das Basisteil wird am Schanier festgeschraubt und hat $\SI{40}{mm}$ Durchmesser. In das Basisteil können nun weitere Ringe eingesetzt und durch verdrehen arretiert werden, damit auch die Durchmesser $30,20,5\SI{}{\ mm}$ einen guten Halt haben.
+Der dritte Teil des Halters ist der Stabilisator und sorgt dafür, dass das Röhrchen nicht seitlich verkippt werden kann und es dadurch zu Undichtigkeiten kommt. Damit diese Halterung nicht für jedes Röhrchen seperat montiert werden muss, wurde ein universelles Ringsystem entworfen. Das Basisteil wird am Schanier festgeschraubt und hat $\SI{40}{mm}$ Durchmesser. In das Basisteil können nun weitere Ringe eingesetzt und durch verdrehen arretiert werden, damit auch die Durchmesser $30,20,5\SI{}{\ mm}$ einen guten Halt haben.
 
 
 \subsection{Halterung Wirbelbett}
+
+Sowohl für den Aufbau im Labor als auch für den Aufbau im Lichtstreuaufbau, wurde eine Halterung benötigt. Im folgenden werden die beiden Halterungen vorgestellt.
 
 \subsubsection{Lichtstreuaufbau}
 
@@ -347,6 +372,24 @@ Um den Anforderungen gerecht zu werden, wurde eine Konstruktion aus zwei L-förm
 
 In der Draufsicht sieht man, das zum Verschieben nach links und rechts zwei durch eine Laborklemme (rot) gegeneinander verschiebbare Träger genutzt wurden. Ans Ende es linken Trägers wurde mittels zwei Winkeln die Halteplatte für das Wirbelbett montiert. Auf der Halteplatte kann das Wirbelbett mit der Mikrometerschraube exakt in den Laserstrahl gefahren werden.
 
+
+\subsubsection{Laboraufbau}
+
+\paragraph{Anforderungen}
+\hfill \\
+An die Halterungen im Labor gab es lediglich die Anforderung, das sie stabil ist und eine horizontale Ausrichtung des Wirbelbetts ermöglicht.
+
+\paragraph{Umsetzung}
+\hfill \\
+Die Anforderungen wurden zum einen durch eine Platte auf der der Justiermechanismus des Wirbelbetts festgeschraubt wird erfüllt. Für einen stabilen Stand werden in Platte vier Beine mit Füßen von jeweils \SI{3}{cm} Durchmesser eingeschraubt. Durch den Schraubmechnismus können auch schiefe Arbeitsflächen korrigiert werden.
+
+
+
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[scale=0.6]{Halterung_Labor_Seite.png}
+    \end{center}
+\end{figure}
 
 
 
@@ -384,7 +427,24 @@ Um einen geeigneten Filter zu finden wurde sich mit den Herstellern Merk Millipo
 \vspace{0.5cm}
 
 Es wurde sich für die Membran von Sartorius entschieden, weil sie alle Anforderungen erfüllt und in allen Belangen besser ist als die beiden Alternativen. Damit die Membran nicht verrutscht wurde ein jeweils passendes Stück auf die Probenröhrchen geklebt. So ist auch sicher gestellt, das kein Granulat unabsichtlich in den Anschlusszylinder fällt.
+Eine weitere wichtige Funktion des Filters ist es einen gleichmäßigen Gasstrom zu erzeugen. Dies wird durch die feine Porung erreicht und kann durch berechnen der Reynoldszahl für die verschiedenen Durchmesser bestätigt werden. Zur Berechnung geht man wieder vom maximalen Gasstrom von $\SI{3}{m^3/h}$ 
 
+\begin{center}
+\begin{tabular}{c|c|c}
+	Röhrchendruchesser [mm]	&	Gasgeschwindigkeit $v_{Gas}$ [m/s]		& Reynoldszahl \\
+	\hline
+	40	&	0,88		&  0,025 \\
+	\hline
+	30	&		1,57	&  0,046 \\
+	\hline
+	20	&	3,53		&  0,11 \\
+	\hline
+	5	&	14,15		&  0,41 \\
+	\hline
+\end{tabular}	
+\end{center}
+
+Die Reynoldszahlen sind alle weit unter 2300, also ist die Strömung durch die einzelnen Poren laminar und sorgt damit für eine gleichmäßige Anströmung des Granulats über den gesamten Querschnitt des Röhrchens.
 
 
 \section{Bewertung}
