@@ -52,6 +52,8 @@
 }
 
 \usepackage{datetime}
+\usepackage{wallpaper}
+
 
 \newcommand\bootstrapsamples{N_\text P}
 \newcommand\gausswidth{\sigma}
@@ -66,38 +68,81 @@
 \newcommand\timestep{a}
 
 
+\CenterWallPaper{1}{Seitenhintergrund.png}
 
-\subject{Bachelorarbeit in Physikingenieurwesen}
+
+\subject{
+	FH Aachen \\
+	Fachbereich Energietechnik \\
+	Studiengang Physikingenieurwesen
+	}
 \title{%
     Konstruktion, Aufbau und Inbetriebnahme eines Wirbelbetts zur Granulatfluidisierung
 }
-%\subtitle{}
+\subtitle{Bachelorarbeit}
 \author{
-    Christoph Hansen }
+    Vorgelegt im Jahr 2016 von Christoph Hansen \\
+    \small{geboren am 30. April 1992 in Aachen} \\
+    Zum Erlangen des akademischen Grades \\    
+    \large{Bachelor of Engineering (B.Eng.)}
+    }
+    
+\date{}    
 
 \publishers{%
 	Angefertigt am Institut für Materialpyhsik im Weltraum am Deutschen Zenstrum für Luft- und Raumfahrt, vorgelegt dem Fachbereich 10 der Fachhochschule Aachen, Campus Jülich
+	
+	\begin{figure}[h]
+		\begin{center}
+				\includegraphics[scale=0.06]{DLR_Logo.png}
+		\end{center}
+	\end{figure}
+
 }
-\date{6.15.16}
 
 \uppertitleback{%
-    1. Prüfer: Prof. Dr. Michael Stellberg \\
-    2. Prüfer: Dr. Matthias Sperl 
+    1. Prüfer: Prof. Dr.-Ing. Michael Stellberg \\
+    2. Prüfer: Prof. Dr. Matthias Sperl 
 }
 
 \lowertitleback{%
 	
-	Diese Arbeit hat eine Sperrfrist bis zum 30.9.2017.
+	\small{
+	Die vorliegende Arbeit ist bis zum 30.9.2017 streng vertraulich zu behandeln. Die Inhalte dieser Arbeit dürfen im oben genannten Zeitraum weder ganz, noch in Auszügen ohne Einwilligung der Firma Dritten zugänglich gemacht werden.
+	Insbesondere darf die vorliegende Arbeit im genannten Zeitraum nicht in einer Bibliothek aufgestellt werden. Sie darf nur nach vorheriger Absprache mit Prof. Dr.-Ing. Michael Stellberg im Labor für Produktentwicklung der FH Aachen, Campus Jülich eingesehen werden.
 	
-	\vspace{6cm}
+	Die Weitergabe oder die Verwertung der Unterlagen, Informationen und/oder Kenntnissen ist ausnahmsweise zulässig, soweit dies zum ordnungsgemäßen Ablauf des Prüfungsverfahrens gemäß der Prüfungsordnung der FH Aachen erforderlich ist.
+	}
 	
-	Diese Arbeit ist von mir selbstständig angefertigt und verfasst. Es sind keine anderen als die angegebenen Quellen und Hilfsmittel benutzt worden. 
+	
+	\vspace{2cm}
+	
+Ich versichere hiermit, dass ich die vorliegende Arbeit selbstständig verfasst und keine anderen als im Quellenverzeichnis angegebenen Quellen benutzt habe. Stellen, die wörtlich oder sinngemäß aus veröffentlichten oder noch nicht veröffentlichten Quellen entnommen sind, sind als solche kenntlich gemacht. Die Zeichnungen oder Abbildungen in dieser Arbeit sind von mir selbst erstellt worden oder mit einem entsprechenden Quellennachweis versehen. Diese Arbeit ist in gleicher oder ähnlicher Form noch bei keiner anderen Prüfungsbehörde eingereicht worden.
 	
 	\vspace{2cm}
 	
 	\hspace*{\fill}\begin{tabular}{@{}l@{}}\hline
 		\makebox[6cm]{Christoph Hansen}
 	\end{tabular}
+	
+	\vspace{2cm}
+	
+	Die Arbeit wurde betreut von: 
+	
+	\textcolor{white}{Das ist ein Platzhalter}
+
+	\begin{minipage}{0.5\textwidth}
+		\includegraphics[scale=0.6]{FH_Aachen_Logo.png}
+	\end{minipage}
+	\begin{minipage}{0.5\textwidth}
+		Prof. Dr.-Ing. Michael Stellberg
+	\end{minipage}
+	\begin{minipage}{0.5\textwidth}
+		\includegraphics[scale=0.04]{DLR_Logo.png}
+	\end{minipage}
+	\begin{minipage}{0.5\textwidth}
+		Prof. Dr. Matthias Sperl
+	\end{minipage}	
 }
 
 
@@ -106,8 +151,6 @@
 \begin{document}
 
 \maketitle
-
-
 
 \tableofcontents
 
