@@ -16,7 +16,7 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="Prinzip_Wirbelbett.svg"
-   inkscape:export-filename="D:\Dropbox\Bachelorarbeit\BA\BA_Text\Prinzip_Wirbelbett.png"
+   inkscape:export-filename="C:\Dropbox\Bachelorarbeit\BA\BA_Text\Prinzip_Wirbelbett.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <defs
@@ -135,13 +135,13 @@
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
      inkscape:cx="310.71341"
-     inkscape:cy="275.11419"
+     inkscape:cy="475.11419"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1920"
-     inkscape:window-height="1017"
-     inkscape:window-x="1912"
+     inkscape:window-width="1600"
+     inkscape:window-height="837"
+     inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1" />
   <metadata
@@ -152,7 +152,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -271,7 +271,7 @@
          sodipodi:role="line"
          id="tspan4180"
          x="294.96454"
-         y="358.89249">Granulat auffangen</tspan></text>
+         y="358.89249">Granulatauffänger</tspan></text>
     <rect
        style="fill:#000000;stroke:none;stroke-width:5.9000001;stroke-miterlimit:4;stroke-dasharray:none"
        id="rect4182"

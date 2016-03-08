@@ -16,23 +16,23 @@ Eine Herstellerauswahl hat hier nicht stattgefunden, da bereits vorhandene Verro
 Insgesamt wir der Aufbau des Gassystems und Luftbefeuchters knapp \SI{1600}{\euro} kosten, wenn man dabei nur die zusätzlich bestellten Materialien einbezieht und nicht die ohnehin vorhandenen. Der größte Teil der Kosten fällt dabei auf den Flowcontroller zurück. Eine genaue Aufstellung ist im folgenden zu sehen:
 
 \begin{center}
-	\begin{tabular}{l|c|c|c}
-		Teil  & Anzahl & Kosten/Stück & Kosten \\
+	\begin{tabular}{|l|S|S|S|}
+		{Teil}  & {Anzahl} & {Kosten/Stück} & {Kosten} \\
 		\hline
 		&       &       &  \\
-		Flowcontroller & 1     & 1186  & 1186 \\
-		Mutter mit Ferrul & 10    & 4,8   & 48 \\
-		Kükenhahn & 3     & 69,25 & 207,75 \\
-		T-Stück & 2     & 26,11 & 52,22 \\
-		Verbinungsstück & 1     & 12,87 & 12,87 \\
-		Endanschluss & 4     & 12,87 & 51,48 \\
-		Buna N Schlauch & 9     & 2,67  & 24,03 \\
-		Einschraubverbindung M12x1 & 3     & 16,67 & 50,01 \\
-		Teichnetz & 1     & 8,45  & 8,45 \\
-		Küchenschwämme & 3     & 2,99  & 8,97 \\
+		{Flowcontroller} & 1     & 1186,00  & 1186,00 \\
+		{Mutter mit Ferrul} & 10    & 4,80   & 48,00 \\
+		{Kükenhahn} & 3     & 69,25 & 207,75 \\
+		{T-Stück} & 2     & 26,11 & 52,22 \\
+		{Verbinungsstück} & 1     & 12,87 & 12,87 \\
+		{Endanschluss} & 4     & 12,87 & 51,48 \\
+		{Buna N Schlauch} & 9     & 2,67  & 24,03 \\
+		{Einschraubverbindung M12x1} & 3     & 16,67 & 50,01 \\
+		{Teichnetz} & 1     & 8,45  & 8,45 \\
+		{Küchenschwämme} & 3     & 2,99  & 8,97 \\
 		\hline 
 		&       &       &  \\
-		Summe &       &       & 1632,36 \\
+		{Summe} &       &       & 1632,36 \\
 	\end{tabular}
 \end{center}
 
@@ -153,14 +153,14 @@ Abschließend kann gesagt werden, das durch die Wahl der Verrohrung ein luftdich
 Um die Anforderungen für den Luftbefeuchter zu erfüllen, wurden drei mögliche Lösungen geprüft, dabei waren die Größe und die Kosten der Lösung das Hauptaugenmerk. \\
 Von Swagelok gibt es eine Lösung ähnlich dem jetzigen Drucksensor. Über ein spezielles Rohrverbindungsstück kann ein Metallzylinder angeschlossen werden, der senkrecht auf dem Rohr nach oben steht. Dieser wird mit Wasser gefüllt, das von unten mit Luft durchströmt wird und die anschließend oben abgenommen und Richtung Wirbelbett fließt. \\
 In einer anderen Arbeit \cite{Fallturmexperiment} wurde die Luftbefeuchtung realisiert, indem man Luft direkt an einer  Wasseroberfläche vorbeiströmen ließ und die Luft durch Diffusion Wasser aufnahm. \\
-Eine alternative Methode ist mit gleicher Funktion wie die Lösung von Swagelok, besteht darin einen eigenen Luftbefeuchter zu bauen. 
+Eine alternative Methode besteht darin einen eigenen Luftbefeuchter zu bauen, mit gleicher Funktion wie die Lösung von Swagelok. 
 
 
 \paragraph{Auswahl}
 
 \hfill \\
 
-Es wurde sich für die Lösung \glqq Eigenbau\grqq \ entschieden, da die anderen Methoden Mängel aufweisen. Die Lösung von Swagelok ist zum einen sehr teuer, zudem würde bei abgeschaltetem Gasfluss Wasser in das System fließen. \\
+Es wurde sich für die Lösung Eigenbau entschieden, da die anderen Methoden Mängel aufweisen. Die Lösung von Swagelok ist zum einen sehr teuer, zudem würde bei abgeschaltetem Gasfluss Wasser in das System fließen. \\
 Die Methode des Vorbeiströmens wurde verworfen, weil eine zu große Strömfläche gebraucht wurde. Anhand der Formeln aus der Arbeit von Herrn Schmitz, erhielt man eine Fläche von $\SI{50}{cm} \cdot \SI{50}{cm}$. Einen Aufbau dieser Größe kann man nicht im Lichtstreuaufbau unterbringen.
 
 \paragraph{Umsetzung}
@@ -172,7 +172,7 @@ Damit der Befeuchter in den Lichtstreuaufbau passt, wurde zu Anfang ein Behältn
 \begin{figure}[h]
 	\begin{center}
 		\includegraphics[scale=0.6]{Luftbefeuchter.png}
-		\caption{Skizze Luftbefeuchter}
+		\caption{Die Luft wird durch den den Schlauch in die Spirale geleitet und strömt dort aus feinen Löchern in die Schwämme. Die feinen Luftblasen nehmen Feuchtigkeit auf und die Luft strömt oben wieder aus dem Behälter.}
 	\end{center}
 \end{figure}
 
@@ -181,32 +181,32 @@ Dies wurde erreicht, indem die Luft aus einer Schlauchspirale mit feinen Löcher
 Damit die Schwämme nicht durch den Luftstrom von ihrem Platz weggedrückt werden, wurde $\SI{2}{cm}$ darüber ein Netz gespannt.
 
 \begin{figure}[h]
-	\begin{minipage}[hbt]{7cm}
+	\begin{minipage}[hbt]{6cm}
 		\centering
-		\includegraphics[width=7cm]{Luftbefeuchter_Spirale.jpg}
-		\caption{Spirale}
+		\includegraphics[width=6cm]{Luftbefeuchter_Spirale.jpg}
+		\caption{Schlauchspirale durch die die Luft in die Schwämme geleitet wird}
 	\end{minipage}
 	\hfill
-	\begin{minipage}[hbt]{7cm}
+	\begin{minipage}[hbt]{6cm}
 		\centering
-		\includegraphics[width=7cm]{Luftbefeuchter_Schwaemme.jpg}
-		\caption{Schwämme}
+		\includegraphics[width=6cm]{Luftbefeuchter_Schwaemme.jpg}
+		\caption{Schwämme, die die kleinen Luftblasen erzeugen}
 	\end{minipage}
 \end{figure}
 
 Anschließend wurde in die obere Hälfte des Behälters eine Kombination aus einem Swagelok \SI{6}{mm} Rohrverbinder und einem Schlauchanschluss eingefügt. So kann man von außen ein Standard \SI{6}{mm} Stahlrohr anschließen und innen den Bunaschlauch für die Spirale. Die Lösung für die Luftabfuhr wurde ähnlich realisiert. Dazu wurde in den Verschluss wiederum ein \SI{6}{mm} Rohrverbinder eingefügt und der Verschluss auf der Innenseite mit einer Schicht Silikon ausgekleidet, sodass man ihn noch auf- und abdrehen kann um Wasser nachzufüllen, gleichzeitig aber die Luftdichtheit gewährleistet ist.
 
 \begin{figure}[h]
-	\begin{minipage}[hbt]{7cm}
+	\begin{minipage}[hbt]{6cm}
 		\centering
-		\includegraphics[width=7cm]{Luftbefeuchter_Netz.jpg}
-		\caption{Netz}
+		\includegraphics[width=6cm]{Luftbefeuchter_Netz.jpg}
+		\caption{Netz, das die Schwämme an Position hält}
 	\end{minipage}
 	\hfill
-	\begin{minipage}[hbt]{7cm}
+	\begin{minipage}[hbt]{6cm}
 		\centering
-		\includegraphics[width=7cm]{Luftbefeuchter_gesamt.jpg}
-		\caption{Außenansicht mit eingefülltem Wasser}
+		\includegraphics[width=6cm]{Luftbefeuchter_gesamt.jpg}
+		\caption{Außenansicht in Betriebsbereitem Zustand}
 	\end{minipage}
 \end{figure}
 
@@ -258,7 +258,7 @@ Ein in der Industrie übliches Produkt, um Luft von Partikeln zu säubern, ist d
 \begin{figure}[h]
 	\begin{center}
 		\includegraphics[scale=0.5]{Umsetzung_Fliehkraftabscheider.jpg}
-		\caption{Fliehkraftabscheider: Quelle Wikipedia}
+		\caption{Funktionsweise eines klassischen Fliehkraftabscheiders: Quelle Wikipedia}
 	\end{center}
 \end{figure}
 
@@ -309,7 +309,12 @@ Re &= \frac{\SI{0,66}{m/s} \cdot \SI{0,04}{m}}{ \nu\footnotemark[1]} = 1724,36
 
 Die Reynoldszahl ist kleiner als 2300, damit ist der Gasstrom laminar. \\
 Auf der Oberseite befindet sich eine Nut in die der O-Ring zum Abdichten der Verbindung Anschlusszylinder-Röhrchenhalter eingelegt wird. Um das Dichtverhalten zwischen Plastik und O-Ring zu verbessern wurde in beide Nute eine \SI{1}{mm} dicke Lage Silikon gestrichen. Damit diese Verbindung dicht ist, befindet sich auf der Oberseite zudem ein Arretierungsmechanismus in den der Röhrchenhalter eingedreht wird. Zudem garantiert dieser Mechanismus ein einfaches und schnelles lösen der Komponenten.
-Dazu muss eine Kraft von \SI{60}{N} auf die Silikon-Gummi Dichtung ausgeübt werden. Bei Arretierung wird diese Kraft an acht Punkten gehalten, jeder Punkt hält also \SI{7,5}{N}. In Versuchen stellte sich heraus, das jeder dieser Punkte erst bei einer Krafteinwirkung von \SI{60}{N} anfängt nachzugeben. Die Festigkeit im Arbeitsbereich ist mit einem Sicherheitsfaktor von ca 5 garantiert. Weiterhin wurde berechnet wie viel Kraft nötig wäre, damit sich der Röhrchenhalter von selbst aus der Arretierung schraubt:
+Dazu muss eine Kraft von \SI{60}{N} auf die Silikon-Gummi Dichtung ausgeübt werden. Bei Arretierung wird diese Kraft an acht Punkten gehalten, jeder Punkt hält also \SI{7,5}{N}. In Versuchen stellte sich heraus, das jeder dieser Punkte erst bei einer Krafteinwirkung von \SI{60}{N} anfängt nachzugeben. Die Festigkeit im Arbeitsbereich ist mit einem Sicherheitsfaktor von ca 5 garantiert. Die Messmethoden zur Feststellung dieser Werte sind wie folgt: \hfill \\
+Der Anschlusszylinder wird mit Röhrchenhalter im arretierten Zustand unter die das Kraftmessgerät (Ametek Chatillion DFS-025) gefahren, anschließend wir die Arretierung gelöst und der vom Messgerät angezeigte Wert, ist die nötige Kraft, die zur Arretierung benötigt wird. Um die Festigkeit der einzelnen Arretierungspunkte zu messen, wurde ein T-Stück in das Kraftmessgerät geschraubt und dann das T-Stück in den Arretiungspunkt eingehakt. Anschließend wurde am Anschlusszylinder gezogen und die Kraft protokolliert, bei dem ein Knacken des Materials zu vernehmen war.
+
+Bilder von Messmethode
+
+Weiterhin wurde berechnet wie viel Kraft nötig wäre, damit sich der Röhrchenhalter von selbst aus der Arretierung schraubt:
 Bei einer Kraft von \SI{60}{N} und einem Haftreibungskoeffizienten von 0,3 (Kunststoff auf Kunststoff) ergibt sich:
 \begin{align*}
 F_R = \SI{60}{N} \cdot 0,3 = \SI{18}{N}
@@ -430,8 +435,8 @@ Es wurde sich für die Membran von Sartorius entschieden, weil sie alle Anforder
 Eine weitere wichtige Funktion des Filters ist es einen gleichmäßigen Gasstrom zu erzeugen. Dies wird durch die feine Porung erreicht und kann durch berechnen der Reynoldszahl für die verschiedenen Durchmesser bestätigt werden. Zur Berechnung geht man wieder vom maximalen Gasstrom von $\SI{3}{m^3/h}$ 
 
 \begin{center}
-\begin{tabular}{c|c|c}
-	Röhrchendruchesser [mm]	&	Gasgeschwindigkeit $v_{Gas}$ [m/s]		& Reynoldszahl \\
+\begin{tabular}{|S|S|S|}
+ {Röhrchendruchesser [mm]}		& {Gasgeschwindigkeit $v_{Gas}$ [m/s]}	& {Reynoldszahl}  \\
 	\hline
 	40	&	0,88		&  0,025 \\
 	\hline

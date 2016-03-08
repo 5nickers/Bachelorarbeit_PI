@@ -33,7 +33,7 @@
       <path
          id="path4576"
          d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         style="fill-rule:evenodd;stroke:#dbcc12;stroke-width:1pt;stroke-opacity:1;fill:#dbcc12;fill-opacity:1"
          transform="scale(0.8) rotate(180) translate(12.5,0)" />
     </marker>
     <marker
@@ -47,7 +47,7 @@
        inkscape:collect="always">
       <path
          transform="scale(0.8) rotate(180) translate(12.5,0)"
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         style="fill-rule:evenodd;stroke:#dbcc12;stroke-width:1pt;stroke-opacity:1;fill:#dbcc12;fill-opacity:1"
          d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
          id="path4530" />
     </marker>
@@ -63,7 +63,7 @@
       <path
          id="path4490"
          d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         style="fill-rule:evenodd;stroke:#dbcc12;stroke-width:1pt;stroke-opacity:1;fill:#dbcc12;fill-opacity:1"
          transform="scale(0.8) rotate(180) translate(12.5,0)" />
     </marker>
     <marker
@@ -77,7 +77,7 @@
        inkscape:collect="always">
       <path
          transform="scale(0.8) rotate(180) translate(12.5,0)"
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         style="fill-rule:evenodd;stroke:#dbcc12;stroke-width:1pt;stroke-opacity:1;fill:#dbcc12;fill-opacity:1"
          d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
          id="path4456" />
     </marker>
@@ -93,7 +93,7 @@
       <path
          id="path4167"
          d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         style="fill-rule:evenodd;stroke:#dbcc12;stroke-width:1pt;stroke-opacity:1;fill:#dbcc12;fill-opacity:1"
          transform="scale(0.8) rotate(180) translate(12.5,0)" />
     </marker>
   </defs>
@@ -105,14 +105,14 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="221.2968"
-     inkscape:cy="230.42545"
+     inkscape:cx="383.43966"
+     inkscape:cy="280.66398"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1920"
-     inkscape:window-height="1017"
-     inkscape:window-x="1912"
+     inkscape:window-width="1600"
+     inkscape:window-height="837"
+     inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1" />
   <metadata
@@ -123,7 +123,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -142,35 +142,35 @@
        inkscape:export-xdpi="299.96191"
        inkscape:export-ydpi="299.96191" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
+       style="fill:none;fill-rule:evenodd;stroke:#dbcc12;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
        d="M 319.28571,578.79078 300,672.3622"
        id="path4158"
        inkscape:connector-curvature="0"
        inkscape:export-xdpi="299.96191"
        inkscape:export-ydpi="299.96191" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker4528)"
+       style="fill:none;fill-rule:evenodd;stroke:#dbcc12;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker4528)"
        d="M 70.714286,587.3622 145,836.64792"
        id="path4440"
        inkscape:connector-curvature="0"
        inkscape:export-xdpi="299.96191"
        inkscape:export-ydpi="299.96191" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker4488)"
+       style="fill:none;fill-rule:evenodd;stroke:#dbcc12;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker4488)"
        d="M 490.71429,588.79078 316.42857,774.50506"
        id="path4442"
        inkscape:connector-curvature="0"
        inkscape:export-xdpi="299.96191"
        inkscape:export-ydpi="299.96191" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker4574)"
-       d="M 294.28571,949.50506 232.14286,805.93363"
+       style="fill:none;fill-rule:evenodd;stroke:#dbcc12;stroke-width:0.94149572px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker4574)"
+       d="M 294.30989,949.52185 236.38647,812.98757"
        id="path4444"
        inkscape:connector-curvature="0"
        inkscape:export-xdpi="299.96191"
        inkscape:export-ydpi="299.96191" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker4454)"
+       style="fill:none;fill-rule:evenodd;stroke:#dbcc12;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker4454)"
        d="M 497.14286,954.50506 420.71429,740.93363"
        id="path4446"
        inkscape:connector-curvature="0"
