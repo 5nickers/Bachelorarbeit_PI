@@ -276,7 +276,17 @@ Um den Gasstrom zu verlangsamen und gleichzeitig das Einfüllen des Granulats zu
 Wie man anhand der Formel $v_a = \frac{Q}{A}$ \cite{Grollius2012} sehen kann, ist die Geschwindigkeit des Gasstrom direkt proportional zum Querschnitt des Rohrs. Wenn man also den Querschnitt verdoppelt, dann viertelt man die Geschwindigkeit des Gasstroms. Dies wurde für jeden Durchmesser gemacht. Man könnte zwar bei gleicher Höhe auch die Querschnitte unter \SI{40}{mm} auf \SI{80}{mm} aufweiten, allerdings bringt das stömungstechnisch nicht viel, da sich der Luftstrom nicht so schnell so stark aufweiten kann. \\
 Zudem wurde ein abnehmbarer Filter oben auf den Trichter gespannt, um einen rudimentären Schutz gegen austretende Partikel bei Fehlbedienung zu gewährleisten.
 
-Hier Konstruktionsskizze einfügen
+	\begin{figure}[h]
+		\begin{minipage}[hbt]{7.4cm}
+			\centering
+			\includegraphics[width=7.4cm]{Trichter_frontal.png}
+		\end{minipage}
+		\hfill
+		\begin{minipage}[hbt]{5.7cm}
+			\centering
+			\includegraphics[width=5.7cm]{Trichter_unten.png}
+		\end{minipage}
+	\end{figure}
 
 
 \subsection{Anschlusszylinder}
@@ -308,21 +318,30 @@ Re &= \frac{\SI{0,66}{m/s} \cdot \SI{0,04}{m}}{ \nu\footnotemark[1]} = 1724,36
 \footnotetext[1]{kinematische Viskosität von Luft = $\SI{15,31}{m^2/s}$ bei Normaldruck und \SI{20}{^\circ C}}
 
 Die Reynoldszahl ist kleiner als 2300, damit ist der Gasstrom laminar. \\
-Auf der Oberseite befindet sich eine Nut in die der O-Ring zum Abdichten der Verbindung Anschlusszylinder-Röhrchenhalter eingelegt wird. Um das Dichtverhalten zwischen Plastik und O-Ring zu verbessern wurde in beide Nute eine \SI{1}{mm} dicke Lage Silikon gestrichen. Damit diese Verbindung dicht ist, befindet sich auf der Oberseite zudem ein Arretierungsmechanismus in den der Röhrchenhalter eingedreht wird. Zudem garantiert dieser Mechanismus ein einfaches und schnelles lösen der Komponenten.
-Dazu muss eine Kraft von \SI{60}{N} auf die Silikon-Gummi Dichtung ausgeübt werden. Bei Arretierung wird diese Kraft an acht Punkten gehalten, jeder Punkt hält also \SI{7,5}{N}. In Versuchen stellte sich heraus, das jeder dieser Punkte erst bei einer Krafteinwirkung von \SI{60}{N} anfängt nachzugeben. Die Festigkeit im Arbeitsbereich ist mit einem Sicherheitsfaktor von ca 5 garantiert. Die Messmethoden zur Feststellung dieser Werte sind wie folgt: \hfill \\
+Auf der Oberseite befindet sich eine Nut in die der O-Ring zum Abdichten der Verbindung Anschlusszylinder-Röhrchenhalter eingelegt wird. Damit diese Verbindung dicht ist, befindet sich auf der Oberseite zudem ein Arretierungsmechanismus in den der Röhrchenhalter eingedreht wird. Zudem garantiert dieser Mechanismus ein einfaches und schnelles lösen der Komponenten. Um das Dichtverhalten zwischen Plastik und O-Ring zu verbessern wurde Silikon mit dem O-Ring verbunden. Dies geschieht indem man Silikon (Elastosil E43, Wacker) in beide Nute streicht den O-Ring einlegt und den Mechanismus zwei Tage lang arretiert lässt. Nach dem Aushärten sind O-Ring und Silikon verbunden und zeigen nun optimales Dichtverhalten. 
+Zum arretieren muss eine Kraft von \SI{60}{N} auf die Silikon-Gummi Dichtung ausgeübt werden. Bei Arretierung wird diese Kraft an acht Punkten gehalten, jeder Punkt hält also \SI{7,5}{N}. In Versuchen stellte sich heraus, das jeder dieser Punkte erst bei einer Krafteinwirkung von \SI{60}{N} anfängt nachzugeben. Die Festigkeit im Arbeitsbereich ist mit einem Sicherheitsfaktor von ca 5 garantiert. Die Messmethoden zur Feststellung dieser Werte sind wie folgt: \hfill \\
 Der Anschlusszylinder wird mit Röhrchenhalter im arretierten Zustand unter die das Kraftmessgerät (Ametek Chatillion DFS-025) gefahren, anschließend wir die Arretierung gelöst und der vom Messgerät angezeigte Wert, ist die nötige Kraft, die zur Arretierung benötigt wird. Um die Festigkeit der einzelnen Arretierungspunkte zu messen, wurde ein T-Stück in das Kraftmessgerät geschraubt und dann das T-Stück in den Arretiungspunkt eingehakt. Anschließend wurde am Anschlusszylinder gezogen und die Kraft protokolliert, bei dem ein Knacken des Materials zu vernehmen war.
 
 Bilder von Messmethode
 
-Weiterhin wurde berechnet wie viel Kraft nötig wäre, damit sich der Röhrchenhalter von selbst aus der Arretierung schraubt:
-Bei einer Kraft von \SI{60}{N} und einem Haftreibungskoeffizienten von 0,3 (Kunststoff auf Kunststoff) ergibt sich:
+Weiterhin wurde berechnet wie viel Kraft nötig wäre, damit sich der Röhrchenhalter von selbst aus der Arretierung löst. Bei einer Kraft von \SI{60}{N} und einem Haftreibungskoeffizienten von 0,3 (Kunststoff auf Kunststoff) ergibt sich:
 \begin{align*}
 F_R = \SI{60}{N} \cdot 0,3 = \SI{18}{N}
 \end{align*}
 Eine Kraft dieser Größenordnung tritt bei unseren Versuchsbedingungen nicht auf, daher kann man die Möglichkeit einer Selbstlösung vernachlässigen.
 
 
-Hier Doppelbild einfügen
+\begin{figure}[h]
+	\begin{minipage}[hbt]{6.5cm}
+		\centering
+		\includegraphics[width=6.5cm]{Zylinder_frontal.png}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[hbt]{7cm}
+		\centering
+		\includegraphics[width=7cm]{Zylinder_seitlich.png}
+	\end{minipage}
+\end{figure}
 
 In der Frontansicht sieht man den Einlass mit Arretierung für den Ionisator. Zur Montage wird die Spitze des Ionisator in einen Adapter gesteckt und dieser Adapter mittels drehen arretiert. Die Luftdichtheit wird durch einen O-Ring aus Gummi (Shore Härte 50) erreicht. \\
 In der Seitenansicht wird der Anschluss für das Gassystem sichtbar. Hier wurde ein Swagelockverbinder mit Gummi O-Ring in das Plastik geschraubt und der Adapter für den Bunaschlauch daran angeschlossen.
@@ -334,13 +353,45 @@ In der Seitenansicht wird der Anschluss für das Gassystem sichtbar. Hier wurde 
 
 \hfill \\
 
-Der Röhrchenhalter besteht aus drei Teilen, eins dient zur Verbinung mit dem Anschlusszylinder und das andere sorgt dafür, dass die Dichtung an Ort und Stelle gehalten wird. Beide Auflagestellen des O-Rings sind zudem mit Silikon bestrichen, um einen möglichst dichten Abschluss zu gewährleisten.
+Der Röhrchenhalter besteht aus drei Teilen, eins dient zur Verbinung mit dem Anschlusszylinder und das andere sorgt dafür, dass die Dichtung an Ort und Stelle gehalten wird. 
+
+\begin{figure}[h]
+	\begin{minipage}[hbt]{7.1cm}
+		\centering
+		\includegraphics[width=7.1cm]{Halter_oben.png}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[hbt]{6.1cm}
+		\centering
+		\includegraphics[width=6.1cm]{Halter_unten.png}
+	\end{minipage}
+\end{figure}
+
+Beide Auflagestellen des O-Rings sind zudem mit Silikon beschichtet, um einen möglichst dichten Abschluss zu gewährleisten.
 Diese Teile werden durch sechs M6 Schrauben verbunden, damit der Druck auf den dichtenden O-Ring möglichst gleichmäßig verteilt ist. \\
 
-Hier Doppelbild einfügen
+\begin{figure}[h]
+		\begin{center}
+			\includegraphics[scale=0.37]{Deckplatte_unten.png}
+			\caption{Die Anpressfläche ist mit Silikon beschichtet und sorgt für einen dichten Kontakt zum O-Ring}
+		\end{center}
+\end{figure}
 
+Der dritte Teil des Halters ist der Stabilisator und sorgt dafür, dass das Röhrchen nicht seitlich verkippt werden kann und es dadurch zu Undichtigkeiten kommt. Damit diese Halterung nicht für jedes Röhrchen separat montiert werden muss, wurde ein universelles Ringsystem entworfen. Das Basisteil wird am Schanier festgeschraubt und hat $\SI{40}{mm}$ Durchmesser. In das Basisteil können nun weitere Ringe eingesetzt und durch verdrehen arretiert werden, damit auch die Durchmesser $30,20,5\SI{}{\ mm}$ einen guten Halt haben.
 
-Der dritte Teil des Halters ist der Stabilisator und sorgt dafür, dass das Röhrchen nicht seitlich verkippt werden kann und es dadurch zu Undichtigkeiten kommt. Damit diese Halterung nicht für jedes Röhrchen seperat montiert werden muss, wurde ein universelles Ringsystem entworfen. Das Basisteil wird am Schanier festgeschraubt und hat $\SI{40}{mm}$ Durchmesser. In das Basisteil können nun weitere Ringe eingesetzt und durch verdrehen arretiert werden, damit auch die Durchmesser $30,20,5\SI{}{\ mm}$ einen guten Halt haben.
+	\begin{figure}[h]
+		\begin{minipage}[hbt]{7.4cm}
+			\centering
+			\includegraphics[width=7.4cm]{Basishalter.png}
+			\caption{Schwenkbarer Halter der mit Einsätzen für alle möglichen Röhrchendurchmesser angepasst werden kann}
+		\end{minipage}
+		\hfill
+		\begin{minipage}[hbt]{5.7cm}
+			\centering
+			\includegraphics[width=5.7cm]{Basishalter_Einsatz.png}
+			\caption{Einsatz für Röhrchen mit \SI{30}{mm} Innendurchmesser}
+		\end{minipage}
+	\end{figure}
 
 
 \subsection{Halterung Wirbelbett}
