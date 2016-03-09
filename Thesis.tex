@@ -23,7 +23,7 @@
 
 \usepackage{diagbox}
 
-\usepackage{dcolumn}
+\usepackage{pdfpages}
 
 \usepackage{float}
 \newfloat{algorithm}{tbhp}{loa}[chapter]
@@ -70,7 +70,7 @@
 \newcommand\timestep{a}
 
 
-\CenterWallPaper{1}{Seitenhintergrund.png}
+
 
 
 \subject{
@@ -152,7 +152,13 @@ Ich versichere hiermit, dass ich die vorliegende Arbeit selbstständig verfasst 
 
 \begin{document}
 
-\maketitle
+
+
+\includepdf[pages={1-6}, fitpaper=true]{FH_Aachen_Chris.pdf}
+
+\CenterWallPaper{1}{Seitenhintergrund.png}
+
+\setcounter{page}{1}
 
 \tableofcontents
 
