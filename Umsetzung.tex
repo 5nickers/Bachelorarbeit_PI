@@ -43,6 +43,8 @@ Bei der Analyse des bisherigen Wirbelbettes wurde klar, das die Bauhöhe, neben 
 Weiterhin wurde beschlossen den Justiermechanismus des alten Aufbaus weiterzuverwenden, da dieser bereits funktioniert und leicht in den neuen Aufbau integriert werden kann. 
 
 
+\newpage
+
 \section{AP 2 - Elektronik}
 
 \paragraph{Anforderungen}
@@ -235,7 +237,7 @@ Eine weitere Anforderung bestand in der Integration eine Ionisators, sodass die 
 
 \begin{figure}[h]
 	\begin{center}
-		\includegraphics[scale=0.6]{Zusammenbau_fluides_Bett.png}
+		\includegraphics[scale=0.4]{Zusammenbau_fluides_Bett.png}
 		\caption{Digitalmodell Wirbelbett}
 	\end{center}
 \end{figure}
@@ -319,17 +321,30 @@ Re &= \frac{\SI{0,66}{m/s} \cdot \SI{0,04}{m}}{ \nu\footnotemark[1]} = 1724,36
 
 Die Reynoldszahl ist kleiner als 2300, damit ist der Gasstrom laminar. \\
 Auf der Oberseite befindet sich eine Nut in die der O-Ring zum Abdichten der Verbindung Anschlusszylinder-Röhrchenhalter eingelegt wird. Damit diese Verbindung dicht ist, befindet sich auf der Oberseite zudem ein Arretierungsmechanismus in den der Röhrchenhalter eingedreht wird. Zudem garantiert dieser Mechanismus ein einfaches und schnelles lösen der Komponenten. Um das Dichtverhalten zwischen Plastik und O-Ring zu verbessern wurde Silikon mit dem O-Ring verbunden. Dies geschieht indem man Silikon (Elastosil E43, Wacker) in beide Nute streicht den O-Ring einlegt und den Mechanismus zwei Tage lang arretiert lässt. Nach dem Aushärten sind O-Ring und Silikon verbunden und zeigen nun optimales Dichtverhalten. 
-Zum arretieren muss eine Kraft von \SI{60}{N} auf die Silikon-Gummi Dichtung ausgeübt werden. Bei Arretierung wird diese Kraft an acht Punkten gehalten, jeder Punkt hält also \SI{7,5}{N}. In Versuchen stellte sich heraus, das jeder dieser Punkte erst bei einer Krafteinwirkung von \SI{60}{N} anfängt nachzugeben. Die Festigkeit im Arbeitsbereich ist mit einem Sicherheitsfaktor von ca 5 garantiert. Die Messmethoden zur Feststellung dieser Werte sind wie folgt: \hfill \\
+Zum arretieren muss eine Kraft von \SI{60}{N} auf die Silikon-Gummi Dichtung ausgeübt werden. Bei Arretierung wird diese Kraft an acht Punkten gehalten, jeder Punkt hält also \SI{7,5}{N}. In Versuchen stellte sich heraus, das jeder dieser Punkte erst bei einer Krafteinwirkung von \SI{75}{N} anfängt nachzugeben. Die Festigkeit im Arbeitsbereich ist mit einem Sicherheitsfaktor von ca 10 garantiert. Die Messmethoden zur Feststellung dieser Werte sind wie folgt: \hfill \\
 Der Anschlusszylinder wird mit Röhrchenhalter im arretierten Zustand unter die das Kraftmessgerät (Ametek Chatillion DFS-025) gefahren, anschließend wir die Arretierung gelöst und der vom Messgerät angezeigte Wert, ist die nötige Kraft, die zur Arretierung benötigt wird. Um die Festigkeit der einzelnen Arretierungspunkte zu messen, wurde ein T-Stück in das Kraftmessgerät geschraubt und dann das T-Stück in den Arretiungspunkt eingehakt. Anschließend wurde am Anschlusszylinder gezogen und die Kraft protokolliert, bei dem ein Knacken des Materials zu vernehmen war.
-
-Bilder von Messmethode
-
 Weiterhin wurde berechnet wie viel Kraft nötig wäre, damit sich der Röhrchenhalter von selbst aus der Arretierung löst. Bei einer Kraft von \SI{60}{N} und einem Haftreibungskoeffizienten von 0,3 (Kunststoff auf Kunststoff) ergibt sich:
 \begin{align*}
 F_R = \SI{60}{N} \cdot 0,3 = \SI{18}{N}
 \end{align*}
 Eine Kraft dieser Größenordnung tritt bei unseren Versuchsbedingungen nicht auf, daher kann man die Möglichkeit einer Selbstlösung vernachlässigen.
 
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[scale=0.5]{Messmethode_Anpressung.png}
+		\caption{Messaufbau um den benötigen Druck zur Arretierung des Röhrchenhalteres zu messen}
+	\end{center}
+\end{figure}
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[scale=0.6]{Messmethode_Zugkraft.png}
+		\caption{Das T-Stück wird in die Arretierung gehakt und dann daran gezogen, um zu ermitteln wie hoch die maximal ausübbare Kraft zu bestimmen}
+	\end{center}
+\end{figure}
+
+
+In der Frontansicht sieht man den Einlass mit Arretierung für den Ionisator. Zur Montage wird die Spitze des Ionisator in einen Adapter gesteckt und dieser Adapter mittels drehen arretiert. Die Luftdichtheit wird durch einen O-Ring aus Gummi (Shore Härte 50) erreicht. \\
 
 \begin{figure}[h]
 	\begin{minipage}[hbt]{6.5cm}
@@ -343,7 +358,6 @@ Eine Kraft dieser Größenordnung tritt bei unseren Versuchsbedingungen nicht au
 	\end{minipage}
 \end{figure}
 
-In der Frontansicht sieht man den Einlass mit Arretierung für den Ionisator. Zur Montage wird die Spitze des Ionisator in einen Adapter gesteckt und dieser Adapter mittels drehen arretiert. Die Luftdichtheit wird durch einen O-Ring aus Gummi (Shore Härte 50) erreicht. \\
 In der Seitenansicht wird der Anschluss für das Gassystem sichtbar. Hier wurde ein Swagelockverbinder mit Gummi O-Ring in das Plastik geschraubt und der Adapter für den Bunaschlauch daran angeschlossen.
 
 
@@ -368,7 +382,7 @@ Der Röhrchenhalter besteht aus drei Teilen, eins dient zur Verbinung mit dem An
 \end{figure}
 
 Beide Auflagestellen des O-Rings sind zudem mit Silikon beschichtet, um einen möglichst dichten Abschluss zu gewährleisten.
-Diese Teile werden durch sechs M6 Schrauben verbunden, damit der Druck auf den dichtenden O-Ring möglichst gleichmäßig verteilt ist. \\
+Diese Teile werden durch sechs M6 Schrauben verbunden, damit die Kraft auf den dichtenden O-Ring möglichst gleichmäßig verteilt ist. \\
 
 \begin{figure}[h]
 		\begin{center}
@@ -376,6 +390,25 @@ Diese Teile werden durch sechs M6 Schrauben verbunden, damit der Druck auf den d
 			\caption{Die Anpressfläche ist mit Silikon beschichtet und sorgt für einen dichten Kontakt zum O-Ring}
 		\end{center}
 \end{figure}
+
+Die Kraft, die eine einzelne Schraube auf den Ring ausübt, kann aus dem angelegten Drehmoment berechnet werden:
+
+\begin{align*}
+	M_A &= M_K + M_G = F_{VM} \cdot \mu \cdot r_A + F_{VM} \cdot \frac{d_2}{2} \cdot \tan\left( \alpha + \phi' \right) \\
+	&= \left( F_{Kl} + F_A \cdot \left( 1 - \Phi \right) + F_Z \right) \cdot \mu \cdot r_A + \left( F_{Kl} + F_A \cdot \left( 1 - \Phi \right) + F_Z \right) \cdot \frac{d_2}{2} \cdot \tan\left( \alpha + \phi' \right) \\
+	\intertext{Man geht davon aus, das kein Setzverhalten eintritt bzw. dieses vernachlässigbar ist. Zudem kann man nur die resultierende Kraft bestimmen:}
+	&= F_{res} \cdot \left( \mu \cdot r_A  + \frac{d_2}{2} \cdot \tan\left( \alpha + \phi' \right) \right) \\
+	\intertext{Es wird das Moment gemessen und daraus die Kraft berechnet:}
+	F_{res} &= \frac{M_A}{ \mu \cdot \frac{d_3 + D_B}{4}  + \frac{d_2}{2} \cdot \tan\left( \alpha + \phi' \right)}
+	\intertext{Man kann $d_2$, $d_3$ und $\alpha$ aus der Tabelle XX im Anhang ablesen. Der Reibwert $\mu$ wird mit $\mu = \SI{0,325}{}$ Quelle!! angenommen. $\phi'$ berechnet man entsprechend der Formel:}
+	\phi' &= \arctan\left( \frac{\mu}{\cos\left( \frac{\beta}{2} \right)} \right) 
+	\intertext{Dabei ist $\beta$ der Standartflankenwinkel von $\SI{60}{^\circ}$ eines ISO-Gewindes.}
+	&= \arctan\left( \frac{0,325}{\cos(\SI{30}{^\circ})} \right) = \SI{20,57}{^\circ}
+	\intertext{Bei einem gemessenen Drehmoment (mittels CDI Werameter 7131A) von $M_A = \SI{1}{Nm}$, ist die wirkende Kraft einer Schraube:}
+	F_{res} &= \frac{\SI{1}{Nm}}{0,325 \cdot \frac{\SI{4,773}{mm} + \SI{6}{mm}}{4} + \frac{\SI{5,35}{mm}}{2} \cdot \tan(\SI{3,405}{^\circ} + \SI{20,57}{^\circ})} = \SI{0,482}{N}
+\end{align*}
+
+Bei sechs Schrauben erhält man eine Gesamtkraft von $F_{ges} = \SI{2,904}{N}$ Dies reicht auch bei einem Probenrohrdurchmesser von \SI{40}{mm} aus, um eine luftdichte Verbindung zu erreichen. Zudem ist man mit dieser Kraft deutlich unter der Belastungsgrenze von ABS, die bei \SI{39}{N/mm} liegt.
 
 Der dritte Teil des Halters ist der Stabilisator und sorgt dafür, dass das Röhrchen nicht seitlich verkippt werden kann und es dadurch zu Undichtigkeiten kommt. Damit diese Halterung nicht für jedes Röhrchen separat montiert werden muss, wurde ein universelles Ringsystem entworfen. Das Basisteil wird am Schanier festgeschraubt und hat $\SI{40}{mm}$ Durchmesser. In das Basisteil können nun weitere Ringe eingesetzt und durch verdrehen arretiert werden, damit auch die Durchmesser $30,20,5\SI{}{\ mm}$ einen guten Halt haben.
 
@@ -504,6 +537,16 @@ Die Reynoldszahlen sind alle weit unter 2300, also ist die Strömung durch die e
 
 \newpage
 
+\section{Messungen}
+
+\subsection{Nachweis der Dichtigkeit}
+
+
+\subsection{Vermessung verschiedener Granulate}
+
+
+\newpage
+
 \section{Bewertung}
 
 In diesem Abschnitt soll der Erfolg der einzelnen Arbeitspakete kritisch hinterfragt werden, um Raum zur Optimierung aufzuzeigen. 
@@ -526,7 +569,7 @@ Durch die Anforderung einen Ionisator im Aufbau unterzubringen, war es nicht mö
 Die Qualität der gedruckten Bauteile war durchweg hoch, besonders die Stabilität ist beachtlich, allerdings dauert es zwei, drei Drucke bis man seinen Modell am Rechner soweit angepasst hat, das der Drucker so druckt, wie man es beabsichtigt. Zudem ist der Drucker anfällig im Bezug auf den Druckuntergrund. Während des Projekts ist das Kaptontape auf der Heizplatte kaputtgegangen und ohne dieses Tape auf der Heizplatte, ist es nicht möglich Teile mit Durchmesser größer als \SI{40}{mm} mit flachem Boden zu drucken. Die Drucke bogen sich und waren somit ungeeignet für dichtende Zwecke eingesetzt zu werden.
 
 
-\subsection{Insgesamt}
+\subsection{Zusammenfassung}
 
 
 
