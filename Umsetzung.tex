@@ -278,17 +278,11 @@ Um den Gasstrom zu verlangsamen und gleichzeitig das Einfüllen des Granulats zu
 Wie man anhand der Formel $v_a = \frac{Q}{A}$ \cite{Grollius2012} sehen kann, ist die Geschwindigkeit des Gasstrom direkt proportional zum Querschnitt des Rohrs. Wenn man also den Querschnitt verdoppelt, dann viertelt man die Geschwindigkeit des Gasstroms. Dies wurde für jeden Durchmesser gemacht. Man könnte zwar bei gleicher Höhe auch die Querschnitte unter \SI{40}{mm} auf \SI{80}{mm} aufweiten, allerdings bringt das stömungstechnisch nicht viel, da sich der Luftstrom nicht so schnell so stark aufweiten kann. \\
 Zudem wurde ein abnehmbarer Filter oben auf den Trichter gespannt, um einen rudimentären Schutz gegen austretende Partikel bei Fehlbedienung zu gewährleisten.
 
-	\begin{figure}[h]
-		\begin{minipage}[hbt]{7.4cm}
-			\centering
-			\includegraphics[width=7.4cm]{Trichter_frontal.png}
-		\end{minipage}
-		\hfill
-		\begin{minipage}[hbt]{5.7cm}
-			\centering
-			\includegraphics[width=5.7cm]{Trichter_unten.png}
-		\end{minipage}
-	\end{figure}
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[scale=0.5]{Schnitt_Trichter.png}
+	\end{center}
+\end{figure}
 
 \newpage
 
@@ -361,6 +355,20 @@ Eine Kraft dieser Größenordnung tritt bei unseren Versuchsbedingungen nicht au
 
 In der Frontansicht sieht man den Einlass mit Arretierung für den Ionisator. Zur Montage wird die Spitze des Ionisator in einen Adapter gesteckt und dieser Adapter mittels drehen arretiert. Die Luftdichtheit wird durch einen O-Ring aus Gummi (Shore Härte 50) erreicht. In der Seitenansicht wird der Anschluss für das Gassystem sichtbar. Hier wurde ein Swagelockverbinder mit Gummi O-Ring in das Plastik geschraubt und der Adapter für den Bunaschlauch daran angeschlossen.
 
+\subparagraph{Veränderungen zur Sicherstellung der Luftdichtheit}
+\hfill \\
+
+Erste Messversuche mit dem 3D gedruckten Anschlusszylinder zeigten, das \SIrange{40}{50}{\%} des Volumenstroms auf unbekanntem Weg verloren gehen. Daher wurde das gesamte Wirbelbett in Wasser getaucht, um auf diese Weise die Leckstellen zu identifizieren. Dabei stellte sich heraus, dass das 3D gedruckte Plastik an sich undicht ist. Hauptsächlich strömte die Luft an den Löchern für die Befestigung an der Halteplatte und an überhängenden Kanten aus. Die Leckstellen können auf Grund der schwankenden Druckqualität von Druck zu Druck variieren, allerdings wurden Leckstellen vornehmlich an Kanten und Löchern und nicht an großen durchgehenden Flächen beobachtet. \\
+Auf Grund dieser Erkenntnisse wurde beschlossen das Design des Anschlusszylinders so abzuändern, das dieser in der Werkstatt aus Aluminium (Was????) fräßbar ist. Dazu wurde der bisherige Arretiermechanismus und die Verbindung zum Justiermechanismus weggelassen, da dies nur sehr aufwändig zu fertigen ist.
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[scale=0.5]{Schnitt_AnschlusszylinderV2.png}
+		\caption{In das M12x1 Gewinde wird der Swagelokadapter geschraubt, dabei dichtet die Dichtung des Adapters mit der Auflagefläche zusätzlich ab. Die M6 Gewinde dienen zur Arretierung des Röhrchenhalters. Die Nut nimmt die gleiche Dichtung auf wie schon weiter oben beschrieben.}
+	\end{center}
+\end{figure}
+
+Um den Anschlusszylinder trotzdem mit dem Justiermechanismus zu verbinden, wird dieser Teil weiterhin im 3D Drucker gedruckt und anschließend mit zwei Komponentenkleber (welcher??) an den Anschlusszylinder angeklebt.
 
 \subsection{Röhrchenhalter}
 
@@ -432,6 +440,18 @@ Der dritte Teil des Halters ist der Stabilisator und sorgt dafür, dass das Röh
 			\caption{Einsatz für Röhrchen mit \SI{30}{mm} Innendurchmesser}
 		\end{minipage}
 	\end{figure}
+	
+\subparagraph{Anpassungen an gefräßten Anschlusszylinder}
+\hfill \\
+
+Wegen der Veränderungen am Anschlusszylinder musste der Röhrchenhalter daran angepasst werden. Dazu  wurde der ursprüngliche Mechanismus zur Arretierung entfernt und stattdessen sechs Durchgangsbohrungen eingefügt, damit der Halter von oben auf den Anschlusszylinder geschraubt werden kann.
+
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[scale=0.6]{Schnitt_RoehrchenhalterV2.png}
+		\caption{}
+	\end{center}
+\end{figure}
 
 
 \subsection{Halterung Wirbelbett}
@@ -526,7 +546,7 @@ Es wurde sich für die Membran von Sartorius entschieden, weil sie alle Anforder
 Eine weitere wichtige Funktion des Filters ist es einen gleichmäßigen Gasstrom zu erzeugen. Dies wird durch die feine Porung erreicht und kann durch berechnen der Reynoldszahl für die verschiedenen Durchmesser bestätigt werden. Zur Berechnung geht man wieder vom maximalen Gasstrom von $\SI{3}{m^3/h}$ 
 
 \begin{center}
-\begin{tabular}{|S|S|S|}
+\begin{tabular}{S|S|S}
  {Röhrchendruchesser [mm]}		& {Gasgeschwindigkeit $v_{Gas}$ [m/s]}	& {Reynoldszahl}  \\
 	\hline
 	40	&	0,88		&  0,025 \\
