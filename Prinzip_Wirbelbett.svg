@@ -16,7 +16,7 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="Prinzip_Wirbelbett.svg"
-   inkscape:export-filename="C:\Dropbox\Bachelorarbeit\BA\BA_Text\Prinzip_Wirbelbett.png"
+   inkscape:export-filename="D:\Dropbox\Bachelorarbeit\BA\BA_Text\Prinzip_Wirbelbett.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <defs
@@ -134,14 +134,14 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="310.71341"
-     inkscape:cy="475.11419"
+     inkscape:cx="186.28349"
+     inkscape:cy="332.25705"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1600"
-     inkscape:window-height="837"
-     inkscape:window-x="-8"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="1912"
      inkscape:window-y="-8"
      inkscape:window-maximized="1" />
   <metadata
@@ -152,7 +152,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -196,16 +196,16 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.06566143px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="160.2977"
-       y="701.03796"
+       x="145.47968"
+       y="703.20715"
        id="text4932"
        sodipodi:linespacing="125%"
-       transform="scale(1.0122803,0.98786869)"><tspan
+       transform="scale(1.0122803,0.98786868)"><tspan
          sodipodi:role="line"
          id="tspan4934"
-         x="160.2977"
-         y="701.03796"
-         style="font-size:11.32386971px">Luftstrom</tspan></text>
+         x="145.47968"
+         y="703.20715"
+         style="font-size:17.5px">Luftstrom</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.7;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker4944);stroke-miterlimit:4;stroke-dasharray:none"
        d="m 283.80966,563.26724 -62.22733,3.55127"
@@ -228,7 +228,7 @@
          id="tspan5016"
          x="288.63489"
          y="571.98181"
-         style="font-size:14.9999999px">Granulat</tspan></text>
+         style="font-size:19.99999986px">Granulat</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.06566143px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -241,7 +241,7 @@
          id="tspan5020"
          x="286.1185"
          y="609.72803"
-         style="font-size:14.9999999px">Filter</tspan></text>
+         style="font-size:19.99999986px">Filter</tspan></text>
     <rect
        style="fill:#00ff00;stroke:none;stroke-width:5.9000001;stroke-miterlimit:4;stroke-dasharray:none"
        id="rect4170"
@@ -260,7 +260,7 @@
          id="tspan4174"
          x="305.98523"
          y="476.51398"
-         style="font-size:15px">Probenrohr</tspan></text>
+         style="font-size:20px">Probenrohr</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -271,7 +271,8 @@
          sodipodi:role="line"
          id="tspan4180"
          x="294.96454"
-         y="358.89249">Granulatauffänger</tspan></text>
+         y="358.89249"
+         style="font-size:20px">Granulatauffänger</tspan></text>
     <rect
        style="fill:#000000;stroke:none;stroke-width:5.9000001;stroke-miterlimit:4;stroke-dasharray:none"
        id="rect4182"
@@ -367,7 +368,8 @@
          sodipodi:role="line"
          id="tspan4227"
          x="296.07144"
-         y="832.00507">Ventil</tspan></text>
+         y="832.00507"
+         style="font-size:20px">Ventil</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -378,7 +380,8 @@
          sodipodi:role="line"
          id="tspan4231"
          x="222.85715"
-         y="986.29077">Luftbefeuchter</tspan></text>
+         y="986.29077"
+         style="font-size:20px">Luftbefeuchter</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 189.28571,742.3622 0.35715,-43.21428"
@@ -387,14 +390,15 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="58.92857"
-       y="779.14795"
+       x="30.357141"
+       y="786.29083"
        id="text4235"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4237"
-         x="58.92857"
-         y="779.14795">Drucksensor</tspan></text>
+         x="30.357141"
+         y="786.29083"
+         style="font-size:20px">Drucksensor</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -405,7 +409,8 @@
          sodipodi:role="line"
          id="tspan4241"
          x="483.21429"
-         y="820.21936">Massenstromregler</tspan></text>
+         y="820.21936"
+         style="font-size:20px">Massenstromregler</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -416,7 +421,8 @@
          sodipodi:role="line"
          id="tspan4245"
          x="423.57144"
-         y="648.07648">Elektronik</tspan></text>
+         y="648.07648"
+         style="font-size:20px">Elektronik</tspan></text>
     <rect
        style="fill:#000000;stroke:none;stroke-width:5.9000001;stroke-miterlimit:4;stroke-dasharray:none"
        id="rect4247"
@@ -427,14 +433,15 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="29.294424"
-       y="532.13367"
+       x="-2.8484328"
+       y="561.41937"
        id="text4249"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4251"
-         x="29.294424"
-         y="532.13367">Halterung</tspan></text>
+         x="-2.8484328"
+         y="561.41937"
+         style="font-size:20px">Halterung</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.7;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker4261);stroke-miterlimit:4;stroke-dasharray:none"
        d="M 301.42857,471.29078 250,477.71935"
@@ -465,7 +472,8 @@
          sodipodi:role="line"
          id="tspan4645"
          x="305"
-         y="757.36218">auslesen</tspan></text>
+         y="757.36218"
+         style="font-size:20px">auslesen</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -476,6 +484,7 @@
          sodipodi:role="line"
          id="tspan4649"
          x="490"
-         y="761.64795">regeln</tspan></text>
+         y="761.64795"
+         style="font-size:20px">regeln</tspan></text>
   </g>
 </svg>
