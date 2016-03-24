@@ -16,7 +16,7 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="Luftbefeuchter.svg"
-   inkscape:export-filename="D:\Dropbox\Bachelorarbeit\BA\BA_Text\Luftbefeuchter.png"
+   inkscape:export-filename="C:\Dropbox\Bachelorarbeit\BA\BA_Text\Luftbefeuchter.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <defs
@@ -132,9 +132,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="345.59824"
-     inkscape:cy="681.17349"
+     inkscape:zoom="0.9899495"
+     inkscape:cx="301.83715"
+     inkscape:cy="303.92682"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -142,9 +142,9 @@
      inkscape:snap-grids="true"
      showguides="true"
      inkscape:guide-bbox="true"
-     inkscape:window-width="1920"
-     inkscape:window-height="1017"
-     inkscape:window-x="1912"
+     inkscape:window-width="1600"
+     inkscape:window-height="837"
+     inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:snap-text-baseline="false">
@@ -442,7 +442,8 @@
          sodipodi:role="line"
          id="tspan3464"
          x="68.690376"
-         y="670.52454">Netz</tspan></text>
+         y="670.52454"
+         style="font-size:22.5px">Netz</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -453,7 +454,8 @@
          sodipodi:role="line"
          id="tspan3468"
          x="559.62451"
-         y="774.57025">Schwämme</tspan></text>
+         y="774.57025"
+         style="font-size:22.5px">Schwämme</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -464,7 +466,8 @@
          sodipodi:role="line"
          id="tspan3472"
          x="553.5636"
-         y="891.74799">Schlauchspirale</tspan></text>
+         y="891.74799"
+         style="font-size:22.5px">Schlauchspirale</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -475,7 +478,8 @@
          sodipodi:role="line"
          id="tspan3476"
          x="547.50269"
-         y="564.45856">Schlauch</tspan></text>
+         y="564.45856"
+         style="font-size:22.5px">Schlauch</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -486,7 +490,8 @@
          sodipodi:role="line"
          id="tspan3480"
          x="548.51288"
-         y="405.86456">Luftzufuhr</tspan></text>
+         y="405.86456"
+         style="font-size:22.5px">Luftzufuhr</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -497,7 +502,8 @@
          sodipodi:role="line"
          id="tspan3484"
          x="126.26907"
-         y="297.77826">Luftabfuhr</tspan></text>
+         y="297.77826"
+         style="font-size:22.5px">Luftabfuhr</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.13418436px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
        d="m 237.49039,294.76825 c 86.2516,29.8489 102.56132,35.49316 102.56132,35.49316"
@@ -558,6 +564,6 @@
          id="tspan4394"
          x="477.80215"
          y="310.40515"
-         style="font-size:20px">Silikon</tspan></text>
+         style="font-size:22.5px">Silikon</tspan></text>
   </g>
 </svg>
