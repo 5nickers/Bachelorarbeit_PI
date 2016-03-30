@@ -81,7 +81,7 @@ Es wurde sich für den TM7705 Dual 16-bit ADC entschieden, da dieser bereits auf
 \begin{figure}[h]
 	\begin{center}
 		\includegraphics[scale=0.6]{Schema_Elektronik.jpg}
-		\caption{Schema Elektronik}
+		\caption[Schema Elektronik]{Schema Elektronik}
 	\end{center}
 \end{figure}
 
@@ -139,7 +139,7 @@ Auf der Skizze in Abbildung xy kann man das gebaute System sehen:
 \begin{figure}[h]
 	\begin{center}
 		\includegraphics[scale=0.6]{Aufbau_Gassystem.jpg}
-		\caption{Schema Gassystem}
+		\caption[Schema Gassystem]{Schema Gassystem}
 	\end{center}
 \end{figure}
 
@@ -176,7 +176,7 @@ Damit die Schwämme nicht durch den Luftstrom von ihrem Platz weggedrückt werde
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[scale=0.5]{Luftbefeuchter.png}
-		\caption{Die Luft wird durch den den Schlauch in die Spirale geleitet und strömt dort aus feinen Löchern in die Schwämme. Die feinen Luftblasen nehmen Feuchtigkeit auf und die Luft strömt oben wieder aus dem Behälter.}
+		\caption[Schema Luftbefeuchter]{Die Luft wird durch den den Schlauch in die Spirale geleitet und strömt dort aus feinen Löchern in die Schwämme. Die feinen Luftblasen nehmen Feuchtigkeit auf und die Luft strömt oben wieder aus dem Behälter.}
 	\end{center}
 \end{figure}
 
@@ -186,13 +186,13 @@ Beim Zusammenbau sahen die einzelnen Lage wie folgt aus:
 	\begin{minipage}[hbt]{6cm}
 		\centering
 		\includegraphics[width=6cm]{Luftbefeuchter_Spirale.jpg}
-		\caption{Schlauchspirale durch die die Luft in die Schwämme geleitet wird}
+		\caption[Spirale Luftbefeuchter]{Schlauchspirale durch die die Luft in die Schwämme geleitet wird}
 	\end{minipage}
 	\hfill
 	\begin{minipage}[hbt]{6cm}
 		\centering
 		\includegraphics[width=6cm]{Luftbefeuchter_Schwaemme.jpg}
-		\caption{Schwämme, die die kleinen Luftblasen erzeugen}
+		\caption[Schwämme Luftbefeuchter]{Schwämme, die die kleinen Luftblasen erzeugen}
 	\end{minipage}
 \end{figure}
 
@@ -200,13 +200,13 @@ Beim Zusammenbau sahen die einzelnen Lage wie folgt aus:
 	\begin{minipage}[hbt]{6cm}
 		\centering
 		\includegraphics[width=6cm]{Luftbefeuchter_Netz.jpg}
-		\caption{Netz, das die Schwämme an Position hält}
+		\caption[Netz Luftbefeuchter]{Netz, das die Schwämme an Position hält}
 	\end{minipage}
 	\hfill
 	\begin{minipage}[hbt]{6cm}
 		\centering
 		\includegraphics[width=6cm]{Luftbefeuchter_gesamt.jpg}
-		\caption{Außenansicht in Betriebsbereitem Zustand}
+		\caption[Außenansicht Luftbefeuchter]{Außenansicht in Betriebsbereitem Zustand}
 	\end{minipage}
 \end{figure}
 
@@ -219,6 +219,7 @@ Anschließend wurde in die obere Hälfte des Behälters eine Kombination aus ein
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[scale=0.11]{Gassystem_montiert.jpg}
+		\caption[Gassystem montiert]{Das vollständig montierte Gassystem im Betriebsbereiten Zustand}
 	\end{center}
 \end{figure}
 
@@ -244,7 +245,7 @@ Eine weitere Anforderung bestand in der Integration eine Ionisators, sodass die 
 \begin{figure}[h]
 	\begin{center}
 		\includegraphics[scale=0.4]{Zusammenbau_fluides_Bett.png}
-		\caption{Digitalmodell Wirbelbett}
+		\caption[Modell Wirbelbett]{vollständig zusammengebautes Wirbelbett im betriebsbereiten ZUstand}
 	\end{center}
 \end{figure}
 
@@ -266,7 +267,7 @@ Ein in der Industrie übliches Produkt, um Luft von Partikeln zu säubern, ist d
 \begin{figure}[h]
 	\begin{center}
 		\includegraphics[scale=0.5]{Umsetzung_Fliehkraftabscheider.jpg}
-		\caption{Funktionsweise eines klassischen Fliehkraftabscheiders: Quelle Wikipedia}
+		\caption[Funktionsweise Fliehkraftabscheider]{Funktionsweise eines klassischen Fliehkraftabscheiders: Quelle Wikipedia}
 	\end{center}
 \end{figure}
 
@@ -287,8 +288,25 @@ Zudem wurde ein abnehmbarer Filter oben auf den Trichter gespannt, um einen rudi
 \begin{figure}[h]
 	\begin{center}
 		\includegraphics[scale=0.5]{Schnitt_Trichter.png}
+		\caption[Skizze Trichter]{Schnitt durch den Trichter mit allen konstruktiven Details}
 	\end{center}
 \end{figure}
+
+
+\subsection{Ionisator}
+
+\subsubsection{Anforderungen}
+
+Der Ionisator sollte in der Mitte des Luftstroms platziert werden, damit die Ionen möglichst gut von der Luft mitgenommen werden können. Zudem sollte der Ionisator einfach an und absteckbar sein, da die teilweise im System verwendete Luft sehr feucht ist und dann Korrosionsgefahr besteht.
+
+\subsubsection{Umsetzung}
+
+Damit keine dauerhaften Veränderungen am Ionisatorkopf selbst vorgenommen werden mussten, wurde beschlossen den Kopf in einen Adapter zu stecken und diesen mit einem Gewinde am Anschlusszylinder zu befestigen. Dazu wird der Innendurchmesser des Adapters so nah wie möglich an den Außendruchmesser des Ionisatorkopfes angenährt. Zur Sicherstellung der Luftdichtigkeit und der Stabilität wird der Ionisatorkopf in den Adapter eingeklebt. Außen auf den Adapter wird ein Gewinde geschnitten mit dem der Adapter, unter Verwendung von Teflonband, in den Anschlusszylinder eingedreht werden kann.
+
+Bild!!!
+
+Am hinteren Ende des Adapters befindet sich ein hervorstehender Ring, der eine dezidierte Kontaktfläche mit dem Anschlusszylinder darstellt. Der Ring wird mit Silikon bestrichen, genauso wie die Nut am Zylinder. Durch Pressung wird das Gewinde zusätzlich gegen Luftaustritt abgesichert. Zur Sicherstellung der Luftdichtheit sollte ein Anziehmoment von \SI{1,2}{Nm} nicht unterschritten werden, aber auch ein Moment von \SI{1,8}{Nm} nicht überschritten werden. Bei Überschreitung des Limits droht dauerhafter Schaden am Gewinde und damit der Verlust der Dichtheit.
+
 
 \newpage
 
@@ -328,7 +346,7 @@ Der Anschlusszylinder wird mit Röhrchenhalter im arretierten Zustand unter die 
 \begin{figure}[h]
 	\begin{center}
 		\includegraphics[scale=0.5]{Messmethode_Anpressung.png}
-		\caption{Messaufbau um den benötigen Druck zur Arretierung des Röhrchenhalteres zu messen}
+		\caption[Messaufbau Arretierung 1]{Messaufbau um den benötigen Druck zur Arretierung des Röhrchenhalteres zu messen}
 	\end{center}
 \end{figure}
 
@@ -337,7 +355,7 @@ Um die Festigkeit der einzelnen Arretierungspunkte zu messen, wurde ein T-Stück
 \begin{figure}[h]
 	\begin{center}
 		\includegraphics[scale=0.6]{Messmethode_Zugkraft.png}
-		\caption{Das T-Stück wird in die Arretierung gehakt und dann daran gezogen, um zu ermitteln wie hoch die maximal ausübbare Kraft zu bestimmen}
+		\caption[Messaufbau Arretierung 2]{Das T-Stück wird in die Arretierung gehakt und dann daran gezogen, um zu ermitteln wie hoch die maximal ausübbare Kraft zu bestimmen}
 	\end{center}
 \end{figure}
 
@@ -351,15 +369,17 @@ Eine Kraft dieser Größenordnung tritt bei unseren Versuchsbedingungen nicht au
 	\begin{minipage}[hbt]{6.0cm}
 		\centering
 		\includegraphics[width=6.0cm]{Zylinder_frontal.png}
+		\caption[Zylinder V1 frontal]{}
 	\end{minipage}
 	\hfill
 	\begin{minipage}[hbt]{7cm}
 		\centering
 		\includegraphics[width=7cm]{Zylinder_seitlich.png}
+		\caption[Zylinder V1 seitlich]{}
 	\end{minipage}
 \end{figure}
 
-In der Frontansicht sieht man den Einlass mit Arretierung für den Ionisator. Zur Montage wird die Spitze des Ionisator in einen Adapter gesteckt und dieser Adapter mittels drehen arretiert. Die Luftdichtheit wird durch einen O-Ring aus Gummi (Shore Härte 50) erreicht. In der Seitenansicht wird der Anschluss für das Gassystem sichtbar. Hier wurde ein Swagelockverbinder mit Gummi O-Ring in das Plastik geschraubt und der Adapter für den Bunaschlauch daran angeschlossen.
+In der Frontansicht sieht man den Einlass mit Arretierung für den Ionisator. Zur Montage wird die Spitze des Ionisator in einen Adapter gesteckt und dieser Adapter mittels drehen in das Gewinde arretiert. In der Seitenansicht wird der Anschluss für das Gassystem sichtbar. Hier wurde ein Swagelockverbinder mit Gummi O-Ring in das Plastik geschraubt und der Adapter für den Bunaschlauch daran angeschlossen.
 
 \subparagraph{Veränderungen zur Sicherstellung der Luftdichtheit}
 \hfill \\
@@ -370,7 +390,7 @@ Auf Grund dieser Erkenntnisse wurde beschlossen das Design des Anschlusszylinder
 \begin{figure}[h]
 	\begin{center}
 		\includegraphics[scale=0.5]{Schnitt_AnschlusszylinderV2.png}
-		\caption{In das M12x1 Gewinde wird der Swagelokadapter geschraubt, dabei dichtet die Dichtung des Adapters mit der Auflagefläche zusätzlich ab. Die M6 Gewinde dienen zur Arretierung des Röhrchenhalters. Die Nut nimmt die gleiche Dichtung auf wie schon weiter oben beschrieben.}
+		\caption[Schnitt Zylinder V2]{In das M12x1 Gewinde wird der Swagelokadapter geschraubt, dabei dichtet die Dichtung des Adapters mit der Auflagefläche zusätzlich ab. Die M6 Gewinde dienen zur Arretierung des Röhrchenhalters. Die Nut nimmt die gleiche Dichtung auf wie schon weiter oben beschrieben.}
 	\end{center}
 \end{figure}
 
@@ -387,6 +407,7 @@ Der Röhrchenhalter besteht aus drei Teilen, eins dient zur Verbinung mit dem An
 \begin{figure}[h]
 	\begin{center}
 		\includegraphics[scale=0.5]{Schnitt_Roehrchenhalter.png}
+		\caption[Schnitt Röhrchenhalter]{Der Röhrchenhalter wird mit der oben gemessenen Kraft auf en Anschlusszylinder gedrückt und anschließen durch drehen arretiert}
 	\end{center}
 \end{figure}
 
@@ -396,7 +417,7 @@ Diese Teile werden durch sechs M6 Schrauben verbunden, damit die Kraft auf den d
 \begin{figure}[h!]
 		\begin{center}
 			\includegraphics[scale=0.5]{Schnitt_Deckplatte.png}
-			\caption{Die Anpressfläche ist mit Silikon beschichtet und sorgt für einen dichten Kontakt zum O-Ring}
+			\caption[Schnitt Deckplatte]{Die Anpressfläche ist mit Silikon beschichtet und sorgt für einen dichten Kontakt zum O-Ring}
 		\end{center}
 \end{figure}
 
@@ -419,7 +440,7 @@ Die Kraft, die eine einzelne Schraube auf den Ring ausübt, kann aus dem angeleg
 	F_{res} &= \frac{\SI{1}{Nm}}{0,325 \cdot \frac{\SI{4,773}{mm} + \SI{6}{mm}}{4} + \frac{\SI{5,35}{mm}}{2} \cdot \tan(\SI{3,405}{^\circ} + \SI{20,57}{^\circ})} = \SI{0,482}{N}
 \end{align*}
 
-Bei sechs Schrauben erhält man eine Gesamtkraft von $F_{ges} = \SI{2,904}{N}$ Dies reicht auch bei einem Probenrohrdurchmesser von \SI{40}{mm} aus, um eine luftdichte Verbindung zu erreichen. Zudem ist man mit dieser Kraft deutlich unter der Belastungsgrenze von ABS, die bei ca \SI{44}{N/mm} (ISO 527, \cite{C.Dallner2006} \cite{ThyssenPlastics}) liegt.
+Bei sechs Schrauben erhält man eine Gesamtkraft von $F_{ges} = \SI{2,904}{N}$ Dies reicht auch bei einem Probenrohrdurchmesser von \SI{40}{mm} aus, um eine luftdichte Verbindung zu erreichen. Zudem ist man mit dieser Kraft deutlich unter der Belastungsgrenze von ABS, die bei ca \SI{44}{N/mm} (ISO 527, \cite{C.Dallner2006, ThyssenPlastics}) liegt.
 
 Der dritte Teil des Halters ist der Stabilisator und sorgt dafür, dass das Röhrchen nicht seitlich verkippt werden kann und es dadurch zu Undichtigkeiten kommt. Damit diese Halterung nicht für jedes Röhrchen separat montiert werden muss, wurde ein universelles Ringsystem entworfen. Das Basisteil wird am Schanier festgeschraubt und hat $\SI{40}{mm}$ Durchmesser. In das Basisteil können nun weitere Ringe eingesetzt und durch verdrehen arretiert werden, damit auch die Durchmesser $30,20,5\SI{}{\ mm}$ einen guten Halt haben.
 
@@ -427,13 +448,13 @@ Der dritte Teil des Halters ist der Stabilisator und sorgt dafür, dass das Röh
 		\begin{minipage}[hbt]{7.4cm}
 			\centering
 			\includegraphics[width=7.4cm]{Basishalter.png}
-			\caption{Schwenkbarer Halter der mit Einsätzen für alle möglichen Röhrchendurchmesser angepasst werden kann}
+			\caption[Röhrchenhalter oben]{Schwenkbarer Halter der mit Einsätzen für alle möglichen Röhrchendurchmesser angepasst werden kann}
 		\end{minipage}
 		\hfill
 		\begin{minipage}[hbt]{5.7cm}
 			\centering
 			\includegraphics[width=5.7cm]{Basishalter_Einsatz.png}
-			\caption{Einsatz für Röhrchen mit \SI{30}{mm} Innendurchmesser}
+			\caption[Röhrchenhalter Einsatz oben]{Einsatz für Röhrchen mit \SI{30}{mm} Innendurchmesser}
 		\end{minipage}
 	\end{figure}
 	
@@ -445,7 +466,7 @@ Wegen der Veränderungen am Anschlusszylinder musste der Röhrchenhalter daran a
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[scale=0.6]{Schnitt_RoehrchenhalterV2.png}
-		\caption{}
+		\caption[Röhrchenhalter V2]{}
 	\end{center}
 \end{figure}
 
@@ -471,13 +492,13 @@ Um den Anforderungen gerecht zu werden, wurde eine Konstruktion aus zwei L-förm
 	\begin{minipage}[hbt]{7cm}
 		\centering
 		\includegraphics[width=7cm]{Halterung_Lichtstreu_Vogel.png}
-		\caption{Draufsicht}
+		\caption[Haltearm Lichtstreuaufbau Draufsicht]{Draufsicht}
 	\end{minipage}
 	\hfill
 	\begin{minipage}[hbt]{7cm}
 		\centering
 		\includegraphics[width=7cm]{Halterung_Lichtstreu_Seite.png}
-		\caption{Seitenansicht}
+		\caption[Haltearm Lichtstreuaufbau Seitenansicht]{Seitenansicht}
 	\end{minipage}
 \end{figure}
 
@@ -500,6 +521,7 @@ Die Anforderungen wurden zum einen durch eine Platte auf der der Justiermechanis
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[scale=0.6]{Halterung_Labor_Seite.png}
+	\caption[Halterung Labor]{}
     \end{center}
 \end{figure}
 
@@ -618,7 +640,7 @@ Die Qualität der gedruckten Bauteile war durchweg hoch, besonders die Stabilit�
 
 \section{Ausblick}
 
-Der Ausblick ist zweigeteilt, im ersten Teil wird auf das konstruierte Wirbelbett eingegangen und im zweiten Teil über dessen Weiterentwicklung diskutiert. \\
+Der Ausblick ist zweigeteilt, im ersten Teil wird auf das konstruierte Wirbelbett eingegangen und im zweiten Teil über dessen Weiterentwicklung diskutiert. 
 
 Wie bereits in der Bewertung erwähnt, gibt es noch Raum für Verbesserungen bei einzelnen Komponenten. Dies betrifft zum Beispiel den Filter, der entweder ersetzt oder durch konstruktive Maßnahmen am biegen gehindert werden sollte. In diesem Zusammenhang kann man sich auch nochmal mit der Integration eines Luftionisator beschäftigen, da dies ein interessantes Konzept ist, unser Ionisator allerdings entweder zu wenig Leistung hatte oder der Filter zu wenig Ionen durchließ.
 Weiterhin wäre es interessant zu untersuchen, ob und wie es möglich ist die 3D gedruckten Teile luftdicht zu machen. Eine Möglichkeit die erwogen wurde, ist das tränken in Epokzitharz, allerdings wurde sie aus Zeit- und Erfahrungsmangel nicht weiter verfolgt.
@@ -626,6 +648,10 @@ Weiterhin wäre es interessant zu untersuchen, ob und wie es möglich ist die 3D
 Die Weiterentwicklung des Wirbelbetts bestünde darin, es auch mit Wasser betreiben zu können.
 
 
+\phantomsection
+\addcontentsline{toc}{chapter}{Abbildungsverzeichniss}
+
+\listoffigures
 
 
 

@@ -17,7 +17,7 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="Schnitt_Roehrchenhalter.svg"
-   inkscape:export-filename="C:\Dropbox\Bachelorarbeit\BA\BA_Text\Schnitt_Roehrchenhalter.PNG"
+   inkscape:export-filename="D:\Dropbox\Bachelorarbeit\BA\BA_Text\Schnitt_RoehrchenhalterV2.PNG"
    inkscape:export-xdpi="398.44815"
    inkscape:export-ydpi="398.44815">
   <defs
@@ -115,13 +115,13 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.98994949"
-     inkscape:cx="312.31351"
-     inkscape:cy="304.38742"
+     inkscape:cx="334.03179"
+     inkscape:cy="246.80872"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1600"
-     inkscape:window-height="837"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1" />
@@ -170,8 +170,8 @@
        id="path4643"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker4671)"
-       d="m 431.33514,864.47381 159.6041,-119.198"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker4671);stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 434.20592,821.05769 591.11846,745.00617"
        id="path4667"
        inkscape:connector-curvature="0" />
     <text
@@ -188,14 +188,14 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:27.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="401.03058"
-       y="892.75806"
+       x="398.00012"
+       y="851.3418"
        id="text4679"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4681"
-         x="401.03058"
-         y="892.75806">Nut</tspan></text>
+         x="398.00012"
+         y="851.3418">Nut</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:27.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -230,24 +230,24 @@
          x="267.69043"
          y="571.5296">Drehhilfe</tspan></text>
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker4701)"
-       d="M 643.46717,898.819 716.19815,753.35703"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker4701)"
+       d="m 683.5664,814.10602 33.18475,-61.85835"
        id="path4699"
        inkscape:connector-curvature="0" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:27.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="574.77679"
-       y="931.14386"
+       x="529.31995"
+       y="845.28088"
        id="text4705"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4707"
-         x="574.77679"
-         y="931.14386">Arretierung</tspan><tspan
+         x="529.31995"
+         y="845.28088">Arretierung</tspan><tspan
          sodipodi:role="line"
-         x="574.77679"
-         y="965.51886"
+         x="529.31995"
+         y="879.65588"
          id="tspan4790">Anschlusszylinder</tspan></text>
   </g>
 </svg>

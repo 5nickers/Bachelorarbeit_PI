@@ -6,8 +6,7 @@
     DIV=15, BCOR=2cm, headinclude,
 ]{scrbook}
 
-%\includeonly{40-Implementierung}
-%\usepackage[style=authortitle]{biblatex} 
+
 \usepackage{cite}
 
 
@@ -21,9 +20,16 @@
 \usepackage{algpseudocode}
 \usepackage{placeins}
 
+\usepackage{caption}
+
 \usepackage{diagbox}
 
 \usepackage{pdfpages}
+
+
+%\usepackage[backend=biber,style=alphabetic]{biblatex}
+%\addbibresource{Quellen.bib}
+
 
 \usepackage{float}
 \newfloat{algorithm}{tbhp}{loa}[chapter]
@@ -69,8 +75,7 @@
 \newcommand\timesites{N}
 \newcommand\timestep{a}
 
-
-
+%\addto\captionsngerman{\renewcommand{\bibname}{}}
 
 
 \subject{
