@@ -82,7 +82,7 @@ Es wurde sich für den TM7705 Dual 16-bit ADC entschieden, da dieser bereits auf
 \begin{figure}[h]
 	\begin{center}
 		\includegraphics[scale=0.6]{Schema_Elektronik.jpg}
-		\caption[Schema Elektronik]{Schema Elektronik}
+		\caption[Schema Elektronik]{Der Raspberry versorgt den Adruino mit Strom und übergibt gleichzeitig alle nötigen Daten zur Kontrolle des Flowcontrollers. Der Arduino wandelt diese geeignet um und gibt sie an den Flowcontroller. Gleichzeitig sammelt er alle Daten des Flowcontrollers und Drucksensors und übergibt diese zum Abspeichern an den Raspberry}
 	\end{center}
 \end{figure}
 
@@ -140,7 +140,7 @@ Auf der Skizze in Abbildung xy kann man das gebaute System sehen:
 \begin{figure}[h]
 	\begin{center}
 		\includegraphics[scale=0.6]{Aufbau_Gassystem.jpg}
-		\caption[Schema Gassystem]{Schema Gassystem}
+		\caption[Schema Gassystem]{Der Flowcontroller bekommt den nötigen Vordruck von einer Gasfalsche mit Stickstoff. Nach dem Flowcontroller kann mit den Kükenhähnen die Luft entweder über den Luftbefeuchter oder direkt zum Wirbelbett geleitet werden.}
 	\end{center}
 \end{figure}
 
@@ -397,7 +397,6 @@ Auf Grund dieser Erkenntnisse wurde beschlossen das Design des Anschlusszylinder
 
 Zudem stellte sich während der Messungen heraus, das der verwendete Luftionisator (Haug Static Line LC) nicht den gewünschten Effekt erzielt, daher wurde dieser Anschluss bei der Ausführung in Aluminium ebenfalls weggelassen. Um den Anschlusszylinder trotzdem mit dem Justiermechanismus zu verbinden, wird dieser Teil weiterhin im 3D Drucker gedruckt und anschließend mit zwei Komponentenkleber (UHU Plus, 2-K-Epoxidkleber) an den Anschlusszylinder angeklebt.
 
-Berechnungen zur Anpresskraft auf die Dichtung!!!
 
 \subsection{Röhrchenhalter}
 
@@ -443,7 +442,7 @@ Die Kraft, die eine einzelne Schraube auf den Ring ausübt, kann aus dem angeleg
 	F_{res} &= \frac{\SI{1}{Nm}}{0,325 \cdot \frac{\SI{4,773}{mm} + \SI{6}{mm}}{4} + \frac{\SI{5,35}{mm}}{2} \cdot \tan(\SI{3,405}{^\circ} + \SI{20,57}{^\circ})} = \SI{0,482}{N}
 \end{align*}
 
-Bei sechs Schrauben erhält man eine Gesamtkraft von $F_{ges} = \SI{2,904}{N}$ Dies reicht auch bei einem Probenrohrdurchmesser von \SI{40}{mm} aus, um eine luftdichte Verbindung zu erreichen. Zudem ist man mit dieser Kraft deutlich unter der Belastungsgrenze von ABS, die bei ca \SI{44}{N/mm} (ISO 527, \cite{C.Dallner2006, ThyssenPlastics}) liegt.
+Bei sechs Schrauben erhält man eine Gesamtkraft von $F_{ges} = \SI{2,904}{N}$. Dies reicht auch bei einem Probenrohrdurchmesser von \SI{40}{mm} aus, um eine luftdichte Verbindung zu erreichen. Zudem ist man mit dieser Kraft deutlich unter der Belastungsgrenze von ABS, die bei ca \SI{44}{N/mm} (ISO 527, \cite{C.Dallner2006, ThyssenPlastics}) liegt.
 
 Der dritte Teil des Halters ist der Stabilisator und sorgt dafür, dass das Röhrchen nicht seitlich verkippt werden kann und es dadurch zu Undichtigkeiten kommt. Damit diese Halterung nicht für jedes Röhrchen separat montiert werden muss, wurde ein universelles Ringsystem entworfen. Das Basisteil wird am Schanier festgeschraubt und hat $\SI{40}{mm}$ Durchmesser. In das Basisteil können nun weitere Ringe eingesetzt und durch verdrehen arretiert werden, damit auch die Durchmesser $30,20,5\SI{}{\ mm}$ einen guten Halt haben.
 
@@ -464,14 +463,23 @@ Der dritte Teil des Halters ist der Stabilisator und sorgt dafür, dass das Röh
 \subparagraph{Anpassungen an gefräßten Anschlusszylinder}
 \hfill \\
 
-Wegen der Veränderungen am Anschlusszylinder musste der Röhrchenhalter daran angepasst werden. Dazu  wurde der ursprüngliche Mechanismus zur Arretierung entfernt und stattdessen sechs Durchgangsbohrungen eingefügt, damit der Halter von oben auf den Anschlusszylinder geschraubt werden kann.
+Wegen der Veränderungen am Anschlusszylinder musste der Röhrchenhalter daran angepasst werden. Dazu  wurde der ursprüngliche Mechanismus zur Arretierung entfernt und stattdessen sechs Langlöcher eingefügt, damit der Halter von oben auf den Anschlusszylinder geschraubt werden kann. Die Langlöcher sorgen für einen gewissen Spielraum bei Ungenauigkeiten beim Druck
 
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[scale=0.6]{Schnitt_RoehrchenhalterV2.png}
-		\caption[Röhrchenhalter V2]{}
+		\caption[Röhrchenhalter V2]{Der Röhrchenhalter wurde hat den selben Durchmesser wie der Anschlusszylinder, allerdings nun keine Füße zur Arretierung und keine Drehhilfe mehr.}
 	\end{center}
 \end{figure}
+
+Mit der oben verwendete Gleichung lässt sich auch die Anpresskraft berechnen.
+\begin{align*}
+	\intertext{Bei einem gemessenen Drehmoment (mittels CDI Werameter 7131A) von $M_A = \SI{0,0}{Nm}$, ist die wirkende Kraft einer Schraube:}
+	F_{res} &= \frac{\SI{0,0}{Nm}}{0,325 \cdot \frac{\SI{4,773}{mm} + \SI{6}{mm}}{4} + \frac{\SI{5,35}{mm}}{2} \cdot \tan(\SI{3,405}{^\circ} + \SI{20,57}{^\circ})} = \SI{0,0}{N}
+\end{align*}
+
+Bei sechs Schrauben erhält man eine Gesamtkraft von $F_{ges} = \SI{0,0}{N}$
+
 
 
 \subsection{Halterung Wirbelbett}
@@ -486,27 +494,27 @@ Sowohl für den Aufbau im Labor als auch für den Aufbau im Lichtstreuaufbau, wu
 \hfill \\
 Die Aufgabe bestand darin, das Wirbelbett so in den Aufbau zu integrieren, sodass weder die Rotationsfähigkeit vermindert, noch der Aufbau verändert wird. Zudem sollte die Höhe des Wirbelbetts rudimentär geändert werden und die Position in der Horizontalen im Submilimeterbereich eingestellt werden können. 
 
+\newpage
 
 \paragraph{Umsetzung}
 \hfill \\
 Um den Anforderungen gerecht zu werden, wurde eine Konstruktion aus zwei L-förmigen Teilen gewählt. 
 
 \begin{figure}[h]
-	\begin{minipage}[hbt]{7cm}
 		\centering
-		\includegraphics[width=7cm]{Halterung_Lichtstreu_Vogel.png}
+		\includegraphics[scale=0.9]{Halterung_Lichtstreu_Vogel.png}
 		\caption[Haltearm Lichtstreuaufbau Draufsicht]{Draufsicht}
-	\end{minipage}
-	\hfill
-	\begin{minipage}[hbt]{7cm}
-		\centering
-		\includegraphics[width=7cm]{Halterung_Lichtstreu_Seite.png}
-		\caption[Haltearm Lichtstreuaufbau Seitenansicht]{Seitenansicht}
-	\end{minipage}
 \end{figure}
 
+In der Draufsicht sieht man, das zum Verschieben nach links und rechts zwei durch eine Laborklemme (rot) gegeneinander verschiebbare Träger genutzt wurden. Ans Ende es linken Trägers wurde mittels zwei Winkeln die Halteplatte für das Wirbelbett montiert.
 
-In der Draufsicht sieht man, das zum Verschieben nach links und rechts zwei durch eine Laborklemme (rot) gegeneinander verschiebbare Träger genutzt wurden. Ans Ende es linken Trägers wurde mittels zwei Winkeln die Halteplatte für das Wirbelbett montiert. Auf der Halteplatte kann das Wirbelbett mit der Mikrometerschraube exakt in den Laserstrahl gefahren werden.
+\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.8]{Halterung_Lichtstreu_Seite.png}
+		\caption[Haltearm Lichtstreuaufbau Seitenansicht]{Seitenansicht}
+\end{figure}
+
+ Auf der Halteplatte kann das Wirbelbett mit der Mikrometerschraube exakt in den Laserstrahl gefahren werden.
 
 
 \subsubsection{Laboraufbau}
@@ -529,14 +537,13 @@ Die Anforderungen wurden zum einen durch eine Platte auf der der Justiermechanis
 \end{figure}
 
 
-\newpage
-
 \subsection{Filter}
 
 \paragraph{Anforderungen}
 \hfill \\
 Das Ziel bestand darin einen Filter zu finden, der, im Gegensatz zu dem vorher verwendeten Schwamm, immer die gleichen Eigenschaften aufweist, auch wenn man ihn austauscht. Zudem muss der Filter durchlässig genug sein um bis zu $\SI{3000}{l/h}$ Luft durchzulassen, ohne zu reißen. Zugleich müssen die Poren fein genug sein, damit die Partikel des kleinsten Granulats nicht hindurch fallen. Außerdem muss der Filter dünn genug sein, damit der die Höhe der Konstruktion nicht negativ beeinflusst, da es beim Lichtstreuaufbeu eine Höhenbegrenzung gibt. Weiterhin musste der Filter hydrophob und antistatisch sein, sodass er bei Zuschaltung des Luftbefeuchters kein Wasser aufnimmt und dadurch verstopft und sich nicht statisch aufläd.
 
+\newpage
 
 \paragraph{Auswahl}
 \hfill \\
@@ -655,27 +662,9 @@ Die Qualität der gedruckten Bauteile war durchweg hoch, besonders die Stabilit�
 Der Ausblick ist zweigeteilt, im ersten Teil wird auf das konstruierte Wirbelbett eingegangen und im zweiten Teil über dessen Weiterentwicklung diskutiert. 
 
 Wie bereits in der Bewertung erwähnt, gibt es noch Raum für Verbesserungen bei einzelnen Komponenten. Dies betrifft zum Beispiel den Filter, der entweder ersetzt oder durch konstruktive Maßnahmen am biegen gehindert werden sollte. In diesem Zusammenhang kann man sich auch nochmal mit der Integration eines Luftionisator beschäftigen, da dies ein interessantes Konzept ist, unser Ionisator allerdings entweder zu wenig Leistung hatte oder der Filter zu wenig Ionen durchließ.
-Weiterhin wäre es interessant zu untersuchen, ob und wie es möglich ist die 3D gedruckten Teile luftdicht zu machen. Eine Möglichkeit die erwogen wurde, ist das tränken in Epokzitharz, allerdings wurde sie aus Zeit- und Erfahrungsmangel nicht weiter verfolgt.
+Weiterhin wäre es interessant zu untersuchen, ob und wie es möglich ist die 3D gedruckten Teile luftdicht zu machen. Eine Möglichkeit die erwogen wurde, ist das tränken des gedruckten Teils in Epokzitharz. Bei einem Versuch mit Z-Bond 90 war die Behandlung nicht erfolgreich und der Luftduchfluss verschlechterte sich nochmal. Hier wäre es interessant herauszufinden welche Materialien für eine luftdichte Versiegelung in Frage kommen und wie das gedruckte Teil damit behandelt werden muss. Der Vorteil wäre ein deutlich leichteres Wirbelbett.
 
 Die Weiterentwicklung des Wirbelbetts bestünde darin, es auch mit Wasser betreiben zu können.
-
-
-
-
-
-
-
-
-
-
-
-\phantomsection
-\addcontentsline{toc}{chapter}{Abbildungsverzeichniss}
-
-\listoffigures
-
-
-
 
 
 
