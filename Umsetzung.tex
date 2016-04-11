@@ -94,9 +94,23 @@ Stattdessen wurde ein Gehäuse entworfen, in dem sowohl der Arduino als auch das
 Für die Anschlüsse wurden möglichst kleine Löcher im Gehäuse gelassen, sodass ein größtmöglicher Schutz gegen Schmutz bei größtmöglichem Komfort gewährleistet wird. \\
 Beim Deckel wurde sich für eine Presspassung entschieden, zudem dient der Deckel gleichzeitig dazu die Komponenten innerhalb des Gehäuses an Ort und Stelle zu halten. Dies wurde über Streben, die vom Deckel nach unten bis auf die jeweilige Komponente geht realisiert.
 
-Hier Bilder einfügen!!
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[scale=0.4]{Elektronik_Gehaeuse1.png}
+		\caption[Gehäuse Draufsicht]{Man sieht links die Aussparung für den Arduino Due, oben rechts die Aussparung für den Spannungsteiler, in der Mitte unten sitzt der A-D Wandler}
+	\end{center}
+\end{figure}
 
-\newpage
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[scale=0.45]{Elektronik_Gehaeuse2.png}
+		\caption[Gehäuse räumlich]{In der räumlichen Ansicht sieht man die Aussparungen durch die die Kabel geführt werden.}
+	\end{center}
+\end{figure}
+
+
+
+\clearpage
 
 \section{AP3 - Gassystem}
 
@@ -304,7 +318,12 @@ Der Ionisator sollte in der Mitte des Luftstroms platziert werden, damit die Ion
 
 Damit keine dauerhaften Veränderungen am Ionisatorkopf selbst vorgenommen werden mussten, wurde beschlossen den Kopf in einen Adapter zu stecken und diesen mit einem Gewinde am Anschlusszylinder zu befestigen. Dazu wird der Innendurchmesser des Adapters so nah wie möglich an den Außendruchmesser des Ionisatorkopfes angenährt. Zur Sicherstellung der Luftdichtigkeit und der Stabilität wird der Ionisatorkopf in den Adapter eingeklebt. Außen auf den Adapter wird ein Gewinde geschnitten mit dem der Adapter, unter Verwendung von Teflonband, in den Anschlusszylinder eingedreht werden kann.
 
-Bild!!!
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[scale=0.17]{Adapter_Ionisator.jpg}
+		\caption[Adapter für Ionisator]{Der Adapter wird auf den Ionisator geklebt und anschließend in den Anschlusszylinder eingedreht. Dabei drückt der hervorstehende Ring in die Nut den Anschlusszylinders}
+	\end{center}
+\end{figure}
 
 Am hinteren Ende des Adapters befindet sich ein hervorstehender Ring, der eine dezidierte Kontaktfläche mit dem Anschlusszylinder darstellt. Der Ring wird mit Silikon bestrichen, genauso wie die Nut am Zylinder. Durch Pressung wird das Gewinde zusätzlich gegen Luftaustritt abgesichert. Zur Sicherstellung der Luftdichtheit sollte ein Anziehmoment von \SI{1,2}{Nm} nicht unterschritten werden, aber auch ein Moment von \SI{1,8}{Nm} nicht überschritten werden. Bei Überschreitung des Limits droht dauerhafter Schaden am Gewinde und damit der Verlust der Dichtheit.
 
@@ -622,49 +641,6 @@ Der Messablauf bestand darin, das mit dem Massenstromregler Volumenströme vorge
 
 
 \subsection{Vermessung verschiedener Granulate}
-
-
-\newpage
-
-\section{Bewertung}
-
-In diesem Abschnitt soll der Erfolg der einzelnen Arbeitspakete kritisch hinterfragt werden, um Raum zur Optimierung aufzuzeigen. 
-
-\subsection{Elektronik}
-
-Rückblickend wurde die Komplexität der Elektronik unterschätzt, was dazu führte, das sehr lange unklar war welche Teile verwendet werden. Dadurch war es nicht möglich in dem geplanten Zeitfenster ein finales Gehäuse für die Elektronik zu designen. Da der Zeitaufwand für das Design dieses Teils allerdings nicht sehr hoch war, war es ohne Probleme möglich es am Ende des Projekts zu machen. In Zukunft wäre es besser solche Probleme entweder früher zu erkennen oder das Design von vorne herein ans Ende zu stellen. 
-
-\subsection{Gassystem}
-
-Der gewählte Filter erfüllt zwar alle gestellten Anforderungen, bringt aber einen Nachteil mit sich. Trotz planem Filter beim Aufkleben auf das Probenröhrchen, verformt sich dieser im Laufe der Nutzung plastisch. Das führt zu einem zusätzlichen heben und senken des graularen Mediums um bis zu \SI{3}{cm} (im Rährchen mit \SI{40}{mm}  Durchmesser). Dieses Verhalten ist unerwünscht, da sich die Granulate deswegen nicht komprimieren und dann auf ihr Verhalten untersuchen lassen.  
-
-\subsection{Wirbelbett}
-
-
-
-\subsection{Nutzung des 3D Druckers}
-
-Durch die Anforderung einen Ionisator im Aufbau unterzubringen, war es nicht möglich ein anderes Material außer Plastik zu verwenden. Zudem konnte eine andere Herangehensweise gewählt werden, statt klassischen Technischen Zeichnungen und FEM, wurde die Methode des evolutionären Druckens gewählt. Das sparte die aufwändigen Simulationen und erlaubte das Testen der designten Teile unter Realbedingungen. Der Nachteil dieser Methode ist neben den  Fehldrucken, die bei ca \SI{10}{\%} lagen, der Overhead an Teilen. Dadurch das man das selbe Teil in verschiedenen Evolutionsstufen druckt, ist man nicht sehr materialsparend. \\
-Die Qualität der gedruckten Bauteile war durchweg hoch, besonders die Stabilität ist beachtlich, allerdings dauert es zwei, drei Drucke bis man seinen Modell am Rechner soweit angepasst hat, das der Drucker so druckt, wie man es beabsichtigt. Zudem ist der Drucker anfällig im Bezug auf den Druckuntergrund. Während des Projekts ist das Kaptontape auf der Heizplatte kaputtgegangen und ohne dieses Tape auf der Heizplatte, ist es nicht möglich Teile mit Durchmesser größer als \SI{40}{mm} mit flachem Boden zu drucken. Die Drucke bogen sich und waren somit ungeeignet für dichtende Zwecke eingesetzt zu werden. Weiterhin stellte sich im Rahmen der Messungen heraus, das der gedruckte Anschlusszylinder nicht luftdicht ist. Die genauen Ursachen sind nicht untersucht worden, allerdings werden die nicht optimal miteinander verschmolzenen Außenwände dabei eine große Rollen spielen.
-
-
-\subsection{Zusammenfassung}
-
-
-
-
-
-
-
-
-\section{Ausblick}
-
-Der Ausblick ist zweigeteilt, im ersten Teil wird auf das konstruierte Wirbelbett eingegangen und im zweiten Teil über dessen Weiterentwicklung diskutiert. 
-
-Wie bereits in der Bewertung erwähnt, gibt es noch Raum für Verbesserungen bei einzelnen Komponenten. Dies betrifft zum Beispiel den Filter, der entweder ersetzt oder durch konstruktive Maßnahmen am biegen gehindert werden sollte. In diesem Zusammenhang kann man sich auch nochmal mit der Integration eines Luftionisator beschäftigen, da dies ein interessantes Konzept ist, unser Ionisator allerdings entweder zu wenig Leistung hatte oder der Filter zu wenig Ionen durchließ.
-Weiterhin wäre es interessant zu untersuchen, ob und wie es möglich ist die 3D gedruckten Teile luftdicht zu machen. Eine Möglichkeit die erwogen wurde, ist das tränken des gedruckten Teils in Epokzitharz. Bei einem Versuch mit Z-Bond 90 war die Behandlung nicht erfolgreich und der Luftduchfluss verschlechterte sich nochmal. Hier wäre es interessant herauszufinden welche Materialien für eine luftdichte Versiegelung in Frage kommen und wie das gedruckte Teil damit behandelt werden muss. Der Vorteil wäre ein deutlich leichteres Wirbelbett.
-
-Die Weiterentwicklung des Wirbelbetts bestünde darin, es auch mit Wasser betreiben zu können.
 
 
 
