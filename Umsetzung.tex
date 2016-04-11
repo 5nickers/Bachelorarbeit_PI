@@ -87,7 +87,7 @@ Es wurde sich für den TM7705 Dual 16-bit ADC entschieden, da dieser bereits auf
 \end{figure}
 
 
-\paragraph{Gehäuse (still in progress)} 
+\paragraph{Gehäuse} 
 \hfill \\
 Da es insbesondere im Lichtstreuaufbau nur sehr begrenzten Stauraum gibt und sämtliche Bauteile, das Wirbelbett selbst ausgenommen, auf einer Platte verbaut werden sollen, wurde gegen ein kommerziell erhältliches Gehäuse entschieden. \\ 
 Stattdessen wurde ein Gehäuse entworfen, in dem sowohl der Arduino als auch das Board mit dem Spannungsteiler passgenau Platz finden. Dabei wurde darauf geachtet, dass die Kontakte unterhalb des Arduinos und des Boards genug Platz haben, sodass es keinerlei unbeabsichtigte Reibung der Komponenten am Gehäuse gibt. \\
@@ -386,7 +386,7 @@ In der Frontansicht sieht man den Einlass mit Arretierung für den Ionisator. Zu
 \hfill \\
 
 Erste Messversuche mit dem 3D gedruckten Anschlusszylinder zeigten, das \SIrange{40}{50}{\%} des Volumenstroms auf unbekanntem Weg verloren gehen. Daher wurde das gesamte Wirbelbett in Wasser getaucht, um auf diese Weise die Leckstellen zu identifizieren. Dabei stellte sich heraus, dass das 3D gedruckte Plastik an sich undicht ist. Hauptsächlich strömte die Luft an den Löchern für die Befestigung an der Halteplatte und an überhängenden Kanten aus. Die Leckstellen können auf Grund der schwankenden Druckqualität von Druck zu Druck variieren, allerdings wurden Leckstellen vornehmlich an Kanten und Löchern und nicht an großen durchgehenden Flächen beobachtet. \\
-Auf Grund dieser Erkenntnisse wurde beschlossen das Design des Anschlusszylinders so abzuändern, das dieser in der Werkstatt aus Aluminium (Was????) fräßbar ist. Dazu wurde der bisherige Arretiermechanismus und die Verbindung zum Justiermechanismus weggelassen, da dies nur sehr aufwändig zu fertigen ist.
+Auf Grund dieser Erkenntnisse wurde beschlossen das Design des Anschlusszylinders so abzuändern, das dieser in der Werkstatt aus Aluminium (Aluminium 7075) fräßbar ist. Dazu wurde der bisherige Arretiermechanismus und die Verbindung zum Justiermechanismus weggelassen, da dies nur sehr aufwändig zu fertigen ist.
 
 \begin{figure}[h]
 	\begin{center}
@@ -439,7 +439,7 @@ Die Kraft, die eine einzelne Schraube auf den Ring ausübt, kann aus dem angeleg
 	\intertext{Dabei ist $\beta$ der Standartflankenwinkel von $\SI{60}{^\circ}$ eines ISO-Gewindes.}
 	&= \arctan\left( \frac{0,325}{\cos(\SI{30}{^\circ})} \right) = \SI{20,57}{^\circ}
 	\intertext{Bei einem gemessenen Drehmoment (mittels CDI Werameter 7131A) von $M_A = \SI{1}{Nm}$, ist die wirkende Kraft einer Schraube:}
-	F_{res} &= \frac{\SI{1}{Nm}}{0,325 \cdot \frac{\SI{4,773}{mm} + \SI{6}{mm}}{4} + \frac{\SI{5,35}{mm}}{2} \cdot \tan(\SI{3,405}{^\circ} + \SI{20,57}{^\circ})} = \SI{0,482}{N}
+	F_{res} &= \frac{\SI{1}{Nm}}{0,325 \cdot \frac{\SI{4,773}{mm} + \SI{6}{mm}}{4} + \frac{\SI{5,35}{mm}}{2} \cdot \tan(\SI{3,405}{^\circ} \text{\cite{Stellberg13}} + \SI{20,57}{^\circ})} = \SI{0,482}{N}
 \end{align*}
 
 Bei sechs Schrauben erhält man eine Gesamtkraft von $F_{ges} = \SI{2,904}{N}$. Dies reicht auch bei einem Probenrohrdurchmesser von \SI{40}{mm} aus, um eine luftdichte Verbindung zu erreichen. Zudem ist man mit dieser Kraft deutlich unter der Belastungsgrenze von ABS, die bei ca \SI{44}{N/mm} (ISO 527, \cite{C.Dallner2006, ThyssenPlastics}) liegt.
@@ -463,7 +463,7 @@ Der dritte Teil des Halters ist der Stabilisator und sorgt dafür, dass das Röh
 \subparagraph{Anpassungen an gefräßten Anschlusszylinder}
 \hfill \\
 
-Wegen der Veränderungen am Anschlusszylinder musste der Röhrchenhalter daran angepasst werden. Dazu  wurde der ursprüngliche Mechanismus zur Arretierung entfernt und stattdessen sechs Langlöcher eingefügt, damit der Halter von oben auf den Anschlusszylinder geschraubt werden kann. Die Langlöcher sorgen für einen gewissen Spielraum bei Ungenauigkeiten beim Druck
+Wegen der Veränderungen am Anschlusszylinder musste der Röhrchenhalter daran angepasst werden. Dazu  wurde der ursprüngliche Mechanismus zur Arretierung entfernt und stattdessen sechs Langlöcher eingefügt, damit der Halter von oben auf den Anschlusszylinder geschraubt werden kann. Die Langlöcher sorgen für einen gewissen Spielraum bei Ungenauigkeiten bei der Fertigung. Weiterhin wurden auch die Röhrchenhalter aus Aluminium 7075 gefertigt, da nur so deren Luftdichtheit gewährleistet ist.
 
 \begin{figure}[h!]
 	\begin{center}
