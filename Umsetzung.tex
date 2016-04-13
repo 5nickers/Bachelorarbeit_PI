@@ -116,7 +116,7 @@ Noch nicht final........
 
 \clearpage
 
-\section{AP3 - Gassystem}
+\section{AP 3 - Gassystem}
 
 \subsection{Anforderungen}
 
@@ -253,7 +253,7 @@ Diagramm einfügen!!!
 \newpage
 
 
-\section{AP4 - Wirbelbett}
+\section{AP 4 - Wirbelbett}
 
 
 \subsection{Allgemeine Anforderungen}
@@ -275,7 +275,7 @@ Eine weitere Anforderung bestand in der Integration eine Ionisators, sodass die 
 Im folgenden werden die im Bild zu sehenden Bauteile in Abschnitten diskutiert, die sich mit der Methode zum auffangen des Granulats, dem Anschlusszylinder, dem Röhrchenhalter, der Halterung des Wirbelbetts und dem Filter beschäftigen.
 
 
-\subsection{Methode zum Granulat auffangen}
+\subsection{Auffangen des Granulats}
 
 \subsubsection{Anforderung}
 
@@ -460,7 +460,7 @@ Die Kraft, die eine einzelne Schraube auf den Ring ausübt, kann aus dem angeleg
 	&= F_{res} \cdot \left( \mu \cdot r_A  + \frac{d_2}{2} \cdot \tan\left( \alpha + \phi' \right) \right) \\
 	\intertext{Es wird das Moment gemessen und daraus die Kraft berechnet:}
 	F_{res} &= \frac{M_A}{ \mu \cdot \frac{d_3 + D_B}{4}  + \frac{d_2}{2} \cdot \tan\left( \alpha + \phi' \right)}
-	\intertext{Man kann $d_2$, $d_3$ und $\alpha$ aus der Tabelle XX im Anhang ablesen. Der Reibwert $\mu$ wird mit $\mu = \SI{0,325}{}$ Quelle!! angenommen. $\phi'$ berechnet man entsprechend der Formel:}
+	\intertext{Man kann $d_2$, $d_3$ und $\alpha$ aus der Gewindetabelle im Anhang ablesen. Der Reibwert $\mu$ wird mit $\mu = \SI{0,325}{}$ \text{\cite{Schumann2011}} angenommen. $\phi'$ berechnet man entsprechend der Formel:}
 	\phi' &= \arctan\left( \frac{\mu}{\cos\left( \frac{\beta}{2} \right)} \right) 
 	\intertext{Dabei ist $\beta$ der Standartflankenwinkel von $\SI{60}{^\circ}$ eines ISO-Gewindes.}
 	&= \arctan\left( \frac{0,325}{\cos(\SI{30}{^\circ})} \right) = \SI{20,57}{^\circ}
@@ -498,13 +498,15 @@ Wegen der Veränderungen am Anschlusszylinder musste der Röhrchenhalter daran a
 	\end{center}
 \end{figure}
 
-Mit der oben verwendete Gleichung lässt sich auch die Anpresskraft berechnen.
+Mit der oben verwendete Gleichung lässt sich auch die Anpresskraft auf den Anschlusszylinder berechnen. Bei einem gemessenen Drehmoment (mittels CDI Werameter 7131A) von $M_A = \SI{1,5}{Nm}$, ist die wirkende Kraft einer Schraube: \\
+
+Man kann $d_2$, $d_3$ und $\alpha$ aus der Gewindetabelle im Anhang ablesen. Der Reibwert $\mu$ wird mit $\mu = \SI{1,3}{}$ angenommen \cite{Matek2011}. $\phi'$ berechnet man entsprechend der Formel:
 \begin{align*}
-	\intertext{Bei einem gemessenen Drehmoment (mittels CDI Werameter 7131A) von $M_A = \SI{0,0}{Nm}$, ist die wirkende Kraft einer Schraube:}
-	F_{res} &= \frac{\SI{0,0}{Nm}}{0,325 \cdot \frac{\SI{4,773}{mm} + \SI{6}{mm}}{4} + \frac{\SI{5,35}{mm}}{2} \cdot \tan(\SI{3,405}{^\circ} + \SI{20,57}{^\circ})} = \SI{0,0}{N}
+	\phi' &= \arctan\left( \frac{1,3}{\cos(\SI{30}{^\circ})} \right) = \SI{68,96}{^\circ} \\
+	F_{res} &= \frac{\SI{1,5}{Nm}}{1,3 \cdot \frac{\SI{4,773}{mm} + \SI{6}{mm}}{4} + \frac{\SI{5,35}{mm}}{2} \cdot \tan(\SI{3,405}{^\circ} + \SI{68,96}{^\circ})} = \SI{0,126}{N}
 \end{align*}
 
-Bei sechs Schrauben erhält man eine Gesamtkraft von $F_{ges} = \SI{0,0}{N}$
+Bei sechs Schrauben erhält man eine Gesamtkraft von $F_{ges} = \SI{0,755}{N}$. Das führt zu einer dichten Verbindung.
 
 
 
@@ -618,7 +620,7 @@ Die Reynoldszahlen sind alle weit unter 2300, also ist die Strömung durch die e
 
 \newpage
 
-\section{Tests / Messungen}
+\section{AP 5 - Tests / Messungen}
 
 In diesem Abschnitt wird die Luftdichtigkeit des Wirbelbetts nachgewiesen, als auch Ergebnisse von Messungen an Granulaten dargelegt.
 
