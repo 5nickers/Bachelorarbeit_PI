@@ -16,7 +16,7 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="Halterung_Labor_Seite.svg"
-   inkscape:export-filename="C:\Dropbox\Bachelorarbeit\BA\BA_Text\Halterung_Labor_Seite.png"
+   inkscape:export-filename="D:\Dropbox\Bachelorarbeit\BA\BA_Text\Halterung_Labor_Seite.png"
    inkscape:export-xdpi="299.92734"
    inkscape:export-ydpi="299.92734">
   <defs
@@ -103,14 +103,14 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.98994949"
-     inkscape:cx="380.08718"
+     inkscape:cx="159.36885"
      inkscape:cy="271.93217"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1600"
-     inkscape:window-height="837"
-     inkscape:window-x="-8"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="1912"
      inkscape:window-y="-8"
      inkscape:window-maximized="1" />
   <metadata
@@ -121,7 +121,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -174,18 +174,20 @@
          sodipodi:role="line"
          id="tspan3374"
          x="215.16249"
-         y="541.22504">Montageplatte für Wirbelbett</tspan></text>
+         y="541.22504"
+         style="font-size:27.5px">Montageplatte für Wirbelbett</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="338.40109"
-       y="747.29614"
+       x="332.34018"
+       y="736.18445"
        id="text3376"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan3378"
-         x="338.40109"
-         y="747.29614">Beine</tspan></text>
+         x="332.34018"
+         y="736.18445"
+         style="font-size:27.5px">Beine</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -196,7 +198,8 @@
          sodipodi:role="line"
          id="tspan3382"
          x="340.42142"
-         y="963.46875">Füße</tspan></text>
+         y="963.46875"
+         style="font-size:27.5px">Füße</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker4554)"
        d="M 411.13209,957.40787 518.20826,896.79871"
@@ -209,12 +212,12 @@
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker4480)"
-       d="m 409.11178,741.23522 123.23861,6.06092"
+       d="m 410.51979,730.03918 120.9934,24.18855"
        id="path3388"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker4514)"
-       d="M 332.34019,741.23522 201.02036,783.66163"
+       d="M 329.60499,734.06847 203.73683,790.65562"
        id="path3390"
        inkscape:connector-curvature="0" />
     <path
