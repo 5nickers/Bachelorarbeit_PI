@@ -13,9 +13,10 @@ Der Hautschwachpunkt der Elektronik ist die Verkabelung, da man es bei dem Setup
 \paragraph{Gassystem}
 \hfill \\
 Eine Herstellerauswahl hat hier nicht stattgefunden, da bereits vorhandene Verrohrung der Firma Swagelok weitergenutzt werden sollte. Dies hatte auch den Vorteil, das ein Berater aus dem nahegelegenen Standort Düsseldorf bei der Auslegung und Wahl der Komponenten beraten konnte. \\
-Insgesamt wurden Zukaufteile im Wert von gut \SI{1600}{\euro} identifiziert. Eine genaue Aufstellung ist im folgenden zu sehen:
+Insgesamt wurden Zukaufteile im Wert von gut \SI{1600}{\euro} identifiziert. 
 
 \begin{center}
+	\captionof{table}[Kostenaufstellung Gassystem]{Kostenaufstellung}
 	\begin{tabular}{|l|S|S|S|}
 		{Teil}  & {Anzahl} & {Kosten/Stück} & {Kosten} \\
 		\hline
@@ -65,6 +66,7 @@ Damit kann man mit einer Genauigkeit von $\frac{\SI{5}{V}}{\SI{65536}{bit}} = \S
 Zur Auswahl standen zwei verschiedene A-D Wandler:
 
 \begin{center}
+	\captionof{table}[Vergleich A-D Wandler]{A-D Wandlervergleich}
 \begin{tabular}{l|c|c}
 	& TM7705 Dual 16-bit ADC & AD420 \\ 
 	\hline Preis [\euro]	& 15  & 7 \\ 
@@ -100,14 +102,14 @@ Beim Deckel wurde sich für eine Presspassung entschieden, zudem dient der Decke
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[scale=0.45]{Elektronik_Gehaeuse2.png}
-		\caption[Gehäuse räumlich]{3D Darstellung Gehäuse: Man sieht die Aussparungen in die die einzelnen Komponenten eingelegt werden. Durch die Öffnungen werden die Kabel zum Raspberry Pi, dem Drucksensor und dem Massenstromregler geführt.}
+		\caption[Gehäuse räumlich]{3D Darstellung Gehäuse. Man sieht die Aussparungen in die die einzelnen Komponenten eingelegt werden. Durch die Öffnungen werden die Kabel zum Raspberry Pi, dem Drucksensor und dem Massenstromregler geführt.}
 	\end{center}
 \end{figure}
 
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[scale=0.45]{Elektronik_Gehaeuse1.png}
-		\caption[Gehäuse Deckel]{3D Darstellung Deckel: Der Deckel wird auf das Gehäuse gepresst bis die Kante das Gehäuse berührt. Die Stäbe dienen der Stabilisierung der innen liegenden Komponenten}
+		\caption[Gehäuse Deckel]{3D Darstellung Deckel. Der Deckel wird auf das Gehäuse gepresst bis die Kante das Gehäuse berührt. Die Stäbe dienen der Stabilisierung der innen liegenden Komponenten}
 	\end{center}
 \end{figure}
 
@@ -133,14 +135,17 @@ Aus den Tabellen im Abschnitt \glqq Ziele der Arbeit\grqq \ folgt, das ein Gasfl
 Es gab mehrere Lösungen, die diese Anforderung erfüllen. Eine Lösung bestand darin, den Luftstrom über mehrere Gasdurchflussbegrenzer und Ventile auf definierte Werte voreinzustellen und mit dem vorhandenen Flowcontroller von da ab zu regeln. Zudem kann man einen Massenstromregler kaufen, der komplett digital zu regeln ist. \\
 Die erste Lösungsart wurde verworfen, weil es sich als zu ungenau und nicht deutlich billiger in Aufwand und Kosten darstellte. Zudem wäre der Aufbau deutlich größer gewesen. Die Lösung bestand somit darin einen neuen Flowcontroller anzuschaffen, der den gesamten Regelbereich mit einer hinreichenden Genauigkeit abdeckt und gleichzeitig gut in das Gassystem integriert werden kann. Dazu wurden zwei Angebote eingeholt, die im folgenden dargelegt sind:
 
+\begin{center}
+	\captionof{table}[Vergleich Massenstromregler]{Vergleich Massenstromregler}
+	\begin{tabular}{l|c|c}
+		& Brooks & Bronkhorst \\ 
+		\hline Regelbereich & \SIrange{0}{3000}{l/h} & \SIrange{0}{3000}{l/h} \\ 
+		\hline Genauigkeit $20 - \SI{100}{\%}$ & $\pm \SI{0,9}{\%}$ Istwert & $\pm \SI{0,5}{\%}$ Istwert $+ \pm \SI{0,1}{\%}$ Endwert\\ 
+		\hline Genauigkeit $0 - \SI{20}{\%}$ & $\pm \SI{0,18}{\%}$ Istwert & $\pm \SI{0,5}{\%}$ Istwert $+ \pm \SI{0,1}{\%}$ Endwert \\ 
+		\hline Preis in \euro & 1187,33 & 1382,66 \\ 
+	\end{tabular} 
+\end{center}
 
-\begin{tabular}{l|c|c}
-	 & Brooks & Bronkhorst \\ 
-	\hline Regelbereich & \SIrange{0}{3000}{l/h} & \SIrange{0}{3000}{l/h} \\ 
-	\hline Genauigkeit $20 - \SI{100}{\%}$ & $\pm \SI{0,9}{\%}$ Istwert & $\pm \SI{0,5}{\%}$ Istwert $+ \pm \SI{0,1}{\%}$ Endwert\\ 
-	\hline Genauigkeit $0 - \SI{20}{\%}$ & $\pm \SI{0,18}{\%}$ Istwert & $\pm \SI{0,5}{\%}$ Istwert $+ \pm \SI{0,1}{\%}$ Endwert \\ 
-	\hline Preis in \euro & 1187,33 & 1382,66 \\ 
-\end{tabular} 
 
 \vspace{0,5cm}
 
@@ -194,14 +199,14 @@ Damit die Schwämme nicht durch den Luftstrom von ihrem Platz weggedrückt werde
 
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[scale=0.5]{Luftbefeuchter.png}
+		\includegraphics[scale=0.47]{Luftbefeuchter.png}
 		\caption[Schema Luftbefeuchter]{Schematischer Aufbau des Luftbefeuchters. Die Luft wird durch den den Schlauch in die Spirale geleitet und strömt dort aus feinen Löchern in die Schwämme. Die feinen Luftblasen nehmen Feuchtigkeit auf und die Luft strömt oben wieder aus dem Behälter.}
 	\end{center}
 \end{figure}
 
 
 Anschließend wurde in die obere Hälfte des Behälters eine Kombination aus einem Swagelok \SI{6}{mm} Rohrverbinder und einem Schlauchanschluss eingefügt. So kann man von außen ein Standard \SI{6}{mm} Stahlrohr anschließen und innen den Bunaschlauch für die Spirale. Die Lösung für die Luftabfuhr wurde ähnlich realisiert. Dazu wurde in den Verschluss wiederum ein \SI{6}{mm} Rohrverbinder eingefügt und der Verschluss auf der Innenseite mit einer Schicht Silikon ausgekleidet, sodass man ihn noch auf- und abdrehen kann um Wasser nachzufüllen, gleichzeitig aber die Luftdichtheit gewährleistet ist.
-Beim Zusammenbau sahen die einzelnen Lage wie folgt aus:
+Beim Zusammenbau sahen die einzelnen Lagen wie folgt aus:
 
 \clearpage
 
@@ -241,7 +246,7 @@ Abschließend wurde auch der Luftbefeuchter auf einer Holzplatte befestigt, die 
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[scale=0.11]{Gassystem_montiert.jpg}
-		\caption[Gassystem montiert]{Laboraufbau Wirbelbett: Die Luft strömt durch den Lufteinlass und am Luftionisator vorbei. Anschließend strömt die Luft durch den Filter und das darauf liegende Granulat.}
+		\caption[Gassystem montiert]{Laboraufbau Wirbelbett. Die Luft strömt durch den Lufteinlass und am Luftionisator vorbei. Anschließend strömt die Luft durch den Filter und das darauf liegende Granulat.}
 	\end{center}
 \end{figure}
 
@@ -328,7 +333,7 @@ Damit keine dauerhaften Veränderungen am Ionisatorkopf selbst vorgenommen werde
 \begin{figure}[h]
 	\begin{center}
 		\includegraphics[scale=0.7]{Adapter_Ionisator.png}
-		\caption[Adapter für Ionisator]{3D Duck Ionisatoradapter. Der Adapter wird auf den Ionisator geklebt und anschließend in den Anschlusszylinder eingedreht. Dabei drückt der hervorstehende Ring in die Nut des Anschlusszylinders}
+		\caption[Adapter für Ionisator]{3D Druck Ionisatoradapter. Der Adapter wird auf den Ionisator geklebt und anschließend in den Anschlusszylinder eingedreht. Dabei drückt der hervorstehende Ring in die Nut des Anschlusszylinders}
 	\end{center}
 \end{figure}
 
@@ -404,7 +409,7 @@ Eine Kraft dieser Größenordnung tritt bei unseren Versuchsbedingungen nicht au
 	\begin{minipage}[hbt]{7cm}
 		\centering
 		\includegraphics[width=7cm]{Zylinder_seitlich.png}
-		\caption[Zylinder V1 seitlich]{3D Modell Anschlusszylinder: In den Lufteinlass wird ein Swagelokadapter eingeschraubt, damit das Gassystem angeschlossen werden kann. Die Taschen rechts sind Aussparungen, in die Schrauben zur Befestigung an der Halteplatte eingeschraubt werden.}
+		\caption[Zylinder V1 seitlich]{3D Modell Anschlusszylinder. In den Lufteinlass wird ein Swagelokadapter eingeschraubt, damit das Gassystem angeschlossen werden kann. Die Taschen rechts sind Aussparungen, in die Schrauben zur Befestigung an der Halteplatte eingeschraubt werden.}
 	\end{minipage}
 \end{figure}
 
@@ -440,7 +445,7 @@ Der Röhrchenhalter besteht aus drei Teilen, eins dient zur Verbinung mit dem An
 \begin{figure}[h]
 	\begin{center}
 		\includegraphics[scale=0.5]{Schnitt_Roehrchenhalter.png}
-		\caption[Schnitt Röhrchenhalter]{Schnitt durch Röhrchenhalter: Der Röhrchenhalter wird mit der oben gemessenen Kraft auf en Anschlusszylinder gedrückt und anschließen durch drehen arretiert}
+		\caption[Schnitt Röhrchenhalter]{Schnitt durch Röhrchenhalter. Der Röhrchenhalter wird mit der oben gemessenen Kraft auf en Anschlusszylinder gedrückt und anschließen durch drehen arretiert}
 	\end{center}
 \end{figure}
 
@@ -450,7 +455,7 @@ Diese Teile werden durch sechs M6 Schrauben verbunden, damit die Kraft auf den d
 \begin{figure}[h!]
 		\begin{center}
 			\includegraphics[scale=0.5]{Schnitt_Deckplatte.png}
-			\caption[Schnitt Deckplatte]{Schnitt durch Deckplatte: Die Deckplatte wird auf den mit Schrauben auf den Röhrchehalter geschraubt und dichtet mit einem O-Ring das Röhrchen gegen den Röhrchenhalter ab. Die Anpressfläche ist mit Silikon beschichtet und sorgt für einen dichten Kontakt zum O-Ring}
+			\caption[Schnitt Deckplatte]{Schnitt durch Deckplatte. Die Deckplatte wird auf den mit Schrauben auf den Röhrchehalter geschraubt und dichtet mit einem O-Ring das Röhrchen gegen den Röhrchenhalter ab. Die Anpressfläche ist mit Silikon beschichtet und sorgt für einen dichten Kontakt zum O-Ring}
 		\end{center}
 \end{figure}
 
@@ -498,8 +503,8 @@ Auf Grund der Veränderungen am Anschlusszylinder musste der Röhrchenhalter dar
 
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[scale=0.6]{Schnitt_RoehrchenhalterV2.png}
-		\caption[Röhrchenhalter V2]{Der Röhrchenhalter wurde hat den selben Durchmesser wie der Anschlusszylinder, allerdings nun keine Füße zur Arretierung und keine Drehhilfe mehr.}
+		\includegraphics[scale=0.5]{Schnitt_RoehrchenhalterV2.png}
+		\caption[Röhrchenhalter V2]{Schnitt durch Röhrchenhalter. Der Röhrchenhalter wurde hat den selben Durchmesser wie der Anschlusszylinder, allerdings nun keine Füße zur Arretierung und keine Drehhilfe mehr.}
 	\end{center}
 \end{figure}
 
@@ -508,10 +513,10 @@ Mit der oben verwendete Gleichung lässt sich auch die Anpresskraft auf den Ansc
 Man kann $d_2$, $d_3$ und $\alpha$ aus der Gewindetabelle im Anhang ablesen. Der Reibwert $\mu$ wird mit $\mu = \SI{0,25}{}$ angenommen \cite{GDV2011}. $\phi'$ berechnet man entsprechend der Formel:
 \begin{align*}
 	\phi' &= \arctan\left( \frac{0,25}{\cos(\SI{30}{^\circ})} \right) = \SI{16,16}{^\circ} \\
-	F_{res} &= \frac{\SI{2,5}{Nm}}{0,25 \cdot \frac{\SI{4,773}{mm} + \SI{6}{mm}}{4} + \frac{\SI{5,35}{mm}}{2} \cdot \tan(\SI{3,405}{^\circ} + \SI{16,16}{^\circ})} = \SI{}{N}
+	F_{res} &= \frac{\SI{2,5}{Nm}}{0,25 \cdot \frac{\SI{4,773}{mm} + \SI{6}{mm}}{4} + \frac{\SI{5,35}{mm}}{2} \cdot \tan(\SI{3,405}{^\circ} + \SI{16,16}{^\circ})} = \SI{1,54}{N}
 \end{align*}
 
-Bei sechs Schrauben erhält man eine Gesamtkraft von $F_{ges} = \SI{}{N}$. Das führt zu einer dichten Verbindung. Dabei ist darauf zu achten, das zwischen Röhrchenhalter und Anschlusszylinder ein Spalt \SI{2}{mm} bleibt. Dies schont die Dichtung und ist trotzdem luftdicht.
+Bei sechs Schrauben erhält man eine Gesamtkraft von $F_{ges} = \SI{9,24}{N}$. Das führt zu einer dichten Verbindung. Dabei ist darauf zu achten, das zwischen Röhrchenhalter und Anschlusszylinder ein Spalt \SI{2}{mm} bleibt. Dies schont die Dichtung und ist trotzdem luftdicht.
 
 \newpage
 
@@ -585,6 +590,7 @@ Um einen geeigneten Filter zu finden wurde sich mit den Herstellern Merk Millipo
 
 
 \begin{center}
+	\captionof{table}[Vergleich Filter]{Vergleich Filter}
 			\begin{tabular}{l|c|c|c}
 				& Sartorius & Merck Millipore & Nitto \\
 				\hline
@@ -595,6 +601,7 @@ Um einen geeigneten Filter zu finden wurde sich mit den Herstellern Merk Millipo
 				antistatisch & ja    & ja    & ja \\
 				hydrophob & ja    & ja    & ja \\
 				Material & PVDF\footnotemark[1]  & PTFE\footnotemark[2]  & PE\footnotemark[3] \\
+				\hline
 			\end{tabular}	
 \end{center}
 
@@ -608,6 +615,7 @@ Es wurde sich für die Membran von Sartorius entschieden, weil sie alle Anforder
 Eine weitere wichtige Funktion des Filters ist es einen gleichmäßigen Gasstrom zu erzeugen. Dies wird durch die feine Porung erreicht und kann durch berechnen der Reynoldszahl für die verschiedenen Durchmesser bestätigt werden. Zur Berechnung geht man wieder vom maximalen Gasstrom von $\SI{3}{m^3/h}$ 
 
 \begin{center}
+	\captionof{table}[Reynoldszahlen Filter]{Reynoldszahlen bei verschiedenen Durchmessern}
 \begin{tabular}{S|S|S}
  {Röhrchendurchmesser [mm]}		& {Gasgeschwindigkeit $v_{Gas}$ [m/s]}	& {Reynoldszahl}  \\
 	\hline
@@ -663,13 +671,13 @@ Im Falle eines Lecks wirft das Lecksuchspay große stabile Blasen. Nach Ablauf e
 	\begin{minipage}[hbt]{6.5cm}
 		\centering
 		\includegraphics[width=6.5cm]{Leck1_nachher.jpg}
-		\caption[Leck Röhrchenansatz vorher]{Übergang Röhrchenhalter - Röhrchen. Man sieht das keine neuen Blasen enstanden sind.}
+		\caption[Leck Röhrchenansatz nachher]{Übergang Röhrchenhalter - Röhrchen. Man sieht das keine neuen Blasen enstanden sind.}
 	\end{minipage}
 	\hfill
 	\begin{minipage}[hbt]{7cm}
 		\centering
 		\includegraphics[width=7cm]{Leck2_nachher.jpg}
-		\caption[Leck Anschlusszylinder vorher]{Übergang Anschlusszylinder - Röhrchenhalter. Es findet keine Blasenbildung statt.}
+		\caption[Leck Anschlusszylinder nachher]{Übergang Anschlusszylinder - Röhrchenhalter. Es findet keine Blasenbildung statt.}
 	\end{minipage}
 \end{figure}
 
