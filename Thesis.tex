@@ -37,20 +37,6 @@
 
 \usepackage{tikz}
 \usepackage{pgfplots}
-\pgfplotsset{
-    compat=1.9,
-    width=0.8\linewidth,
-    xticklabel style={/pgf/number format/use comma},
-    yticklabel style={/pgf/number format/use comma},
-}
-\usepgfplotslibrary{external}
-\tikzexternalize[mode=list and make]
-\tikzsetexternalprefix{_build/Abbildung-}
-
-\pgfplotsset{
-    colormap={whiteblack}{gray=(0.95) gray=(0)},
-    max space between ticks=50pt,
-}
 
 
 \hypersetup{

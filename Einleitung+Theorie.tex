@@ -104,9 +104,9 @@ Das Ziel der Arbeit ist die Realisierung eines Versuchsaufbau in dem die Strömu
 In der vorliegenden Arbeit soll ein vorhandener Versuchsstand für quantitative Messungen weiterentwickelt werden. Zuerst werden die Probleme des bisherigen Setups analysiert und eine entsprechende Lösung für das Medium Luft konstruiert. \\ 
 Konkrete Ziele der Bachelorarbeit sind thematisch geordnet folgende:
 Die Elektronik soll im Bezug auf das Auslesen des Drucksensors auf \SI{0,1}{mbar} genau sein und in ein Gehäuse verpackt werden. \\
-Es soll ein neues Gassystem entworfen werden, das luftdicht und mechnanisch stabil ist. Weiterhin soll in das Gassystem ein Luftbefeuchter integriert werden. Außerdem sollen mit Probenröhrchen mit Durchmessern \SI{5}{mm}, \SI{20}{mm}, \SI{30}{mm} und \SI{40}{mm} gemessen werden. Die Röhrchen sollen einfach und schnell wechselbar sein und auch das Probenmaterial muss einfach zu wechseln sein. Um mit den größeren Röhrchendurchmessern $D_r$ und Partikeln $d_p$ messen zu können muss der Gasstrom erhöht werden. Aus den Gleichungen im vorigen Abschnitt ergeben sich, für die zwei häufigsten Packungsdichten ($\epsilon$), folgende Gasströme: 
+Es soll ein neues Gassystem entworfen werden, das luftdicht und mechnanisch stabil ist. Weiterhin soll in das Gassystem ein Luftbefeuchter integriert werden. Außerdem sollen mit Probenröhrchen mit Durchmessern \SI{5}{mm}, \SI{20}{mm}, \SI{30}{mm} und \SI{40}{mm} gemessen werden. Die Röhrchen sollen einfach und schnell wechselbar sein und auch das Probenmaterial muss einfach zu wechseln sein. Um mit den größeren Röhrchendurchmessern $D_r$ und Partikeln $d_p$ messen zu können muss der Gasstrom erhöht werden. Aus den Gleichungen im vorigen Abschnitt ergeben sich, für die zwei typischsten Packungsdichten ($\epsilon$), folgende Gasströme: 
 
-Gasströme [l/h] für $\epsilon = \SI{0,54}{}$: \\
+Gasströme [l/h] für $\epsilon = \SI{0,54}{}$ (zufällige Packung): \\
 
 \begin{center}
 	\begin{tabular}{|c|S|S|S|S|}
@@ -125,7 +125,7 @@ Gasströme [l/h] für $\epsilon = \SI{0,54}{}$: \\
 
 \vspace{1cm}
 
-Gasströme [l/h] für $\epsilon = \SI{0,64}{}$: \\
+Gasströme [l/h] für $\epsilon = \SI{0,64}{}$ (leicht komprimiert): \\
 
 \begin{center}
 	\begin{tabular}{|c|S|S|S|S|}
@@ -135,8 +135,8 @@ Gasströme [l/h] für $\epsilon = \SI{0,64}{}$: \\
 		5     & 12,831 & 35,643 & 80,197 & 142,573 \\
 		10    & 51,326 & 142,573 & 320,789 & 570,292 \\
 		20    & 205,305 & 570,292 & 1283,157 & 2281,169 \\
-		30    & 461,936 & 1283,157 & 2887,105 &  5132,631 \\
-		40    & 821,221 & 2281,169 & 5132,631 & 9124,678 \\
+		30    & 461,936 & 1283,157 & 2887,105 &  \textcolor{red}{5132,631} \\
+		40    & 821,221 & 2281,169 & \textcolor{red}{5132,631} & \textcolor{red}{9124,678} \\
 		\hline
 	\end{tabular} 
 \end{center}

@@ -559,7 +559,7 @@ An die Halterungen im Labor gab es lediglich die Anforderung, das sie stabil ist
 
 \paragraph{Umsetzung}
 \hfill \\
-Die Anforderungen wurden zum einen durch eine Platte auf der der Justiermechanismus des Wirbelbetts festgeschraubt wird erfüllt. Für einen stabilen Stand werden in Platte vier Beine mit Füßen von jeweils \SI{3}{cm} Durchmesser eingeschraubt. Durch den Schraubmechnismus können auch schiefe Arbeitsflächen korrigiert werden.
+Die Anforderungen wurden zum einen durch eine Platte auf der der Justiermechanismus des Wirbelbetts festgeschraubt wird erfüllt. Für einen stabilen Stand werden in Platte vier Beine mit Füßen von jeweils \SI{3}{cm} Durchmesser eingeschraubt. Durch den Schraubmechnismus können auch schiefe Arbeitsflächen korrigiert werden. Zudem wurde, wegen der Gewichtserhöhung des Wirbelbetts, ein Gegengewicht an den beiden dem Wirbelbett gegenüberliegenden Beinen angebracht.
 
 
 
@@ -643,25 +643,133 @@ In einem ersten Verfahren wurde das gesamte Wirbelbett unter Wasser betrieben un
 Das zweite Verfahren bestand in der Anwendung von Lecksuchspray (ECO Leak Finder, CRC). Zur Untersuchung wurden alle Bauteilübergänge und Dichtungen am Wirbelbett mit dem Spray eingesprüht. 
 
 
-Bilder
+\begin{figure}[h!]
+		\begin{minipage}[hbt]{7cm}
+			\centering
+			\includegraphics[width=7cm]{Leck1_vorher.jpg}
+			\caption[Leck Röhrchenansatz vorher]{Übergang Röhrchenhalter - Röhrchen. Man sieht das aufgetragene Lecksuchspray}
+		\end{minipage}
+		\hfill
+		\begin{minipage}[hbt]{6cm}
+			\centering
+			\includegraphics[width=6cm]{Leck2_vorher.jpg}
+			\caption[Leck Anschlusszylinder vorher]{Übergang Anschlusszylinder - Röhrchenhalter. Im Schlitz befindet sich Lecksuchspray}
+		\end{minipage}
+\end{figure}
 
-Nach Ablauf einer Messung waren außen den im Verlauf des Aufsprühens enstanden Blasen keine weiteren entstanden.
+Im Falle eines Lecks wirft das Lecksuchspay große stabile Blasen. Nach Ablauf einer Messung waren, außen den im Verlauf des Aufsprühens entstandenen Blasen, keine weiteren entstanden.
 
-Bilder
+\begin{figure}[h!]
+	\begin{minipage}[hbt]{6.5cm}
+		\centering
+		\includegraphics[width=6.5cm]{Leck1_nachher.jpg}
+		\caption[Leck Röhrchenansatz vorher]{Übergang Röhrchenhalter - Röhrchen. Man sieht das keine neuen Blasen enstanden sind.}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[hbt]{7cm}
+		\centering
+		\includegraphics[width=7cm]{Leck2_nachher.jpg}
+		\caption[Leck Anschlusszylinder vorher]{Übergang Anschlusszylinder - Röhrchenhalter. Es findet keine Blasenbildung statt.}
+	\end{minipage}
+\end{figure}
 
+\vspace{1cm}
 
 Um unregelmäßige Lecks auszuschließen, wurde sich der lineare Zusammenhang zwischen dem Druck vor dem Wirbelbett und dem eingestellten Massenstrom zu Nutze gemacht. In der Theorie hat der Filter, auf dem das Granulat liegt einen konstanten Widerstand, also muss bei linearer Erhöhung des Massenstroms, der Druck auch linear ansteigen. Dafür wurde das zu dem Zeitpunkt verfügbare Röhrchen mit \SI{20}{mm} Innendurchmesser gewählt und der Druck über einen Massenstrombereich von \SIrange{0}{750}{l/h} gemessen. Dabei erhielt man folgende Kurve:
 
+\begin{figure}[H]
+	\begin{tikzpicture}
+	\begin{axis}[yticklabel style={/pgf/number format/1000 sep={}},		
+	height=9cm, width=14.5cm,
+	title={Referenzmessung ohne Granulat},
+	legend pos= south east,
+	%	     axis x line=middle, % Achse mit Pfeil und Beschriftung am Pfeil
+	%	     axis y line=middle,
+	xmode=normal,						    % x-Achse 
+	ymode=normal,						     % y-Achse 
+	x label style={at={(axis description cs:0.5,0)},anchor=north},
+	y label style={at={(axis description cs:0,.5)},anchor=south},
+	xlabel={Massenstrom [l/h]},
+	ylabel={Druck [mbar]},
+	grid=both, %major,
+	xmin=0,
+	xmax=780,
+	ymin=1345,
+	ymax=1390,
+	]
+	\addplot[color=blue,only marks,mark=x,mark size=4, error bars/.cd,y dir=both, y explicit] table[x=a,y=b]{Reference_0_750.txt};
+	\addlegendentry{Messwerte};
+	\addplot[color=red,very thick,no marks,samples=1000,domain=0:770] {0.0422*x + 1350.1};
+	\addlegendentry{$y = 0,0422x + 1350,1$};
+	\end{axis} 
+	\end{tikzpicture}
+\end{figure}
 
 
 
 
+Die durch die Punkte gelegte Fitgerade hat eine Bestimmtheit von \SI{99,66}{\%}, was für eine sehr starke Linearität der Messdaten spricht. Die Abweichungen von der Fitgeraden können mit der Dehnung des Filters erklärt werden. Zudem können wir aus dem Verlauf ableiten, das wir entweder ein kleines, aber über den gesamten Flussbereich konstantes Leck oder kein Leck haben. Beide Fälle wirken sich nicht auf die Messgenauigkeit der Messmethode aus, da für diese vor allem die Linearität wichtig ist. 
 
-Die durch die Punkte gelegte Fitgerade hat eine Bestimmtheit von \SI{99,66}{\%}, was für eine sehr starke Linearität der Messdaten spricht. Zudem können wir aus dem Verlauf ableiten, das wir entweder ein kleines, aber über den gesamten Flussbereich konstantes Leck oder kein Leck haben. Beide Fälle wirken sich nicht auf die Messgenauigkeit der Messmethode aus, da für diese vor allem die Linearität wichtig ist. 
-
+\newpage
 
 \subsection{Vermessung verschiedener Granulate}
 
+Zur Demonstration der Funktionsfähigkeit des Wirbelbetts wurden zwei Probemessungen gemacht. Dabei wurde festgestellt, das die Messkurven sehr genau sind und die Werte den theoretischen Berechnungen entsprechen.
+
+\begin{figure}[H]
+	\begin{tikzpicture}
+	\begin{axis}[yticklabel style={/pgf/number format/1000 sep={}},		
+	height=9cm, width=14.5cm,
+	title={Messung mit Granulat der Größe \SI{500}{\mu m}},
+	legend pos= south east,
+	%	     axis x line=middle, % Achse mit Pfeil und Beschriftung am Pfeil
+	%	     axis y line=middle,
+	xmode=normal,						    % x-Achse 
+	ymode=normal,						     % y-Achse 
+	x label style={at={(axis description cs:0.5,0)},anchor=north},
+	y label style={at={(axis description cs:0,.5)},anchor=south},
+	xlabel={Massenstrom [l/h]},
+	ylabel={$\Delta P$ [mbar]},
+	grid=both, %major,
+	xmin=0,
+	xmax=900,
+	ymin=-0.2,
+	ymax=18,
+	]
+	\addplot[color=blue,only marks,mark=x,mark size=4, error bars/.cd,y dir=both, y explicit] table[x=a,y=b]{Run0001_500.txt};
+	\addlegendentry{Messwerte};
+	\end{axis} 
+	\end{tikzpicture}
+\end{figure}
+
+Man sieht ganz deutlich den Peak (ca \SI{340}{l/h}) an dem das Granulat vom festen in den fluidisierten Zustand übergeht und anschließend den Bubbling Zustand (ca \SIrange{400}{900}{l/h}) in dem die Druckdifferenz konstant bleibt. Im Bereich des Bubblings fluktuieren die Werte recht stark, da sich das Granulat stark auf und ab bewegt und so eine variierenden Gegenkraft ausübt. 
 
 
 
+\begin{figure}[H]
+	\begin{tikzpicture}
+	\begin{axis}[yticklabel style={/pgf/number format/1000 sep={}},		
+	height=9cm, width=14.5cm,
+	title={Messung mit Granulat der Größe \SI{300}{\mu m}},
+	legend pos= south east,
+	%	     axis x line=middle, % Achse mit Pfeil und Beschriftung am Pfeil
+	%	     axis y line=middle,
+	xmode=normal,						    % x-Achse 
+	ymode=normal,						     % y-Achse 
+	x label style={at={(axis description cs:0.5,0)},anchor=north},
+	y label style={at={(axis description cs:0,.5)},anchor=south},
+	xlabel={Massenstrom [l/h]},
+	ylabel={$\Delta P$ [mbar]},
+	grid=both, %major,
+	xmin=0,
+	xmax=130,
+	ymin=-0.2,
+	ymax=14,
+	]
+	\addplot[color=blue,only marks,mark=x,mark size=4, error bars/.cd,y dir=both, y explicit] table[x=a,y=b]{Run0002_300.txt};
+	\addlegendentry{Messwerte};
+	\end{axis} 
+	\end{tikzpicture}
+\end{figure}
+
+Im Diagramm mit Granulat von \SI{300}{\mu m} Größe ist der Peak (ca \SI{85}{l/h}) nicht so stark ausgeprägt, aber trotzdem sichtbar. Außerdem fluktuiert der Druck im Bubbling Zustand nicht so stark. Das könnte daran liegen, das kleinere Luftblasen als bei \SI{500}{\mu m} durch das Granulat wandern und das Granulat sich dadurch weniger stark auf und ab bewegt.
