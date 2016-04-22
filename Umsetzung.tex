@@ -81,7 +81,7 @@ Zur Auswahl standen zwei verschiedene A-D Wandler:
 Es wurde sich für den TM7705 Dual 16-bit ADC entschieden, da dieser bereits auf eine Platine aufgelötet ist und somit ohne zusätzliche Arbeiten verwendet werden kann und zudem auch direkt vom Arduino mit Spannung versorgt werden kann. Der AD420 hätte ein zusätzliches Netzteil gebraucht, was wiederum mehr Platz in Anspruch genommen hätte. Schematisch ist die Schaltung mit dem A-D Wandler die unten stehende:
 
 
-\begin{figure}[h]
+\begin{figure}[h!]
 	\begin{center}
 		\includegraphics[scale=0.6]{Schema_Elektronik.jpg}
 		\caption[Schema Elektronik]{Schematischer Aufbau der Elektronik. Der Raspberry versorgt den Adruino mit Strom und übergibt gleichzeitig alle nötigen Daten zur Kontrolle des Flowcontrollers. Der Arduino wandelt diese geeignet um und gibt sie an den Flowcontroller. Gleichzeitig sammelt er alle Daten des Flowcontrollers und Drucksensors und übergibt diese zum Abspeichern an den Raspberry}
@@ -160,7 +160,7 @@ Um die geforderte Stabilität und Reproduzierbarkeit zu gewährleisten, wurde en
 Auf der Skizze in Abbildung xy kann man das gebaute System sehen:
 \hfill \\
 
-\begin{figure}[h]
+\begin{figure}[h!]
 	\begin{center}
 		\includegraphics[scale=0.6]{Aufbau_Gassystem.jpg}
 		\caption[Schema Gassystem]{Schema des Gassystems. Der Flowcontroller bekommt den nötigen Vordruck von einer Gasfalsche mit Stickstoff. Nach dem Flowcontroller kann mit den Kükenhähnen die Luft entweder über den Luftbefeuchter oder direkt zum Wirbelbett geleitet werden.}
@@ -195,7 +195,7 @@ Die Methode des Vorbeiströmens wurde verworfen, weil eine zu große Strömfläc
 
 Damit der Befeuchter in den Lichtstreuaufbau passt, wurde zu Anfang ein Behältnis ausgewählt, das in den Aufbau passt und dann wurden die für den Befeuchter nötigen Änderungen vorgenommen. Dazu wurde der Kanister mit einem Durchmesser von \SI{22}{cm} und einer Höhe von \SI{38}{cm} auf einer Höhe von \SI{15}{cm} horizontal aufgeschnitten. Nun war es möglich die benötigten Komponenten in dem Behälter unterzubringen. Eine weitere Herausforderung war die Luft mit dem geforderten Feuchtigkeitsgrad von $\SI{75}{\%}$ anzureichern. Ein erprobtes Verfahren ist, die Luft durch eine gesättigte Kochsalzlösung zu leiten. Dadurch wird automatisch eine Luftfeuchtigkeit von $\SI{75}{\%}$ erreicht. Die Luft muss allerdings als sehr feine Blasen durch die Kochsalzlösung wandern, da die Steigzeit sonst nicht ausreicht die Luft anzureichern. 
 Dies wurde erreicht, indem die Luft aus einer Schlauchspirale mit feinen Löchern durch eine zweilagige Schicht aus handelsüblichen Küchenschwämmen geleitet wurde.
-Damit die Schwämme nicht durch den Luftstrom von ihrem Platz weggedrückt werden, wurde $\SI{2}{cm}$ darüber ein Netz gespannt. Der schematische Aufbau ist in der unten stehenden Skizze zu sehen. \\
+Damit die Schwämme nicht durch den Luftstrom von ihrem Platz weggedrückt werden, wurde $\SI{2}{cm}$ darüber ein Netz gespannt. Das führte allerdings zu Salzrückständen im Gassystem und zu unregelmäßigem Verhalten des Flowcontrollers. Probeweise wurde daher versucht den Luftbefeuchter nur mit Wasser zu betreiben und bei einer Füllung bis ans Netz, stellte sich auch eine Luftfeuchtigkeit von \SI{75}{\%} ein. Der schematische Aufbau ist in der unten stehenden Skizze zu sehen. \\
 
 \begin{figure}[h!]
 	\begin{center}
@@ -238,22 +238,50 @@ Beim Zusammenbau sahen die einzelnen Lagen wie folgt aus:
 	\end{minipage}
 \end{figure}
 
-
+\clearpage
 
 Abschließend wurde auch der Luftbefeuchter auf einer Holzplatte befestigt, die auch dazu dient den Zu- und Ableitungsrohren möglichst wenig Bewegungsspielraum zu geben, sodass die Anschlüsse an den Befeuchter nicht belastet werden und es so nicht zu Undichtigkeiten kommt.
 
 
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[scale=0.11]{Gassystem_montiert.jpg}
+		\includegraphics[scale=0.12]{Gassystem_montiert.jpg}
 		\caption[Gassystem montiert]{Laboraufbau Wirbelbett. Die Luft strömt durch den Lufteinlass und am Luftionisator vorbei. Anschließend strömt die Luft durch den Filter und das darauf liegende Granulat.}
 	\end{center}
 \end{figure}
 
+\clearpage
 
-Im realen Betrieb wird die Luftfeuchtigkeit von \SI{75}{\%} nicht immer erreicht, stattdessen ist sie abhängig vom Luftstrom wie im Diagramm unten dargestellt.
+Im realen Betrieb wird die Luftfeuchtigkeit von \SI{75}{\%} ziemlich gut erreicht. Sie ist allerdings bei niedrigen und bei hohen Massenströmen ein wenig abhängig vom Luftstrom wie im Diagramm unten dargestellt.
 
-Diagramm einfügen!!!
+\begin{figure}[H]
+	\begin{tikzpicture}
+	\begin{axis}[yticklabel style={/pgf/number format/1000 sep={}},
+	xticklabel style={/pgf/number format/1000 sep={}},		
+	height=9cm, width=14.5cm,
+	title={Luftfeuchtigkeit in Abhänigkeit des Massenstroms},
+	legend pos= south east,
+	%	     axis x line=middle, % Achse mit Pfeil und Beschriftung am Pfeil
+	%	     axis y line=middle,
+	xtick={0,200,400,600,900,1200,1500,1800,2100,2400,2700,3000},
+	%xmode=normal,						    % x-Achse 
+	ymode=normal,						     % y-Achse 
+	extra y ticks = {75},
+	x label style={at={(axis description cs:0.5,0)},anchor=north},
+	y label style={at={(axis description cs:0,.5)},anchor=south},
+	xlabel={Massenstrom [l/h]},
+	ylabel={Feuchtigkeit [$\%$]},
+	grid=both, %major,
+	xmin=0,
+	xmax=3100,
+	ymin=68,
+	ymax=80,
+	]
+	\addplot[color=blue,only marks,mark=x,mark size=4, error bars/.cd,y dir=both, y explicit] table[x=a,y=b]{Flow_Feuchtigkeit.txt};
+	\addlegendentry{Messwerte};
+	\end{axis} 
+	\end{tikzpicture}
+\end{figure}
 
 \newpage
 
@@ -264,20 +292,16 @@ Diagramm einfügen!!!
 \subsection{Allgemeine Anforderungen}
 
 Da das bisherige Wirbelbett nicht flexibel genug konfigurierbar war, musste es neu konstruiert werden und dabei möglichst modular werden. Zum einen soll es möglich sein Probenröhrchen von \SI{5}{mm}, \SI{20}{mm}, \SI{30}{mm} und \SI{40}{mm} nutzen zu können. Weiterhin ist es erforderlich sowohl die Probenröhrchen als auch das Probenmaterial einfach und schnell wechseln zu können. Außerdem wurde gefordert, das aus dem Probenröhrchen austretende Partikel aufgefangen werden können. Des weiteren musste ein neuer Filter für den Übergang vom Anschlusszylinder zum Probenröhrchen gefunden werden. 
-Eine weitere Anforderung bestand in der Integration eine Ionisators, sodass die durch das Probenröhrchen strömende Luft ionisiert werden kann. Die gesamte Konstruktion muss zudem in den Lichtstreuaufbau passen. \\
 
 
-
-
-\begin{figure}[h]
+\begin{figure}[h!]
 	\begin{center}
-		\includegraphics[scale=0.4]{Zusammenbau_fluides_Bett.png}
-		\caption[Modell Wirbelbett]{vollständig zusammengebautes Wirbelbett im betriebsbereiten Zustand/ noch neues Bild machen}
+		\includegraphics[scale=0.45]{Zusammenbau_fluides_Bett.png}
+		\caption[Modell Wirbelbett]{Featureerläuterung Wirbelbett. Die Luft wird durch den Lufteinlass in eingelassen und strömt dann am Ionisator vorbei. Anschließend wird die Luft durch den Filter in das Probenröhrchen gedrückt und zum Schluss durch den Granulatfänger. Der Stabilisator und der Ringeinsatz dienen der Stabilisation des Röhrchens im oberen Teil, während Röhrchenhalter und Deckplatte den dichten Abschluss mit dem Anschlusszylinder sicherstellen.}
 	\end{center}
 \end{figure}
 
-
-Im folgenden werden die im Bild zu sehenden Bauteile in Abschnitten diskutiert, die sich mit der Methode zum auffangen des Granulats, dem Anschlusszylinder, dem Röhrchenhalter, der Halterung des Wirbelbetts und dem Filter beschäftigen.
+Eine weitere Anforderung bestand in der Integration eine Ionisators, sodass die durch das Probenröhrchen strömende Luft ionisiert werden kann. Die gesamte Konstruktion muss zudem in den Lichtstreuaufbau passen. Im Folgenden werden die im Bild zu sehenden Bauteile in Abschnitten diskutiert, die sich mit der Methode zum auffangen des Granulats, dem Anschlusszylinder, dem Röhrchenhalter, der Halterung des Wirbelbetts und dem Filter beschäftigen.
 
 
 \subsection{Auffangen des Granulats}
@@ -288,21 +312,18 @@ Wie schon in der Einleitung beschrieben, hat ein granulares Medium mehrere Phase
 
 \subsubsection{Auswahl}
 
-Ein in der Industrie übliches Produkt, um Luft von Partikeln zu säubern, ist der Fliehkraftabscheider oder Zyklon. Dieser basiert auf dem Prinzip, das die Luft immer weiter beschleunigt wird und die darin enthaltenen Partikel an die Wand gedrückt werden und schließlich nach unten raus fallen. \\
+Ein in der Industrie übliches Produkt, um Luft von Partikeln zu säubern, ist der Fliehkraftabscheider oder Zyklon. 
 
 
-\begin{figure}[h]
+\begin{figure}[h!]
 	\begin{center}
-		\includegraphics[scale=0.5]{Umsetzung_Fliehkraftabscheider.jpg}
+		\includegraphics[scale=0.4]{Umsetzung_Fliehkraftabscheider.jpg}
 		\caption[Funktionsweise Fliehkraftabscheider]{Schema eines Fliehkraftabscheiders. Das Luft-Granulat Gemisch wird in die Trennstrecke eingeleitet und das Granulat auf Grund der Beschleunigung nach außen gedrückt, bis es unten ausfällt. Die so gereinigte Luft wird nach oben abgeführt. Aus Wikipedia nach \cite{Loeffler1988}}
 	\end{center}
 \end{figure}
 
-
-
-Das Problem bei diesem Bauteil besteht darin, das die kommerziell erhältlichen Versionen sehr teuer sind und zudem zu groß für unserem Aufbau passen. \\
-Weiterhin wäre ein erheblicher Konstruktionsaufwand nötig, um einen eigenen Zyklon zu bauen, da die Luft in unserem Versuch von unten kommt, der Zyklon sie aber von der Seite braucht. \\
-Eine Alternative dazu ist ein Trichter, der den Querschnitt aufweitet und so den Gasstrom verlangsamt. Aus Kosten und den oben beschriebenen Konstruktionsproblemen wurde entschieden einen Trichter zu entwerfen.
+Dieser basiert auf dem Prinzip, das die Luft immer weiter beschleunigt wird und die darin enthaltenen Partikel an die Wand gedrückt werden und schließlich nach unten raus fallen. Das Problem bei diesem Bauteil besteht darin, das die kommerziell erhältlichen Versionen sehr teuer sind und zudem zu groß für unserem Aufbau passen. 
+Weiterhin wäre ein erheblicher Konstruktionsaufwand nötig, um einen eigenen Zyklon zu bauen, da die Luft in unserem Versuch von unten kommt, der Zyklon sie aber von der Seite braucht. Eine Alternative dazu ist ein Trichter, der den Querschnitt aufweitet und so den Gasstrom verlangsamt. Aus Kosten und den oben beschriebenen Konstruktionsproblemen wurde entschieden einen Trichter zu entwerfen.
 
 
 
@@ -312,9 +333,9 @@ Um den Gasstrom zu verlangsamen und gleichzeitig das Einfüllen des Granulats zu
 Wie man anhand der Formel $v_a = \frac{Q}{A}$ \cite{Grollius2012} sehen kann, ist die Geschwindigkeit des Gasstrom antiproportional zum Querschnitt des Rohrs. Wenn man also den Querschnitt verdoppelt, dann viertelt man die Geschwindigkeit des Gasstroms. Dies wurde für jeden Durchmesser gemacht. Man könnte zwar bei gleicher Höhe auch die Querschnitte unter \SI{40}{mm} auf \SI{80}{mm} aufweiten, allerdings bringt das stömungstechnisch nicht viel, da sich der Luftstrom nicht so schnell so stark aufweiten kann. \\
 Zudem wurde ein abnehmbarer Filter oben auf den Trichter gespannt, um einen rudimentären Schutz gegen austretende Partikel bei Fehlbedienung zu gewährleisten.
 
-\begin{figure}[h]
+\begin{figure}[h!]
 	\begin{center}
-		\includegraphics[scale=0.5]{Schnitt_Trichter.png}
+		\includegraphics[scale=0.4]{Schnitt_Trichter.png}
 		\caption[Skizze Trichter]{Schnitt durch Trichter. Man sieht den Torus zur Stabilisation am Rohr und die Aufweitung des Durchmessers zur Geschwindigkeitsverminderung der Luft.}
 	\end{center}
 \end{figure}
@@ -330,9 +351,9 @@ Der Ionisator sollte in der Mitte des Luftstroms platziert werden, damit die Ion
 
 Damit keine dauerhaften Veränderungen am Ionisatorkopf selbst vorgenommen werden mussten, wurde beschlossen den Kopf in einen Adapter zu stecken und diesen mit einem Gewinde am Anschlusszylinder zu befestigen. Dazu wird der Innendurchmesser des Adapters so nah wie möglich an den Außendruchmesser des Ionisatorkopfes angenährt. Zur Sicherstellung der Luftdichtigkeit und der Stabilität wird der Ionisatorkopf in den Adapter eingeklebt. Außen auf den Adapter wird ein Gewinde geschnitten mit dem der Adapter, unter Verwendung von Teflonband, in den Anschlusszylinder eingedreht werden kann.
 
-\begin{figure}[h]
+\begin{figure}[h!]
 	\begin{center}
-		\includegraphics[scale=0.7]{Adapter_Ionisator.png}
+		\includegraphics[scale=0.6]{Adapter_Ionisator.png}
 		\caption[Adapter für Ionisator]{3D Druck Ionisatoradapter. Der Adapter wird auf den Ionisator geklebt und anschließend in den Anschlusszylinder eingedreht. Dabei drückt der hervorstehende Ring in die Nut des Anschlusszylinders}
 	\end{center}
 \end{figure}
@@ -384,7 +405,7 @@ Der Anschlusszylinder wird mit Röhrchenhalter im arretierten Zustand unter die 
 
 Um die Festigkeit der einzelnen Arretierungspunkte zu messen, wurde ein T-Stück in das Kraftmessgerät geschraubt und dann das T-Stück in den Arretiungspunkt eingehakt. Anschließend wurde am Anschlusszylinder gezogen und die Kraft protokolliert, bei dem ein Knacken des Materials zu vernehmen war.
 
-\begin{figure}[h]
+\begin{figure}[h!]
 	\begin{center}
 		\includegraphics[scale=0.7]{Messmethode_Zugkraft.png}
 		\caption[Messaufbau Arretierung 2]{Messaufbau Festigkeitsprüfung. Das T-Stück wird in die Arretierung gehakt und dann am Anschlusszylinder nach unten gezogen. Auf dem Messgerät kann man die Kraft ablesen, die nötig ist, um die Arretierung abzureißen.}
@@ -442,7 +463,7 @@ Zudem stellte sich während der Messungen heraus, das der verwendete Luftionisat
 
 Der Röhrchenhalter besteht aus drei Teilen, eins dient zur Verbinung mit dem Anschlusszylinder und das andere sorgt dafür, dass die Dichtung an Ort und Stelle gehalten wird. 
 
-\begin{figure}[h]
+\begin{figure}[h!]
 	\begin{center}
 		\includegraphics[scale=0.5]{Schnitt_Roehrchenhalter.png}
 		\caption[Schnitt Röhrchenhalter]{Schnitt durch Röhrchenhalter. Der Röhrchenhalter wird mit der oben gemessenen Kraft auf en Anschlusszylinder gedrückt und anschließen durch drehen arretiert}
@@ -482,7 +503,7 @@ Bei sechs Schrauben erhält man eine Gesamtkraft von $F_{ges} = \SI{2,904}{N}$. 
 
 Der dritte Teil des Halters ist der Stabilisator und sorgt dafür, dass das Röhrchen nicht seitlich verkippt werden kann und es dadurch zu Undichtigkeiten kommt. Damit diese Halterung nicht für jedes Röhrchen separat montiert werden muss, wurde ein universelles Ringsystem entworfen. Das Basisteil wird am Schanier festgeschraubt und hat $\SI{40}{mm}$ Durchmesser. In das Basisteil können nun weitere Ringe eingesetzt und durch verdrehen arretiert werden, damit auch die Durchmesser $30,20,5\SI{}{\ mm}$ einen guten Halt haben.
 
-	\begin{figure}[h]
+	\begin{figure}[h!]
 		\begin{minipage}[hbt]{7.4cm}
 			\centering
 			\includegraphics[width=7.4cm]{Basishalter.png}
@@ -555,6 +576,13 @@ In der Draufsicht sieht man, das zum Verschieben nach links und rechts zwei durc
 
  Auf der Halteplatte kann das Wirbelbett mit der Mikrometerschraube exakt in den Laserstrahl gefahren werden.
 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.16]{Lichtstreuaufbau.jpg}
+	\caption[Aufbau in Lichtstreuaufbau]{Bild von Halterung im Lichtstreuaufbau. Die Grundplatte wird auf den Gewindeboden geschraubt und anschließend das Wirbelbett mit der Mikrometerschraube im Laserstrahl positioniert.}
+\end{figure}
+
+\clearpage
 
 \subsubsection{Laboraufbau}
 
@@ -568,12 +596,20 @@ Die Anforderungen wurden zum einen durch eine Platte auf der der Justiermechanis
 
 
 
-\begin{figure}[h]
+\begin{figure}[h!]
 	\begin{center}
-	\includegraphics[scale=0.4]{Halterung_Labor_Seite.png}
+	\includegraphics[scale=0.7]{Halterung_Labor_Seite.png}
 	\caption[Halterung Labor]{Schema Laborhalterung. Die Füße sind schraubbar, somit können schiefe Arbeitsflächen ausgeglichen werden}
     \end{center}
 \end{figure}
+
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[scale=0.13]{Laboraufbau.jpg}
+		\caption[Laboraufbau Wirbelbett]{Aufbau des Wirbelbetts im Labor im betriebsbereiten Zustand. In diesem Moment aufgebockt, da der Kleber noch trocknet.}
+	\end{center}
+\end{figure}
+
 
 \newpage
 
@@ -681,14 +717,13 @@ Im Falle eines Lecks wirft das Lecksuchspay große stabile Blasen. Nach Ablauf e
 	\end{minipage}
 \end{figure}
 
-\vspace{1cm}
 
 Um unregelmäßige Lecks auszuschließen, wurde sich der lineare Zusammenhang zwischen dem Druck vor dem Wirbelbett und dem eingestellten Massenstrom zu Nutze gemacht. In der Theorie hat der Filter, auf dem das Granulat liegt einen konstanten Widerstand, also muss bei linearer Erhöhung des Massenstroms, der Druck auch linear ansteigen. Dafür wurde das zu dem Zeitpunkt verfügbare Röhrchen mit \SI{20}{mm} Innendurchmesser gewählt und der Druck über einen Massenstrombereich von \SIrange{0}{750}{l/h} gemessen. Dabei erhielt man folgende Kurve:
 
 \begin{figure}[H]
 	\begin{tikzpicture}
 	\begin{axis}[yticklabel style={/pgf/number format/1000 sep={}},		
-	height=9cm, width=14.5cm,
+	height=7.5cm, width=14.5cm,
 	title={Referenzmessung ohne Granulat},
 	legend pos= south east,
 	%	     axis x line=middle, % Achse mit Pfeil und Beschriftung am Pfeil
@@ -741,7 +776,7 @@ Zur Demonstration der Funktionsfähigkeit des Wirbelbetts wurden zwei Probemessu
 	grid=both, %major,
 	xmin=0,
 	xmax=900,
-	ymin=-0.2,
+	ymin=0,
 	ymax=18,
 	]
 	\addplot[color=blue,only marks,mark=x,mark size=4, error bars/.cd,y dir=both, y explicit] table[x=a,y=b]{Run0001_500.txt};
@@ -752,12 +787,39 @@ Zur Demonstration der Funktionsfähigkeit des Wirbelbetts wurden zwei Probemessu
 
 Man sieht ganz deutlich den Peak (ca \SI{340}{l/h}) an dem das Granulat vom festen in den fluidisierten Zustand übergeht und anschließend den Bubbling Zustand (ca \SIrange{400}{900}{l/h}) in dem die Druckdifferenz konstant bleibt. Im Bereich des Bubblings fluktuieren die Werte recht stark, da sich das Granulat stark auf und ab bewegt und so eine variierenden Gegenkraft ausübt. 
 
+\begin{figure}[H]
+	\begin{tikzpicture}
+	\begin{axis}[yticklabel style={/pgf/number format/1000 sep={}},		
+	height=9cm, width=14.5cm,
+	title={Messung mit Granulat der Größe \SI{500}{\mu m} (nano beschichtet)},
+	legend pos= south east,
+	%	     axis x line=middle, % Achse mit Pfeil und Beschriftung am Pfeil
+	%	     axis y line=middle,
+	xmode=normal,						    % x-Achse 
+	ymode=normal,						     % y-Achse 
+	x label style={at={(axis description cs:0.5,0)},anchor=north},
+	y label style={at={(axis description cs:0,.5)},anchor=south},
+	xlabel={Massenstrom [l/h]},
+	ylabel={$\Delta P$ [mbar]},
+	grid=both, %major,
+	xmin=0,
+	xmax=600,
+	ymin=-0,
+	ymax=14,
+	]
+	\addplot[color=blue,only marks,mark=x,mark size=4, error bars/.cd,y dir=both, y explicit] table[x=c,y=f]{Run0004_500_beschichtet.txt};
+	\addlegendentry{Messwerte};
+	\end{axis} 
+	\end{tikzpicture}
+\end{figure}
+
+Man sieht, das der Peak wie erwartet bei einer Beschichtung der Partikel mit einem Aerosol kleiner ausfällt. Das liegt an der reduzierten Reibung der Partikel untereinander. Die theoretische Kurve hätte überhaupt keinen Peak mehr, sondern ein übergangsloses Wechseln vom festen in den flüssigen Zustand. 
 
 
 \begin{figure}[H]
 	\begin{tikzpicture}
 	\begin{axis}[yticklabel style={/pgf/number format/1000 sep={}},		
-	height=9cm, width=14.5cm,
+	height=8cm, width=14.3cm,
 	title={Messung mit Granulat der Größe \SI{300}{\mu m}},
 	legend pos= south east,
 	%	     axis x line=middle, % Achse mit Pfeil und Beschriftung am Pfeil
@@ -781,3 +843,34 @@ Man sieht ganz deutlich den Peak (ca \SI{340}{l/h}) an dem das Granulat vom fest
 \end{figure}
 
 Im Diagramm mit Granulat von \SI{300}{\mu m} Größe ist der Peak (ca \SI{85}{l/h}) nicht so stark ausgeprägt, aber trotzdem sichtbar. Außerdem fluktuiert der Druck im Bubbling Zustand nicht so stark. Das könnte daran liegen, das kleinere Luftblasen als bei \SI{500}{\mu m} durch das Granulat wandern und das Granulat sich dadurch weniger stark auf und ab bewegt.
+
+Wenn man das Wirbelbett, zur Unterdrückung der Elektrostatik, mit dem Luftbefeuchter betreibt, dann sehen die Kurven wie folgt aus: 
+
+\begin{figure}[H]
+	\begin{tikzpicture}
+	\begin{axis}[yticklabel style={/pgf/number format/1000 sep={}},		
+	height=8cm, width=14.3cm,
+	title={Messung mit Granulat der Größe \SI{300}{\mu m} (Luftbefeuchter aktiv)},
+	legend pos= south east,
+	%	     axis x line=middle, % Achse mit Pfeil und Beschriftung am Pfeil
+	%	     axis y line=middle,
+	xmode=normal,						    % x-Achse 
+	ymode=normal,						     % y-Achse 
+	x label style={at={(axis description cs:0.5,0)},anchor=north},
+	y label style={at={(axis description cs:0,.5)},anchor=south},
+	xlabel={Massenstrom [l/h]},
+	ylabel={$\Delta P$ [mbar]},
+	grid=both, %major,
+	xmin=0,
+	xmax=160,
+	ymin=0,
+	ymax=16,
+	]
+	\addplot[color=blue,only marks,mark=x,mark size=4, error bars/.cd,y dir=both, y explicit] table[x=c,y=f]{Run0001_300_Befeuchter.txt};
+	\addlegendentry{Messwerte};
+	\end{axis} 
+	\end{tikzpicture}
+\end{figure}
+
+Man erkennt, das der deutlich ausgeprägter ist. Dadurch kann man den Breaking Point genauer bestimmen.
+
