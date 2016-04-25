@@ -1,24 +1,25 @@
 \chapter{Umsetzung}
 
-Im folgenden Kapitel wir die Umsetzung der Ziele aus dem vorigen Kapitel behandelt. Zuerst wird die Elektronik behandelt, danach das Gassystem und abschließend das Wirbelbett und die Testergebnisse.
+Im folgenden Kapitel wird die Umsetzung der Ziele aus dem vorigen Kapitel dargestellt. Zuerst wird die Elektronik behandelt, danach das Gassystem und abschließend das Wirbelbett und die Testergebnisse.
 
 
 \section{AP 1 - Analyse}
 
 \paragraph{Elektronik}
 \hfill \\
-Der Hautschwachpunkt der Elektronik ist die Verkabelung, da man es bei dem Setup mit mehreren Teilen zu tun hat, die teils verlötet, teils gesteckt werden. Das führt zu einem insgesamt sensiblen Aufbau. Ziel muss es also sein, so viele Kabel wie möglich geeignet zu verpacken, sodass sie möglichst wenig äußeren Einflüssen ausgesetzt sind. 
+Der Hautschwachpunkt der Elektronik ist die Verkabelung, da der Setup aus mehreren Teilen besteht, die teils verlötet, teils gesteckt werden. Das führt zu einem insgesamt sensiblen Aufbau. Ziel muss es also sein, so viele Kabel wie möglich geeignet zu verpacken, sodass sie möglichst wenig äußeren Einflüssen ausgesetzt sind. 
 
 
 \paragraph{Gassystem}
 \hfill \\
-Eine Herstellerauswahl hat hier nicht stattgefunden, da bereits vorhandene Verrohrung der Firma Swagelok weitergenutzt werden sollte. Dies hatte auch den Vorteil, das ein Berater aus dem nahegelegenen Standort Düsseldorf bei der Auslegung und Wahl der Komponenten beraten konnte. \\
+Eine Herstellerauswahl fand hier nicht statt, da bereits vorhandene Verrohrung der Firma Swagelok weitergenutzt werden sollte. Dies hatte auch den Vorteil, dass ein Berater aus dem nahegelegenen Standort Düsseldorf bei der Auslegung und Wahl der Komponenten beraten konnte. \\
 Insgesamt wurden Zukaufteile im Wert von gut \SI{1600}{\euro} identifiziert. 
 
 \begin{center}
 	\captionof{table}[Kostenaufstellung Gassystem]{Kostenaufstellung}
+		\vspace{0.25cm}
 	\begin{tabular}{|l|S|S|S|}
-		{Teil}  & {Anzahl} & {Kosten/Stück} & {Kosten} \\
+		{Teil}  & {Anzahl} & {Kosten/Stück [\euro]} & {Kosten [\euro]} \\
 		\hline
 		&       &       &  \\
 		{Flowcontroller} & 1     & 1186,00  & 1186,00 \\
@@ -41,8 +42,8 @@ Insgesamt wurden Zukaufteile im Wert von gut \SI{1600}{\euro} identifiziert.
 
 \paragraph{Wirbelbett}
 \hfill \\
-Bei der Analyse des bisherigen Wirbelbettes wurde klar, das die Bauhöhe, neben der Dichtheit, ein entscheidendes Kriterium ist. Die Bauhöhe ist durch den Lichtstreuaufbau nach begrenzt und enthält eine Mindesthöhe über dem Rotationsarm und eine Maximalhöhe, da der Aufbau sonst gegen Stahlträger stößt. Daraus folgte unmittelbar, das die Anschlüsse für Luft und Ionisator beide seitlich, also in der horizontalen Ebene erfolgen müssen. \\
-Weiterhin wurde beschlossen, den Justiermechanismus des alten Aufbaus weiterzuverwenden, da dieser bereits funktioniert und leicht in den neuen Aufbau integriert werden kann. Für das Wirbelbett sind keine Zukaufteile erforderlich, da alle Teile intern gefertigt wurden. Dabei musste berücksichtigt werden, das die Konstruktionsskizzen rechtzeitig an die Werkstatt gegeben werden. 
+Bei der Analyse des bisherigen Wirbelbettes wurde klar, dass die Bauhöhe, neben der Dichtheit, ein entscheidendes Kriterium ist. Die Bauhöhe ist durch den Lichtstreuaufbau begrenzt. Es handelt sich um eine Mindesthöhe über dem Rotationsarm und eine Maximalhöhe, da der Aufbau sonst gegen einen Stahlträger stößt. Daraus folgte unmittelbar, das die Anschlüsse für Luft und Ionisator beide seitlich, also in der horizontalen Ebene erfolgen müssen. \\
+Weiterhin wurde beschlossen, den Justiermechanismus des alten Aufbaus weiterzuverwenden, da dieser bereits funktionsfähig ist und leicht in den neuen Aufbau integriert werden kann. Für das Wirbelbett sind keine Zukaufteile erforderlich, da alle Teile intern gefertigt wurden. Dabei musste berücksichtigt werden, dass die Konstruktionsskizzen rechtzeitig an die Werkstatt gegeben werden. 
 
 
 \newpage
@@ -52,8 +53,8 @@ Weiterhin wurde beschlossen, den Justiermechanismus des alten Aufbaus weiterzuve
 \paragraph{Anforderungen}
 \hfill \\
 Bei der Elektronik gab es zwei verschiedene Bereiche: \\
-In einem ersten Schritt sollte ein A-D\footnote{Analog-Digital} Wandler gefunden werden, mit dem der Drucksensor mit \SI{0,1}{mbar} Genauigkeit ausgelesen werden kann. Zum Start es Projekts wurde der Drucksensor über das $\SI{10}{bit}$ breite analoge Interface des Arduino ausgelesen. Das ist für eine genaue Auswertung der Experimente zu wenig. Der A-D Wandler soll zwischen den Drucksensor und den Arduino geschaltet werden, damit die Auslesegenauigkeit von \SI{0,1}{mbar} erreicht werden kann. Der Drucksensor hat einen Messbereich von \SIrange{0}{2}{\bar} absolut und gibt diesen auf \SIrange{0}{10}{\volt} aus. Da der Arduino maximal $\SI{5}{V}$ als Eingangsspannung verarbeiten kann, wird die Spannung über einen Spannungsteiler auf \SIrange{0}{5}{\volt} reduziert und dann eingelesen. 
-Als Resultat soll die gesamte Elektronik als \glqq Blackbox\grqq \ vorliegen, sodass man nach außen hin nur noch Anschlüsse hat, die klar gekennzeichnet sind. Dies soll in Form eines Gehäuses erledigt werden, das zudem auch noch rudimentären Schutz mechanische Belastungen.
+In einem ersten Schritt sollte ein A-D\footnote{Analog-Digital} Wandler gefunden werden, mit dem der Drucksensor mit \SI{0,1}{mbar} Genauigkeit ausgelesen werden kann. Zum Start des Projekts wurde der Drucksensor über das $\SI{10}{bit}$ breite analoge Interface des Arduino ausgelesen. Das ist für eine genaue Auswertung der Experimente zu wenig. Der A-D Wandler soll zwischen den Drucksensor und den Arduino geschaltet werden, damit die Auslesegenauigkeit von \SI{0,1}{mbar} erreicht werden kann. Der Drucksensor hat einen Messbereich von \SIrange{0}{2}{\bar} absolut und gibt diesen auf \SIrange{0}{10}{\volt} aus. Da der Arduino maximal $\SI{5}{V}$ als Eingangsspannung verarbeiten kann, wird die Spannung über einen Spannungsteiler auf \SIrange{0}{5}{\volt} reduziert und dann eingelesen. 
+Als Resultat soll die gesamte Elektronik als \glqq Blackbox\grqq \ vorliegen, sodass man nach außen hin nur noch Anschlüsse hat, die klar gekennzeichnet sind. Dies soll in Form eines Gehäuses erledigt werden, das zudem auch noch rudimentären Schutz vor mechanische Belastungen bietet.
 
 
 \subsection{Umsetzung}
@@ -61,12 +62,13 @@ Als Resultat soll die gesamte Elektronik als \glqq Blackbox\grqq \ vorliegen, so
 
 \paragraph{Elektronik}
 \hfill \\
-Der Arduino bietet einen SPI\footnote{\url{http://www.mct.de/faq/spi.html}} Bus zum Anschluss von externen Modulen an. Darüber können die digitalen Outputdaten der angesteckten Module ausgelesen werden, unabhängig davon wie hoch die Auflösung der Module ist. Auf Grund dessen wurde entschieden ein Modul für diesen Bus zu verwenden und aus Gründen der Genauigkeit wurde sich für ein \SI{16}{bit} Modul entschieden. \\
-Damit kann man mit einer Genauigkeit von $\frac{\SI{5}{V}}{\SI{65536}{bit}} = \SI{0,00008}{V/bit}$ die Ausgangsspannung des Drucksensors auslesen. Das bedeutet auch eine Auslesegenauigkeit von $\frac{\SI{2000}{mbar}}{\SI{65536}{bit}} = \SI{0,03}{mbar/bit}$. \\
+Der Arduino bietet einen SPI\footnote{\url{http://www.mct.de/faq/spi.html}} Bus zum Anschluss von externen Modulen an. Darüber können die digitalen Outputdaten der angesteckten Module ausgelesen werden, unabhängig davon wie hoch die Auflösung der Module ist. Auf Grund dessen wurde entschieden, ein Modul für diesen Bus zu verwenden. Aus Gründen der Genauigkeit entschied man sich für ein \SI{16}{bit} Modul. \\
+Damit kann man mit einer Genauigkeit von $\frac{\SI{5}{V}}{\SI{65536}{bit}} = \SI{0,00008}{V/bit}$ die Ausgangsspannung des Drucksensors auslesen. Das bedeutet eine Auslesegenauigkeit von $\frac{\SI{2000}{mbar}}{\SI{65536}{bit}} = \SI{0,03}{mbar/bit}$. \\
 Zur Auswahl standen zwei verschiedene A-D Wandler:
 
 \begin{center}
 	\captionof{table}[Vergleich A-D Wandler]{A-D Wandlervergleich}
+	\vspace{0.25cm}
 \begin{tabular}{l|c|c}
 	& TM7705 Dual 16-bit ADC & AD420 \\ 
 	\hline Preis [\euro]	& 15  & 7 \\ 
@@ -78,23 +80,23 @@ Zur Auswahl standen zwei verschiedene A-D Wandler:
 \end{center}
 
 
-Es wurde sich für den TM7705 Dual 16-bit ADC entschieden, da dieser bereits auf eine Platine aufgelötet ist und somit ohne zusätzliche Arbeiten verwendet werden kann und zudem auch direkt vom Arduino mit Spannung versorgt werden kann. Der AD420 hätte ein zusätzliches Netzteil gebraucht, was wiederum mehr Platz in Anspruch genommen hätte. Schematisch ist die Schaltung mit dem A-D Wandler die unten stehende:
+Man entschied sich für den TM7705 Dual 16-bit ADC, da dieser bereits auf eine Platine aufgelötet ist und somit ohne zusätzliche Arbeiten verwendet werden kann. Zudem kann der A-D Wandler direkt vom Arduino mit Spannung versorgt werden kann. Der AD420 hätte ein zusätzliches Netzteil gebraucht, was wiederum mehr Platz in Anspruch genommen hätte. Schematisch sieht die Schaltung mit dem A-D Wandler wie folgt aus:
 
 
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[scale=0.6]{Schema_Elektronik.jpg}
-		\caption[Schema Elektronik]{Schematischer Aufbau der Elektronik. Der Raspberry versorgt den Adruino mit Strom und übergibt gleichzeitig alle nötigen Daten zur Kontrolle des Flowcontrollers. Der Arduino wandelt diese geeignet um und gibt sie an den Flowcontroller. Gleichzeitig sammelt er alle Daten des Flowcontrollers und Drucksensors und übergibt diese zum Abspeichern an den Raspberry}
+		\caption[Schema Elektronik]{Schematischer Aufbau der Elektronik. Der Raspberry versorgt den Adruino mit Strom und übergibt gleichzeitig alle nötigen Daten zur Kontrolle des Flowcontrollers. Der Arduino wandelt diese geeignet um und gibt sie an den Flowcontroller. Gleichzeitig sammelt er alle Daten des Flowcontrollers und Drucksensors und übergibt diese zum Abspeichern an den Raspberry Pi}
 	\end{center}
 \end{figure}
 
 
 \paragraph{Gehäuse} 
 \hfill \\
-Da es insbesondere im Lichtstreuaufbau nur sehr begrenzten Stauraum gibt und sämtliche Bauteile, das Wirbelbett selbst ausgenommen, auf einer Platte verbaut werden sollen, wurde gegen ein kommerziell erhältliches Gehäuse entschieden. \\ 
+Da es insbesondere im Lichtstreuaufbau nur sehr begrenzten Stauraum gibt und sämtliche Bauteile, das Wirbelbett selbst ausgenommen, auf einer Platte verbaut werden sollen, wurde sich gegen ein kommerziell erhältliches Gehäuse entschieden. \\ 
 Stattdessen wurde ein Gehäuse entworfen, in dem sowohl der Arduino als auch das Board mit dem Spannungsteiler passgenau Platz finden. Dabei wurde darauf geachtet, dass die Kontakte unterhalb des Arduinos und des Boards genug Platz haben, sodass es keinerlei unbeabsichtigte Reibung der Komponenten am Gehäuse gibt. \\
 Für die Anschlüsse wurden möglichst kleine Löcher im Gehäuse gelassen, sodass ein größtmöglicher Schutz gegen Schmutz bei größtmöglichem Komfort gewährleistet wird. \\
-Beim Deckel wurde sich für eine Presspassung entschieden, zudem dient der Deckel gleichzeitig dazu die Komponenten innerhalb des Gehäuses an Ort und Stelle zu halten. Dies wurde über Streben, die vom Deckel nach unten bis auf die jeweilige Komponente gehen realisiert.
+Der Deckel schließt das Gehäuse mit einer Presspassung ab, zudem dient der Deckel gleichzeitig dazu die Komponenten innerhalb des Gehäuses an Ort und Stelle zu halten. Dies wurde über Streben, die vom Deckel nach unten bis auf die jeweilige Komponente gehen realisiert.
 
 \clearpage
 
@@ -102,18 +104,18 @@ Beim Deckel wurde sich für eine Presspassung entschieden, zudem dient der Decke
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[scale=0.45]{Elektronik_Gehaeuse2.png}
-		\caption[Gehäuse räumlich]{3D Darstellung Gehäuse. Man sieht die Aussparungen in die die einzelnen Komponenten eingelegt werden. Durch die Öffnungen werden die Kabel zum Raspberry Pi, dem Drucksensor und dem Massenstromregler geführt.}
+		\caption[Gehäuse räumlich]{3D Darstellung Gehäuse. Man sieht die Aussparungen, in die die einzelnen Komponenten eingelegt werden. Durch die Öffnungen werden die Kabel zum Raspberry Pi, dem Drucksensor und dem Massenstromregler geführt.}
 	\end{center}
 \end{figure}
 
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[scale=0.45]{Elektronik_Gehaeuse1.png}
-		\caption[Gehäuse Deckel]{3D Darstellung Deckel. Der Deckel wird auf das Gehäuse gepresst bis die Kante das Gehäuse berührt. Die Stäbe dienen der Stabilisierung der innen liegenden Komponenten}
+		\caption[Gehäuse Deckel]{3D Darstellung Deckel. Der Deckel wird auf das Gehäuse gepresst bis die Kante das Gehäuse berührt. Die Stäbe dienen der Stabilisierung der innen liegenden Komponenten.}
 	\end{center}
 \end{figure}
 
-Die obige Abbildung ist dabei nur als Konzept anzusehen, die den Aufbau zum Zeitpunkt der Abgabe der Arbeit widerspiegelt. Da man aber annehmen musste, das sich der Aufbau durch weitere Optimierungen verändert, konnte kein finales Gehäuse gefertigt werden.
+Die obige Abbildung ist dabei nur als Konzept anzusehen, die den Aufbau zum Zeitpunkt der Abgabe der Arbeit widerspiegelt. Da man aber annehmen muss, dass sich der Aufbau durch weitere Optimierungen verändert, konnte kein finales Gehäuse gefertigt werden.
 
 
 \clearpage
@@ -122,7 +124,7 @@ Die obige Abbildung ist dabei nur als Konzept anzusehen, die den Aufbau zum Zeit
 
 \subsection{Anforderungen}
 
-Beim Gassystem soll neben der Luftdichtheit auch eine mechanische Stabilität erreicht werden, damit es einfach von zwischen Normalem und Lichtstreubaufbau transportiert werden kann. Außerdem soll der Gasstrom von \SIrange{0}{120}{l/h} auf \SIrange{0}{3000}{l/h} erhöht werden. Zudem sollen die Werte, die der Drucksensor vor und hinter dem Wirbelbett misst um weniger als \SI{1}{\%} differieren. Weiterhin muss das gesamte Gassystem mit Luftbefeuchter in den Lichtstreuaufbau passen. \\
+Beim Gassystem soll neben der Luftdichtheit auch eine mechanische Stabilität erreicht werden, damit es einfach zwischen Normalem- und Lichtstreubaufbau transportiert werden kann. Außerdem soll der Gasstrom von \SIrange{0}{120}{l/h} auf \SIrange{0}{3000}{l/h} erhöht werden. Zudem sollen die Werte, die der Drucksensor vor und hinter dem Wirbelbett misst um weniger als \SI{1}{\%} differieren. Weiterhin muss das gesamte Gassystem mit Luftbefeuchter in den Lichtstreuaufbau passen. \\
 Der Luftbefeuchter selbst soll im Betrieb eine Luftfeuchtigkeit von \SI{75}{\%} erreichen und den gesamten Regelbereich des Flowcontrollers abdecken.
 
 
@@ -131,12 +133,13 @@ Der Luftbefeuchter selbst soll im Betrieb eine Luftfeuchtigkeit von \SI{75}{\%} 
 
 \subsubsection{Flowcontroller}
 
-Aus den Tabellen im Abschnitt \glqq Ziele der Arbeit\grqq \ folgt, das ein Gasfluss von \SIrange{0}{3000}{l/h} alle Anforderungen erfüllt. \\
-Es gab mehrere Lösungen, die diese Anforderung erfüllen. Eine Lösung bestand darin, den Luftstrom über mehrere Gasdurchflussbegrenzer und Ventile auf definierte Werte voreinzustellen und mit dem vorhandenen Flowcontroller von da ab zu regeln. Zudem kann man einen Massenstromregler kaufen, der komplett digital zu regeln ist. \\
-Die erste Lösungsart wurde verworfen, weil es sich als zu ungenau und nicht deutlich billiger in Aufwand und Kosten darstellte. Zudem wäre der Aufbau deutlich größer gewesen. Die Lösung bestand somit darin einen neuen Flowcontroller anzuschaffen, der den gesamten Regelbereich mit einer hinreichenden Genauigkeit abdeckt und gleichzeitig gut in das Gassystem integriert werden kann. Dazu wurden zwei Angebote eingeholt, die im folgenden dargelegt sind:
+Aus den Tabellen im Abschnitt \glqq Ziele der Arbeit\grqq \ folgt, dass ein Gasfluss von \SIrange{0}{3000}{l/h} alle Anforderungen erfüllt. \\
+Es gab mehrere Lösungen, die diese Anforderung erfüllen. Eine Lösung bestand darin, den Luftstrom über mehrere Gasdurchflussbegrenzer und Ventile auf definierte Werte voreinzustellen und mit dem vorhandenen Flowcontroller von da ab zu regeln. Oder man kann einen Massenstromregler kaufen, der komplett digital zu regeln ist. \\
+Die erste Lösungsart wurde verworfen, weil es sich als zu ungenau und nicht deutlich billiger in Aufwand und Kosten darstellte als ein digitaler Massenstromregler. Zudem wäre der Aufbau deutlich größer gewesen. Die Lösung bestand somit darin einen neuen Flowcontroller anzuschaffen, der den gesamten Regelbereich mit einer hinreichenden Genauigkeit abdeckt und gleichzeitig gut in das Gassystem integriert werden kann. Dazu wurden zwei Angebote eingeholt, die im folgenden dargelegt sind:
 
 \begin{center}
 	\captionof{table}[Vergleich Massenstromregler]{Vergleich Massenstromregler}
+	\vspace{0.25cm}
 	\begin{tabular}{l|c|c}
 		& Brooks & Bronkhorst \\ 
 		\hline Regelbereich & \SIrange{0}{3000}{l/h} & \SIrange{0}{3000}{l/h} \\ 
@@ -149,66 +152,66 @@ Die erste Lösungsart wurde verworfen, weil es sich als zu ungenau und nicht deu
 
 \vspace{0,5cm}
 
-Es wurde sich für den Flowcontroller der Firma Brooks entschieden. Das geschah aus mehreren Gründen: \\
-Im ursprünglichen Aufbau war auch ein Flowcontroler von Brooks verbaut, daher war bekannt wie dieser angesteuert wird und hatten bereits den benötigten Stecker. Weiterhin ist die Genauigkeit des Brookscontrollers im niedriegen Regelbereich besser als die des Bronkhorstcontrollers. Dies ist grade bei quantitativen Messungen mit kleinen Rohrdurchmessern und sehr feinen granularen Medien essentiell. \\
-Zudem waren die Anschaffungskosten für den Brookscontroller um ca $\SI{200}{Euro}$ niedriger. Außerdem hatte die Gruppe bei einem anderen Controller von Bronkhorst einige Probleme mit der Zuverlässigkeit gehabt, während der Brooks Controller keine aufwies. Der Brooks Controller ist im besonderen Fallturmfest, während der Bronkhost dies nicht ist.
+Aus mehreren Gründen entschied man sich für einen Massenstromregler der Firma Brooks: \\
+Im ursprünglichen Aufbau war auch ein Flowcontroler von Brooks verbaut, daher war bekannt, wie dieser angesteuert wird. Zudem war der benötigte Stecker bereits vorhanden. Weiterhin ist die Genauigkeit des Brookscontrollers im niedrigen Regelbereich besser als die des Bronkhorstcontrollers. Dies ist grade bei quantitativen Messungen mit kleinen Rohrdurchmessern und sehr feinen granularen Medien essentiell. \\
+Zudem waren die Anschaffungskosten für den Brookscontroller ca $\SI{200}{Euro}$ niedriger. Außerdem hatte die Arbeitsgruppe bei einem anderen Controller von Bronkhorst einige Probleme mit der Zuverlässigkeit gehabt, während der Brooks Controller keine aufwies. Der Brookscontroller ist im besonderen fallturmfest, während der Bronkhost dies nicht ist.
 
 
 \subsubsection{Verrohrung}
 
-Um die geforderte Stabilität und Reproduzierbarkeit zu gewährleisten, wurde entschieden das gesamte Gassystem aus Stahlrohren (\textcolor{blue}{blau}) zu bauen. Das bietet, neben der besseren Luftdichtigkeit, auch einen höheren Schutz gegenüber äußeren Umwelteinflüssen wie ätzenden Flüssigkeiten oder herunterfallenden Gegenständen.
-Auf der Skizze in Abbildung xy kann man das gebaute System sehen:
+Um die geforderte Stabilität und Reproduzierbarkeit zu gewährleisten, wurde entschieden, das gesamte Gassystem aus Stahlrohren (\textcolor{blue}{blau}) zu bauen. Das bietet, neben der besseren Luftdichtigkeit, auch einen höheren Schutz gegenüber äußeren Umwelteinflüssen, wie ätzenden Flüssigkeiten oder herunterfallenden Gegenständen.
+Auf der Skizze in Abbildung 2.4 kann man das gebaute System sehen:
 \hfill \\
 
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[scale=0.6]{Aufbau_Gassystem.jpg}
-		\caption[Schema Gassystem]{Schema des Gassystems. Der Flowcontroller bekommt den nötigen Vordruck von einer Gasfalsche mit Stickstoff. Nach dem Flowcontroller kann mit den Kükenhähnen die Luft entweder über den Luftbefeuchter oder direkt zum Wirbelbett geleitet werden.}
+		\caption[Schema Gassystem]{Schema des Gassystems. Der Flowcontroller bekommt den nötigen Vordruck von einer Gasflasche mit Stickstoff. Nach dem Flowcontroller kann mit den Kükenhähnen die Luft entweder über den Luftbefeuchter oder direkt zum Wirbelbett geleitet werden.}
 	\end{center}
 \end{figure}
 
 
 Um dem Aufbau die nötige Flexibilität zu geben, die beim Umbau zwischen Versuchsständen nötig ist, wurde das Wirbelbett mit einem Bunaschlauch (\textcolor{orange}{orange}) an das Gassystem angeschlossen. Der Bunaschlauch gewährleistet neben der nötigen Flexibiltät auch eine deutlich verminderte Knickgefahr, da der Schlauch aus dickem Gummi mit zusätzlicher Verstärkung aus Rayongewebe besteht.
 Um Problemen mit dem Flowcontroller zu begegnen, wird das Gassystem über eine Druckluftflasche mit einstellbarem Ausgangsdruck gespeist. Sämtliche Rohrleitungen ab dem Luftfilter bis zum Übergang zum Wirbelbett sind aus Edelstahl. \\
-Die Ventile, T-Stücke und Verbindungsstücke sind auch aus Edelstahl, da Messing zwar billiger wäre, allerdings auch weicher, was zu Verformungen und höherem Verschleiß führen kann. Zur weiteren Erhöhung der Stabilität und Reproduzierbarkeit wurde das System zudem auf einer Holzplatte befestigt. \\
+Die Ventile, T-Stücke und Verbindungsstücke sind auch aus Edelstahl, da Messing zwar billiger wäre, allerdings auch weicher, was zu Verformungen und höherem Verschleiß führen kann. Zur weiteren Erhöhung der Stabilität und Reproduzierbarkeit wurde das System auf einer Holzplatte befestigt. \\
 Abschließend kann gesagt werden, das durch die Wahl der Verrohrung ein luftdichtes Gassystem erreicht wurde. Außerdem ist der Aufbau mit $\SI{0,41}{m} \cdot \SI{0,33}{m}$ passend für den Lichtstreuaufbau.
 
 
 \subsubsection{Luftbefeuchter}
 
-Um die Anforderungen für den Luftbefeuchter zu erfüllen, wurden drei mögliche Lösungen geprüft, dabei waren die Größe und die Kosten der Lösung das Hauptaugenmerk. \\
-Von Swagelok gibt es eine Lösung, bei der über ein spezielles Rohrverbindungsstück ein Metallzylinder angeschlossen werden kann, der senkrecht auf dem Rohr nach oben steht. Dieser wird mit Wasser gefüllt, das von unten mit Luft durchströmt wird und die anschließend oben abgenommen und Richtung Wirbelbett fließt. \\
+Um die Anforderungen für den Luftbefeuchter zu erfüllen, wurden drei mögliche Lösungen geprüft. Dabei waren die Größe und die Kosten der Lösung das Hauptaugenmerk. \\
+Von der Firma Swagelok gibt es ein System, bei der über ein spezielles Rohrverbindungsstück ein Metallzylinder angeschlossen werden kann, der senkrecht auf dem Rohr nach oben steht. Dieser wird mit Wasser gefüllt, das von unten mit Luft durchströmt wird und die anschließend oben abgenommen und Richtung Wirbelbett fließt. \\
 In einer anderen Arbeit \cite{Fallturmexperiment} wurde die Luftbefeuchtung realisiert, indem man Luft direkt an einer  Wasseroberfläche vorbeiströmen ließ und die Luft durch Diffusion Wasser aufnahm. \\
-Eine alternative Methode besteht darin einen eigenen Luftbefeuchter zu bauen, mit gleicher Funktion wie die Lösung von Swagelok. 
+Eine Alternative besteht darin, einen eigenen Luftbefeuchter zu bauen, mit gleicher Funktion wie die Lösung von Swagelok. 
 
 
 \paragraph{Auswahl}
 
 \hfill \\
 
-Es wurde sich für die Lösung Eigenbau entschieden, da die anderen Methoden Mängel aufweisen. Die Lösung von Swagelok ist zum einen sehr teuer, zudem würde bei abgeschaltetem Gasfluss Wasser in das System fließen. \\
-Die Methode des Vorbeiströmens wurde verworfen, weil eine zu große Strömfläche gebraucht wurde. Anhand der Formeln aus der Arbeit von Herrn Schmitz, erhielt man eine Fläche von $\SI{50}{cm} \cdot \SI{50}{cm}$. Einen Aufbau dieser Größe kann man nicht im Lichtstreuaufbau unterbringen.
+Es wurde sich für die Lösung Eigenbau entschieden, da die anderen Methoden Mängel aufweisen. Die Lösung von Swagelok ist zum einen sehr teuer; zudem würde bei abgeschaltetem Gasfluss Wasser in das System fließen. \\
+Die Methode des Vorbeiströmens wurde verworfen, weil eine zu große Strömfläche gebraucht wurde. Anhand der Formeln aus der Arbeit von Herrn Schmitz, erhielt man eine Fläche von $\SI{50}{cm} \cdot \SI{50}{cm}$ \cite{Fallturmexperiment}. Einen Aufbau dieser Größe kann man nicht im Lichtstreuaufbau unterbringen.
 
 \paragraph{Umsetzung}
 
 \hfill \\
 
-Damit der Befeuchter in den Lichtstreuaufbau passt, wurde zu Anfang ein Behältnis ausgewählt, das in den Aufbau passt und dann wurden die für den Befeuchter nötigen Änderungen vorgenommen. Dazu wurde der Kanister mit einem Durchmesser von \SI{22}{cm} und einer Höhe von \SI{38}{cm} auf einer Höhe von \SI{15}{cm} horizontal aufgeschnitten. Nun war es möglich die benötigten Komponenten in dem Behälter unterzubringen. Eine weitere Herausforderung war die Luft mit dem geforderten Feuchtigkeitsgrad von $\SI{75}{\%}$ anzureichern. Ein erprobtes Verfahren ist, die Luft durch eine gesättigte Kochsalzlösung zu leiten. Dadurch wird automatisch eine Luftfeuchtigkeit von $\SI{75}{\%}$ erreicht. Die Luft muss allerdings als sehr feine Blasen durch die Kochsalzlösung wandern, da die Steigzeit sonst nicht ausreicht die Luft anzureichern. 
+Damit der Befeuchter in den Lichtstreuaufbau passt, wurde zu Anfang ein Behältnis ausgewählt, das in den Aufbau passt. Dann wurden die für den Befeuchter nötigen Änderungen vorgenommen. Dazu wurde der Kanister mit einem Durchmesser von \SI{22}{cm} und einer Höhe von \SI{38}{cm} auf einer Höhe von \SI{15}{cm} horizontal aufgeschnitten. Nun war es möglich die benötigten Komponenten in dem Behälter unterzubringen.
+Eine weitere Herausforderung war die Luft mit dem geforderten Feuchtigkeitsgrad von $\SI{75}{\%}$ anzureichern. Ein erprobtes Verfahren ist, die Luft durch eine gesättigte Kochsalzlösung zu leiten. Dadurch wird automatisch eine Luftfeuchtigkeit von $\SI{75}{\%}$ erreicht. Die Luft muss allerdings als sehr feine Blasen durch die Kochsalzlösung wandern, da die Steigzeit sonst nicht ausreicht, die Luft anzureichern. 
 Dies wurde erreicht, indem die Luft aus einer Schlauchspirale mit feinen Löchern durch eine zweilagige Schicht aus handelsüblichen Küchenschwämmen geleitet wurde.
-Damit die Schwämme nicht durch den Luftstrom von ihrem Platz weggedrückt werden, wurde $\SI{2}{cm}$ darüber ein Netz gespannt. Das führte allerdings zu Salzrückständen im Gassystem und zu unregelmäßigem Verhalten des Flowcontrollers. Probeweise wurde daher versucht den Luftbefeuchter nur mit Wasser zu betreiben und bei einer Füllung bis ans Netz, stellte sich auch eine Luftfeuchtigkeit von \SI{75}{\%} ein. Der schematische Aufbau ist in der unten stehenden Skizze zu sehen. \\
+Damit die Schwämme nicht durch den Luftstrom von ihrem Platz weggedrückt werden, wurde $\SI{2}{cm}$ darüber ein Netz gespannt. Das führte allerdings zu Salzrückständen im Gassystem und zu unregelmäßigem Verhalten des Flowcontrollers. Probeweise wurde daher versucht den Luftbefeuchter nur mit Wasser zu betreiben und bei einer Füllung bis ans Netz stellte sich auch eine Luftfeuchtigkeit von \SI{75}{\%} ein (gemessen mit Sensirion SHT 75). Der schematische Aufbau ist in der unten stehenden Skizze dargestellt: \\
 
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[scale=0.47]{Luftbefeuchter.png}
-		\caption[Schema Luftbefeuchter]{Schematischer Aufbau des Luftbefeuchters. Die Luft wird durch den den Schlauch in die Spirale geleitet und strömt dort aus feinen Löchern in die Schwämme. Die feinen Luftblasen nehmen Feuchtigkeit auf und die Luft strömt oben wieder aus dem Behälter.}
+		\caption[Schema Luftbefeuchter]{Schematischer Aufbau des Luftbefeuchters. Die Luft wird durch den Schlauch in die Spirale geleitet und strömt dort aus feinen Löchern in die Schwämme. Die feinen Luftblasen nehmen Feuchtigkeit auf und die Luft strömt oben wieder aus dem Behälter.}
 	\end{center}
 \end{figure}
 
 
-Anschließend wurde in die obere Hälfte des Behälters eine Kombination aus einem Swagelok \SI{6}{mm} Rohrverbinder und einem Schlauchanschluss eingefügt. So kann man von außen ein Standard \SI{6}{mm} Stahlrohr anschließen und innen den Bunaschlauch für die Spirale. Die Lösung für die Luftabfuhr wurde ähnlich realisiert. Dazu wurde in den Verschluss wiederum ein \SI{6}{mm} Rohrverbinder eingefügt und der Verschluss auf der Innenseite mit einer Schicht Silikon ausgekleidet, sodass man ihn noch auf- und abdrehen kann um Wasser nachzufüllen, gleichzeitig aber die Luftdichtheit gewährleistet ist.
+Anschließend wurde in die obere Hälfte des Behälters eine Kombination aus einem Swagelok \SI{6}{mm} Rohrverbinder und einem Schlauchanschluss eingefügt. So kann man von außen ein Standard \SI{6}{mm} Stahlrohr anschließen und innen den Bunaschlauch für die Spirale. Die Lösung für die Luftabfuhr wurde ähnlich realisiert. Dazu wurde in den Verschluss wiederum ein \SI{6}{mm} Rohrverbinder eingefügt und der Verschluss auf der Innenseite mit einer Schicht Silikon ausgekleidet. So kann man ihn noch auf- und abdrehen kann, um Wasser nachzufüllen und gleichzeitig ist die Luftdichtheit gewährleistet.
 Beim Zusammenbau sahen die einzelnen Lagen wie folgt aus:
 
-\clearpage
 
 \begin{figure}[h!]
 	\begin{minipage}[hbt]{6cm}
@@ -225,34 +228,34 @@ Beim Zusammenbau sahen die einzelnen Lagen wie folgt aus:
 \end{figure}
 
 \begin{figure}[h!]
-	\begin{minipage}[hbt]{6cm}
+	\begin{minipage}[hbt]{5cm}
 		\centering
-		\includegraphics[width=6cm]{Luftbefeuchter_Netz.jpg}
+		\includegraphics[width=5cm]{Luftbefeuchter_Netz.jpg}
 		\caption[Netz Luftbefeuchter]{Netz, das die Schwämme an Position hält}
 	\end{minipage}
 	\hfill
-	\begin{minipage}[hbt]{6cm}
+	\begin{minipage}[hbt]{5cm}
 		\centering
-		\includegraphics[width=6cm]{Luftbefeuchter_gesamt.jpg}
+		\includegraphics[width=5cm]{Luftbefeuchter_gesamt.jpg}
 		\caption[Außenansicht Luftbefeuchter]{Außenansicht in betriebsbereitem Zustand}
 	\end{minipage}
 \end{figure}
 
 \clearpage
 
-Abschließend wurde auch der Luftbefeuchter auf einer Holzplatte befestigt, die auch dazu dient den Zu- und Ableitungsrohren möglichst wenig Bewegungsspielraum zu geben, sodass die Anschlüsse an den Befeuchter nicht belastet werden und es so nicht zu Undichtigkeiten kommt.
+Abschließend wurde auch der Luftbefeuchter auf einer Holzplatte befestigt, die auch dazu dient, den Zu- und Ableitungsrohren möglichst wenig Bewegungsspielraum zu geben, sodass die Anschlüsse an den Befeuchter nicht belastet werden und es nicht zu Undichtigkeiten kommt.
 
 
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[scale=0.12]{Gassystem_montiert.jpg}
-		\caption[Gassystem montiert]{Laboraufbau Wirbelbett. Die Luft strömt durch den Lufteinlass und am Luftionisator vorbei. Anschließend strömt die Luft durch den Filter und das darauf liegende Granulat.}
+		\caption[Gassystem montiert]{Zusammenbau Gassystem. Man sieht den Massenstromregler von dem die Luft in das Gassystem geleitet wird. Nun kann über die Kükenhähne entschieden werden, ob die Luft über den Luftbefeuchter oder daran vorbei fließen soll. Mittig unten ist der Drucksensor und der Bunaschlauch mit dem das Wirbelbett angeschlossen wird.}
 	\end{center}
 \end{figure}
 
 \clearpage
 
-Im realen Betrieb wird die Luftfeuchtigkeit von \SI{75}{\%} ziemlich gut erreicht. Sie ist allerdings bei niedrigen und bei hohen Massenströmen ein wenig abhängig vom Luftstrom wie im Diagramm unten dargestellt.
+Im realen Betrieb wird die Luftfeuchtigkeit von \SI{75}{\%} ziemlich gut erreicht. Sie ist allerdings bei niedrigen und bei hohen Massenströmen ein wenig abhängig vom Luftstrom wie im Diagramm unten dargestellt:
 
 \begin{figure}[H]
 	\begin{tikzpicture}
@@ -291,24 +294,24 @@ Im realen Betrieb wird die Luftfeuchtigkeit von \SI{75}{\%} ziemlich gut erreich
 
 \subsection{Allgemeine Anforderungen}
 
-Da das bisherige Wirbelbett nicht flexibel genug konfigurierbar war, musste es neu konstruiert werden und dabei möglichst modular werden. Zum einen soll es möglich sein Probenröhrchen von \SI{5}{mm}, \SI{20}{mm}, \SI{30}{mm} und \SI{40}{mm} nutzen zu können. Weiterhin ist es erforderlich sowohl die Probenröhrchen als auch das Probenmaterial einfach und schnell wechseln zu können. Außerdem wurde gefordert, das aus dem Probenröhrchen austretende Partikel aufgefangen werden können. Des weiteren musste ein neuer Filter für den Übergang vom Anschlusszylinder zum Probenröhrchen gefunden werden. 
+Da das bisherige Wirbelbett nicht flexibel genug konfigurierbar war, musste es neu konstruiert werden und dabei möglichst modular werden. Zum einen soll es möglich, sein Probenröhrchen von \SI{5}{mm}, \SI{20}{mm}, \SI{30}{mm} und \SI{40}{mm} nutzen zu können. Zum anderen ist es erforderlich, sowohl die Probenröhrchen als auch das Probenmaterial einfach und schnell wechseln zu können. Außerdem wurde gefordert, dass aus dem Probenröhrchen austretende Partikel aufgefangen werden können. Des weiteren musste ein neuer Filter für den Übergang vom Anschlusszylinder zum Probenröhrchen gefunden werden. 
 
 
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[scale=0.45]{Zusammenbau_fluides_Bett.png}
-		\caption[Modell Wirbelbett]{Featureerläuterung Wirbelbett. Die Luft wird durch den Lufteinlass in eingelassen und strömt dann am Ionisator vorbei. Anschließend wird die Luft durch den Filter in das Probenröhrchen gedrückt und zum Schluss durch den Granulatfänger. Der Stabilisator und der Ringeinsatz dienen der Stabilisation des Röhrchens im oberen Teil, während Röhrchenhalter und Deckplatte den dichten Abschluss mit dem Anschlusszylinder sicherstellen.}
+		\includegraphics[scale=0.4]{Zusammenbau_fluides_Bett.png}
+		\caption[Modell Wirbelbett]{Featureerläuterung Wirbelbett. Die Luft wird durch den Lufteinlass eingelassen und strömt dann am Ionisator vorbei. Anschließend wird die Luft durch den Filter in das Probenröhrchen gedrückt und zum Schluss durch den Granulatfänger. Der Stabilisator und der Ringeinsatz dienen der Stabilisation des Röhrchens im oberen Teil, während Röhrchenhalter und Deckplatte den dichten Abschluss mit dem Anschlusszylinder sicherstellen.}
 	\end{center}
 \end{figure}
 
-Eine weitere Anforderung bestand in der Integration eine Ionisators, sodass die durch das Probenröhrchen strömende Luft ionisiert werden kann. Die gesamte Konstruktion muss zudem in den Lichtstreuaufbau passen. Im Folgenden werden die im Bild zu sehenden Bauteile in Abschnitten diskutiert, die sich mit der Methode zum auffangen des Granulats, dem Anschlusszylinder, dem Röhrchenhalter, der Halterung des Wirbelbetts und dem Filter beschäftigen.
+Eine weitere Anforderung bestand in der Integration eines Ionisators, mit dem die durch das Probenröhrchen strömende Luft ionisiert werden kann. Die gesamte Konstruktion muss zudem in den Lichtstreuaufbau passen. Im Folgenden werden die in Abb. 2.11 zu sehenden Bauteile in Abschnitten diskutiert, die sich mit der Methode zum Auffangen des Granulats, dem Anschlusszylinder, dem Röhrchenhalter, der Halterung des Wirbelbetts und dem Filter beschäftigen.
 
 
 \subsection{Auffangen des Granulats}
 
 \subsubsection{Anforderung}
 
-Wie schon in der Einleitung beschrieben, hat ein granulares Medium mehrere Phasen gleichzeitig, von denen die oberste die Gasphase ist. Je nach Füllstand und Gasfluss des Messröhrchens kann es nun passieren, das einzelne Partikel oben aus dem Röhrchen hinausfliegen. Außerdem braucht es eine Absicherung gegen Fehlbedienung, sodass bei zu hohem Gasstrom kein Granulat aus dem Probenröchrchen austritt.
+Wie schon in der Einleitung beschrieben, hat ein granulares Medium mehrere Phasen gleichzeitig, von denen die oberste die Gasphase ist. Je nach Füllstand und Gasfluss des Messröhrchens kann es nun passieren, dass einzelne Partikel oben aus dem Röhrchen hinausfliegen. Außerdem ist eine Absicherung gegen Fehlbedienung notwendig, sodass bei zu hohem Gasstrom kein Granulat aus dem Probenröhrchrchen austritt.
 
 \subsubsection{Auswahl}
 
@@ -322,21 +325,20 @@ Ein in der Industrie übliches Produkt, um Luft von Partikeln zu säubern, ist d
 	\end{center}
 \end{figure}
 
-Dieser basiert auf dem Prinzip, das die Luft immer weiter beschleunigt wird und die darin enthaltenen Partikel an die Wand gedrückt werden und schließlich nach unten raus fallen. Das Problem bei diesem Bauteil besteht darin, das die kommerziell erhältlichen Versionen sehr teuer sind und zudem zu groß für unserem Aufbau passen. 
-Weiterhin wäre ein erheblicher Konstruktionsaufwand nötig, um einen eigenen Zyklon zu bauen, da die Luft in unserem Versuch von unten kommt, der Zyklon sie aber von der Seite braucht. Eine Alternative dazu ist ein Trichter, der den Querschnitt aufweitet und so den Gasstrom verlangsamt. Aus Kosten und den oben beschriebenen Konstruktionsproblemen wurde entschieden einen Trichter zu entwerfen.
-
+Dieser basiert auf dem Prinzip, dass die Luft immer weiter beschleunigt wird und die darin enthaltenen Partikel an die Wand gedrückt werden und schließlich nach unten heraus fallen. Das Problem bei diesem Bauteil besteht darin, dass die kommerziell erhältlichen Versionen sehr teuer sind und zudem zu groß für unserem Aufbau sind. 
+Weiterhin wäre ein erheblicher Konstruktionsaufwand nötig, um einen eigenen Zyklon zu bauen, da die Luft in unserem Versuch von unten kommt, sie beim Zyklon aber von der Seite zugeführt werden muss. Eine Alternative dazu ist ein Trichter, der den Querschnitt aufweitet und so den Gasstrom verlangsamt. Aus Kosten und den oben beschriebenen Konstruktionsproblemen wurde entschieden einen, Trichter zu entwerfen.
 
 
 \subsubsection{Umsetzung}
 
 Um den Gasstrom zu verlangsamen und gleichzeitig das Einfüllen des Granulats zu erleichtern, wurde jeweils ein Trichter konstruiert, der passgenau mit dem Innendurchmesser jedes Probenröhrchens abschließt und zudem den Querschnitt verdoppelt. \\
-Wie man anhand der Formel $v_a = \frac{Q}{A}$ \cite{Grollius2012} sehen kann, ist die Geschwindigkeit des Gasstrom antiproportional zum Querschnitt des Rohrs. Wenn man also den Querschnitt verdoppelt, dann viertelt man die Geschwindigkeit des Gasstroms. Dies wurde für jeden Durchmesser gemacht. Man könnte zwar bei gleicher Höhe auch die Querschnitte unter \SI{40}{mm} auf \SI{80}{mm} aufweiten, allerdings bringt das stömungstechnisch nicht viel, da sich der Luftstrom nicht so schnell so stark aufweiten kann. \\
+Wie man anhand der Formel $v_a = \frac{Q}{A}$ \cite{Grollius2012} sehen kann, ist die Geschwindigkeit des Gasstrom antiproportional zum Querschnitt des Rohrs. Wenn man also den Querschnitt verdoppelt, dann viertelt man die Geschwindigkeit des Gasstroms. Dies wurde für jeden Durchmesser gemacht. Man könnte bei gleicher Höhe die Querschnitte unter \SI{40}{mm} auf \SI{80}{mm} aufweiten. Allerdings bringt das stömungstechnisch nicht viel, da sich der Luftstrom nicht so schnell so stark aufweiten kann. \\
 Zudem wurde ein abnehmbarer Filter oben auf den Trichter gespannt, um einen rudimentären Schutz gegen austretende Partikel bei Fehlbedienung zu gewährleisten.
 
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[scale=0.4]{Schnitt_Trichter.png}
-		\caption[Skizze Trichter]{Schnitt durch Trichter. Man sieht den Torus zur Stabilisation am Rohr und die Aufweitung des Durchmessers zur Geschwindigkeitsverminderung der Luft.}
+		\caption[Skizze Trichter]{Schnitt durch den Trichter. Man sieht den Torus zur Stabilisation am Rohr und die Aufweitung des Durchmessers zur Geschwindigkeitsverminderung der Luft.}
 	\end{center}
 \end{figure}
 
@@ -345,11 +347,11 @@ Zudem wurde ein abnehmbarer Filter oben auf den Trichter gespannt, um einen rudi
 
 \subsubsection{Anforderungen}
 
-Der Ionisator sollte in der Mitte des Luftstroms platziert werden, damit die Ionen möglichst gut von der Luft mitgenommen werden können. Zudem sollte der Ionisator einfach an und absteckbar sein, da die teilweise im System verwendete Luft sehr feucht ist und dann Korrosionsgefahr besteht.
+Der Ionisator sollte in der Mitte des Luftstroms platziert werden, damit die Ionen möglichst gut von der Luft mitgenommen werden können. Zudem sollte der Ionisator einfach an- und absteckbar sein, da die teilweise im System verwendete Luft sehr feucht ist und dann Korrosionsgefahr besteht.
 
 \subsubsection{Umsetzung}
 
-Damit keine dauerhaften Veränderungen am Ionisatorkopf selbst vorgenommen werden mussten, wurde beschlossen den Kopf in einen Adapter zu stecken und diesen mit einem Gewinde am Anschlusszylinder zu befestigen. Dazu wird der Innendurchmesser des Adapters so nah wie möglich an den Außendruchmesser des Ionisatorkopfes angenährt. Zur Sicherstellung der Luftdichtigkeit und der Stabilität wird der Ionisatorkopf in den Adapter eingeklebt. Außen auf den Adapter wird ein Gewinde geschnitten mit dem der Adapter, unter Verwendung von Teflonband, in den Anschlusszylinder eingedreht werden kann.
+Damit keine dauerhaften Veränderungen am Ionisatorkopf selbst vorgenommen werden mussten, wurde beschlossen, den Kopf in einen Adapter zu stecken und diesen mit einem Gewinde am Anschlusszylinder zu befestigen. Dazu wird der Innendurchmesser des Adapters so nah wie möglich an den Außendruchmesser des Ionisatorkopfes angenährt. Zur Sicherstellung der Luftdichtigkeit und der Stabilität wird der Ionisatorkopf in den Adapter eingeklebt. Außen auf den Adapter wird ein Gewinde geschnitten mit dem der Adapter, unter Verwendung von Teflonband, in den Anschlusszylinder eingedreht werden kann.
 
 \begin{figure}[h!]
 	\begin{center}
@@ -367,7 +369,7 @@ Am hinteren Ende des Adapters befindet sich ein hervorstehender Ring, der eine d
 
 \subsubsection{Anforderungen}
 
-Das Ziel bei diesem Zylinder war den Anschluss an das Gassystem zu haben und eine Halterung für die verschieden großen Röhrchen zu haben, die einen schnellen Wechsel gewährleistet. Zudem sollte gewährleistet werden, das ein Ionisator in den Luftstrom eingebracht werden kann.
+Das Ziel bei diesem Zylinder, war den Anschluss an das Gassystem zu bauen und eine Halterung für die verschieden großen Röhrchen zu haben, die einen schnellen Wechsel ermöglicht. Zudem sollte gewährleistet werden, das ein Ionisator in den Luftstrom eingebracht werden kann.
 
 
 \subsubsection{Umsetzung}
@@ -385,20 +387,21 @@ Dabei ist $d$ der innere Durchmesser des Anschlusszylinders und $\nu$ die kineti
 
 \begin{align*}
 v_{Gas} &= \frac{\frac{\SI{3}{m^3}}{\SI{3600}{s}}}{\pi \cdot \SI{0,02}{m}^2} = \SI{0,66}{m/s} 
-\intertext{Damit ergibt die sich Reynoldszahl zu:}
+\intertext{Damit ergibt die sich Reynoldszahl:}
 Re &= \frac{\SI{0,66}{m/s} \cdot \SI{0,04}{m}}{ \nu\footnotemark[1]} = 1724,36
 \end{align*}
 
 \footnotetext[1]{kinematische Viskosität von Luft = $\SI{15,31}{m^2/s}$ bei Normaldruck und \SI{20}{^\circ C}}
 
 Die Reynoldszahl ist kleiner als 2300, damit ist der Gasstrom sehr wahrscheinlich laminar. \\
-Auf der Oberseite befindet sich eine Nut in die der O-Ring zum Abdichten der Verbindung Anschlusszylinder-Röhrchenhalter eingelegt wird. Damit diese Verbindung dicht ist, befindet sich auf der Oberseite zudem ein Arretierungsmechanismus in den der Röhrchenhalter eingedreht wird. Zudem garantiert dieser Mechanismus ein einfaches und schnelles Lösen der Komponenten. Um das Dichtverhalten zwischen Plastik und O-Ring zu verbessern wurde Silikon mit dem O-Ring verbunden. Dies geschieht indem man Silikon (Elastosil E43, Wacker) in beide Nute streicht den O-Ring einlegt und den Mechanismus zwei Tage lang arretiert lässt. Nach dem Aushärten sind O-Ring und Silikon verbunden und zeigen nun optimales Dichtverhalten. 
-Zum Arretieren muss eine Kraft von \SI{60}{N} auf die Silikon-Gummi Dichtung ausgeübt werden. Bei Arretierung wird diese Kraft an acht Punkten gehalten, jeder Punkt hält also \SI{7,5}{N}. In Versuchen stellte sich heraus, das jeder dieser Punkte erst bei einer Krafteinwirkung von \SI{75}{N} anfängt nachzugeben. Die Festigkeit im Arbeitsbereich ist mit einem Sicherheitsfaktor von ca 10 garantiert. Die Messmethoden zur Feststellung dieser Werte sind wie folgt: \hfill \\
-Der Anschlusszylinder wird mit Röhrchenhalter im arretierten Zustand unter die das Kraftmessgerät (Ametek Chatillion DFS-025) gefahren, anschließend wir die Arretierung gelöst und der vom Messgerät angezeigte Wert ist die nötige Kraft, die zur Arretierung benötigt wird. 
+
+Auf der Oberseite befindet sich eine Nut in die der O-Ring zum Abdichten der Verbindung Anschlusszylinder-Röhrchenhalter eingelegt wird. Damit diese Verbindung dicht ist, befindet sich auf der Oberseite zudem ein Arretierungsmechanismus. in den der Röhrchenhalter eingedreht wird. Zudem garantiert dieser Mechanismus ein einfaches und schnelles Lösen der Komponenten. Um das Dichtverhalten zwischen Plastik und O-Ring zu verbessern, wurde Silikon mit dem O-Ring verbunden. Dies geschieht indem man Silikon (Elastosil E43, Wacker) in beide Nute streicht, den O-Ring einlegt und den Mechanismus zwei Tage lang ruhen lässt. Nach dem Aushärten sind O-Ring und Silikon verbunden und zeigen nun optimales Dichtverhalten. 
+Zum Arretieren muss eine Kraft von \SI{60}{N} auf die Silikon-Gummi Dichtung ausgeübt werden. Bei der Arretierung wird diese Kraft an acht Punkten gehalten, jeder Punkt hält also \SI{7,5}{N}. In Versuchen stellte sich heraus, das jeder dieser Punkte erst bei einer Krafteinwirkung von \SI{75}{N} nachgibt. Die Festigkeit im Arbeitsbereich ist mit einem Sicherheitsfaktor von ca 10 garantiert. Die Messmethoden zur Feststellung dieser Werte sind wie folgt: \hfill \\
+Der Anschlusszylinder wird mit Röhrchenhalter im arretierten Zustand unter das Kraftmessgerät (Ametek Chatillion DFS-025) gefahren, anschließend wir die Arretierung gelöst und der vom Messgerät angezeigte Wert ist die nötige Kraft, die zur Arretierung benötigt wird. 
 
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[scale=0.55]{Messmethode_Anpressung.png}
+		\includegraphics[scale=0.52]{Messmethode_Anpressung.png}
 		\caption[Messaufbau Arretierung 1]{Messaufbau zur Arretierungskraftbestimmung. Der Anschlusszylinder und der Röhrchenhalter werden im arretierten Zustand unter die Aufnahmeplatte gestellt. Anschließend wird die Arretierung gelöst und die ausgeübte Kraft am Messgerät abgelesen.}
 	\end{center}
 \end{figure}
@@ -424,7 +427,7 @@ Eine Kraft dieser Größenordnung tritt bei unseren Versuchsbedingungen nicht au
 	\begin{minipage}[hbt]{6.0cm}
 		\centering
 		\includegraphics[width=6.0cm]{Zylinder_frontal.png}
-		\caption[Zylinder V1 frontal]{3D Modell Anschlusszylinder. Die Arretierung dient dazu den Röhrchenhalter am Anschlusszylinder zu befestigen, während in der Nut eine Gummi-Silikon Dichtung dichtet. In das Innengewinde wird der Adapter für den Ionisator eingeschraubt.}
+		\caption[Zylinder V1 frontal]{3D Modell Anschlusszylinder. Die Arretierung dient dazu, den Röhrchenhalter am Anschlusszylinder zu befestigen, während in der Nut eine Gummi-Silikon Dichtung dichtet. In das Innengewinde wird der Adapter für den Ionisator eingeschraubt.}
 	\end{minipage}
 	\hfill
 	\begin{minipage}[hbt]{7cm}
@@ -441,7 +444,7 @@ In der Frontansicht sieht man den Einlass mit Arretierung für den Ionisator. Zu
 \hfill \\
 
 Erste Messversuche mit dem 3D gedruckten Anschlusszylinder zeigten, das \SIrange{40}{50}{\%} des Volumenstroms auf unbekanntem Weg verloren gehen. Daher wurde das gesamte Wirbelbett in Wasser getaucht, um auf diese Weise die Leckstellen zu identifizieren. Dabei stellte sich heraus, dass das 3D gedruckte Plastik an sich undicht ist. Hauptsächlich strömte die Luft an den Löchern für die Befestigung an der Halteplatte und an überhängenden Kanten aus. Die Leckstellen können auf Grund der schwankenden Druckqualität von Druck zu Druck variieren, allerdings wurden Leckstellen vornehmlich an Kanten und Löchern und nicht an großen durchgehenden Flächen beobachtet. \\
-Auf Grund dieser Erkenntnisse wurde beschlossen das Design des Anschlusszylinders so abzuändern, das dieser in der Werkstatt aus Aluminium (Aluminium 7075) fräßbar ist. Dazu wurde der bisherige Arretiermechanismus und die Verbindung zum Justiermechanismus weggelassen, da dies nur sehr aufwändig zu fertigen ist.
+Auf Grund dieser Erkenntnisse wurde beschlossen, das Design des Anschlusszylinders so abzuändern, sodass dieser in der Werkstatt aus Aluminium (Aluminium 7075) fräßbar ist. Dazu wurde der bisherige Arretiermechanismus und die Verbindung zum Justiermechanismus weggelassen, da dies nur sehr aufwändig zu fertigen ist.
 
 
 \begin{figure}[h!]
@@ -451,7 +454,7 @@ Auf Grund dieser Erkenntnisse wurde beschlossen das Design des Anschlusszylinder
 	\end{center}
 \end{figure}
 
-Zudem stellte sich während der Messungen heraus, das der verwendete Luftionisator (Haug Static Line LC) nicht den gewünschten Effekt erzielt, daher wurde dieser Anschluss bei der Ausführung in Aluminium ebenfalls weggelassen. Um den Anschlusszylinder trotzdem mit dem Justiermechanismus zu verbinden, wird dieser Teil weiterhin im 3D Drucker gedruckt und anschließend mit zwei Komponentenkleber (UHU Plus, 2-K-Epoxidkleber) an den Anschlusszylinder angeklebt.
+Zudem stellte sich während der Messungen heraus, dass der verwendete Luftionisator (Haug Static Line LC) nicht den gewünschten Effekt erzielt. Daher wurde dieser Anschluss bei der Ausführung in Aluminium ebenfalls weggelassen. Um den Anschlusszylinder trotzdem mit dem Justiermechanismus zu verbinden, wird dieser Teil weiterhin im 3D Drucker gedruckt und anschließend mit zwei Komponentenkleber (UHU Plus, 2-K-Epoxidkleber) an den Anschlusszylinder angeklebt.
 
 \newpage
 
@@ -466,7 +469,7 @@ Der Röhrchenhalter besteht aus drei Teilen, eins dient zur Verbinung mit dem An
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[scale=0.5]{Schnitt_Roehrchenhalter.png}
-		\caption[Schnitt Röhrchenhalter]{Schnitt durch Röhrchenhalter. Der Röhrchenhalter wird mit der oben gemessenen Kraft auf en Anschlusszylinder gedrückt und anschließen durch drehen arretiert}
+		\caption[Schnitt Röhrchenhalter]{Schnitt durch den Röhrchenhalter. Der Röhrchenhalter wird mit der oben gemessenen Kraft auf en Anschlusszylinder gedrückt und anschließend durch Drehen arretiert.}
 	\end{center}
 \end{figure}
 
@@ -476,7 +479,7 @@ Diese Teile werden durch sechs M6 Schrauben verbunden, damit die Kraft auf den d
 \begin{figure}[h!]
 		\begin{center}
 			\includegraphics[scale=0.5]{Schnitt_Deckplatte.png}
-			\caption[Schnitt Deckplatte]{Schnitt durch Deckplatte. Die Deckplatte wird auf den mit Schrauben auf den Röhrchehalter geschraubt und dichtet mit einem O-Ring das Röhrchen gegen den Röhrchenhalter ab. Die Anpressfläche ist mit Silikon beschichtet und sorgt für einen dichten Kontakt zum O-Ring}
+			\caption[Schnitt Deckplatte]{Schnitt durch die Deckplatte. Die Deckplatte wird mit Schrauben auf den Röhrchenhalter geschraubt und dichtet mit einem O-Ring das Röhrchen gegen den Röhrchenhalter ab. Die Anpressfläche ist mit Silikon beschichtet und sorgt für einen dichten Kontakt zum O-Ring.}
 		\end{center}
 \end{figure}
 
@@ -487,7 +490,7 @@ Die Kraft, die eine einzelne Schraube auf den Ring ausübt, kann aus dem angeleg
 \begin{align*}
 	M_A &= M_K + M_G = F_{VM} \cdot \mu \cdot r_A + F_{VM} \cdot \frac{d_2}{2} \cdot \tan\left( \alpha + \phi' \right) \\
 	&= \left( F_{Kl} + F_A \cdot \left( 1 - \Phi \right) + F_Z \right) \cdot \mu \cdot r_A + \left( F_{Kl} + F_A \cdot \left( 1 - \Phi \right) + F_Z \right) \cdot \frac{d_2}{2} \cdot \tan\left( \alpha + \phi' \right) \\
-	\intertext{Man geht davon aus, das kein Setzverhalten eintritt bzw. dieses vernachlässigbar ist. Zudem kann man nur die resultierende Kraft bestimmen:}
+	\intertext{Man geht davon aus, dass kein Setzverhalten eintritt bzw. dieses vernachlässigbar ist. Zudem kann man nur die resultierende Kraft bestimmen:}
 	&= F_{res} \cdot \left( \mu \cdot r_A  + \frac{d_2}{2} \cdot \tan\left( \alpha + \phi' \right) \right) \\
 	\intertext{Es wird das Moment gemessen und daraus die Kraft berechnet:}
 	F_{res} &= \frac{M_A}{ \mu \cdot \frac{d_3 + D_B}{4}  + \frac{d_2}{2} \cdot \tan\left( \alpha + \phi' \right)}
@@ -501,7 +504,7 @@ Die Kraft, die eine einzelne Schraube auf den Ring ausübt, kann aus dem angeleg
 
 Bei sechs Schrauben erhält man eine Gesamtkraft von $F_{ges} = \SI{2,904}{N}$. Dies reicht auch bei einem Probenrohrdurchmesser von \SI{40}{mm} aus, um eine luftdichte Verbindung zu erreichen. Zudem ist man mit dieser Kraft deutlich unter der Belastungsgrenze von ABS, die bei ca \SI{44}{N/mm} (ISO 527, \cite{C.Dallner2006, ThyssenPlastics}) liegt.
 
-Der dritte Teil des Halters ist der Stabilisator und sorgt dafür, dass das Röhrchen nicht seitlich verkippt werden kann und es dadurch zu Undichtigkeiten kommt. Damit diese Halterung nicht für jedes Röhrchen separat montiert werden muss, wurde ein universelles Ringsystem entworfen. Das Basisteil wird am Schanier festgeschraubt und hat $\SI{40}{mm}$ Durchmesser. In das Basisteil können nun weitere Ringe eingesetzt und durch verdrehen arretiert werden, damit auch die Durchmesser $30,20,5\SI{}{\ mm}$ einen guten Halt haben.
+Der dritte Teil des Röhrchenhalters ist der Stabilisator und sorgt dafür, dass das Röhrchen nicht seitlich verkippt werden kann und es dadurch zu Undichtigkeiten kommt. Damit diese Halterung nicht für jedes Röhrchen separat montiert werden muss, wurde ein universelles Ringsystem entworfen. Das Basisteil wird am Schanier festgeschraubt und hat $\SI{40}{mm}$ Durchmesser. In das Basisteil können nun weitere Ringe eingesetzt und durch verdrehen arretiert werden, damit auch die Durchmesser $30,20  \ \text{und} \ 5\SI{}{\ mm}$ einen guten Halt haben.
 
 	\begin{figure}[h!]
 		\begin{minipage}[hbt]{7.4cm}
@@ -517,7 +520,7 @@ Der dritte Teil des Halters ist der Stabilisator und sorgt dafür, dass das Röh
 		\end{minipage}
 	\end{figure}
 	
-\subparagraph{Anpassungen an gefräßten Anschlusszylinder}
+\subparagraph{Anpassungen an den gefräßten Anschlusszylinder}
 \hfill \\
 
 Auf Grund der Veränderungen am Anschlusszylinder musste der Röhrchenhalter daran angepasst werden. Dazu  wurde der ursprüngliche Mechanismus zur Arretierung entfernt und stattdessen sechs Langlöcher eingefügt, damit der Halter von oben auf den Anschlusszylinder geschraubt werden kann. Die Röhrchenhalter wurden auch aus Aluminium 7075 gefertigt, da nur so deren Luftdichtheit gewährleistet ist.
@@ -525,19 +528,18 @@ Auf Grund der Veränderungen am Anschlusszylinder musste der Röhrchenhalter dar
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[scale=0.5]{Schnitt_RoehrchenhalterV2.png}
-		\caption[Röhrchenhalter V2]{Schnitt durch Röhrchenhalter. Der Röhrchenhalter wurde hat den selben Durchmesser wie der Anschlusszylinder, allerdings nun keine Füße zur Arretierung und keine Drehhilfe mehr.}
+		\caption[Röhrchenhalter V2]{Schnitt durch den Röhrchenhalter. Der Röhrchenhalter hat denselben Durchmesser wie der Anschlusszylinder, allerdings nun keine Füße zur Arretierung und keine Drehhilfe mehr.}
 	\end{center}
 \end{figure}
 
-Mit der oben verwendete Gleichung lässt sich auch die Anpresskraft auf den Anschlusszylinder berechnen. Bei einem gemessenen Drehmoment (mittels CDI Werameter 7131A) von $M_A = \SI{1,5}{Nm}$, ist die wirkende Kraft einer Schraube: \\
-
+Mit der oben verwendete Gleichung lässt sich auch die Anpresskraft auf den Anschlusszylinder berechnen. Bei einem gemessenen Drehmoment (mittels CDI Werameter 7131A) von $M_A = \SI{1,5}{Nm}$, berechnet sich die wirkende Kraft wie folgt: 
 Man kann $d_2$, $d_3$ und $\alpha$ aus der Gewindetabelle im Anhang ablesen. Der Reibwert $\mu$ wird mit $\mu = \SI{0,25}{}$ angenommen \cite{GDV2011}. $\phi'$ berechnet man entsprechend der Formel:
 \begin{align*}
 	\phi' &= \arctan\left( \frac{0,25}{\cos(\SI{30}{^\circ})} \right) = \SI{16,16}{^\circ} \\
 	F_{res} &= \frac{\SI{2,5}{Nm}}{0,25 \cdot \frac{\SI{4,773}{mm} + \SI{6}{mm}}{4} + \frac{\SI{5,35}{mm}}{2} \cdot \tan(\SI{3,405}{^\circ} + \SI{16,16}{^\circ})} = \SI{1,54}{N}
 \end{align*}
 
-Bei sechs Schrauben erhält man eine Gesamtkraft von $F_{ges} = \SI{9,24}{N}$. Das führt zu einer dichten Verbindung. Dabei ist darauf zu achten, das zwischen Röhrchenhalter und Anschlusszylinder ein Spalt \SI{2}{mm} bleibt. Dies schont die Dichtung und ist trotzdem luftdicht.
+Bei sechs Schrauben erhält man eine Gesamtkraft von $F_{ges} = \SI{9,24}{N}$. Das führt zu einer dichten Verbindung. Dabei ist darauf zu achten, das zwischen Röhrchenhalter und Anschlusszylinder ein Spalt von \SI{2}{mm} bleibt. Dies schont die Dichtung und ist trotzdem luftdicht.
 
 \newpage
 
@@ -551,7 +553,7 @@ Sowohl für den Aufbau im Labor als auch für den Aufbau im Lichtstreuaufbau, wu
 \paragraph{Anforderungen}
 
 \hfill \\
-Die Aufgabe bestand darin, das Wirbelbett so in den Aufbau zu integrieren, sodass weder die Streulichtdiagnostik eingeschränkt, noch der Aufbau verändert wird. Zudem sollte die Höhe des Wirbelbetts rudimentär geändert werden und die Position in der Horizontalen im Submilimeterbereich eingestellt werden können. 
+Die Aufgabe bestand darin, das Wirbelbett so in den Aufbau zu integrieren, dass weder die Streulichtdiagnostik eingeschränkt noch der Aufbau verändert wird. Zudem sollte die Höhe des Wirbelbetts rudimentär geändert werden und die Position in der Horizontalen im Submillimeterbereich eingestellt werden können. 
 
 
 \paragraph{Umsetzung}
@@ -561,10 +563,10 @@ Um den Anforderungen gerecht zu werden, wurde eine Konstruktion aus zwei L-förm
 \begin{figure}[h!]
 		\centering
 		\includegraphics[scale=1.1]{Halterung_Lichtstreu_Vogel.png}
-		\caption[Haltearm Lichtstreuaufbau Draufsicht]{Draufsicht auf Lichtstreuhalterung. Das Wirbelbett wird mit dem Justiermechanismus auf die Halteplatte geschraubt und anschließend im Laserstrahl positioniert.}
+		\caption[Haltearm Lichtstreuaufbau Aufsicht]{Aufsicht auf Lichtstreuhalterung. Das Wirbelbett wird mit dem Justiermechanismus auf die Halteplatte geschraubt und anschließend im Laserstrahl positioniert.}
 \end{figure}
 
-In der Draufsicht sieht man, das zum Verschieben nach links und rechts zwei durch eine Laborklemme (rot) gegeneinander verschiebbare Träger genutzt wurden. Ans Ende es linken Trägers wurde mittels zwei Winkeln die Halteplatte für das Wirbelbett montiert.
+In der Aufsicht sieht man, dass zum Verschieben nach links und rechts zwei durch eine Laborklemme (rot) gegeneinander verschiebbare Träger genutzt wurden. Am Ende des linken Trägers wurde mittels zweier Winkel die Halteplatte für das Wirbelbett montiert.
 
 \newpage
 
@@ -578,8 +580,8 @@ In der Draufsicht sieht man, das zum Verschieben nach links und rechts zwei durc
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.16]{Lichtstreuaufbau.jpg}
-	\caption[Aufbau in Lichtstreuaufbau]{Bild von Halterung im Lichtstreuaufbau. Die Grundplatte wird auf den Gewindeboden geschraubt und anschließend das Wirbelbett mit der Mikrometerschraube im Laserstrahl positioniert.}
+	\includegraphics[scale=0.7]{Lichtstreuaufbau.png}
+	\caption[Aufbau in Lichtstreuaufbau]{Bild von der Halterung im Lichtstreuaufbau. Die Grundplatte wird auf den Gewindeboden geschraubt und anschließend das Wirbelbett mit der Mikrometerschraube im Laserstrahl positioniert.}
 \end{figure}
 
 \clearpage
@@ -588,18 +590,18 @@ In der Draufsicht sieht man, das zum Verschieben nach links und rechts zwei durc
 
 \paragraph{Anforderungen}
 \hfill \\
-An die Halterungen im Labor gab es lediglich die Anforderung, das sie stabil ist und eine horizontale Ausrichtung des Wirbelbetts ermöglicht.
+An die Halterung im Labor gab es lediglich die Anforderung, das sie stabil ist und eine horizontale Ausrichtung des Wirbelbetts ermöglicht.
 
 \paragraph{Umsetzung}
 \hfill \\
-Die Anforderungen wurden zum einen durch eine Platte auf der der Justiermechanismus des Wirbelbetts festgeschraubt wird erfüllt. Für einen stabilen Stand werden in Platte vier Beine mit Füßen von jeweils \SI{3}{cm} Durchmesser eingeschraubt. Durch den Schraubmechnismus können auch schiefe Arbeitsflächen korrigiert werden. Zudem wurde, wegen der Gewichtserhöhung des Wirbelbetts, ein Gegengewicht an den beiden dem Wirbelbett gegenüberliegenden Beinen angebracht.
+Die Anforderungen wurden zum einen erfüllt durch eine Platte, auf der der Justiermechanismus des Wirbelbetts festgeschraubt wird. Für einen stabilen Stand werden in die Platte vier Beine mit Füßen von jeweils \SI{3}{cm} Durchmesser eingeschraubt. Durch den Schraubmechnismus können auch unebene Arbeitsflächen korrigiert werden. Zudem wurde, wegen der Gewichtserhöhung des Wirbelbetts, ein Gegengewicht an den beiden dem Wirbelbett gegenüberliegenden Beinen angebracht.
 
 
 
 \begin{figure}[h!]
 	\begin{center}
 	\includegraphics[scale=0.7]{Halterung_Labor_Seite.png}
-	\caption[Halterung Labor]{Schema Laborhalterung. Die Füße sind schraubbar, somit können schiefe Arbeitsflächen ausgeglichen werden}
+	\caption[Halterung Labor]{Schema die Laborhalterung. Die Füße sind schraubbar, somit können unebene Arbeitsflächen ausgeglichen werden}
     \end{center}
 \end{figure}
 
@@ -617,16 +619,17 @@ Die Anforderungen wurden zum einen durch eine Platte auf der der Justiermechanis
 
 \paragraph{Anforderungen}
 \hfill \\
-Das Ziel bestand darin einen Filter zu finden, der, im Gegensatz zu dem vorher verwendeten Schwamm, immer die gleichen Eigenschaften aufweist, auch wenn man ihn austauscht. Zudem muss der Filter durchlässig genug sein um bis zu $\SI{3000}{l/h}$ Luft durchzulassen, ohne zu reißen. Zugleich müssen die Poren fein genug sein, damit die Partikel des kleinsten Granulats nicht hindurch fallen. Außerdem muss der Filter dünn genug sein, damit der die Höhe der Konstruktion nicht negativ beeinflusst, da es beim Lichtstreuaufbeu eine Höhenbegrenzung gibt. Weiterhin musste der Filter hydrophob und antistatisch sein, sodass er bei Zuschaltung des Luftbefeuchters kein Wasser aufnimmt und dadurch verstopft und sich nicht statisch aufläd.
+Das Ziel bestand darin einen Filter zu finden, der, im Gegensatz zu dem vorher verwendeten Schwamm, immer die gleichen Eigenschaften aufweist, auch wenn man ihn austauscht. Zudem muss der Filter durchlässig genug sein um bis zu $\SI{3000}{l/h}$ Luft durchzulassen, ohne zu reißen. Zugleich müssen die Poren fein genug sein, damit die Partikel des kleinsten Granulats nicht hindurch fallen. Außerdem muss der Filter dünn genug sein, damit er die Höhe der Konstruktion nicht negativ beeinflusst, da es beim Lichtstreuaufbeu eine Höhenbegrenzung gibt. Weiterhin musste der Filter hydrophob und antistatisch sein, sodass er bei Zuschaltung des Luftbefeuchters kein Wasser aufnimmt, dadurch verstopft und sich nicht statisch aufläd.
 
 
 \paragraph{Auswahl}
 \hfill \\
-Um einen geeigneten Filter zu finden wurde sich mit den Herstellern Merk Millipore, Sartorius und Nitto in Verbindung gesetzt. Am Schluss hatten wie die Auswahl zwischen folgenden Filtern:
+Um einen geeigneten Filter zu finden wurde Kontakt zu den Herstellern Merk Millipore, Sartorius und Nitto aufgenommen. Am Schluss bestand eine Auswahl zwischen folgenden Filtern:
 
 
 \begin{center}
 	\captionof{table}[Vergleich Filter]{Vergleich Filter}
+	\vspace{0.25cm}
 			\begin{tabular}{l|c|c|c}
 				& Sartorius & Merck Millipore & Nitto \\
 				\hline
@@ -647,11 +650,12 @@ Um einen geeigneten Filter zu finden wurde sich mit den Herstellern Merk Millipo
 
 \vspace{0.5cm}
 
-Es wurde sich für die Membran von Sartorius entschieden, weil sie alle Anforderungen erfüllt und in allen Belangen besser ist als die beiden Alternativen. Damit die Membran nicht verrutscht wurde ein jeweils passendes Stück auf die Probenröhrchen geklebt. So ist auch sicher gestellt, das kein Granulat unabsichtlich in den Anschlusszylinder fällt.
-Eine weitere wichtige Funktion des Filters ist es einen gleichmäßigen Gasstrom zu erzeugen. Dies wird durch die feine Porung erreicht und kann durch berechnen der Reynoldszahl für die verschiedenen Durchmesser bestätigt werden. Zur Berechnung geht man wieder vom maximalen Gasstrom von $\SI{3}{m^3/h}$ 
+Es wurde sich für die Membran von Sartorius entschieden, weil sie alle Anforderungen erfüllt und in allen Belangen besser ist als die beiden Alternativen. Damit die Membran nicht verrutscht, wurde ein jeweils passendes Stück auf die Probenröhrchen geklebt. So ist auch sicher gestellt, dass kein Granulat unabsichtlich in den Anschlusszylinder fällt.
+Eine weitere wichtige Funktion des Filters ist es, einen gleichmäßigen Gasstrom zu erzeugen. Dies wird durch die feine Porung erreicht und kann durch berechnen der Reynoldszahl für die verschiedenen Durchmesser bestätigt werden. Zur Berechnung geht man wieder vom maximalen Gasstrom von $\SI{3}{m^3/h}$ aus:
 
 \begin{center}
 	\captionof{table}[Reynoldszahlen Filter]{Reynoldszahlen bei verschiedenen Durchmessern}
+	\vspace{0.25cm}
 \begin{tabular}{S|S|S}
  {Röhrchendurchmesser [mm]}		& {Gasgeschwindigkeit $v_{Gas}$ [m/s]}	& {Reynoldszahl}  \\
 	\hline
@@ -672,18 +676,18 @@ Die Reynoldszahlen sind alle weit unter 2300, also ist die Strömung durch die e
 
 \section{AP 5 - Tests / Messungen}
 
-In diesem Abschnitt wird die Luftdichtigkeit des Wirbelbetts nachgewiesen, als auch Ergebnisse von Messungen an Granulaten dargelegt.
+In diesem Abschnitt wird die Luftdichtigkeit des Wirbelbetts nachgewiesen und die Ergebnisse von Messungen an Granulaten dargelegt.
 
 \subsection{Nachweis der Dichtigkeit}
 
 \paragraph{Messmethode}
 \hfill \\
-Um die Dichtigkeit möglichst nahe an den realen Messbedingungen zu testen, wurde entschieden, dass man die Volumenströme vor und hinter dem Wirbelbett miteinander vergleicht. Dies hat den Vorteil, dass der Filter auf dem das Granulat liegt einen beständigen Luftwiderstand darstellt und es dadurch, wie auch bei Messungen, zu einem Druckaufbau vor dem Filter kommt. Gegenüber diesem Druck muss die Apparatur mindestens luftdicht sein. Auf Grund mechanisch schwierigen Realisierbarkeit, das Röhrchen oben abzudichten, wurde sich für eine optische Methode entschieden.
+Um die Dichtigkeit möglichst nahe an den realen Messbedingungen zu testen, wurde entschieden, dass die Volumenströme vor und hinter dem Wirbelbett miteinander verglichen werden. Dies hat den Vorteil, dass der Filter, auf dem das Granulat liegt, einen beständigen Luftwiderstand darstellt und es dadurch, wie auch bei Messungen, zu einem Druckaufbau vor dem Filter kommt. Gegenüber diesem Druck muss die Apparatur mindestens luftdicht sein. Auf Grund der mechanisch schwierigen Realisierbarkeit, das Röhrchen oben abzudichten, entschied man sich für eine optische Methode.
 
 \paragraph{Ergebnisse}
 \hfill \\
 
-In einem ersten Verfahren wurde das gesamte Wirbelbett unter Wasser betrieben und dabei auf Blasen an Bauteilübergängen und Dichtungen geachtet. Über den Zeitraum einer üblichen Messung wurden dabei keine Blasenentstehung an Bauteilübergängen oder Dichtungen beobachtet. 
+In einem ersten Versuch wurde das gesamte Wirbelbett unter Wasser betrieben und dabei auf Blasen an Bauteilübergängen und Dichtungen geachtet. Über den Zeitraum einer üblichen Messung wurde dabei keine Blasenentstehung an Bauteilübergängen oder Dichtungen beobachtet. 
 Das zweite Verfahren bestand in der Anwendung von Lecksuchspray (ECO Leak Finder, CRC). Zur Untersuchung wurden alle Bauteilübergänge und Dichtungen am Wirbelbett mit dem Spray eingesprüht. 
 
 
@@ -701,7 +705,7 @@ Das zweite Verfahren bestand in der Anwendung von Lecksuchspray (ECO Leak Finder
 		\end{minipage}
 \end{figure}
 
-Im Falle eines Lecks wirft das Lecksuchspay große stabile Blasen. Nach Ablauf einer Messung waren, außen den im Verlauf des Aufsprühens entstandenen Blasen, keine weiteren entstanden.
+Im Falle eines Lecks wirft das Lecksuchspay große stabile Blasen. Im Verlauf einer Messung entstanden, außer den durch das Aufsprühen entstandenen, keine weiteren Blasen.
 
 \begin{figure}[h!]
 	\begin{minipage}[hbt]{6.5cm}
@@ -718,7 +722,7 @@ Im Falle eines Lecks wirft das Lecksuchspay große stabile Blasen. Nach Ablauf e
 \end{figure}
 
 
-Um unregelmäßige Lecks auszuschließen, wurde sich der lineare Zusammenhang zwischen dem Druck vor dem Wirbelbett und dem eingestellten Massenstrom zu Nutze gemacht. In der Theorie hat der Filter, auf dem das Granulat liegt einen konstanten Widerstand, also muss bei linearer Erhöhung des Massenstroms, der Druck auch linear ansteigen. Dafür wurde das zu dem Zeitpunkt verfügbare Röhrchen mit \SI{20}{mm} Innendurchmesser gewählt und der Druck über einen Massenstrombereich von \SIrange{0}{750}{l/h} gemessen. Dabei erhielt man folgende Kurve:
+Um unregelmäßige Lecks auszuschließen, machte man sich den linearen Zusammenhang zwischen dem Druck vor dem Wirbelbett und dem eingestellten Massenstrom zu Nutze. In der Theorie hat der Filter, auf dem das Granulat liegt, einen konstanten Widerstand, also muss bei linearer Erhöhung des Massenstroms der Druck auch linear ansteigen. Dafür wurde das zu dem Zeitpunkt verfügbare Röhrchen mit \SI{20}{mm} Innendurchmesser gewählt und der Druck über einen Massenstrombereich von \SIrange{0}{750}{l/h} gemessen. Dabei erhielt man folgende Kurve:
 
 \begin{figure}[H]
 	\begin{tikzpicture}
@@ -751,13 +755,12 @@ Um unregelmäßige Lecks auszuschließen, wurde sich der lineare Zusammenhang zw
 
 
 
-Die durch die Punkte gelegte Fitgerade hat eine Bestimmtheit von \SI{99,66}{\%}, was für eine sehr starke Linearität der Messdaten spricht. Die Abweichungen von der Fitgeraden können mit der Dehnung des Filters erklärt werden. Zudem können wir aus dem Verlauf ableiten, das wir entweder ein kleines, aber über den gesamten Flussbereich konstantes Leck oder kein Leck haben. Beide Fälle wirken sich nicht auf die Messgenauigkeit der Messmethode aus, da für diese vor allem die Linearität wichtig ist. 
+Die durch die Messunkte gelegte Fitgerade hat eine Bestimmtheit von \SI{99,66}{\%}, was für eine sehr starke Linearität der Messdaten spricht. Die Abweichungen von der Fitgeraden können mit der Dehnung des Filters erklärt werden. Zudem kann man aus dem Verlauf ableiten, das man entweder ein kleines, aber über den gesamten Flussbereich konstantes Leck oder es besteht kein Leck. Beide Fälle wirken sich nicht auf die Messgenauigkeit der Messmethode aus, da für diese vor allem die Linearität wichtig ist. 
 
-\newpage
 
 \subsection{Vermessung verschiedener Granulate}
 
-Zur Demonstration der Funktionsfähigkeit des Wirbelbetts wurden zwei Probemessungen gemacht. Dabei wurde festgestellt, das die Messkurven sehr genau sind und die Werte den theoretischen Berechnungen entsprechen.
+Zur Demonstration der Funktionsfähigkeit des Wirbelbetts wurden vier Probemessungen gemacht. Dabei wurde festgestellt, dass die Messkurven sehr genau sind und die Werte den theoretischen Berechnungen entsprechen.
 
 \begin{figure}[H]
 	\begin{tikzpicture}
@@ -785,7 +788,7 @@ Zur Demonstration der Funktionsfähigkeit des Wirbelbetts wurden zwei Probemessu
 	\end{tikzpicture}
 \end{figure}
 
-Man sieht ganz deutlich den Peak (ca \SI{340}{l/h}) an dem das Granulat vom festen in den fluidisierten Zustand übergeht und anschließend den Bubbling Zustand (ca \SIrange{400}{900}{l/h}) in dem die Druckdifferenz konstant bleibt. Im Bereich des Bubblings fluktuieren die Werte recht stark, da sich das Granulat stark auf und ab bewegt und so eine variierenden Gegenkraft ausübt. 
+Man sieht ganz deutlich den Peak (ca \SI{340}{l/h}), an dem das Granulat vom festen in den fluidisierten Zustand übergeht und anschließend in den Bubbling Zustand (ca \SIrange{400}{900}{l/h}), in dem die Druckdifferenz konstant bleibt. Im Bereich des Bubblings fluktuieren die Werte recht stark, da sich das Granulat stark auf und ab bewegt und so eine variierenden Gegenkraft ausübt. 
 
 \begin{figure}[H]
 	\begin{tikzpicture}
@@ -813,7 +816,7 @@ Man sieht ganz deutlich den Peak (ca \SI{340}{l/h}) an dem das Granulat vom fest
 	\end{tikzpicture}
 \end{figure}
 
-Man sieht, das der Peak wie erwartet bei einer Beschichtung der Partikel mit einem Aerosol kleiner ausfällt. Das liegt an der reduzierten Reibung der Partikel untereinander. Die theoretische Kurve hätte überhaupt keinen Peak mehr, sondern ein übergangsloses Wechseln vom festen in den flüssigen Zustand. 
+Man sieht, dass der Peak wie erwartet, bei einer Beschichtung der Partikel mit einem Aerosol, kleiner ausfällt. Das liegt an der reduzierten Reibung der Partikel untereinander. Die theoretische Kurve hat überhaupt keinen Peak mehr, sondern einen übergangslosen Wechsel vom festen in den flüssigen Zustand. 
 
 
 \begin{figure}[H]
@@ -844,7 +847,7 @@ Man sieht, das der Peak wie erwartet bei einer Beschichtung der Partikel mit ein
 
 Im Diagramm mit Granulat von \SI{300}{\mu m} Größe ist der Peak (ca \SI{85}{l/h}) nicht so stark ausgeprägt, aber trotzdem sichtbar. Außerdem fluktuiert der Druck im Bubbling Zustand nicht so stark. Das könnte daran liegen, das kleinere Luftblasen als bei \SI{500}{\mu m} durch das Granulat wandern und das Granulat sich dadurch weniger stark auf und ab bewegt.
 
-Wenn man das Wirbelbett, zur Unterdrückung der Elektrostatik, mit dem Luftbefeuchter betreibt, dann sehen die Kurven wie folgt aus: 
+Wenn man das Wirbelbett, zur Unterdrückung der Elektrostatik, mit dem Luftbefeuchter betreibt, dann sieht die Kurve wie folgt aus: 
 
 \begin{figure}[H]
 	\begin{tikzpicture}
@@ -872,5 +875,5 @@ Wenn man das Wirbelbett, zur Unterdrückung der Elektrostatik, mit dem Luftbefeu
 	\end{tikzpicture}
 \end{figure}
 
-Man erkennt, das der deutlich ausgeprägter ist. Dadurch kann man den Breaking Point genauer bestimmen.
+Man erkennt, dass der Peak deutlich ausgeprägter ist. Dadurch kann man den Breaking Point genauer bestimmen.
 

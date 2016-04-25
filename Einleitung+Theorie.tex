@@ -4,8 +4,8 @@ In der Einleitung wird eine Einführung in das Thema gegeben. Weiterhin werden d
 
 \section{Einführung}
 
-Diese Arbeit behandelt die Neukonzeption des bestehenden Wirbelbettes am Deutschen Zentrum für Luft- und Raumfahrt, Institut für Materialphysik im Weltraum. Ziel ist es das bestehende Wirbelbett zu einem Messaufbau weiterzuentwickeln um Wechselwirkungen in granularen Medien zu charakterisieren. Zur Verifikation der Konstruktion werden im Anschluss Testmessungen mit verschiedenen granularen Medien gemacht. \\
-Im Folgenden werden grundlegenden Eigenschaften von Granulaten und Wirbelbetten behandelt. Danach werden die Anforderungen und Ziele erläutert, worauf die Beschreibung der Umsetzung folgt.
+Diese Arbeit behandelt die Neukonzeption des bestehenden Wirbelbettes am Deutschen Zentrum für Luft- und Raumfahrt, Institut für Materialphysik im Weltraum. Ziel ist es, das bestehende Wirbelbett zu einem Messaufbau weiterzuentwickeln, um Wechselwirkungen in granularen Medien zu charakterisieren. Zur Verifikation der Konstruktion werden im Anschluss Testmessungen mit verschiedenen granularen Medien gemacht. \\
+Im Folgenden werden grundlegenden Eigenschaften von Granulaten und Wirbelbetten behandelt. Danach werden die Anforderungen und Ziele erläutert und im Anschluss die Beschreibung der Umsetzung folgt.
 
 
 \section{Grundlegende Definitionen}
@@ -16,7 +16,7 @@ Im weiteren Verlauf wird zunächst erläutert, was granulare Medien physikalisch
 
 Unter Granulat versteht man ein Medium, das aus einzelnen harten Körnern besteht, die jeweils den Gesetzen der Newtonschen Mechanik unterworfen sind. Weiterhin haben die Körner eine Mindestgröße von $\SI{10}{\micro\meter}$, wodurch die thermische Anregung unterbunden wird. \\
 Ein weiteres Charakteristikum von Granulaten ist die Dissipation. Das heißt, dass die hauptsächlich kinetische Energie der Körner durch Stöße fast komplett in Wärmeenergie umgewandelt werden kann. \cite{DLRWebsite} \\
-Daraus ergibt sich als weiteres Merkmal granularer Medien die Segregation. Das bedeutet, das sich kleinere Partikel zwischen größeren bewegen können und so die Partikel nach Größen aufgetrennt werden. \cite{PhysikimKontext} \\
+Daraus ergibt sich als weiteres Merkmal granularer Medien die Segregation. Das bedeutet, dass sich kleinere Partikel zwischen größeren bewegen können und so die Partikel nach Größen aufgetrennt werden. \cite{PhysikimKontext} \\
 \hfill \\ 
 Wie bei Molekülen gibt es auch bei granularen Medien ein dynamisches Verhalten. Dieses kann man unter anderem hervorrufen, indem man mittels Schwingungen, also Vibration, auf das Granulat einwirkt. Man erhält dann ein schwingungsfluidiertes Granulat, in dem die Bewegung der Teilchen mit der Brownschen Molekularbewegung vergleichbar ist. \\
 Die unterschiedlichen dynamischen Zustände des Granulats werden gerne mit den Aggregatzuständen molekularer Stoffe verglichen:
@@ -31,9 +31,9 @@ Die unterschiedlichen dynamischen Zustände des Granulats werden gerne mit den A
 
 Die in Abbildung 1.1 zu sehenden Phasen treten alle gleichzeitig während einer Anregung durch Vibration auf. Im gasförmigen Zustand sind die Abstände der Partikel weit größer als der Partikeldurchmesser und die Partikel bewegen sich weitgehend unabhängig voneinander. \\
 Zum darunter liegenden flüssigen Zustand gibt es, anders als bei Wasser, keinen wohldefinierten Übergang. Man spricht von flüssig, sobald die mittlere freie Weglänge auf die Größenordnung der Partikel gesunken ist. Man spricht auch von einem Glasübergang. \\
-Charakteristisch für granulare Medien ist der \glqq jamming\grqq-\ Übergang zwischen fest und flüssig. Hier ist keine Diffusion mehr möglich, die Partikel verbleiben also in ihrer Packungsposition und verklemmen mit ihrer Nachbarn. Bereits in diesem Zustand bilden sich sogenannte \glqq force chains\grqq \ heraus, über die die Kraftübertragung des Systems läuft. \\
+Charakteristisch für granulare Medien ist der \glqq jamming\grqq-\ Übergang zwischen fest und flüssig. Hier ist keine Diffusion mehr möglich; die Partikel verbleiben also in ihrer Packungsposition und verklemmen mit ihrer Nachbarn. Bereits in diesem Zustand bilden sich sogenannte \glqq force chains\grqq \ aus, über die die Kraftübertragung des Systems läuft. \\
 Die \glqq force chains\grqq \ bilden sich im festen Zustand vollständig zu einem Netzwerk heraus. Da sich die Partikel amorph anordnen, verlaufen die \glqq force chains\grqq \ nicht homogen und isotrop, sondern willkürlich, was sich in einer unregelmäßigen Kraftverteilung ausdrückt \cite{Darmstadt2015, Fallturmexperiment}.
-Eine genaue Charakterisierung der Wechselwirkung in einem granularen Medium mit der Methode von Castellanos möglich \cite{Castellanos2000}. Hierzu wird ein Wirbelbett genutzt, das im folgenden Abschnitt (1.2.2) erläutert wird. Diese Methode macht sich die Eigenschaft zunutze, das sich granulare Medien abhängig von den Wechselwirkungen der Teilchen untereinander und der Größe der Teilchen unterschiedlich verhalten und fluidisiert werden. Fluidisierung heißt in diesem Kontext, dass sich das granulare Medium wie eine Flüssigkeit verhält.
+Eine genaue Charakterisierung der Wechselwirkung in einem granularen Medium ist mit der Methode von Castellanos möglich \cite{Castellanos2000}. Hierzu wird ein Wirbelbett genutzt, das im folgenden Abschnitt (1.2.2) erläutert wird. Diese Methode macht sich die Eigenschaft zunutze, dass sich granulare Medien abhängig von den Wechselwirkungen der Teilchen untereinander und der Größe der Teilchen unterschiedlich verhalten und fluidisiert werden. Fluidisierung heißt in diesem Kontext, dass sich das granulare Medium wie eine Flüssigkeit verhält.
 
 \subsection{Wirbelbett}
 
@@ -57,8 +57,8 @@ Das im Probenrohr befindliche granulare Medium wird von unten von einem durch ei
 	\end{center}
 \end{figure}
 
-Dabei muss besonders der zu sehende Peak (Breaking Point) gut vermessen sein, da sich über dessen Lage und Höhe die granularen Medien charakterisieren lassen. \\
-Neben der Bestimmung mittels Druckabfall, lässt sich der Punkt der Fluidisation auch mittels Lichtstreuung bestimmen. Dazu wird das Ganulat mit einem Laser punktuell bestrahlt. Aus der Änderung des Streulichts lässt sich der Fluidisationspunkt bestimmen. 
+Entscheidend ist die exakte Messung des als Peak erscheinenden Breaking Points, da sich über dessen Lage und Höhe die granularen Medien charakterisieren lassen. \\
+Neben der Bestimmung mittels Druckabfall, lässt sich der Punkt der Fluidisation auch mittels Lichtstreuung bestimmen. Dazu wird das Ganulat mit einem Laser punktuell bestrahlt. Aus der Änderung des Streulichts lässt sich der Fluidisationspunkt ebenfalls bestimmen. 
 
 
 \newpage
@@ -79,7 +79,7 @@ Das oben beschriebene Teil ist zur vertikalen Verstellbarkeit auf einen Gerätet
 
 Die Gaszufuhr wird über flexible Plasikschläuche realisiert, die teils mit Klemmen und teils mit Muttern an den Geräteflanschen befestigt sind. \\
 Die Elektronik zum Auslesen des Drucksensors liegt offen und anfällig auf dem Tisch. Zudem kann der Druck noch nicht genau genug ausgelesen werden. Man bekommt ein Signal zwischen \SIrange{0}{10}{\volt} vom Sensor, das über einen Spannungsteiler auf \SIrange{0}{5}{\volt} reduziert wird. \\
-Dieser Aufbau bringt eine Reihe von Problemen mit sich. Das größte Problem ist sicherlich, das nicht mit unterschiedlichen Probenrohrdurchmessern gemessen werden kann. Die sind nötig um auch große Partikel messen zu können. Außerdem ist der luftdichte Anschluss am Probenrohr nicht gegeben, da dies nur mit dem Schwamm in eine Öffnung des Metallblocks gesteckt wird.
+Dieser Aufbau bringt eine Reihe von Problemen mit sich. Das größte Problem ist sicherlich, dass nicht mit unterschiedlichen Probenrohrdurchmessern gemessen werden kann. Die sind nötig, um auch große Partikel messen zu können. Außerdem ist der luftdichte Anschluss am Probenrohr nicht gegeben, da dies nur mit einem Schwamm in eine Öffnung des Metallblocks gesteckt wird.
 Weiterhin ist das Wirbelbett zwar vertikal und horizontal beweglich, aber der Geräteträger verhindert Messungen im Lichtstreuaufbau.
 Die bisherige Verrohrung mit Plastikschläuchen ist nicht luftdicht und zu instabil, um reproduzierbar messen zu können. \\
 
@@ -102,13 +102,14 @@ Das Ziel der Arbeit ist die Realisierung eines Versuchsaufbau in dem die Strömu
 \section{Ziele der Arbeit}
 
 In der vorliegenden Arbeit soll ein vorhandener Versuchsstand für quantitative Messungen weiterentwickelt werden. Zuerst werden die Probleme des bisherigen Setups analysiert und eine entsprechende Lösung für das Medium Luft konstruiert. \\ 
-Konkrete Ziele der Bachelorarbeit sind thematisch geordnet folgende:
+Konkrete Ziele der Bachelorarbeit sind thematisch geordnet folgende: \\
 Die Elektronik soll im Bezug auf das Auslesen des Drucksensors auf \SI{0,1}{mbar} genau sein und in ein Gehäuse verpackt werden. \\
-Es soll ein neues Gassystem entworfen werden, das luftdicht und mechnanisch stabil ist. Weiterhin soll in das Gassystem ein Luftbefeuchter integriert werden. Außerdem sollen mit Probenröhrchen mit Durchmessern \SI{5}{mm}, \SI{20}{mm}, \SI{30}{mm} und \SI{40}{mm} gemessen werden. Die Röhrchen sollen einfach und schnell wechselbar sein und auch das Probenmaterial muss einfach zu wechseln sein. Um mit den größeren Röhrchendurchmessern $D_r$ und Partikeln $d_p$ messen zu können muss der Gasstrom erhöht werden. Aus den Gleichungen im vorigen Abschnitt ergeben sich, für die zwei typischsten Packungsdichten ($\epsilon$), folgende Gasströme: 
+Es soll ein neues Gassystem entworfen werden, das luftdicht und mechnanisch stabil ist. Weiterhin soll in das Gassystem ein Luftbefeuchter integriert werden. Außerdem soll mit Probenröhrchen mit Durchmessern \SI{5}{mm}, \SI{20}{mm}, \SI{30}{mm} und \SI{40}{mm} gemessen werden. Die Röhrchen sollen einfach und schnell wechselbar sein und auch das Probenmaterial muss einfach zu wechseln sein. Um mit den größeren Röhrchendurchmessern $D_r$ und Partikeln $d_p$ messen zu können, muss der Gasstrom erhöht werden. Aus den Gleichungen im vorigen Abschnitt ergeben sich für die zwei typischsten Packungsdichten ($\epsilon$), folgende Gasströme: 
 
 
 \begin{center}
 	\captionof{table}[Gasströme zufällige Packung]{Gasströme [l/h] für $\epsilon = \SI{0,54}{}$ (zufällige Packung)}
+		\vspace{0.25cm}
 	\begin{tabular}{|c|S|S|S|S|}
 		\hline
 		\diagbox{$D_r$ $[mm]$}{$d_p$ $[\mu m]$}    & 300   & 500   & 750   & 1000 \\
@@ -124,10 +125,11 @@ Es soll ein neues Gassystem entworfen werden, das luftdicht und mechnanisch stab
 \end{center}
 
 
-\vspace{1cm}
+\vspace{0.5cm}
 
 \begin{center}
 		\captionof{table}[Gasströme komprimierte Packung]{Gasströme [l/h] für $\epsilon = \SI{0,64}{}$ (leicht komprimiert)}
+			\vspace{0.25cm}
 	\begin{tabular}{|c|S|S|S|S|}
 		\hline
 		\diagbox{$D_r$ $[mm]$}{$d_p$ $[\mu m]$}    & 300   & 500   & 750   & 1000 \\
@@ -143,8 +145,7 @@ Es soll ein neues Gassystem entworfen werden, das luftdicht und mechnanisch stab
 \end{center}
 
 
-\vspace{0.5cm}
-Aus den Tabellen folgt, das mit einem Gasstrom von \SI{3000}{l/h} fast alle Paarungen abgedeckt werden können. Daher soll der Gasstrom auf diesen Wert erhöht werden. \\
+Aus den Tabellen folgt, dass mit einem Gasstrom von \SI{3000}{l/h} fast alle Paarungen abgedeckt werden können. Daher soll der Gasstrom auf diesen Wert erhöht werden. \\
 Zur Unterbindung der Elektrostatik des granularen Mediums ist die Integration eines Luftionisators und Luftbefeuchters geplant. Weiterhin soll das Wirbelbett für eine korrekte Integration in den Lichtstreuaufbau horizontal und vertikal manipulierbar sein. \\
 Zur Strukturierung der Arbeit wurden die einzelnen Ziele im folgenden Abschnitt unterteilt und ein Zeitplan aufgestellt.
 
@@ -159,12 +160,12 @@ In diesem Arbeitspaket werden die Eckdaten des Projekts gesammelt und den Anford
 
 \subsection{AP 2 - Elektronik}
 
-Aufgabe in diesem Arbeitspaket sind der Bau des Gehäuses und die Erhöhung der Präzision des Drucksensors. Dies soll zu Anfang geschehen, weil die Steuerelektronik für jegliche Steuerung zuständig ist und somit ohne diese das Wirbelbett nicht bedienbar ist. Zudem können mit einem recht einfachen Bauteil wie dem Gehäuse erste Erfahrungen mit dem 3D Drucker gesammelt werden.
+Aufgabe dieses Arbeitspakets ist der Bau des Gehäuses und die Erhöhung der Präzision des Drucksensors. Dies soll zu Anfang geschehen, weil die Steuerelektronik für jegliche Steuerung zuständig ist und somit ohne diese das Wirbelbett nicht bedienbar ist. Zudem können mit einem recht einfachen Bauteil wie dem Gehäuse erste Erfahrungen mit dem 3D Drucker gesammelt werden.
 
 \subsection{AP 3 - Gassystem}
 
 Dieses Arbeitspaket beschäftigt sich mit dem Gassystem. Hier geht es insbesondere um das Suchen und Bestellen der geeigneten Teile für die Verrohrung und den Luftbefeuchter, sowie deren Zusammenbau. \\
-Der Entschluss, dieses Arbeitspaket auch recht früh anzugehen fiel, auf Grund der langen Lieferzeit für den Flowcontroller. 
+Der Entschluss, dieses Arbeitspaket auch recht früh anzugehen, fiel auf Grund der langen Lieferzeit für den Flowcontroller. 
 
 \subsection{AP 4 - Wirbelbett}
 
@@ -174,12 +175,12 @@ Dieser Abschnitt liegt direkt vor dem Testen, damit unmittelbar nach dessen Absc
 
 \subsection{AP 5 - Tests / Messungen}
 
-Im letzten Abschnitt sollen alle Komponenten im vollständigen Aufbau getestet werden. Hier soll evaluiert werden, ob alle Anforderungen erfüllt wurden und ob es noch Mängel gibt. Kleinere Mängel sollen noch in dieser Phase behoben werden, während bei größeren analysiert werden muss, wie damit umzugehen ist. Wenn möglich werden auch Messkurven des alten Messaufbaus und des neuen verglichen und diskutiert.
+Im letzten Abschnitt sollen alle Komponenten im vollständigen Aufbau getestet werden. Hier soll evaluiert werden, ob alle Anforderungen erfüllt wurden und ob es noch Mängel gibt. Kleinere Mängel sollen noch in dieser Phase behoben werden, während bei größeren analysiert werden muss, wie damit umzugehen ist.
 
 
 \subsection{Zeitplanung}
 
-Graphisch dargestellt stellt sich der Verlauf des Projekts so dar:
+Graphisch stellt sich der Verlauf des Projekts so dar:
 
 \begin{figure}[h]
 	\begin{center}
